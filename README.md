@@ -28,7 +28,7 @@ A JWT is composed of a header, a payload, and a signature. The payload contains 
 
 Before you can make calls to the Smooch API, you'll need to create a JWT that proves you are authorized to use the API.
 
- #### **Step 1** Generate a KEY ID and SECRET on the settings tab in the [Smooch Dashboard](https://app.smooch.io/).
+#### **Step 1** Generate a KEY ID and SECRET on the settings tab in the [Smooch Dashboard](https://app.smooch.io/).
 
 ![secret key and id](https://docs.smooch.io/images/secret_keys.png)
 
