@@ -16,7 +16,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 1.0.0'
+    gem 'smooch-api', '~> 1.1.0'
 
 ## Getting Started
 
@@ -81,11 +81,9 @@ Class | Method | HTTP request | Description
 *SmoochApi::AppApi* | [**create_app**](docs/AppApi.md#create_app) | **POST** /apps | 
 *SmoochApi::AppApi* | [**create_secret_key**](docs/AppApi.md#create_secret_key) | **POST** /apps/{appId}/keys | 
 *SmoochApi::AppApi* | [**delete_app**](docs/AppApi.md#delete_app) | **DELETE** /apps/{appId} | 
-*SmoochApi::AppApi* | [**delete_integration**](docs/AppApi.md#delete_integration) | **DELETE** /apps/{appId}/integrations/{integrationId} | 
 *SmoochApi::AppApi* | [**delete_secret_key**](docs/AppApi.md#delete_secret_key) | **DELETE** /apps/{appId}/keys/{keyId} | 
 *SmoochApi::AppApi* | [**get_app**](docs/AppApi.md#get_app) | **GET** /apps/{appId} | 
 *SmoochApi::AppApi* | [**get_app_jwt**](docs/AppApi.md#get_app_jwt) | **GET** /apps/{appId}/keys/{keyId}/jwt | 
-*SmoochApi::AppApi* | [**get_integration**](docs/AppApi.md#get_integration) | **GET** /apps/{appId}/integrations/{integrationId} | 
 *SmoochApi::AppApi* | [**get_secret_key**](docs/AppApi.md#get_secret_key) | **GET** /apps/{appId}/keys/{keyId} | 
 *SmoochApi::AppApi* | [**list_apps**](docs/AppApi.md#list_apps) | **GET** /apps | 
 *SmoochApi::AppApi* | [**list_secret_keys**](docs/AppApi.md#list_secret_keys) | **GET** /apps/{appId}/keys | 
@@ -106,7 +104,13 @@ Class | Method | HTTP request | Description
 *SmoochApi::ConversationApi* | [**trigger_typing_activity**](docs/ConversationApi.md#trigger_typing_activity) | **POST** /appusers/{userId}/conversation/activity | 
 *SmoochApi::InitApi* | [**init**](docs/InitApi.md#init) | **POST** /init | 
 *SmoochApi::IntegrationApi* | [**create_integration**](docs/IntegrationApi.md#create_integration) | **POST** /apps/{appId}/integrations | 
+*SmoochApi::IntegrationApi* | [**create_integration_menu**](docs/IntegrationApi.md#create_integration_menu) | **POST** /apps/{appId}/integrations/{integrationId}/menu | 
+*SmoochApi::IntegrationApi* | [**delete_integration**](docs/IntegrationApi.md#delete_integration) | **DELETE** /apps/{appId}/integrations/{integrationId} | 
+*SmoochApi::IntegrationApi* | [**delete_integration_menu**](docs/IntegrationApi.md#delete_integration_menu) | **DELETE** /apps/{appId}/integrations/{integrationId}/menu | 
+*SmoochApi::IntegrationApi* | [**get_integration**](docs/IntegrationApi.md#get_integration) | **GET** /apps/{appId}/integrations/{integrationId} | 
+*SmoochApi::IntegrationApi* | [**get_integration_menu**](docs/IntegrationApi.md#get_integration_menu) | **GET** /apps/{appId}/integrations/{integrationId}/menu | 
 *SmoochApi::IntegrationApi* | [**list_integrations**](docs/IntegrationApi.md#list_integrations) | **GET** /apps/{appId}/integrations | 
+*SmoochApi::IntegrationApi* | [**update_integration_menu**](docs/IntegrationApi.md#update_integration_menu) | **PUT** /apps/{appId}/integrations/{integrationId}/menu | 
 *SmoochApi::MenuApi* | [**delete_menu**](docs/MenuApi.md#delete_menu) | **DELETE** /menu | 
 *SmoochApi::MenuApi* | [**get_menu**](docs/MenuApi.md#get_menu) | **GET** /menu | 
 *SmoochApi::MenuApi* | [**update_menu**](docs/MenuApi.md#update_menu) | **PUT** /menu | 

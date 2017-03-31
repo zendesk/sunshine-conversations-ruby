@@ -7,11 +7,9 @@ Method | HTTP request | Description
 [**create_app**](AppApi.md#create_app) | **POST** /apps | 
 [**create_secret_key**](AppApi.md#create_secret_key) | **POST** /apps/{appId}/keys | 
 [**delete_app**](AppApi.md#delete_app) | **DELETE** /apps/{appId} | 
-[**delete_integration**](AppApi.md#delete_integration) | **DELETE** /apps/{appId}/integrations/{integrationId} | 
 [**delete_secret_key**](AppApi.md#delete_secret_key) | **DELETE** /apps/{appId}/keys/{keyId} | 
 [**get_app**](AppApi.md#get_app) | **GET** /apps/{appId} | 
 [**get_app_jwt**](AppApi.md#get_app_jwt) | **GET** /apps/{appId}/keys/{keyId}/jwt | 
-[**get_integration**](AppApi.md#get_integration) | **GET** /apps/{appId}/integrations/{integrationId} | 
 [**get_secret_key**](AppApi.md#get_secret_key) | **GET** /apps/{appId}/keys/{keyId} | 
 [**list_apps**](AppApi.md#list_apps) | **GET** /apps | 
 [**list_secret_keys**](AppApi.md#list_secret_keys) | **GET** /apps/{appId}/keys | 
@@ -159,60 +157,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **String**| Identifies the app. | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[jwt](../README.md#jwt)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **delete_integration**
-> delete_integration(app_id, integration_id)
-
-
-
-Delete the specified integration.
-
-### Example
-```ruby
-# load the gem
-require 'smooch-api'
-# setup authorization
-SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
-  config.api_key['Authorization'] = 'YOUR JWT'
-  config.api_key_prefix['Authorization'] = 'Bearer'
-end
-
-api_instance = SmoochApi::AppApi.new
-
-app_id = "app_id_example" # String | Identifies the app.
-
-integration_id = "integration_id_example" # String | Identifies the integration.
-
-
-begin
-  api_instance.delete_integration(app_id, integration_id)
-rescue SmoochApi::ApiError => e
-  puts "Exception when calling AppApi->delete_integration: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **integration_id** | **String**| Identifies the integration. | 
 
 ### Return type
 
@@ -378,61 +322,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**JwtResponse**](JwtResponse.md)
-
-### Authorization
-
-[jwt](../README.md#jwt)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **get_integration**
-> IntegrationResponse get_integration(app_id, integration_id)
-
-
-
-Get the specified integration.
-
-### Example
-```ruby
-# load the gem
-require 'smooch-api'
-# setup authorization
-SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
-  config.api_key['Authorization'] = 'YOUR JWT'
-  config.api_key_prefix['Authorization'] = 'Bearer'
-end
-
-api_instance = SmoochApi::AppApi.new
-
-app_id = "app_id_example" # String | Identifies the app.
-
-integration_id = "integration_id_example" # String | Identifies the integration.
-
-
-begin
-  result = api_instance.get_integration(app_id, integration_id)
-  p result
-rescue SmoochApi::ApiError => e
-  puts "Exception when calling AppApi->get_integration: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **integration_id** | **String**| Identifies the integration. | 
-
-### Return type
-
-[**IntegrationResponse**](IntegrationResponse.md)
 
 ### Authorization
 
