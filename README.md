@@ -16,7 +16,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 1.1.0'
+    gem 'smooch-api', '~> 1.2.0'
 
 ## Getting Started
 

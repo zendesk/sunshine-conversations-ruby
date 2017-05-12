@@ -410,8 +410,8 @@ end
 api_instance = SmoochApi::AppApi.new
 
 opts = { 
-  limit: 56, # Integer | The number of records to return.
-  offset: 56 # Integer | The number of initial records to skip before picking records to return.
+  limit: 0, # Integer | The number of records to return.
+  offset: 0 # Integer | The number of initial records to skip before picking records to return.
 }
 
 begin
@@ -426,8 +426,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **Integer**| The number of records to return. | [optional] 
- **offset** | **Integer**| The number of initial records to skip before picking records to return. | [optional] 
+ **limit** | **Integer**| The number of records to return. | [optional] [default to 0]
+ **offset** | **Integer**| The number of initial records to skip before picking records to return. | [optional] [default to 0]
 
 ### Return type
 
