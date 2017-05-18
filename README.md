@@ -16,7 +16,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 1.2.0'
+    gem 'smooch-api', '~> 1.3.0'
 
 ## Getting Started
 
@@ -87,6 +87,7 @@ Class | Method | HTTP request | Description
 *SmoochApi::AppApi* | [**get_secret_key**](docs/AppApi.md#get_secret_key) | **GET** /apps/{appId}/keys/{keyId} | 
 *SmoochApi::AppApi* | [**list_apps**](docs/AppApi.md#list_apps) | **GET** /apps | 
 *SmoochApi::AppApi* | [**list_secret_keys**](docs/AppApi.md#list_secret_keys) | **GET** /apps/{appId}/keys | 
+*SmoochApi::AppApi* | [**update_app**](docs/AppApi.md#update_app) | **PUT** /apps/{appId} | 
 *SmoochApi::AppUserApi* | [**app_user_device_update**](docs/AppUserApi.md#app_user_device_update) | **PUT** /appusers/{userId}/devices/{deviceId} | 
 *SmoochApi::AppUserApi* | [**delete_app_user_profile**](docs/AppUserApi.md#delete_app_user_profile) | **DELETE** /appusers/{userId}/profile | 
 *SmoochApi::AppUserApi* | [**get_app_user**](docs/AppUserApi.md#get_app_user) | **GET** /appusers/{userId} | 
@@ -127,6 +128,8 @@ Class | Method | HTTP request | Description
  - [SmoochApi::App](docs/App.md)
  - [SmoochApi::AppCreate](docs/AppCreate.md)
  - [SmoochApi::AppResponse](docs/AppResponse.md)
+ - [SmoochApi::AppSettings](docs/AppSettings.md)
+ - [SmoochApi::AppUpdate](docs/AppUpdate.md)
  - [SmoochApi::AppUser](docs/AppUser.md)
  - [SmoochApi::AppUserLink](docs/AppUserLink.md)
  - [SmoochApi::AppUserPreCreate](docs/AppUserPreCreate.md)

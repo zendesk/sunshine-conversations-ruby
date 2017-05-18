@@ -13,28 +13,23 @@ Swagger Codegen version: 2.2.3-SNAPSHOT
 require 'date'
 
 module SmoochApi
-
-  class Conversation
-    # The conversation ID, generated automatically.
-    attr_accessor :_id
-
-    # The number of unread messages in the conversation.
-    attr_accessor :unread_count
+  # Customizable app settings.
+  class AppSettings
+    # Flag specifying whether credit card numbers will be automatically masked if sent through Smooch.
+    attr_accessor :mask_credit_card_numbers
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'_id' => :'_id',
-        :'unread_count' => :'unreadCount'
+        :'mask_credit_card_numbers' => :'maskCreditCardNumbers'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'_id' => :'String',
-        :'unread_count' => :'Integer'
+        :'mask_credit_card_numbers' => :'BOOLEAN'
       }
     end
 
@@ -46,12 +41,8 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'_id')
-        self._id = attributes[:'_id']
-      end
-
-      if attributes.has_key?(:'unreadCount')
-        self.unread_count = attributes[:'unreadCount']
+      if attributes.has_key?(:'maskCreditCardNumbers')
+        self.mask_credit_card_numbers = attributes[:'maskCreditCardNumbers']
       end
 
     end
@@ -60,22 +51,12 @@ module SmoochApi
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @_id.nil?
-        invalid_properties.push("invalid value for '_id', _id cannot be nil.")
-      end
-
-      if @unread_count.nil?
-        invalid_properties.push("invalid value for 'unread_count', unread_count cannot be nil.")
-      end
-
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @_id.nil?
-      return false if @unread_count.nil?
       return true
     end
 
@@ -84,8 +65,7 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          _id == o._id &&
-          unread_count == o.unread_count
+          mask_credit_card_numbers == o.mask_credit_card_numbers
     end
 
     # @see the `==` method
@@ -97,7 +77,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [_id, unread_count].hash
+      [mask_credit_card_numbers].hash
     end
 
     # Builds the object from hash

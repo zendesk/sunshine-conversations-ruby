@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**get_secret_key**](AppApi.md#get_secret_key) | **GET** /apps/{appId}/keys/{keyId} | 
 [**list_apps**](AppApi.md#list_apps) | **GET** /apps | 
 [**list_secret_keys**](AppApi.md#list_secret_keys) | **GET** /apps/{appId}/keys | 
+[**update_app**](AppApi.md#update_app) | **PUT** /apps/{appId} | 
 
 
 # **create_app**
@@ -484,6 +485,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListSecretKeysResponse**](ListSecretKeysResponse.md)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **update_app**
+> AppResponse update_app(app_id, app_update_body)
+
+
+
+Update the specified app.
+
+### Example
+```ruby
+# load the gem
+require 'smooch-api'
+# setup authorization
+SmoochApi.configure do |config|
+  # Configure API key authorization: jwt
+  config.api_key['Authorization'] = 'YOUR JWT'
+  config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = SmoochApi::AppApi.new
+
+app_id = "app_id_example" # String | Identifies the app.
+
+app_update_body = SmoochApi::AppUpdate.new # AppUpdate | Body for an updateApp request.
+
+
+begin
+  result = api_instance.update_app(app_id, app_update_body)
+  p result
+rescue SmoochApi::ApiError => e
+  puts "Exception when calling AppApi->update_app: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **String**| Identifies the app. | 
+ **app_update_body** | [**AppUpdate**](AppUpdate.md)| Body for an updateApp request. | 
+
+### Return type
+
+[**AppResponse**](AppResponse.md)
 
 ### Authorization
 

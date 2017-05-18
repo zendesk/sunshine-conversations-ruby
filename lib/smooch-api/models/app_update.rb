@@ -14,27 +14,26 @@ require 'date'
 
 module SmoochApi
 
-  class Conversation
-    # The conversation ID, generated automatically.
-    attr_accessor :_id
+  class AppUpdate
+    # The app's name.
+    attr_accessor :name
 
-    # The number of unread messages in the conversation.
-    attr_accessor :unread_count
+    attr_accessor :settings
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'_id' => :'_id',
-        :'unread_count' => :'unreadCount'
+        :'name' => :'name',
+        :'settings' => :'settings'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'_id' => :'String',
-        :'unread_count' => :'Integer'
+        :'name' => :'String',
+        :'settings' => :'AppSettings'
       }
     end
 
@@ -46,12 +45,12 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'_id')
-        self._id = attributes[:'_id']
+      if attributes.has_key?(:'name')
+        self.name = attributes[:'name']
       end
 
-      if attributes.has_key?(:'unreadCount')
-        self.unread_count = attributes[:'unreadCount']
+      if attributes.has_key?(:'settings')
+        self.settings = attributes[:'settings']
       end
 
     end
@@ -60,12 +59,8 @@ module SmoochApi
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @_id.nil?
-        invalid_properties.push("invalid value for '_id', _id cannot be nil.")
-      end
-
-      if @unread_count.nil?
-        invalid_properties.push("invalid value for 'unread_count', unread_count cannot be nil.")
+      if @name.nil?
+        invalid_properties.push("invalid value for 'name', name cannot be nil.")
       end
 
       return invalid_properties
@@ -74,8 +69,7 @@ module SmoochApi
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @_id.nil?
-      return false if @unread_count.nil?
+      return false if @name.nil?
       return true
     end
 
@@ -84,8 +78,8 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          _id == o._id &&
-          unread_count == o.unread_count
+          name == o.name &&
+          settings == o.settings
     end
 
     # @see the `==` method
@@ -97,7 +91,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [_id, unread_count].hash
+      [name, settings].hash
     end
 
     # Builds the object from hash
