@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 
 # **post_message**
-> PostMessagesResponse post_message(user_id, message_post_body)
+> MessageResponse post_message(user_id, message_post_body)
 
 
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PostMessagesResponse**](PostMessagesResponse.md)
+[**MessageResponse**](MessageResponse.md)
 
 ### Authorization
 

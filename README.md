@@ -16,7 +16,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 1.5.0'
+    gem 'smooch-api', '~> 1.6.0'
 
 ## Getting Started
 
@@ -162,7 +162,6 @@ Class | Method | HTTP request | Description
  - [SmoochApi::MessageItem](docs/MessageItem.md)
  - [SmoochApi::MessagePost](docs/MessagePost.md)
  - [SmoochApi::MessageResponse](docs/MessageResponse.md)
- - [SmoochApi::PostMessagesResponse](docs/PostMessagesResponse.md)
  - [SmoochApi::SecretKey](docs/SecretKey.md)
  - [SmoochApi::SecretKeyCreate](docs/SecretKeyCreate.md)
  - [SmoochApi::SecretKeyResponse](docs/SecretKeyResponse.md)
