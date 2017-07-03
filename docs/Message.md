@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **email** | **String** | The email address of the message author. | [optional] 
 **avatar_url** | **String** | The URL of the desired message avatar image. | 
 **received** | **Float** | The unix timestamp of the moment the message was received. | 
-**media_url** | **String** | The mediaUrl for the image. Required for image messages.  | [optional] 
-**media_type** | **String** | The mediaType for the image. Required for image messages.  | [optional] 
+**media_url** | **String** | The mediaUrl for the message. Required for image/file messages.  | [optional] 
+**media_type** | **String** | The mediaType for the message. Required for image/file messages.  | [optional] 
 **metadata** | **Object** | Flat JSON object containing any custom properties associated with the message. | [optional] 
 **items** | [**Array&lt;MessageItem&gt;**](MessageItem.md) | The items in the message list. Required for carousel and list messages.  | [optional] 
 **actions** | [**Array&lt;Action&gt;**](Action.md) | The actions in the message. | [optional] 

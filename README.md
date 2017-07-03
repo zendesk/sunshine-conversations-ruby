@@ -16,7 +16,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 1.8.0'
+    gem 'smooch-api', '~> 1.9.0'
 
 ## Getting Started
 
@@ -98,6 +98,7 @@ Class | Method | HTTP request | Description
 *SmoochApi::AppUserApi* | [**track_event**](docs/AppUserApi.md#track_event) | **POST** /appusers/{userId}/events | 
 *SmoochApi::AppUserApi* | [**unlink_app_user**](docs/AppUserApi.md#unlink_app_user) | **DELETE** /appusers/{userId}/channels/{channel} | 
 *SmoochApi::AppUserApi* | [**update_app_user**](docs/AppUserApi.md#update_app_user) | **PUT** /appusers/{userId} | 
+*SmoochApi::AttachmentsApi* | [**upload_attachment**](docs/AttachmentsApi.md#upload_attachment) | **POST** /apps/{appId}/attachments | 
 *SmoochApi::ConversationApi* | [**delete_messages**](docs/ConversationApi.md#delete_messages) | **DELETE** /appusers/{userId}/messages | 
 *SmoochApi::ConversationApi* | [**get_messages**](docs/ConversationApi.md#get_messages) | **GET** /appusers/{userId}/messages | 
 *SmoochApi::ConversationApi* | [**post_message**](docs/ConversationApi.md#post_message) | **POST** /appusers/{userId}/messages | 
@@ -135,6 +136,7 @@ Class | Method | HTTP request | Description
  - [SmoochApi::AppUserPreCreate](docs/AppUserPreCreate.md)
  - [SmoochApi::AppUserResponse](docs/AppUserResponse.md)
  - [SmoochApi::AppUserUpdate](docs/AppUserUpdate.md)
+ - [SmoochApi::AttachmentResponse](docs/AttachmentResponse.md)
  - [SmoochApi::Client](docs/Client.md)
  - [SmoochApi::ClientInfo](docs/ClientInfo.md)
  - [SmoochApi::Conversation](docs/Conversation.md)
