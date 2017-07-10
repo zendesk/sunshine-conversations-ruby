@@ -14,48 +14,27 @@ require 'date'
 
 module SmoochApi
 
-  class WebhookUpdate
-    # URL to be called when the webhook is triggered.
-    attr_accessor :target
+  class Confirmation
+    # The confirmation type.
+    attr_accessor :type
 
-    # An array of triggers you wish to have the webhook listen to. If unspecified the default trigger is *message*.
-    attr_accessor :triggers
+    # The message used to reach out to the user. Must be a valid message object as per the post message API.
+    attr_accessor :message
 
-    class EnumAttributeValidator
-      attr_reader :datatype
-      attr_reader :allowable_values
-
-      def initialize(datatype, allowable_values)
-        @allowable_values = allowable_values.map do |value|
-          case datatype.to_s
-          when /Integer/i
-            value.to_i
-          when /Float/i
-            value.to_f
-          else
-            value
-          end
-        end
-      end
-
-      def valid?(value)
-        !value || allowable_values.include?(value)
-      end
-    end
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'target' => :'target',
-        :'triggers' => :'triggers'
+        :'type' => :'type',
+        :'message' => :'message'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'target' => :'String',
-        :'triggers' => :'Array<String>'
+        :'type' => :'String',
+        :'message' => :'Message'
       }
     end
 
@@ -67,14 +46,12 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'target')
-        self.target = attributes[:'target']
+      if attributes.has_key?(:'type')
+        self.type = attributes[:'type']
       end
 
-      if attributes.has_key?(:'triggers')
-        if (value = attributes[:'triggers']).is_a?(Array)
-          self.triggers = value
-        end
+      if attributes.has_key?(:'message')
+        self.message = attributes[:'message']
       end
 
     end
@@ -83,12 +60,17 @@ module SmoochApi
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @type.nil?
+        invalid_properties.push("invalid value for 'type', type cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @type.nil?
       return true
     end
 
@@ -97,8 +79,8 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          target == o.target &&
-          triggers == o.triggers
+          type == o.type &&
+          message == o.message
     end
 
     # @see the `==` method
@@ -110,7 +92,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [target, triggers].hash
+      [type, message].hash
     end
 
     # Builds the object from hash

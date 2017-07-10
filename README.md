@@ -16,7 +16,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 1.9.0'
+    gem 'smooch-api', '~> 1.11.0'
 
 ## Getting Started
 
@@ -139,6 +139,7 @@ Class | Method | HTTP request | Description
  - [SmoochApi::AttachmentResponse](docs/AttachmentResponse.md)
  - [SmoochApi::Client](docs/Client.md)
  - [SmoochApi::ClientInfo](docs/ClientInfo.md)
+ - [SmoochApi::Confirmation](docs/Confirmation.md)
  - [SmoochApi::Conversation](docs/Conversation.md)
  - [SmoochApi::Destination](docs/Destination.md)
  - [SmoochApi::DeviceInit](docs/DeviceInit.md)
