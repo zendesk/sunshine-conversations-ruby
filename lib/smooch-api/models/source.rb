@@ -14,27 +14,27 @@ require 'date'
 
 module SmoochApi
 
-  class MessageResponse
-    # The message.
-    attr_accessor :message
+  class Source
+    # An identifier used by Smooch for internal purposes.
+    attr_accessor :id
 
-    # The conversation.
-    attr_accessor :conversation
+    # An identifier for the channel from which a message originated.
+    attr_accessor :type
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'message' => :'message',
-        :'conversation' => :'conversation'
+        :'id' => :'id',
+        :'type' => :'type'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'message' => :'Message',
-        :'conversation' => :'Conversation'
+        :'id' => :'String',
+        :'type' => :'String'
       }
     end
 
@@ -46,12 +46,12 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'message')
-        self.message = attributes[:'message']
+      if attributes.has_key?(:'id')
+        self.id = attributes[:'id']
       end
 
-      if attributes.has_key?(:'conversation')
-        self.conversation = attributes[:'conversation']
+      if attributes.has_key?(:'type')
+        self.type = attributes[:'type']
       end
 
     end
@@ -60,22 +60,12 @@ module SmoochApi
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @message.nil?
-        invalid_properties.push("invalid value for 'message', message cannot be nil.")
-      end
-
-      if @conversation.nil?
-        invalid_properties.push("invalid value for 'conversation', conversation cannot be nil.")
-      end
-
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @message.nil?
-      return false if @conversation.nil?
       return true
     end
 
@@ -84,8 +74,8 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          message == o.message &&
-          conversation == o.conversation
+          id == o.id &&
+          type == o.type
     end
 
     # @see the `==` method
@@ -97,7 +87,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [message, conversation].hash
+      [id, type].hash
     end
 
     # Builds the object from hash
