@@ -4,15 +4,15 @@ All URIs are relative to *https://api.smooch.io/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_messages**](ConversationApi.md#delete_messages) | **DELETE** /appusers/{userId}/messages | 
-[**get_messages**](ConversationApi.md#get_messages) | **GET** /appusers/{userId}/messages | 
-[**post_message**](ConversationApi.md#post_message) | **POST** /appusers/{userId}/messages | 
-[**reset_unread_count**](ConversationApi.md#reset_unread_count) | **POST** /appusers/{userId}/conversation/read | 
-[**trigger_typing_activity**](ConversationApi.md#trigger_typing_activity) | **POST** /appusers/{userId}/conversation/activity | 
+[**delete_messages**](ConversationApi.md#delete_messages) | **DELETE** /apps/{appId}/appusers/{userId}/messages | 
+[**get_messages**](ConversationApi.md#get_messages) | **GET** /apps/{appId}/appusers/{userId}/messages | 
+[**post_message**](ConversationApi.md#post_message) | **POST** /apps/{appId}/appusers/{userId}/messages | 
+[**reset_unread_count**](ConversationApi.md#reset_unread_count) | **POST** /apps/{appId}/appusers/{userId}/conversation/read | 
+[**trigger_typing_activity**](ConversationApi.md#trigger_typing_activity) | **POST** /apps/{appId}/appusers/{userId}/conversation/activity | 
 
 
 # **delete_messages**
-> delete_messages(user_id, )
+> delete_messages(app_id, user_id, )
 
 
 
@@ -31,11 +31,13 @@ end
 
 api_instance = SmoochApi::ConversationApi.new
 
+app_id = "app_id_example" # String | Identifies the app.
+
 user_id = "user_id_example" # String | Identifies the user. Can be either the smoochId or the userId.
 
 
 begin
-  api_instance.delete_messages(user_id, )
+  api_instance.delete_messages(app_id, user_id, )
 rescue SmoochApi::ApiError => e
   puts "Exception when calling ConversationApi->delete_messages: #{e}"
 end
@@ -45,6 +47,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **app_id** | **String**| Identifies the app. | 
  **user_id** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
 
 ### Return type
@@ -63,7 +66,7 @@ nil (empty response body)
 
 
 # **get_messages**
-> GetMessagesResponse get_messages(user_id, , opts)
+> GetMessagesResponse get_messages(app_id, user_id, , opts)
 
 
 
@@ -82,6 +85,8 @@ end
 
 api_instance = SmoochApi::ConversationApi.new
 
+app_id = "app_id_example" # String | Identifies the app.
+
 user_id = "user_id_example" # String | Identifies the user. Can be either the smoochId or the userId.
 
 opts = { 
@@ -90,7 +95,7 @@ opts = {
 }
 
 begin
-  result = api_instance.get_messages(user_id, , opts)
+  result = api_instance.get_messages(app_id, user_id, , opts)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling ConversationApi->get_messages: #{e}"
@@ -101,6 +106,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **app_id** | **String**| Identifies the app. | 
  **user_id** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
  **before** | **String**| Timestamp of message. The API will return 100 messages before the specified timestamp (excluding any messages with the provided timestamp). | [optional] 
  **after** | **String**| Timestamp of message. The API will return 100 messages after the specified timestamp (excluding any messages with the provided timestamp). | [optional] 
@@ -121,7 +127,7 @@ Name | Type | Description  | Notes
 
 
 # **post_message**
-> MessageResponse post_message(user_id, message_post_body)
+> MessageResponse post_message(app_id, user_id, message_post_body)
 
 
 
@@ -140,13 +146,15 @@ end
 
 api_instance = SmoochApi::ConversationApi.new
 
+app_id = "app_id_example" # String | Identifies the app.
+
 user_id = "user_id_example" # String | Identifies the user. Can be either the smoochId or the userId.
 
 message_post_body = SmoochApi::MessagePost.new # MessagePost | Body for a postMessage request. Additional arguments are necessary based on message type ([text](https://docs.smooch.io/rest#text-message), [image](https://docs.smooch.io/rest#image-message), [carousel](https://docs.smooch.io/rest#carousel-message), [list](https://docs.smooch.io/rest#list-message)) 
 
 
 begin
-  result = api_instance.post_message(user_id, message_post_body)
+  result = api_instance.post_message(app_id, user_id, message_post_body)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling ConversationApi->post_message: #{e}"
@@ -157,6 +165,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **app_id** | **String**| Identifies the app. | 
  **user_id** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
  **message_post_body** | [**MessagePost**](MessagePost.md)| Body for a postMessage request. Additional arguments are necessary based on message type ([text](https://docs.smooch.io/rest#text-message), [image](https://docs.smooch.io/rest#image-message), [carousel](https://docs.smooch.io/rest#carousel-message), [list](https://docs.smooch.io/rest#list-message))  | 
 
@@ -176,7 +185,7 @@ Name | Type | Description  | Notes
 
 
 # **reset_unread_count**
-> reset_unread_count(user_id, )
+> reset_unread_count(app_id, user_id, )
 
 
 
@@ -195,11 +204,13 @@ end
 
 api_instance = SmoochApi::ConversationApi.new
 
+app_id = "app_id_example" # String | Identifies the app.
+
 user_id = "user_id_example" # String | Identifies the user. Can be either the smoochId or the userId.
 
 
 begin
-  api_instance.reset_unread_count(user_id, )
+  api_instance.reset_unread_count(app_id, user_id, )
 rescue SmoochApi::ApiError => e
   puts "Exception when calling ConversationApi->reset_unread_count: #{e}"
 end
@@ -209,6 +220,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **app_id** | **String**| Identifies the app. | 
  **user_id** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
 
 ### Return type
@@ -227,7 +239,7 @@ nil (empty response body)
 
 
 # **trigger_typing_activity**
-> trigger_typing_activity(user_id, typing_activity_trigger_body)
+> trigger_typing_activity(app_id, user_id, typing_activity_trigger_body)
 
 
 
@@ -246,13 +258,15 @@ end
 
 api_instance = SmoochApi::ConversationApi.new
 
+app_id = "app_id_example" # String | Identifies the app.
+
 user_id = "user_id_example" # String | Identifies the user. Can be either the smoochId or the userId.
 
 typing_activity_trigger_body = SmoochApi::TypingActivityTrigger.new # TypingActivityTrigger | Body for a triggerTypingActivity request.
 
 
 begin
-  api_instance.trigger_typing_activity(user_id, typing_activity_trigger_body)
+  api_instance.trigger_typing_activity(app_id, user_id, typing_activity_trigger_body)
 rescue SmoochApi::ApiError => e
   puts "Exception when calling ConversationApi->trigger_typing_activity: #{e}"
 end
@@ -262,6 +276,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **app_id** | **String**| Identifies the app. | 
  **user_id** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
  **typing_activity_trigger_body** | [**TypingActivityTrigger**](TypingActivityTrigger.md)| Body for a triggerTypingActivity request. | 
 

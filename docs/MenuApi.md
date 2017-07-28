@@ -4,13 +4,13 @@ All URIs are relative to *https://api.smooch.io/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_menu**](MenuApi.md#delete_menu) | **DELETE** /menu | 
-[**get_menu**](MenuApi.md#get_menu) | **GET** /menu | 
-[**update_menu**](MenuApi.md#update_menu) | **PUT** /menu | 
+[**delete_menu**](MenuApi.md#delete_menu) | **DELETE** /apps/{appId}/menu | 
+[**get_menu**](MenuApi.md#get_menu) | **GET** /apps/{appId}/menu | 
+[**update_menu**](MenuApi.md#update_menu) | **PUT** /apps/{appId}/menu | 
 
 
 # **delete_menu**
-> MenuResponse delete_menu
+> MenuResponse delete_menu(app_id, )
 
 
 
@@ -29,8 +29,11 @@ end
 
 api_instance = SmoochApi::MenuApi.new
 
+app_id = "app_id_example" # String | Identifies the app.
+
+
 begin
-  result = api_instance.delete_menu
+  result = api_instance.delete_menu(app_id, )
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling MenuApi->delete_menu: #{e}"
@@ -38,7 +41,10 @@ end
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **String**| Identifies the app. | 
 
 ### Return type
 
@@ -56,7 +62,7 @@ This endpoint does not need any parameter.
 
 
 # **get_menu**
-> MenuResponse get_menu
+> MenuResponse get_menu(app_id, )
 
 
 
@@ -75,8 +81,11 @@ end
 
 api_instance = SmoochApi::MenuApi.new
 
+app_id = "app_id_example" # String | Identifies the app.
+
+
 begin
-  result = api_instance.get_menu
+  result = api_instance.get_menu(app_id, )
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling MenuApi->get_menu: #{e}"
@@ -84,7 +93,10 @@ end
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **String**| Identifies the app. | 
 
 ### Return type
 
@@ -102,7 +114,7 @@ This endpoint does not need any parameter.
 
 
 # **update_menu**
-> MenuResponse update_menu(menu_update_body)
+> MenuResponse update_menu(app_id, menu_update_body)
 
 
 
@@ -121,11 +133,13 @@ end
 
 api_instance = SmoochApi::MenuApi.new
 
+app_id = "app_id_example" # String | Identifies the app.
+
 menu_update_body = SmoochApi::Menu.new # Menu | Body for a updateMenu request.
 
 
 begin
-  result = api_instance.update_menu(menu_update_body)
+  result = api_instance.update_menu(app_id, menu_update_body)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling MenuApi->update_menu: #{e}"
@@ -136,6 +150,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **app_id** | **String**| Identifies the app. | 
  **menu_update_body** | [**Menu**](Menu.md)| Body for a updateMenu request. | 
 
 ### Return type
