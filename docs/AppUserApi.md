@@ -4,7 +4,6 @@ All URIs are relative to *https://api.smooch.io/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**app_user_device_update**](AppUserApi.md#app_user_device_update) | **PUT** /apps/{appId}/appusers/{userId}/devices/{deviceId} | 
 [**delete_app_user_profile**](AppUserApi.md#delete_app_user_profile) | **DELETE** /apps/{appId}/appusers/{userId}/profile | 
 [**get_app_user**](AppUserApi.md#get_app_user) | **GET** /apps/{appId}/appusers/{userId} | 
 [**get_app_user_entity_ids**](AppUserApi.md#get_app_user_entity_ids) | **GET** /apps/{appId}/appusers/{userId}/channels | 
@@ -13,67 +12,6 @@ Method | HTTP request | Description
 [**pre_create_app_user**](AppUserApi.md#pre_create_app_user) | **POST** /apps/{appId}/appusers | 
 [**unlink_app_user**](AppUserApi.md#unlink_app_user) | **DELETE** /apps/{appId}/appusers/{userId}/channels/{channel} | 
 [**update_app_user**](AppUserApi.md#update_app_user) | **PUT** /apps/{appId}/appusers/{userId} | 
-
-
-# **app_user_device_update**
-> DeviceResponse app_user_device_update(app_id, user_id, device_id, app_user_device_update_body)
-
-
-
-Update specified device information.
-
-### Example
-```ruby
-# load the gem
-require 'smooch-api'
-# setup authorization
-SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
-  config.api_key['Authorization'] = 'YOUR JWT'
-  config.api_key_prefix['Authorization'] = 'Bearer'
-end
-
-api_instance = SmoochApi::AppUserApi.new
-
-app_id = "app_id_example" # String | Identifies the app.
-
-user_id = "user_id_example" # String | Identifies the user. Can be either the smoochId or the userId.
-
-device_id = "device_id_example" # String | Identifies the device.
-
-app_user_device_update_body = SmoochApi::DeviceUpdate.new # DeviceUpdate | Body for an updateAppUserDevice request.
-
-
-begin
-  result = api_instance.app_user_device_update(app_id, user_id, device_id, app_user_device_update_body)
-  p result
-rescue SmoochApi::ApiError => e
-  puts "Exception when calling AppUserApi->app_user_device_update: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **user_id** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
- **device_id** | **String**| Identifies the device. | 
- **app_user_device_update_body** | [**DeviceUpdate**](DeviceUpdate.md)| Body for an updateAppUserDevice request. | 
-
-### Return type
-
-[**DeviceResponse**](DeviceResponse.md)
-
-### Authorization
-
-[jwt](../README.md#jwt)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
 
 
 # **delete_app_user_profile**

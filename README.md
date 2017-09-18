@@ -16,7 +16,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 2.0.0'
+    gem 'smooch-api', '~> 2.1.0'
 
 ## Getting Started
 
@@ -88,7 +88,6 @@ Class | Method | HTTP request | Description
 *SmoochApi::AppApi* | [**list_apps**](docs/AppApi.md#list_apps) | **GET** /apps | 
 *SmoochApi::AppApi* | [**list_secret_keys**](docs/AppApi.md#list_secret_keys) | **GET** /apps/{appId}/keys | 
 *SmoochApi::AppApi* | [**update_app**](docs/AppApi.md#update_app) | **PUT** /apps/{appId} | 
-*SmoochApi::AppUserApi* | [**app_user_device_update**](docs/AppUserApi.md#app_user_device_update) | **PUT** /apps/{appId}/appusers/{userId}/devices/{deviceId} | 
 *SmoochApi::AppUserApi* | [**delete_app_user_profile**](docs/AppUserApi.md#delete_app_user_profile) | **DELETE** /apps/{appId}/appusers/{userId}/profile | 
 *SmoochApi::AppUserApi* | [**get_app_user**](docs/AppUserApi.md#get_app_user) | **GET** /apps/{appId}/appusers/{userId} | 
 *SmoochApi::AppUserApi* | [**get_app_user_entity_ids**](docs/AppUserApi.md#get_app_user_entity_ids) | **GET** /apps/{appId}/appusers/{userId}/channels | 
@@ -140,8 +139,6 @@ Class | Method | HTTP request | Description
  - [SmoochApi::Confirmation](docs/Confirmation.md)
  - [SmoochApi::Conversation](docs/Conversation.md)
  - [SmoochApi::Destination](docs/Destination.md)
- - [SmoochApi::DeviceResponse](docs/DeviceResponse.md)
- - [SmoochApi::DeviceUpdate](docs/DeviceUpdate.md)
  - [SmoochApi::DisplaySettings](docs/DisplaySettings.md)
  - [SmoochApi::GetMessagesResponse](docs/GetMessagesResponse.md)
  - [SmoochApi::Integration](docs/Integration.md)
