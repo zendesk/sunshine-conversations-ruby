@@ -14,52 +14,22 @@ require 'date'
 
 module SmoochApi
 
-  class AppUserPreCreate
-    # The app user's userId. This ID is specified by the appMaker. 
-    attr_accessor :user_id
-
-    # Flag indicating if the appUser is secured by a JSON Web Token or not.
-    attr_accessor :credential_required
-
-    # The app user's given name.
-    attr_accessor :given_name
-
-    # The app user's surname.
-    attr_accessor :surname
-
-    # The app user's email.
-    attr_accessor :email
-
-    # A datetime string with the format *yyyy-mm-ddThh:mm:ssZ* representing the moment an appUser was created.
-    attr_accessor :signed_up_at
-
-    # Custom properties for the app user.
-    attr_accessor :properties
+  class AuthCodeResponse
+    # The auth code
+    attr_accessor :auth_code
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'user_id' => :'userId',
-        :'credential_required' => :'credentialRequired',
-        :'given_name' => :'givenName',
-        :'surname' => :'surname',
-        :'email' => :'email',
-        :'signed_up_at' => :'signedUpAt',
-        :'properties' => :'properties'
+        :'auth_code' => :'authCode'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'user_id' => :'String',
-        :'credential_required' => :'BOOLEAN',
-        :'given_name' => :'String',
-        :'surname' => :'String',
-        :'email' => :'String',
-        :'signed_up_at' => :'String',
-        :'properties' => :'Object'
+        :'auth_code' => :'String'
       }
     end
 
@@ -71,32 +41,8 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'userId')
-        self.user_id = attributes[:'userId']
-      end
-
-      if attributes.has_key?(:'credentialRequired')
-        self.credential_required = attributes[:'credentialRequired']
-      end
-
-      if attributes.has_key?(:'givenName')
-        self.given_name = attributes[:'givenName']
-      end
-
-      if attributes.has_key?(:'surname')
-        self.surname = attributes[:'surname']
-      end
-
-      if attributes.has_key?(:'email')
-        self.email = attributes[:'email']
-      end
-
-      if attributes.has_key?(:'signedUpAt')
-        self.signed_up_at = attributes[:'signedUpAt']
-      end
-
-      if attributes.has_key?(:'properties')
-        self.properties = attributes[:'properties']
+      if attributes.has_key?(:'authCode')
+        self.auth_code = attributes[:'authCode']
       end
 
     end
@@ -105,8 +51,8 @@ module SmoochApi
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @user_id.nil?
-        invalid_properties.push("invalid value for 'user_id', user_id cannot be nil.")
+      if @auth_code.nil?
+        invalid_properties.push("invalid value for 'auth_code', auth_code cannot be nil.")
       end
 
       return invalid_properties
@@ -115,7 +61,7 @@ module SmoochApi
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @user_id.nil?
+      return false if @auth_code.nil?
       return true
     end
 
@@ -124,13 +70,7 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          user_id == o.user_id &&
-          credential_required == o.credential_required &&
-          given_name == o.given_name &&
-          surname == o.surname &&
-          email == o.email &&
-          signed_up_at == o.signed_up_at &&
-          properties == o.properties
+          auth_code == o.auth_code
     end
 
     # @see the `==` method
@@ -142,7 +82,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [user_id, credential_required, given_name, surname, email, signed_up_at, properties].hash
+      [auth_code].hash
     end
 
     # Builds the object from hash

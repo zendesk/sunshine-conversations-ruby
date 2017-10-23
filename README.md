@@ -16,7 +16,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 2.2.0'
+    gem 'smooch-api', '~> 2.3.0'
 
 ## Getting Started
 
@@ -90,6 +90,7 @@ Class | Method | HTTP request | Description
 *SmoochApi::AppApi* | [**update_app**](docs/AppApi.md#update_app) | **PUT** /apps/{appId} | 
 *SmoochApi::AppUserApi* | [**delete_app_user_profile**](docs/AppUserApi.md#delete_app_user_profile) | **DELETE** /apps/{appId}/appusers/{userId}/profile | 
 *SmoochApi::AppUserApi* | [**get_app_user**](docs/AppUserApi.md#get_app_user) | **GET** /apps/{appId}/appusers/{userId} | 
+*SmoochApi::AppUserApi* | [**get_app_user_auth_code**](docs/AppUserApi.md#get_app_user_auth_code) | **GET** /apps/{appId}/appusers/{userId}/authcode | 
 *SmoochApi::AppUserApi* | [**get_app_user_business_system_ids**](docs/AppUserApi.md#get_app_user_business_system_ids) | **GET** /apps/{appId}/appusers/{userId}/businesssystems | 
 *SmoochApi::AppUserApi* | [**get_app_user_entity_ids**](docs/AppUserApi.md#get_app_user_entity_ids) | **GET** /apps/{appId}/appusers/{userId}/channels | 
 *SmoochApi::AppUserApi* | [**link_app_user**](docs/AppUserApi.md#link_app_user) | **POST** /apps/{appId}/appusers/{userId}/channels | 
@@ -137,6 +138,7 @@ Class | Method | HTTP request | Description
  - [SmoochApi::AppUserResponse](docs/AppUserResponse.md)
  - [SmoochApi::AppUserUpdate](docs/AppUserUpdate.md)
  - [SmoochApi::AttachmentResponse](docs/AttachmentResponse.md)
+ - [SmoochApi::AuthCodeResponse](docs/AuthCodeResponse.md)
  - [SmoochApi::BusinessSystemItem](docs/BusinessSystemItem.md)
  - [SmoochApi::ChannelEntityItem](docs/ChannelEntityItem.md)
  - [SmoochApi::Client](docs/Client.md)

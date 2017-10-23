@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**delete_app_user_profile**](AppUserApi.md#delete_app_user_profile) | **DELETE** /apps/{appId}/appusers/{userId}/profile | 
 [**get_app_user**](AppUserApi.md#get_app_user) | **GET** /apps/{appId}/appusers/{userId} | 
+[**get_app_user_auth_code**](AppUserApi.md#get_app_user_auth_code) | **GET** /apps/{appId}/appusers/{userId}/authcode | 
 [**get_app_user_business_system_ids**](AppUserApi.md#get_app_user_business_system_ids) | **GET** /apps/{appId}/appusers/{userId}/businesssystems | 
 [**get_app_user_entity_ids**](AppUserApi.md#get_app_user_entity_ids) | **GET** /apps/{appId}/appusers/{userId}/channels | 
 [**link_app_user**](AppUserApi.md#link_app_user) | **POST** /apps/{appId}/appusers/{userId}/channels | 
@@ -113,6 +114,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AppUserResponse**](AppUserResponse.md)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **get_app_user_auth_code**
+> AuthCodeResponse get_app_user_auth_code(app_id, user_id, )
+
+
+
+Get an auth code for facilitating a channel transfer
+
+### Example
+```ruby
+# load the gem
+require 'smooch-api'
+# setup authorization
+SmoochApi.configure do |config|
+  # Configure API key authorization: jwt
+  config.api_key['Authorization'] = 'YOUR JWT'
+  config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = SmoochApi::AppUserApi.new
+
+app_id = "app_id_example" # String | Identifies the app.
+
+user_id = "user_id_example" # String | Identifies the user. Can be either the smoochId or the userId.
+
+
+begin
+  result = api_instance.get_app_user_auth_code(app_id, user_id, )
+  p result
+rescue SmoochApi::ApiError => e
+  puts "Exception when calling AppUserApi->get_app_user_auth_code: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **String**| Identifies the app. | 
+ **user_id** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
+
+### Return type
+
+[**AuthCodeResponse**](AuthCodeResponse.md)
 
 ### Authorization
 
