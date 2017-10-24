@@ -11,7 +11,9 @@ Name | Type | Description | Notes
 **currency** | **String** | The currency of the amount being charged (USD, CAD, etc.). | [optional] 
 **default** | **BOOLEAN** | Flag indicating if the message action is the default for a message item in Facebook Messenger. | [optional] 
 **icon_url** | **String** | An icon to render next to the reply option (Facebook Messenger and Web Messenger only). | [optional] 
-**uri** | **String** | The action URI. This is the link that will be used in the clients when clicking the button. Required for *link* actions.  | [optional] 
+**uri** | **String** | The action URI. This is the link that will be used in the clients when clicking the button. Required for *link* and *webview* actions.  | [optional] 
+**fallback** | **String** | The webview action fallback uri. This is the link that will be used in clients that do not support webviews. Required for *webview* actions.  | [optional] 
+**size** | **String** | The size used to display the webview. Allowed values are [\&quot;compact\&quot;, \&quot;tall\&quot;, \&quot;full\&quot;]. (Optional) Used for *webview* actions.  | [optional] 
 **extra_channel_options** | **Object** | Extra options to pass directly to the channel API. See [Extra Channel Options](https://docs.smooch.io/rest#extra-channel-options-schema) | [optional] 
 
 
