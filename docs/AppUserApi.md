@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**get_app_user_auth_code**](AppUserApi.md#get_app_user_auth_code) | **GET** /apps/{appId}/appusers/{userId}/authcode | 
 [**get_app_user_business_system_ids**](AppUserApi.md#get_app_user_business_system_ids) | **GET** /apps/{appId}/appusers/{userId}/businesssystems | 
 [**get_app_user_entity_ids**](AppUserApi.md#get_app_user_entity_ids) | **GET** /apps/{appId}/appusers/{userId}/channels | 
+[**get_link_requests**](AppUserApi.md#get_link_requests) | **GET** /apps/{appId}/appusers/{userId}/linkrequest | 
 [**link_app_user**](AppUserApi.md#link_app_user) | **POST** /apps/{appId}/appusers/{userId}/channels | 
 [**post_image_message**](AppUserApi.md#post_image_message) | **POST** /apps/{appId}/appusers/{userId}/images | 
 [**pre_create_app_user**](AppUserApi.md#pre_create_app_user) | **POST** /apps/{appId}/appusers | 
@@ -279,6 +280,64 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AppUserChannelsResponse**](AppUserChannelsResponse.md)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **get_link_requests**
+> LinkRequestResponse get_link_requests(app_id, user_id, integration_ids)
+
+
+
+Fetch link requests for the specified app user.
+
+### Example
+```ruby
+# load the gem
+require 'smooch-api'
+# setup authorization
+SmoochApi.configure do |config|
+  # Configure API key authorization: jwt
+  config.api_key['Authorization'] = 'YOUR JWT'
+  config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = SmoochApi::AppUserApi.new
+
+app_id = "app_id_example" # String | Identifies the app.
+
+user_id = "user_id_example" # String | Identifies the user. Can be either the smoochId or the userId.
+
+integration_ids = "integration_ids_example" # String | Comma separated list of integration IDs
+
+
+begin
+  result = api_instance.get_link_requests(app_id, user_id, integration_ids)
+  p result
+rescue SmoochApi::ApiError => e
+  puts "Exception when calling AppUserApi->get_link_requests: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **String**| Identifies the app. | 
+ **user_id** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
+ **integration_ids** | **String**| Comma separated list of integration IDs | 
+
+### Return type
+
+[**LinkRequestResponse**](LinkRequestResponse.md)
 
 ### Authorization
 

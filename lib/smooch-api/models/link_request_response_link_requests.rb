@@ -14,22 +14,37 @@ require 'date'
 
 module SmoochApi
 
-  class SecretKeyCreate
-    # A friendly identifier for the secret key.
-    attr_accessor :name
+  class LinkRequestResponseLinkRequests
+    # The integration ID.
+    attr_accessor :integration_id
+
+    # The integration type.
+    attr_accessor :type
+
+    # The link request code.
+    attr_accessor :code
+
+    # The link request url.
+    attr_accessor :url
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'name' => :'name'
+        :'integration_id' => :'integrationId',
+        :'type' => :'type',
+        :'code' => :'code',
+        :'url' => :'url'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'name' => :'String'
+        :'integration_id' => :'String',
+        :'type' => :'String',
+        :'code' => :'String',
+        :'url' => :'String'
       }
     end
 
@@ -41,8 +56,20 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'name')
-        self.name = attributes[:'name']
+      if attributes.has_key?(:'integrationId')
+        self.integration_id = attributes[:'integrationId']
+      end
+
+      if attributes.has_key?(:'type')
+        self.type = attributes[:'type']
+      end
+
+      if attributes.has_key?(:'code')
+        self.code = attributes[:'code']
+      end
+
+      if attributes.has_key?(:'url')
+        self.url = attributes[:'url']
       end
 
     end
@@ -51,8 +78,20 @@ module SmoochApi
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @name.nil?
-        invalid_properties.push("invalid value for 'name', name cannot be nil.")
+      if @integration_id.nil?
+        invalid_properties.push("invalid value for 'integration_id', integration_id cannot be nil.")
+      end
+
+      if @type.nil?
+        invalid_properties.push("invalid value for 'type', type cannot be nil.")
+      end
+
+      if @code.nil?
+        invalid_properties.push("invalid value for 'code', code cannot be nil.")
+      end
+
+      if @url.nil?
+        invalid_properties.push("invalid value for 'url', url cannot be nil.")
       end
 
       return invalid_properties
@@ -61,7 +100,10 @@ module SmoochApi
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @name.nil?
+      return false if @integration_id.nil?
+      return false if @type.nil?
+      return false if @code.nil?
+      return false if @url.nil?
       return true
     end
 
@@ -70,7 +112,10 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          name == o.name
+          integration_id == o.integration_id &&
+          type == o.type &&
+          code == o.code &&
+          url == o.url
     end
 
     # @see the `==` method
@@ -82,7 +127,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name].hash
+      [integration_id, type, code, url].hash
     end
 
     # Builds the object from hash

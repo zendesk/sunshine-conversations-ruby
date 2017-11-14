@@ -14,22 +14,22 @@ require 'date'
 
 module SmoochApi
 
-  class SecretKeyCreate
-    # A friendly identifier for the secret key.
-    attr_accessor :name
+  class LinkRequestResponse
+    # The list of link requests.
+    attr_accessor :link_requests
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'name' => :'name'
+        :'link_requests' => :'linkRequests'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'name' => :'String'
+        :'link_requests' => :'Array<LinkRequestResponseLinkRequests>'
       }
     end
 
@@ -41,8 +41,10 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'name')
-        self.name = attributes[:'name']
+      if attributes.has_key?(:'linkRequests')
+        if (value = attributes[:'linkRequests']).is_a?(Array)
+          self.link_requests = value
+        end
       end
 
     end
@@ -51,17 +53,12 @@ module SmoochApi
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @name.nil?
-        invalid_properties.push("invalid value for 'name', name cannot be nil.")
-      end
-
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @name.nil?
       return true
     end
 
@@ -70,7 +67,7 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          name == o.name
+          link_requests == o.link_requests
     end
 
     # @see the `==` method
@@ -82,7 +79,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name].hash
+      [link_requests].hash
     end
 
     # Builds the object from hash
