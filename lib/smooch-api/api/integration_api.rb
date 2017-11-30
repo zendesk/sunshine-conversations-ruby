@@ -449,6 +449,73 @@ module SmoochApi
     end
 
     # 
+    # Update the specified integration.
+    # @param app_id Identifies the app.
+    # @param integration_id Identifies the integration.
+    # @param integration_update_body Body for a updateIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration) 
+    # @param [Hash] opts the optional parameters
+    # @return [IntegrationResponse]
+    def update_integration(app_id, integration_id, integration_update_body, opts = {})
+      data, _status_code, _headers = update_integration_with_http_info(app_id, integration_id, integration_update_body, opts)
+      return data
+    end
+
+    # 
+    # Update the specified integration.
+    # @param app_id Identifies the app.
+    # @param integration_id Identifies the integration.
+    # @param integration_update_body Body for a updateIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration) 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(IntegrationResponse, Fixnum, Hash)>] IntegrationResponse data, response status code and response headers
+    def update_integration_with_http_info(app_id, integration_id, integration_update_body, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: IntegrationApi.update_integration ..."
+      end
+      # verify the required parameter 'app_id' is set
+      if @api_client.config.client_side_validation && app_id.nil?
+        fail ArgumentError, "Missing the required parameter 'app_id' when calling IntegrationApi.update_integration"
+      end
+      # verify the required parameter 'integration_id' is set
+      if @api_client.config.client_side_validation && integration_id.nil?
+        fail ArgumentError, "Missing the required parameter 'integration_id' when calling IntegrationApi.update_integration"
+      end
+      # verify the required parameter 'integration_update_body' is set
+      if @api_client.config.client_side_validation && integration_update_body.nil?
+        fail ArgumentError, "Missing the required parameter 'integration_update_body' when calling IntegrationApi.update_integration"
+      end
+      # resource path
+      local_var_path = "/apps/{appId}/integrations/{integrationId}".sub('{' + 'appId' + '}', app_id.to_s).sub('{' + 'integrationId' + '}', integration_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(integration_update_body)
+      auth_names = ['jwt']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'IntegrationResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: IntegrationApi#update_integration\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # 
     # Update the specified integration’s menu.
     # @param app_id Identifies the app.
     # @param integration_id Identifies the integration.

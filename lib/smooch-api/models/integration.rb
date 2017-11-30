@@ -120,6 +120,30 @@ module SmoochApi
     # Smooch will receive all messages sent to this phone number. Required for *messagebird* integrations. 
     attr_accessor :originator
 
+    # This color will be used in the messenger header and the button or tab in idle state. (Optional) Used for *Web Messenger* integrations. 
+    attr_accessor :brand_color
+
+    # This color will be used for customer messages, quick replies and actions in the footer. (Optional) Used for *Web Messenger* integrations. 
+    attr_accessor :conversation_color
+
+    # This color will be used for call-to-actions inside your messages. (Optional) Used for *Web Messenger* integrations. 
+    attr_accessor :action_color
+
+    # Choose how the messenger will appear on your website. Must be either button or tab. (Optional) Used for *Web Messenger* integrations. 
+    attr_accessor :display_style
+
+    # With the button style Web Messenger, you have the option of selecting your own button icon. (Optional) Used for *Web Messenger* integrations. 
+    attr_accessor :button_icon_url
+
+    # A custom business name for the Web Messenger. (Optional) Used for *Web Messenger* integrations. 
+    attr_accessor :integration_order
+
+    # A custom business name for the Web Messenger. (Optional) Used for *Web Messenger* integrations. 
+    attr_accessor :business_name
+
+    # A custom business icon url for the Web Messenger. (Optional) Used for *Web Messenger* integrations. 
+    attr_accessor :business_icon_url
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -158,7 +182,15 @@ module SmoochApi
         :'domain' => :'domain',
         :'incoming_address' => :'incomingAddress',
         :'access_key' => :'accessKey',
-        :'originator' => :'originator'
+        :'originator' => :'originator',
+        :'brand_color' => :'brandColor',
+        :'conversation_color' => :'conversationColor',
+        :'action_color' => :'actionColor',
+        :'display_style' => :'displayStyle',
+        :'button_icon_url' => :'buttonIconUrl',
+        :'integration_order' => :'integrationOrder',
+        :'business_name' => :'businessName',
+        :'business_icon_url' => :'businessIconUrl'
       }
     end
 
@@ -199,7 +231,15 @@ module SmoochApi
         :'domain' => :'String',
         :'incoming_address' => :'String',
         :'access_key' => :'String',
-        :'originator' => :'String'
+        :'originator' => :'String',
+        :'brand_color' => :'String',
+        :'conversation_color' => :'String',
+        :'action_color' => :'String',
+        :'display_style' => :'String',
+        :'button_icon_url' => :'String',
+        :'integration_order' => :'Array<String>',
+        :'business_name' => :'String',
+        :'business_icon_url' => :'String'
       }
     end
 
@@ -351,6 +391,40 @@ module SmoochApi
         self.originator = attributes[:'originator']
       end
 
+      if attributes.has_key?(:'brandColor')
+        self.brand_color = attributes[:'brandColor']
+      end
+
+      if attributes.has_key?(:'conversationColor')
+        self.conversation_color = attributes[:'conversationColor']
+      end
+
+      if attributes.has_key?(:'actionColor')
+        self.action_color = attributes[:'actionColor']
+      end
+
+      if attributes.has_key?(:'displayStyle')
+        self.display_style = attributes[:'displayStyle']
+      end
+
+      if attributes.has_key?(:'buttonIconUrl')
+        self.button_icon_url = attributes[:'buttonIconUrl']
+      end
+
+      if attributes.has_key?(:'integrationOrder')
+        if (value = attributes[:'integrationOrder']).is_a?(Array)
+          self.integration_order = value
+        end
+      end
+
+      if attributes.has_key?(:'businessName')
+        self.business_name = attributes[:'businessName']
+      end
+
+      if attributes.has_key?(:'businessIconUrl')
+        self.business_icon_url = attributes[:'businessIconUrl']
+      end
+
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -415,7 +489,15 @@ module SmoochApi
           domain == o.domain &&
           incoming_address == o.incoming_address &&
           access_key == o.access_key &&
-          originator == o.originator
+          originator == o.originator &&
+          brand_color == o.brand_color &&
+          conversation_color == o.conversation_color &&
+          action_color == o.action_color &&
+          display_style == o.display_style &&
+          button_icon_url == o.button_icon_url &&
+          integration_order == o.integration_order &&
+          business_name == o.business_name &&
+          business_icon_url == o.business_icon_url
     end
 
     # @see the `==` method
@@ -427,7 +509,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [_id, type, page_access_token, app_id, app_secret, webhook_secret, page_id, account_sid, auth_token, phone_number_sid, phone_number, name, token, uri, channel_access_token, bot_name, encoding_aes_key, from_address, certificate, password, auto_update_badge, production, server_key, sender_id, consumer_key, consumer_secret, access_token_key, access_token_secret, user_id, username, api_key, domain, incoming_address, access_key, originator].hash
+      [_id, type, page_access_token, app_id, app_secret, webhook_secret, page_id, account_sid, auth_token, phone_number_sid, phone_number, name, token, uri, channel_access_token, bot_name, encoding_aes_key, from_address, certificate, password, auto_update_badge, production, server_key, sender_id, consumer_key, consumer_secret, access_token_key, access_token_secret, user_id, username, api_key, domain, incoming_address, access_key, originator, brand_color, conversation_color, action_color, display_style, button_icon_url, integration_order, business_name, business_icon_url].hash
     end
 
     # Builds the object from hash

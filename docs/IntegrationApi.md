@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**get_integration**](IntegrationApi.md#get_integration) | **GET** /apps/{appId}/integrations/{integrationId} | 
 [**get_integration_menu**](IntegrationApi.md#get_integration_menu) | **GET** /apps/{appId}/integrations/{integrationId}/menu | 
 [**list_integrations**](IntegrationApi.md#list_integrations) | **GET** /apps/{appId}/integrations | 
+[**update_integration**](IntegrationApi.md#update_integration) | **PUT** /apps/{appId}/integrations/{integrationId} | 
 [**update_integration_menu**](IntegrationApi.md#update_integration_menu) | **PUT** /apps/{appId}/integrations/{integrationId}/menu | 
 
 
@@ -389,6 +390,64 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListIntegrationsResponse**](ListIntegrationsResponse.md)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **update_integration**
+> IntegrationResponse update_integration(app_id, integration_idintegration_update_body)
+
+
+
+Update the specified integration.
+
+### Example
+```ruby
+# load the gem
+require 'smooch-api'
+# setup authorization
+SmoochApi.configure do |config|
+  # Configure API key authorization: jwt
+  config.api_key['Authorization'] = 'YOUR JWT'
+  config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = SmoochApi::IntegrationApi.new
+
+app_id = "app_id_example" # String | Identifies the app.
+
+integration_id = "integration_id_example" # String | Identifies the integration.
+
+integration_update_body = SmoochApi::IntegrationUpdate.new # IntegrationUpdate | Body for a updateIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration) 
+
+
+begin
+  result = api_instance.update_integration(app_id, integration_idintegration_update_body)
+  p result
+rescue SmoochApi::ApiError => e
+  puts "Exception when calling IntegrationApi->update_integration: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **String**| Identifies the app. | 
+ **integration_id** | **String**| Identifies the integration. | 
+ **integration_update_body** | [**IntegrationUpdate**](IntegrationUpdate.md)| Body for a updateIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration)  | 
+
+### Return type
+
+[**IntegrationResponse**](IntegrationResponse.md)
 
 ### Authorization
 

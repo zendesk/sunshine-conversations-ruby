@@ -112,6 +112,7 @@ Class | Method | HTTP request | Description
 *SmoochApi::IntegrationApi* | [**get_integration**](docs/IntegrationApi.md#get_integration) | **GET** /apps/{appId}/integrations/{integrationId} | 
 *SmoochApi::IntegrationApi* | [**get_integration_menu**](docs/IntegrationApi.md#get_integration_menu) | **GET** /apps/{appId}/integrations/{integrationId}/menu | 
 *SmoochApi::IntegrationApi* | [**list_integrations**](docs/IntegrationApi.md#list_integrations) | **GET** /apps/{appId}/integrations | 
+*SmoochApi::IntegrationApi* | [**update_integration**](docs/IntegrationApi.md#update_integration) | **PUT** /apps/{appId}/integrations/{integrationId} | 
 *SmoochApi::IntegrationApi* | [**update_integration_menu**](docs/IntegrationApi.md#update_integration_menu) | **PUT** /apps/{appId}/integrations/{integrationId}/menu | 
 *SmoochApi::MenuApi* | [**delete_menu**](docs/MenuApi.md#delete_menu) | **DELETE** /apps/{appId}/menu | 
 *SmoochApi::MenuApi* | [**get_menu**](docs/MenuApi.md#get_menu) | **GET** /apps/{appId}/menu | 
@@ -152,6 +153,7 @@ Class | Method | HTTP request | Description
  - [SmoochApi::Integration](docs/Integration.md)
  - [SmoochApi::IntegrationCreate](docs/IntegrationCreate.md)
  - [SmoochApi::IntegrationResponse](docs/IntegrationResponse.md)
+ - [SmoochApi::IntegrationUpdate](docs/IntegrationUpdate.md)
  - [SmoochApi::JwtResponse](docs/JwtResponse.md)
  - [SmoochApi::LinkRequestResponse](docs/LinkRequestResponse.md)
  - [SmoochApi::LinkRequestResponseLinkRequests](docs/LinkRequestResponseLinkRequests.md)
