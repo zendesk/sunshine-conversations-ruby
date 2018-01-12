@@ -316,7 +316,7 @@ app_id = "app_id_example" # String | Identifies the app.
 
 user_id = "user_id_example" # String | Identifies the user. Can be either the smoochId or the userId.
 
-integration_ids = "integration_ids_example" # String | Comma separated list of integration IDs
+integration_ids = ["integration_ids_example"] # Array<String> | List of integration IDs
 
 
 begin
@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **String**| Identifies the app. | 
  **user_id** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
- **integration_ids** | **String**| Comma separated list of integration IDs | 
+ **integration_ids** | [**Array&lt;String&gt;**](String.md)| List of integration IDs | 
 
 ### Return type
 
