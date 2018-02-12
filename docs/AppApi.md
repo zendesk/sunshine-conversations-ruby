@@ -411,8 +411,9 @@ end
 api_instance = SmoochApi::AppApi.new
 
 opts = { 
-  limit: 0, # Integer | The number of records to return.
-  offset: 0 # Integer | The number of initial records to skip before picking records to return.
+  limit: 25, # Integer | The number of records to return.
+  offset: 0, # Integer | The number of initial records to skip before picking records to return.
+  service_account_id: "" # String | The service account ID for which to list apps.
 }
 
 begin
@@ -427,8 +428,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **Integer**| The number of records to return. | [optional] [default to 0]
+ **limit** | **Integer**| The number of records to return. | [optional] [default to 25]
  **offset** | **Integer**| The number of initial records to skip before picking records to return. | [optional] [default to 0]
+ **service_account_id** | **String**| The service account ID for which to list apps. | [optional] [default to ]
 
 ### Return type
 

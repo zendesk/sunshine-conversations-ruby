@@ -16,7 +16,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 2.8.0'
+    gem 'smooch-api', '~> 2.9.0'
 
 ## Getting Started
 
@@ -117,6 +117,16 @@ Class | Method | HTTP request | Description
 *SmoochApi::MenuApi* | [**delete_menu**](docs/MenuApi.md#delete_menu) | **DELETE** /apps/{appId}/menu | 
 *SmoochApi::MenuApi* | [**get_menu**](docs/MenuApi.md#get_menu) | **GET** /apps/{appId}/menu | 
 *SmoochApi::MenuApi* | [**update_menu**](docs/MenuApi.md#update_menu) | **PUT** /apps/{appId}/menu | 
+*SmoochApi::ServiceAccountApi* | [**create_secret_key**](docs/ServiceAccountApi.md#create_secret_key) | **POST** /serviceaccounts/{serviceAccountId}/keys | 
+*SmoochApi::ServiceAccountApi* | [**create_service_account**](docs/ServiceAccountApi.md#create_service_account) | **POST** /serviceaccounts | 
+*SmoochApi::ServiceAccountApi* | [**delete_secret_key**](docs/ServiceAccountApi.md#delete_secret_key) | **DELETE** /serviceaccounts/{serviceAccountId}/keys/{keyId} | 
+*SmoochApi::ServiceAccountApi* | [**delete_service_account**](docs/ServiceAccountApi.md#delete_service_account) | **DELETE** /serviceaccounts/{serviceAccountId} | 
+*SmoochApi::ServiceAccountApi* | [**get_jwt**](docs/ServiceAccountApi.md#get_jwt) | **GET** /serviceaccounts/{serviceAccountId}/keys/{keyId}/jwt | 
+*SmoochApi::ServiceAccountApi* | [**get_secret_key**](docs/ServiceAccountApi.md#get_secret_key) | **GET** /serviceaccounts/{serviceAccountId}/keys/{keyId} | 
+*SmoochApi::ServiceAccountApi* | [**get_service_account**](docs/ServiceAccountApi.md#get_service_account) | **GET** /serviceaccounts/{serviceAccountId} | 
+*SmoochApi::ServiceAccountApi* | [**list_secret_keys**](docs/ServiceAccountApi.md#list_secret_keys) | **GET** /serviceaccounts/{serviceAccountId}/keys | 
+*SmoochApi::ServiceAccountApi* | [**list_service_accounts**](docs/ServiceAccountApi.md#list_service_accounts) | **GET** /serviceaccounts | 
+*SmoochApi::ServiceAccountApi* | [**update_service_account**](docs/ServiceAccountApi.md#update_service_account) | **PUT** /serviceaccounts/{serviceAccountId} | 
 *SmoochApi::WebhookApi* | [**create_webhook**](docs/WebhookApi.md#create_webhook) | **POST** /apps/{appId}/webhooks | 
 *SmoochApi::WebhookApi* | [**delete_webhook**](docs/WebhookApi.md#delete_webhook) | **DELETE** /apps/{appId}/webhooks/{webhookId} | 
 *SmoochApi::WebhookApi* | [**get_webhook**](docs/WebhookApi.md#get_webhook) | **GET** /apps/{appId}/webhooks/{webhookId} | 
@@ -160,6 +170,7 @@ Class | Method | HTTP request | Description
  - [SmoochApi::ListAppsResponse](docs/ListAppsResponse.md)
  - [SmoochApi::ListIntegrationsResponse](docs/ListIntegrationsResponse.md)
  - [SmoochApi::ListSecretKeysResponse](docs/ListSecretKeysResponse.md)
+ - [SmoochApi::ListServiceAccountsResponse](docs/ListServiceAccountsResponse.md)
  - [SmoochApi::ListWebhooksResponse](docs/ListWebhooksResponse.md)
  - [SmoochApi::Menu](docs/Menu.md)
  - [SmoochApi::MenuItem](docs/MenuItem.md)
@@ -171,6 +182,10 @@ Class | Method | HTTP request | Description
  - [SmoochApi::SecretKey](docs/SecretKey.md)
  - [SmoochApi::SecretKeyCreate](docs/SecretKeyCreate.md)
  - [SmoochApi::SecretKeyResponse](docs/SecretKeyResponse.md)
+ - [SmoochApi::ServiceAccount](docs/ServiceAccount.md)
+ - [SmoochApi::ServiceAccountCreate](docs/ServiceAccountCreate.md)
+ - [SmoochApi::ServiceAccountResponse](docs/ServiceAccountResponse.md)
+ - [SmoochApi::ServiceAccountUpdate](docs/ServiceAccountUpdate.md)
  - [SmoochApi::Source](docs/Source.md)
  - [SmoochApi::TypingActivityTrigger](docs/TypingActivityTrigger.md)
  - [SmoochApi::Webhook](docs/Webhook.md)

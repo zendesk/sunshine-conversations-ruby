@@ -14,22 +14,22 @@ require 'date'
 
 module SmoochApi
 
-  class ListSecretKeysResponse
-    # The list of secret keys.
-    attr_accessor :keys
+  class ServiceAccountUpdate
+    # The service account's name.
+    attr_accessor :name
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'keys' => :'keys'
+        :'name' => :'name'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'keys' => :'Array<SecretKey>'
+        :'name' => :'String'
       }
     end
 
@@ -41,10 +41,8 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'keys')
-        if (value = attributes[:'keys']).is_a?(Array)
-          self.keys = value
-        end
+      if attributes.has_key?(:'name')
+        self.name = attributes[:'name']
       end
 
     end
@@ -53,12 +51,17 @@ module SmoochApi
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @name.nil?
+        invalid_properties.push("invalid value for 'name', name cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @name.nil?
       return true
     end
 
@@ -67,7 +70,7 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          keys == o.keys
+          name == o.name
     end
 
     # @see the `==` method
@@ -79,7 +82,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [keys].hash
+      [name].hash
     end
 
     # Builds the object from hash

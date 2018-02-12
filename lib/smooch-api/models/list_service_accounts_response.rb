@@ -14,22 +14,32 @@ require 'date'
 
 module SmoochApi
 
-  class ListSecretKeysResponse
-    # The list of secret keys.
-    attr_accessor :keys
+  class ListServiceAccountsResponse
+    # The list of service accounts.
+    attr_accessor :service_accounts
+
+    # Flag indicating if there are more service accounts that are not present in the response.
+    attr_accessor :has_more
+
+    # The number of service account records skipped in the returned list.
+    attr_accessor :offset
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'keys' => :'keys'
+        :'service_accounts' => :'serviceAccounts',
+        :'has_more' => :'hasMore',
+        :'offset' => :'offset'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'keys' => :'Array<SecretKey>'
+        :'service_accounts' => :'Array<ServiceAccount>',
+        :'has_more' => :'BOOLEAN',
+        :'offset' => :'Integer'
       }
     end
 
@@ -41,10 +51,18 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'keys')
-        if (value = attributes[:'keys']).is_a?(Array)
-          self.keys = value
+      if attributes.has_key?(:'serviceAccounts')
+        if (value = attributes[:'serviceAccounts']).is_a?(Array)
+          self.service_accounts = value
         end
+      end
+
+      if attributes.has_key?(:'hasMore')
+        self.has_more = attributes[:'hasMore']
+      end
+
+      if attributes.has_key?(:'offset')
+        self.offset = attributes[:'offset']
       end
 
     end
@@ -67,7 +85,9 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          keys == o.keys
+          service_accounts == o.service_accounts &&
+          has_more == o.has_more &&
+          offset == o.offset
     end
 
     # @see the `==` method
@@ -79,7 +99,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [keys].hash
+      [service_accounts, has_more, offset].hash
     end
 
     # Builds the object from hash

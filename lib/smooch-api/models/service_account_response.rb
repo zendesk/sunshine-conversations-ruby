@@ -14,22 +14,22 @@ require 'date'
 
 module SmoochApi
 
-  class ListSecretKeysResponse
-    # The list of secret keys.
-    attr_accessor :keys
+  class ServiceAccountResponse
+    # The service account.
+    attr_accessor :service_account
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'keys' => :'keys'
+        :'service_account' => :'serviceAccount'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'keys' => :'Array<SecretKey>'
+        :'service_account' => :'ServiceAccount'
       }
     end
 
@@ -41,10 +41,8 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'keys')
-        if (value = attributes[:'keys']).is_a?(Array)
-          self.keys = value
-        end
+      if attributes.has_key?(:'serviceAccount')
+        self.service_account = attributes[:'serviceAccount']
       end
 
     end
@@ -67,7 +65,7 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          keys == o.keys
+          service_account == o.service_account
     end
 
     # @see the `==` method
@@ -79,7 +77,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [keys].hash
+      [service_account].hash
     end
 
     # Builds the object from hash
