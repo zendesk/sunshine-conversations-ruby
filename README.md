@@ -16,7 +16,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 3.0.0'
+    gem 'smooch-api', '~> 3.1.0'
 
 ## Getting Started
 
@@ -74,64 +74,64 @@ end
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.smooch.io/v1*
+All URIs are relative to *https://api.smooch.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*SmoochApi::AppApi* | [**create_app**](docs/AppApi.md#create_app) | **POST** /apps | 
-*SmoochApi::AppApi* | [**create_secret_key**](docs/AppApi.md#create_secret_key) | **POST** /apps/{appId}/keys | 
-*SmoochApi::AppApi* | [**delete_app**](docs/AppApi.md#delete_app) | **DELETE** /apps/{appId} | 
-*SmoochApi::AppApi* | [**delete_secret_key**](docs/AppApi.md#delete_secret_key) | **DELETE** /apps/{appId}/keys/{keyId} | 
-*SmoochApi::AppApi* | [**get_app**](docs/AppApi.md#get_app) | **GET** /apps/{appId} | 
-*SmoochApi::AppApi* | [**get_app_jwt**](docs/AppApi.md#get_app_jwt) | **GET** /apps/{appId}/keys/{keyId}/jwt | 
-*SmoochApi::AppApi* | [**get_secret_key**](docs/AppApi.md#get_secret_key) | **GET** /apps/{appId}/keys/{keyId} | 
-*SmoochApi::AppApi* | [**list_apps**](docs/AppApi.md#list_apps) | **GET** /apps | 
-*SmoochApi::AppApi* | [**list_secret_keys**](docs/AppApi.md#list_secret_keys) | **GET** /apps/{appId}/keys | 
-*SmoochApi::AppApi* | [**update_app**](docs/AppApi.md#update_app) | **PUT** /apps/{appId} | 
-*SmoochApi::AppUserApi* | [**delete_app_user_profile**](docs/AppUserApi.md#delete_app_user_profile) | **DELETE** /apps/{appId}/appusers/{userId}/profile | 
-*SmoochApi::AppUserApi* | [**get_app_user**](docs/AppUserApi.md#get_app_user) | **GET** /apps/{appId}/appusers/{userId} | 
-*SmoochApi::AppUserApi* | [**get_app_user_auth_code**](docs/AppUserApi.md#get_app_user_auth_code) | **GET** /apps/{appId}/appusers/{userId}/authcode | 
-*SmoochApi::AppUserApi* | [**get_app_user_business_system_ids**](docs/AppUserApi.md#get_app_user_business_system_ids) | **GET** /apps/{appId}/appusers/{userId}/businesssystems | 
-*SmoochApi::AppUserApi* | [**get_app_user_entity_ids**](docs/AppUserApi.md#get_app_user_entity_ids) | **GET** /apps/{appId}/appusers/{userId}/channels | 
-*SmoochApi::AppUserApi* | [**get_link_requests**](docs/AppUserApi.md#get_link_requests) | **GET** /apps/{appId}/appusers/{userId}/linkrequest | 
-*SmoochApi::AppUserApi* | [**link_app_user**](docs/AppUserApi.md#link_app_user) | **POST** /apps/{appId}/appusers/{userId}/channels | 
-*SmoochApi::AppUserApi* | [**post_image_message**](docs/AppUserApi.md#post_image_message) | **POST** /apps/{appId}/appusers/{userId}/images | 
-*SmoochApi::AppUserApi* | [**pre_create_app_user**](docs/AppUserApi.md#pre_create_app_user) | **POST** /apps/{appId}/appusers | 
-*SmoochApi::AppUserApi* | [**unlink_app_user**](docs/AppUserApi.md#unlink_app_user) | **DELETE** /apps/{appId}/appusers/{userId}/channels/{channel} | 
-*SmoochApi::AppUserApi* | [**update_app_user**](docs/AppUserApi.md#update_app_user) | **PUT** /apps/{appId}/appusers/{userId} | 
-*SmoochApi::AttachmentsApi* | [**upload_attachment**](docs/AttachmentsApi.md#upload_attachment) | **POST** /apps/{appId}/attachments | 
-*SmoochApi::ConversationApi* | [**delete_messages**](docs/ConversationApi.md#delete_messages) | **DELETE** /apps/{appId}/appusers/{userId}/messages | 
-*SmoochApi::ConversationApi* | [**get_messages**](docs/ConversationApi.md#get_messages) | **GET** /apps/{appId}/appusers/{userId}/messages | 
-*SmoochApi::ConversationApi* | [**post_message**](docs/ConversationApi.md#post_message) | **POST** /apps/{appId}/appusers/{userId}/messages | 
-*SmoochApi::ConversationApi* | [**reset_unread_count**](docs/ConversationApi.md#reset_unread_count) | **POST** /apps/{appId}/appusers/{userId}/conversation/read | 
-*SmoochApi::ConversationApi* | [**trigger_typing_activity**](docs/ConversationApi.md#trigger_typing_activity) | **POST** /apps/{appId}/appusers/{userId}/conversation/activity | 
-*SmoochApi::IntegrationApi* | [**create_integration**](docs/IntegrationApi.md#create_integration) | **POST** /apps/{appId}/integrations | 
-*SmoochApi::IntegrationApi* | [**create_integration_menu**](docs/IntegrationApi.md#create_integration_menu) | **POST** /apps/{appId}/integrations/{integrationId}/menu | 
-*SmoochApi::IntegrationApi* | [**delete_integration**](docs/IntegrationApi.md#delete_integration) | **DELETE** /apps/{appId}/integrations/{integrationId} | 
-*SmoochApi::IntegrationApi* | [**delete_integration_menu**](docs/IntegrationApi.md#delete_integration_menu) | **DELETE** /apps/{appId}/integrations/{integrationId}/menu | 
-*SmoochApi::IntegrationApi* | [**get_integration**](docs/IntegrationApi.md#get_integration) | **GET** /apps/{appId}/integrations/{integrationId} | 
-*SmoochApi::IntegrationApi* | [**get_integration_menu**](docs/IntegrationApi.md#get_integration_menu) | **GET** /apps/{appId}/integrations/{integrationId}/menu | 
-*SmoochApi::IntegrationApi* | [**list_integrations**](docs/IntegrationApi.md#list_integrations) | **GET** /apps/{appId}/integrations | 
-*SmoochApi::IntegrationApi* | [**update_integration**](docs/IntegrationApi.md#update_integration) | **PUT** /apps/{appId}/integrations/{integrationId} | 
-*SmoochApi::IntegrationApi* | [**update_integration_menu**](docs/IntegrationApi.md#update_integration_menu) | **PUT** /apps/{appId}/integrations/{integrationId}/menu | 
-*SmoochApi::MenuApi* | [**delete_menu**](docs/MenuApi.md#delete_menu) | **DELETE** /apps/{appId}/menu | 
-*SmoochApi::MenuApi* | [**get_menu**](docs/MenuApi.md#get_menu) | **GET** /apps/{appId}/menu | 
-*SmoochApi::MenuApi* | [**update_menu**](docs/MenuApi.md#update_menu) | **PUT** /apps/{appId}/menu | 
-*SmoochApi::ServiceAccountApi* | [**create_secret_key**](docs/ServiceAccountApi.md#create_secret_key) | **POST** /serviceaccounts/{serviceAccountId}/keys | 
-*SmoochApi::ServiceAccountApi* | [**create_service_account**](docs/ServiceAccountApi.md#create_service_account) | **POST** /serviceaccounts | 
-*SmoochApi::ServiceAccountApi* | [**delete_secret_key**](docs/ServiceAccountApi.md#delete_secret_key) | **DELETE** /serviceaccounts/{serviceAccountId}/keys/{keyId} | 
-*SmoochApi::ServiceAccountApi* | [**delete_service_account**](docs/ServiceAccountApi.md#delete_service_account) | **DELETE** /serviceaccounts/{serviceAccountId} | 
-*SmoochApi::ServiceAccountApi* | [**get_jwt**](docs/ServiceAccountApi.md#get_jwt) | **GET** /serviceaccounts/{serviceAccountId}/keys/{keyId}/jwt | 
-*SmoochApi::ServiceAccountApi* | [**get_secret_key**](docs/ServiceAccountApi.md#get_secret_key) | **GET** /serviceaccounts/{serviceAccountId}/keys/{keyId} | 
-*SmoochApi::ServiceAccountApi* | [**get_service_account**](docs/ServiceAccountApi.md#get_service_account) | **GET** /serviceaccounts/{serviceAccountId} | 
-*SmoochApi::ServiceAccountApi* | [**list_secret_keys**](docs/ServiceAccountApi.md#list_secret_keys) | **GET** /serviceaccounts/{serviceAccountId}/keys | 
-*SmoochApi::ServiceAccountApi* | [**list_service_accounts**](docs/ServiceAccountApi.md#list_service_accounts) | **GET** /serviceaccounts | 
-*SmoochApi::ServiceAccountApi* | [**update_service_account**](docs/ServiceAccountApi.md#update_service_account) | **PUT** /serviceaccounts/{serviceAccountId} | 
-*SmoochApi::WebhookApi* | [**create_webhook**](docs/WebhookApi.md#create_webhook) | **POST** /apps/{appId}/webhooks | 
-*SmoochApi::WebhookApi* | [**delete_webhook**](docs/WebhookApi.md#delete_webhook) | **DELETE** /apps/{appId}/webhooks/{webhookId} | 
-*SmoochApi::WebhookApi* | [**get_webhook**](docs/WebhookApi.md#get_webhook) | **GET** /apps/{appId}/webhooks/{webhookId} | 
-*SmoochApi::WebhookApi* | [**list_webhooks**](docs/WebhookApi.md#list_webhooks) | **GET** /apps/{appId}/webhooks | 
-*SmoochApi::WebhookApi* | [**update_webhook**](docs/WebhookApi.md#update_webhook) | **PUT** /apps/{appId}/webhooks/{webhookId} | 
+*SmoochApi::AppApi* | [**create_app**](docs/AppApi.md#create_app) | **POST** /v1/apps | 
+*SmoochApi::AppApi* | [**create_secret_key**](docs/AppApi.md#create_secret_key) | **POST** /v1/apps/{appId}/keys | 
+*SmoochApi::AppApi* | [**delete_app**](docs/AppApi.md#delete_app) | **DELETE** /v1/apps/{appId} | 
+*SmoochApi::AppApi* | [**delete_secret_key**](docs/AppApi.md#delete_secret_key) | **DELETE** /v1/apps/{appId}/keys/{keyId} | 
+*SmoochApi::AppApi* | [**get_app**](docs/AppApi.md#get_app) | **GET** /v1/apps/{appId} | 
+*SmoochApi::AppApi* | [**get_app_jwt**](docs/AppApi.md#get_app_jwt) | **GET** /v1/apps/{appId}/keys/{keyId}/jwt | 
+*SmoochApi::AppApi* | [**get_secret_key**](docs/AppApi.md#get_secret_key) | **GET** /v1/apps/{appId}/keys/{keyId} | 
+*SmoochApi::AppApi* | [**list_apps**](docs/AppApi.md#list_apps) | **GET** /v1/apps | 
+*SmoochApi::AppApi* | [**list_secret_keys**](docs/AppApi.md#list_secret_keys) | **GET** /v1/apps/{appId}/keys | 
+*SmoochApi::AppApi* | [**update_app**](docs/AppApi.md#update_app) | **PUT** /v1/apps/{appId} | 
+*SmoochApi::AppUserApi* | [**delete_app_user_profile**](docs/AppUserApi.md#delete_app_user_profile) | **DELETE** /v1/apps/{appId}/appusers/{userId}/profile | 
+*SmoochApi::AppUserApi* | [**get_app_user**](docs/AppUserApi.md#get_app_user) | **GET** /v1/apps/{appId}/appusers/{userId} | 
+*SmoochApi::AppUserApi* | [**get_app_user_auth_code**](docs/AppUserApi.md#get_app_user_auth_code) | **GET** /v1/apps/{appId}/appusers/{userId}/authcode | 
+*SmoochApi::AppUserApi* | [**get_app_user_business_system_ids**](docs/AppUserApi.md#get_app_user_business_system_ids) | **GET** /v1/apps/{appId}/appusers/{userId}/businesssystems | 
+*SmoochApi::AppUserApi* | [**get_app_user_entity_ids**](docs/AppUserApi.md#get_app_user_entity_ids) | **GET** /v1/apps/{appId}/appusers/{userId}/channels | 
+*SmoochApi::AppUserApi* | [**get_link_requests**](docs/AppUserApi.md#get_link_requests) | **GET** /v1/apps/{appId}/appusers/{userId}/linkrequest | 
+*SmoochApi::AppUserApi* | [**link_app_user**](docs/AppUserApi.md#link_app_user) | **POST** /v1/apps/{appId}/appusers/{userId}/channels | 
+*SmoochApi::AppUserApi* | [**post_image_message**](docs/AppUserApi.md#post_image_message) | **POST** /v1/apps/{appId}/appusers/{userId}/images | 
+*SmoochApi::AppUserApi* | [**pre_create_app_user**](docs/AppUserApi.md#pre_create_app_user) | **POST** /v1/apps/{appId}/appusers | 
+*SmoochApi::AppUserApi* | [**unlink_app_user**](docs/AppUserApi.md#unlink_app_user) | **DELETE** /v1/apps/{appId}/appusers/{userId}/channels/{channel} | 
+*SmoochApi::AppUserApi* | [**update_app_user**](docs/AppUserApi.md#update_app_user) | **PUT** /v1/apps/{appId}/appusers/{userId} | 
+*SmoochApi::AttachmentsApi* | [**upload_attachment**](docs/AttachmentsApi.md#upload_attachment) | **POST** /v1/apps/{appId}/attachments | 
+*SmoochApi::ConversationApi* | [**delete_messages**](docs/ConversationApi.md#delete_messages) | **DELETE** /v1/apps/{appId}/appusers/{userId}/messages | 
+*SmoochApi::ConversationApi* | [**get_messages**](docs/ConversationApi.md#get_messages) | **GET** /v1/apps/{appId}/appusers/{userId}/messages | 
+*SmoochApi::ConversationApi* | [**post_message**](docs/ConversationApi.md#post_message) | **POST** /v1/apps/{appId}/appusers/{userId}/messages | 
+*SmoochApi::ConversationApi* | [**reset_unread_count**](docs/ConversationApi.md#reset_unread_count) | **POST** /v1/apps/{appId}/appusers/{userId}/conversation/read | 
+*SmoochApi::ConversationApi* | [**trigger_typing_activity**](docs/ConversationApi.md#trigger_typing_activity) | **POST** /v1/apps/{appId}/appusers/{userId}/conversation/activity | 
+*SmoochApi::IntegrationApi* | [**create_integration**](docs/IntegrationApi.md#create_integration) | **POST** /v1/apps/{appId}/integrations | 
+*SmoochApi::IntegrationApi* | [**create_integration_menu**](docs/IntegrationApi.md#create_integration_menu) | **POST** /v1/apps/{appId}/integrations/{integrationId}/menu | 
+*SmoochApi::IntegrationApi* | [**delete_integration**](docs/IntegrationApi.md#delete_integration) | **DELETE** /v1/apps/{appId}/integrations/{integrationId} | 
+*SmoochApi::IntegrationApi* | [**delete_integration_menu**](docs/IntegrationApi.md#delete_integration_menu) | **DELETE** /v1/apps/{appId}/integrations/{integrationId}/menu | 
+*SmoochApi::IntegrationApi* | [**get_integration**](docs/IntegrationApi.md#get_integration) | **GET** /v1/apps/{appId}/integrations/{integrationId} | 
+*SmoochApi::IntegrationApi* | [**get_integration_menu**](docs/IntegrationApi.md#get_integration_menu) | **GET** /v1/apps/{appId}/integrations/{integrationId}/menu | 
+*SmoochApi::IntegrationApi* | [**list_integrations**](docs/IntegrationApi.md#list_integrations) | **GET** /v1/apps/{appId}/integrations | 
+*SmoochApi::IntegrationApi* | [**update_integration**](docs/IntegrationApi.md#update_integration) | **PUT** /v1/apps/{appId}/integrations/{integrationId} | 
+*SmoochApi::IntegrationApi* | [**update_integration_menu**](docs/IntegrationApi.md#update_integration_menu) | **PUT** /v1/apps/{appId}/integrations/{integrationId}/menu | 
+*SmoochApi::MenuApi* | [**delete_menu**](docs/MenuApi.md#delete_menu) | **DELETE** /v1/apps/{appId}/menu | 
+*SmoochApi::MenuApi* | [**get_menu**](docs/MenuApi.md#get_menu) | **GET** /v1/apps/{appId}/menu | 
+*SmoochApi::MenuApi* | [**update_menu**](docs/MenuApi.md#update_menu) | **PUT** /v1/apps/{appId}/menu | 
+*SmoochApi::ServiceAccountApi* | [**create_secret_key**](docs/ServiceAccountApi.md#create_secret_key) | **POST** /v1/serviceaccounts/{serviceAccountId}/keys | 
+*SmoochApi::ServiceAccountApi* | [**create_service_account**](docs/ServiceAccountApi.md#create_service_account) | **POST** /v1/serviceaccounts | 
+*SmoochApi::ServiceAccountApi* | [**delete_secret_key**](docs/ServiceAccountApi.md#delete_secret_key) | **DELETE** /v1/serviceaccounts/{serviceAccountId}/keys/{keyId} | 
+*SmoochApi::ServiceAccountApi* | [**delete_service_account**](docs/ServiceAccountApi.md#delete_service_account) | **DELETE** /v1/serviceaccounts/{serviceAccountId} | 
+*SmoochApi::ServiceAccountApi* | [**get_jwt**](docs/ServiceAccountApi.md#get_jwt) | **GET** /v1/serviceaccounts/{serviceAccountId}/keys/{keyId}/jwt | 
+*SmoochApi::ServiceAccountApi* | [**get_secret_key**](docs/ServiceAccountApi.md#get_secret_key) | **GET** /v1/serviceaccounts/{serviceAccountId}/keys/{keyId} | 
+*SmoochApi::ServiceAccountApi* | [**get_service_account**](docs/ServiceAccountApi.md#get_service_account) | **GET** /v1/serviceaccounts/{serviceAccountId} | 
+*SmoochApi::ServiceAccountApi* | [**list_secret_keys**](docs/ServiceAccountApi.md#list_secret_keys) | **GET** /v1/serviceaccounts/{serviceAccountId}/keys | 
+*SmoochApi::ServiceAccountApi* | [**list_service_accounts**](docs/ServiceAccountApi.md#list_service_accounts) | **GET** /v1/serviceaccounts | 
+*SmoochApi::ServiceAccountApi* | [**update_service_account**](docs/ServiceAccountApi.md#update_service_account) | **PUT** /v1/serviceaccounts/{serviceAccountId} | 
+*SmoochApi::WebhookApi* | [**create_webhook**](docs/WebhookApi.md#create_webhook) | **POST** /v1/apps/{appId}/webhooks | 
+*SmoochApi::WebhookApi* | [**delete_webhook**](docs/WebhookApi.md#delete_webhook) | **DELETE** /v1/apps/{appId}/webhooks/{webhookId} | 
+*SmoochApi::WebhookApi* | [**get_webhook**](docs/WebhookApi.md#get_webhook) | **GET** /v1/apps/{appId}/webhooks/{webhookId} | 
+*SmoochApi::WebhookApi* | [**list_webhooks**](docs/WebhookApi.md#list_webhooks) | **GET** /v1/apps/{appId}/webhooks | 
+*SmoochApi::WebhookApi* | [**update_webhook**](docs/WebhookApi.md#update_webhook) | **PUT** /v1/apps/{appId}/webhooks/{webhookId} | 
 
 
 ## Documentation for Models
