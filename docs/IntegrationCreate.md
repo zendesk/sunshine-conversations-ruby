@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **auth_token** | **String** | Twilio Auth Token. Required for *twilio* integrations.  | [optional] 
 **phone_number_sid** | **String** | SID for specific phone number. Required for *twilio* integrations.  | [optional] 
 **token** | **String** | Telegram Bot Token OR Viber Public Account token. Required for *twilio* and *viber* integrations.  | [optional] 
+**channel_id** | **String** | LINE Channel ID. Required for *line* integrations.  | [optional] 
+**channel_secret** | **String** | LINE Channel Secret. Required for *line* integrations.  | [optional] 
 **channel_access_token** | **String** | LINE Channel Access Token. Required for *line* integrations.  | [optional] 
 **encoding_aes_key** | **String** | AES Encoding Key. (Optional) Used for *wechat* integrations.  | [optional] 
 **from_address** | **String** | Email will display as coming from this address. (Optional) Used for *frontendEmail* integrations.  | [optional] 
