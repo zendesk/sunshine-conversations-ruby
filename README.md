@@ -72,6 +72,18 @@ end
 
 ```
 
+### Region
+
+Smooch is available in the following [regions](https://docs.smooch.io/rest/#region). The US region will be used by default. To target any other region, specify the region [API host](https://docs.smooch.io/rest/#region) in `config.host`. For example:
+
+```ruby
+{{{moduleName}}}.configure do |config|
+  config.api_key['Authorization'] = '<jwt>'
+  config.api_key_prefix['Authorization'] = 'Bearer'
+  config.host = 'api.eu-1.smooch.io'
+end
+```
+
 ## Documentation for API Endpoints
 
 All URIs are relative to *https://api.smooch.io*
