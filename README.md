@@ -16,7 +16,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 3.3.0'
+    gem 'smooch-api', '~> 3.4.0'
 
 ## Getting Started
 
@@ -77,7 +77,7 @@ end
 Smooch is available in the following [regions](https://docs.smooch.io/rest/#region). The US region will be used by default. To target any other region, specify the region [API host](https://docs.smooch.io/rest/#region) in `config.host`. For example:
 
 ```ruby
-{{{moduleName}}}.configure do |config|
+SmoochApi.configure do |config|
   config.api_key['Authorization'] = '<jwt>'
   config.api_key_prefix['Authorization'] = 'Bearer'
   config.host = 'api.eu-1.smooch.io'
