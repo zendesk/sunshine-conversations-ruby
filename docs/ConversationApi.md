@@ -4,11 +4,69 @@ All URIs are relative to *https://api.smooch.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**delete_message**](ConversationApi.md#delete_message) | **DELETE** /v1/apps/{appId}/appusers/{userId}/messages/{messageId} | 
 [**delete_messages**](ConversationApi.md#delete_messages) | **DELETE** /v1/apps/{appId}/appusers/{userId}/messages | 
 [**get_messages**](ConversationApi.md#get_messages) | **GET** /v1/apps/{appId}/appusers/{userId}/messages | 
 [**post_message**](ConversationApi.md#post_message) | **POST** /v1/apps/{appId}/appusers/{userId}/messages | 
 [**reset_unread_count**](ConversationApi.md#reset_unread_count) | **POST** /v1/apps/{appId}/appusers/{userId}/conversation/read | 
 [**trigger_typing_activity**](ConversationApi.md#trigger_typing_activity) | **POST** /v1/apps/{appId}/appusers/{userId}/conversation/activity | 
+
+
+# **delete_message**
+> delete_message(app_id, user_id, message_id)
+
+
+
+Deletes a single message.
+
+### Example
+```ruby
+# load the gem
+require 'smooch-api'
+# setup authorization
+SmoochApi.configure do |config|
+  # Configure API key authorization: jwt
+  config.api_key['Authorization'] = 'YOUR JWT'
+  config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = SmoochApi::ConversationApi.new
+
+app_id = "app_id_example" # String | Identifies the app.
+
+user_id = "user_id_example" # String | Identifies the user. Can be either the smoochId or the userId.
+
+message_id = "message_id_example" # String | Identifies the message.
+
+
+begin
+  api_instance.delete_message(app_id, user_id, message_id)
+rescue SmoochApi::ApiError => e
+  puts "Exception when calling ConversationApi->delete_message: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **String**| Identifies the app. | 
+ **user_id** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
+ **message_id** | **String**| Identifies the message. | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 
 
 # **delete_messages**
