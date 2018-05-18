@@ -11,5 +11,5 @@ Swagger Codegen version: 2.2.3-SNAPSHOT
 =end
 
 module SmoochApi
-  VERSION = ".0"
+  VERSION = "3.5.0"
 end
