@@ -14,22 +14,22 @@ require 'date'
 
 module SmoochApi
 
-  class ServiceAccountUpdate
-    # The service account's name.
-    attr_accessor :name
+  class AttachmentRemove
+    # The mediaUrl for the message. Required for image/file messages. 
+    attr_accessor :media_url
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'name' => :'name'
+        :'media_url' => :'mediaUrl'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'name' => :'String'
+        :'media_url' => :'String'
       }
     end
 
@@ -41,8 +41,8 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'name')
-        self.name = attributes[:'name']
+      if attributes.has_key?(:'mediaUrl')
+        self.media_url = attributes[:'mediaUrl']
       end
 
     end
@@ -51,8 +51,8 @@ module SmoochApi
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @name.nil?
-        invalid_properties.push("invalid value for 'name', name cannot be nil.")
+      if @media_url.nil?
+        invalid_properties.push("invalid value for 'media_url', media_url cannot be nil.")
       end
 
       return invalid_properties
@@ -61,7 +61,7 @@ module SmoochApi
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @name.nil?
+      return false if @media_url.nil?
       return true
     end
 
@@ -70,7 +70,7 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          name == o.name
+          media_url == o.media_url
     end
 
     # @see the `==` method
@@ -82,7 +82,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name].hash
+      [media_url].hash
     end
 
     # Builds the object from hash

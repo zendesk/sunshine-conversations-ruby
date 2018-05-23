@@ -16,7 +16,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 3.5.0'
+    gem 'smooch-api', '~> 3.6.0'
 
 ## Getting Started
 
@@ -111,6 +111,7 @@ Class | Method | HTTP request | Description
 *SmoochApi::AppUserApi* | [**pre_create_app_user**](docs/AppUserApi.md#pre_create_app_user) | **POST** /v1/apps/{appId}/appusers | 
 *SmoochApi::AppUserApi* | [**unlink_app_user**](docs/AppUserApi.md#unlink_app_user) | **DELETE** /v1/apps/{appId}/appusers/{userId}/channels/{channel} | 
 *SmoochApi::AppUserApi* | [**update_app_user**](docs/AppUserApi.md#update_app_user) | **PUT** /v1/apps/{appId}/appusers/{userId} | 
+*SmoochApi::AttachmentsApi* | [**remove_attachment**](docs/AttachmentsApi.md#remove_attachment) | **POST** /v1/apps/{appId}/attachments/remove | 
 *SmoochApi::AttachmentsApi* | [**upload_attachment**](docs/AttachmentsApi.md#upload_attachment) | **POST** /v1/apps/{appId}/attachments | 
 *SmoochApi::ConversationApi* | [**delete_message**](docs/ConversationApi.md#delete_message) | **DELETE** /v1/apps/{appId}/appusers/{userId}/messages/{messageId} | 
 *SmoochApi::ConversationApi* | [**delete_messages**](docs/ConversationApi.md#delete_messages) | **DELETE** /v1/apps/{appId}/appusers/{userId}/messages | 
@@ -162,6 +163,7 @@ Class | Method | HTTP request | Description
  - [SmoochApi::AppUserPreCreate](docs/AppUserPreCreate.md)
  - [SmoochApi::AppUserResponse](docs/AppUserResponse.md)
  - [SmoochApi::AppUserUpdate](docs/AppUserUpdate.md)
+ - [SmoochApi::AttachmentRemove](docs/AttachmentRemove.md)
  - [SmoochApi::AttachmentResponse](docs/AttachmentResponse.md)
  - [SmoochApi::AuthCodeResponse](docs/AuthCodeResponse.md)
  - [SmoochApi::BusinessSystemItem](docs/BusinessSystemItem.md)

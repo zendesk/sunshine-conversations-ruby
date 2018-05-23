@@ -4,7 +4,62 @@ All URIs are relative to *https://api.smooch.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**remove_attachment**](AttachmentsApi.md#remove_attachment) | **POST** /v1/apps/{appId}/attachments/remove | 
 [**upload_attachment**](AttachmentsApi.md#upload_attachment) | **POST** /v1/apps/{appId}/attachments | 
+
+
+# **remove_attachment**
+> remove_attachment(app_id, attachment_remove_body)
+
+
+
+Remove an attachment uploaded to Smooch.
+
+### Example
+```ruby
+# load the gem
+require 'smooch-api'
+# setup authorization
+SmoochApi.configure do |config|
+  # Configure API key authorization: jwt
+  config.api_key['Authorization'] = 'YOUR JWT'
+  config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = SmoochApi::AttachmentsApi.new
+
+app_id = "app_id_example" # String | Identifies the app.
+
+attachment_remove_body = SmoochApi::AttachmentRemove.new # AttachmentRemove | Body for a removeAttachment request. 
+
+
+begin
+  api_instance.remove_attachment(app_id, attachment_remove_body)
+rescue SmoochApi::ApiError => e
+  puts "Exception when calling AttachmentsApi->remove_attachment: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **String**| Identifies the app. | 
+ **attachment_remove_body** | [**AttachmentRemove**](AttachmentRemove.md)| Body for a removeAttachment request.  | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 
 
 # **upload_attachment**
