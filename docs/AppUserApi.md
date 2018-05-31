@@ -4,6 +4,7 @@ All URIs are relative to *https://api.smooch.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**delete_app_user**](AppUserApi.md#delete_app_user) | **DELETE** /v1/apps/{appId}/appusers | 
 [**delete_app_user_profile**](AppUserApi.md#delete_app_user_profile) | **DELETE** /v1/apps/{appId}/appusers/{userId}/profile | 
 [**get_app_user**](AppUserApi.md#get_app_user) | **GET** /v1/apps/{appId}/appusers/{userId} | 
 [**get_app_user_auth_code**](AppUserApi.md#get_app_user_auth_code) | **GET** /v1/apps/{appId}/appusers/{userId}/authcode | 
@@ -15,6 +16,57 @@ Method | HTTP request | Description
 [**pre_create_app_user**](AppUserApi.md#pre_create_app_user) | **POST** /v1/apps/{appId}/appusers | 
 [**unlink_app_user**](AppUserApi.md#unlink_app_user) | **DELETE** /v1/apps/{appId}/appusers/{userId}/channels/{channel} | 
 [**update_app_user**](AppUserApi.md#update_app_user) | **PUT** /v1/apps/{appId}/appusers/{userId} | 
+
+
+# **delete_app_user**
+> delete_app_user(app_id, )
+
+
+
+Delete specified app user.
+
+### Example
+```ruby
+# load the gem
+require 'smooch-api'
+# setup authorization
+SmoochApi.configure do |config|
+  # Configure API key authorization: jwt
+  config.api_key['Authorization'] = 'YOUR JWT'
+  config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = SmoochApi::AppUserApi.new
+
+app_id = "app_id_example" # String | Identifies the app.
+
+
+begin
+  api_instance.delete_app_user(app_id, )
+rescue SmoochApi::ApiError => e
+  puts "Exception when calling AppUserApi->delete_app_user: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **String**| Identifies the app. | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 
 
 # **delete_app_user_profile**
