@@ -63,7 +63,7 @@ nil (empty response body)
 
 
 # **upload_attachment**
-> AttachmentResponse upload_attachment(app_id, source, access)
+> AttachmentResponse upload_attachment(app_id, source, access, opts)
 
 
 
@@ -88,9 +88,14 @@ source = File.new("/path/to/file.txt") # File | File to be uploaded
 
 access = "access_example" # String | Access level for the resulting file
 
+opts = { 
+  _for: "_for_example", # String | The intended container for the attachment
+  app_user_id: "app_user_id_example", # String | The appUserId of the user that will receive the attachment Used in attachments for messages 
+  user_id: "user_id_example" # String | The userId of the user that will receive the attachment Used in attachments for messages 
+}
 
 begin
-  result = api_instance.upload_attachment(app_id, source, access)
+  result = api_instance.upload_attachment(app_id, source, access, opts)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AttachmentsApi->upload_attachment: #{e}"
@@ -104,6 +109,9 @@ Name | Type | Description  | Notes
  **app_id** | **String**| Identifies the app. | 
  **source** | **File**| File to be uploaded | 
  **access** | **String**| Access level for the resulting file | 
+ **_for** | **String**| The intended container for the attachment | [optional] 
+ **app_user_id** | **String**| The appUserId of the user that will receive the attachment Used in attachments for messages  | [optional] 
+ **user_id** | **String**| The userId of the user that will receive the attachment Used in attachments for messages  | [optional] 
 
 ### Return type
 

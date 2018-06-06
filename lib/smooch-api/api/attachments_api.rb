@@ -86,6 +86,9 @@ module SmoochApi
     # @param source File to be uploaded
     # @param access Access level for the resulting file
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :_for The intended container for the attachment
+    # @option opts [String] :app_user_id The appUserId of the user that will receive the attachment Used in attachments for messages 
+    # @option opts [String] :user_id The userId of the user that will receive the attachment Used in attachments for messages 
     # @return [AttachmentResponse]
     def upload_attachment(app_id, source, access, opts = {})
       data, _status_code, _headers = upload_attachment_with_http_info(app_id, source, access, opts)
@@ -98,6 +101,9 @@ module SmoochApi
     # @param source File to be uploaded
     # @param access Access level for the resulting file
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :_for The intended container for the attachment
+    # @option opts [String] :app_user_id The appUserId of the user that will receive the attachment Used in attachments for messages 
+    # @option opts [String] :user_id The userId of the user that will receive the attachment Used in attachments for messages 
     # @return [Array<(AttachmentResponse, Fixnum, Hash)>] AttachmentResponse data, response status code and response headers
     def upload_attachment_with_http_info(app_id, source, access, opts = {})
       if @api_client.config.debugging
@@ -121,6 +127,9 @@ module SmoochApi
       # query parameters
       query_params = {}
       query_params[:'access'] = access
+      query_params[:'for'] = opts[:'_for'] if !opts[:'_for'].nil?
+      query_params[:'appUserId'] = opts[:'app_user_id'] if !opts[:'app_user_id'].nil?
+      query_params[:'userId'] = opts[:'user_id'] if !opts[:'user_id'].nil?
 
       # header parameters
       header_params = {}
