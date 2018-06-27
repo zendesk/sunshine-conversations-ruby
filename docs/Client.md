@@ -11,5 +11,6 @@ Name | Type | Description | Notes
 **app_version** | **String** | A reserved string field for reporting the app version running on the device. | [optional] 
 **display_name** | **String** | The client&#39;s display name. | [optional] 
 **info** | [**ClientInfo**](ClientInfo.md) |  | [optional] 
+**raw** | **Object** | An Object with raw properties that vary for each client platform. All keys are optional and not guaranteed to be available. | [optional] 
 
 
