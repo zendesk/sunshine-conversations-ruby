@@ -16,7 +16,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 3.1.0'
+    gem 'smooch-api', '~> 3.11.0'
 
 ## Getting Started
 
@@ -100,7 +100,7 @@ Class | Method | HTTP request | Description
 *SmoochApi::AppApi* | [**list_apps**](docs/AppApi.md#list_apps) | **GET** /v1/apps | 
 *SmoochApi::AppApi* | [**list_secret_keys**](docs/AppApi.md#list_secret_keys) | **GET** /v1/apps/{appId}/keys | 
 *SmoochApi::AppApi* | [**update_app**](docs/AppApi.md#update_app) | **PUT** /v1/apps/{appId} | 
-*SmoochApi::AppUserApi* | [**delete_app_user**](docs/AppUserApi.md#delete_app_user) | **DELETE** /v1/apps/{appId}/appusers | 
+*SmoochApi::AppUserApi* | [**delete_app_user**](docs/AppUserApi.md#delete_app_user) | **DELETE** /v1/apps/{appId}/appusers/{userId} | 
 *SmoochApi::AppUserApi* | [**delete_app_user_profile**](docs/AppUserApi.md#delete_app_user_profile) | **DELETE** /v1/apps/{appId}/appusers/{userId}/profile | 
 *SmoochApi::AppUserApi* | [**get_app_user**](docs/AppUserApi.md#get_app_user) | **GET** /v1/apps/{appId}/appusers/{userId} | 
 *SmoochApi::AppUserApi* | [**get_app_user_auth_code**](docs/AppUserApi.md#get_app_user_auth_code) | **GET** /v1/apps/{appId}/appusers/{userId}/authcode | 
