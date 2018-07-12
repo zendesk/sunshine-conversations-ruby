@@ -1,4 +1,4 @@
-# SmoochApi::MenuItem
+# SmoochApi::SubMenuItem
 
 ## Properties
 Name | Type | Description | Notes
@@ -7,6 +7,5 @@ Name | Type | Description | Notes
 **uri** | **String** | A valid address, like http://smooch.io. Required for a link type item. | [optional] 
 **type** | **String** | Can either be link, postback, which correspond to Smooch’s link and postback actions, or submenu for nested menus. | 
 **payload** | **String** | A payload for a postback. Required for a postback type item. | [optional] 
-**items** | [**Array&lt;SubMenuItem&gt;**](SubMenuItem.md) | A list of menu items for a submenu. | [optional] 
 
 

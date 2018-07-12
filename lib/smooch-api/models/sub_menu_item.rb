@@ -14,42 +14,37 @@ require 'date'
 
 module SmoochApi
 
-  class BusinessSystemItem
-    # The type of business system (ex. slack, hipchat, zendesk etc...)
+  class SubMenuItem
+    # The button text of the menu item.
+    attr_accessor :text
+
+    # A valid address, like http://smooch.io. Required for a link type item.
+    attr_accessor :uri
+
+    # Can either be link, postback, which correspond to Smooch’s link and postback actions, or submenu for nested menus.
     attr_accessor :type
 
-    # The channel id for a *slack* integration
-    attr_accessor :channel_id
-
-    # The ticket id for a *zendesk* integration
-    attr_accessor :ticket_id
-
-    # The room id for a *hipchat* integration
-    attr_accessor :room_id
-
-    # The conversation id for a *helpscout* integration
-    attr_accessor :conversation_id
+    # A payload for a postback. Required for a postback type item.
+    attr_accessor :payload
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'text' => :'text',
+        :'uri' => :'uri',
         :'type' => :'type',
-        :'channel_id' => :'channelId',
-        :'ticket_id' => :'ticketId',
-        :'room_id' => :'roomId',
-        :'conversation_id' => :'conversationId'
+        :'payload' => :'payload'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'text' => :'String',
+        :'uri' => :'String',
         :'type' => :'String',
-        :'channel_id' => :'String',
-        :'ticket_id' => :'String',
-        :'room_id' => :'Integer',
-        :'conversation_id' => :'String'
+        :'payload' => :'String'
       }
     end
 
@@ -61,24 +56,20 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      if attributes.has_key?(:'text')
+        self.text = attributes[:'text']
+      end
+
+      if attributes.has_key?(:'uri')
+        self.uri = attributes[:'uri']
+      end
+
       if attributes.has_key?(:'type')
         self.type = attributes[:'type']
       end
 
-      if attributes.has_key?(:'channelId')
-        self.channel_id = attributes[:'channelId']
-      end
-
-      if attributes.has_key?(:'ticketId')
-        self.ticket_id = attributes[:'ticketId']
-      end
-
-      if attributes.has_key?(:'roomId')
-        self.room_id = attributes[:'roomId']
-      end
-
-      if attributes.has_key?(:'conversationId')
-        self.conversation_id = attributes[:'conversationId']
+      if attributes.has_key?(:'payload')
+        self.payload = attributes[:'payload']
       end
 
     end
@@ -87,6 +78,10 @@ module SmoochApi
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @text.nil?
+        invalid_properties.push("invalid value for 'text', text cannot be nil.")
+      end
+
       if @type.nil?
         invalid_properties.push("invalid value for 'type', type cannot be nil.")
       end
@@ -97,6 +92,7 @@ module SmoochApi
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @text.nil?
       return false if @type.nil?
       return true
     end
@@ -106,11 +102,10 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          text == o.text &&
+          uri == o.uri &&
           type == o.type &&
-          channel_id == o.channel_id &&
-          ticket_id == o.ticket_id &&
-          room_id == o.room_id &&
-          conversation_id == o.conversation_id
+          payload == o.payload
     end
 
     # @see the `==` method
@@ -122,7 +117,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [type, channel_id, ticket_id, room_id, conversation_id].hash
+      [text, uri, type, payload].hash
     end
 
     # Builds the object from hash

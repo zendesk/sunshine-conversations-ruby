@@ -16,7 +16,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 3.11.0'
+    gem 'smooch-api', '~> 3.12.0'
 
 ## Getting Started
 
@@ -203,6 +203,7 @@ Class | Method | HTTP request | Description
  - [SmoochApi::ServiceAccountResponse](docs/ServiceAccountResponse.md)
  - [SmoochApi::ServiceAccountUpdate](docs/ServiceAccountUpdate.md)
  - [SmoochApi::Source](docs/Source.md)
+ - [SmoochApi::SubMenuItem](docs/SubMenuItem.md)
  - [SmoochApi::TypingActivityTrigger](docs/TypingActivityTrigger.md)
  - [SmoochApi::Webhook](docs/Webhook.md)
  - [SmoochApi::WebhookCreate](docs/WebhookCreate.md)
