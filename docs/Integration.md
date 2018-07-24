@@ -55,5 +55,7 @@ Name | Type | Description | Notes
 **business_icon_url** | **String** | A custom business icon url for the Web Messenger. (Optional) Used for *Web Messenger* integrations.  | [optional] 
 **background_image_url** | **String** | A custom background url for the Web Messenger. (Optional) Used for *Web Messenger* integrations.  | [optional] 
 **origin_whitelist** | **Array&lt;String&gt;** | A list of origins to whitelist. When set, only the origins from this list will be able to initialize the Web Messenger. If unset, all origins are whitelisted. The elements in the list should follow the serialized-origin format from RFC 6454 &#x60;scheme \&quot;://\&quot; host [ \&quot;:\&quot; port ]&#x60;, where scheme is &#x60;http&#x60; or &#x60;https&#x60;. (Optional) Used for *Web Messenger* integrations.  | [optional] 
+**status** | **String** | The integration status. Possible values are active, inactive or error. [More info](https://docs.smooch.io/#integration-status). | [optional] 
+**error** | **String** | The error causing the integration to fail. Will be present when &#x60;status&#x60; is &#39;error&#39;. | [optional] 
 
 

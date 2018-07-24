@@ -14,42 +14,22 @@ require 'date'
 
 module SmoochApi
 
-  class BusinessSystemItem
-    # The type of business system (ex. slack, hipchat, zendesk etc...)
-    attr_accessor :type
-
-    # The channel id for a *slack* integration
-    attr_accessor :channel_id
-
-    # The ticket id for a *zendesk* integration
-    attr_accessor :ticket_id
-
-    # The room id for a *hipchat* integration
-    attr_accessor :room_id
-
-    # The conversation id for a *helpscout* integration
-    attr_accessor :conversation_id
+  class TemplateResponse
+    # The template.
+    attr_accessor :template
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'type' => :'type',
-        :'channel_id' => :'channelId',
-        :'ticket_id' => :'ticketId',
-        :'room_id' => :'roomId',
-        :'conversation_id' => :'conversationId'
+        :'template' => :'template'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'type' => :'String',
-        :'channel_id' => :'String',
-        :'ticket_id' => :'String',
-        :'room_id' => :'Integer',
-        :'conversation_id' => :'String'
+        :'template' => :'Template'
       }
     end
 
@@ -61,24 +41,8 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'type')
-        self.type = attributes[:'type']
-      end
-
-      if attributes.has_key?(:'channelId')
-        self.channel_id = attributes[:'channelId']
-      end
-
-      if attributes.has_key?(:'ticketId')
-        self.ticket_id = attributes[:'ticketId']
-      end
-
-      if attributes.has_key?(:'roomId')
-        self.room_id = attributes[:'roomId']
-      end
-
-      if attributes.has_key?(:'conversationId')
-        self.conversation_id = attributes[:'conversationId']
+      if attributes.has_key?(:'template')
+        self.template = attributes[:'template']
       end
 
     end
@@ -87,8 +51,8 @@ module SmoochApi
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @type.nil?
-        invalid_properties.push("invalid value for 'type', type cannot be nil.")
+      if @template.nil?
+        invalid_properties.push("invalid value for 'template', template cannot be nil.")
       end
 
       return invalid_properties
@@ -97,7 +61,7 @@ module SmoochApi
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @type.nil?
+      return false if @template.nil?
       return true
     end
 
@@ -106,11 +70,7 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          type == o.type &&
-          channel_id == o.channel_id &&
-          ticket_id == o.ticket_id &&
-          room_id == o.room_id &&
-          conversation_id == o.conversation_id
+          template == o.template
     end
 
     # @see the `==` method
@@ -122,7 +82,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [type, channel_id, ticket_id, room_id, conversation_id].hash
+      [template].hash
     end
 
     # Builds the object from hash

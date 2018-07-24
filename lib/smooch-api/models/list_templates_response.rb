@@ -14,42 +14,32 @@ require 'date'
 
 module SmoochApi
 
-  class BusinessSystemItem
-    # The type of business system (ex. slack, hipchat, zendesk etc...)
-    attr_accessor :type
+  class ListTemplatesResponse
+    # The list of templates.
+    attr_accessor :templates
 
-    # The channel id for a *slack* integration
-    attr_accessor :channel_id
+    # Flag indicating if there are more templates that are not present in the response.
+    attr_accessor :has_more
 
-    # The ticket id for a *zendesk* integration
-    attr_accessor :ticket_id
-
-    # The room id for a *hipchat* integration
-    attr_accessor :room_id
-
-    # The conversation id for a *helpscout* integration
-    attr_accessor :conversation_id
+    # The number of template records skipped in the returned list.
+    attr_accessor :offset
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'type' => :'type',
-        :'channel_id' => :'channelId',
-        :'ticket_id' => :'ticketId',
-        :'room_id' => :'roomId',
-        :'conversation_id' => :'conversationId'
+        :'templates' => :'templates',
+        :'has_more' => :'hasMore',
+        :'offset' => :'offset'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'type' => :'String',
-        :'channel_id' => :'String',
-        :'ticket_id' => :'String',
-        :'room_id' => :'Integer',
-        :'conversation_id' => :'String'
+        :'templates' => :'Array<Template>',
+        :'has_more' => :'BOOLEAN',
+        :'offset' => :'Integer'
       }
     end
 
@@ -61,24 +51,18 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'type')
-        self.type = attributes[:'type']
+      if attributes.has_key?(:'templates')
+        if (value = attributes[:'templates']).is_a?(Array)
+          self.templates = value
+        end
       end
 
-      if attributes.has_key?(:'channelId')
-        self.channel_id = attributes[:'channelId']
+      if attributes.has_key?(:'hasMore')
+        self.has_more = attributes[:'hasMore']
       end
 
-      if attributes.has_key?(:'ticketId')
-        self.ticket_id = attributes[:'ticketId']
-      end
-
-      if attributes.has_key?(:'roomId')
-        self.room_id = attributes[:'roomId']
-      end
-
-      if attributes.has_key?(:'conversationId')
-        self.conversation_id = attributes[:'conversationId']
+      if attributes.has_key?(:'offset')
+        self.offset = attributes[:'offset']
       end
 
     end
@@ -87,8 +71,8 @@ module SmoochApi
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @type.nil?
-        invalid_properties.push("invalid value for 'type', type cannot be nil.")
+      if @templates.nil?
+        invalid_properties.push("invalid value for 'templates', templates cannot be nil.")
       end
 
       return invalid_properties
@@ -97,7 +81,7 @@ module SmoochApi
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @type.nil?
+      return false if @templates.nil?
       return true
     end
 
@@ -106,11 +90,9 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          type == o.type &&
-          channel_id == o.channel_id &&
-          ticket_id == o.ticket_id &&
-          room_id == o.room_id &&
-          conversation_id == o.conversation_id
+          templates == o.templates &&
+          has_more == o.has_more &&
+          offset == o.offset
     end
 
     # @see the `==` method
@@ -122,7 +104,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [type, channel_id, ticket_id, room_id, conversation_id].hash
+      [templates, has_more, offset].hash
     end
 
     # Builds the object from hash

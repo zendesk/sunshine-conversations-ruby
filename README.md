@@ -16,7 +16,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 3.12.0'
+    gem 'smooch-api', '~> 3.13.0'
 
 ## Getting Started
 
@@ -142,6 +142,11 @@ Class | Method | HTTP request | Description
 *SmoochApi::ServiceAccountApi* | [**list_secret_keys**](docs/ServiceAccountApi.md#list_secret_keys) | **GET** /v1/serviceaccounts/{serviceAccountId}/keys | 
 *SmoochApi::ServiceAccountApi* | [**list_service_accounts**](docs/ServiceAccountApi.md#list_service_accounts) | **GET** /v1/serviceaccounts | 
 *SmoochApi::ServiceAccountApi* | [**update_service_account**](docs/ServiceAccountApi.md#update_service_account) | **PUT** /v1/serviceaccounts/{serviceAccountId} | 
+*SmoochApi::TemplateApi* | [**create_template**](docs/TemplateApi.md#create_template) | **POST** /v1/apps/{appId}/templates | 
+*SmoochApi::TemplateApi* | [**delete_template**](docs/TemplateApi.md#delete_template) | **DELETE** /v1/apps/{appId}/templates/{templateId} | 
+*SmoochApi::TemplateApi* | [**get_template**](docs/TemplateApi.md#get_template) | **GET** /v1/apps/{appId}/templates/{templateId} | 
+*SmoochApi::TemplateApi* | [**list_templates**](docs/TemplateApi.md#list_templates) | **GET** /v1/apps/{appId}/templates | 
+*SmoochApi::TemplateApi* | [**update_template**](docs/TemplateApi.md#update_template) | **PUT** /v1/apps/{appId}/templates/{templateId} | 
 *SmoochApi::WebhookApi* | [**create_webhook**](docs/WebhookApi.md#create_webhook) | **POST** /v1/apps/{appId}/webhooks | 
 *SmoochApi::WebhookApi* | [**delete_webhook**](docs/WebhookApi.md#delete_webhook) | **DELETE** /v1/apps/{appId}/webhooks/{webhookId} | 
 *SmoochApi::WebhookApi* | [**get_webhook**](docs/WebhookApi.md#get_webhook) | **GET** /v1/apps/{appId}/webhooks/{webhookId} | 
@@ -187,6 +192,7 @@ Class | Method | HTTP request | Description
  - [SmoochApi::ListIntegrationsResponse](docs/ListIntegrationsResponse.md)
  - [SmoochApi::ListSecretKeysResponse](docs/ListSecretKeysResponse.md)
  - [SmoochApi::ListServiceAccountsResponse](docs/ListServiceAccountsResponse.md)
+ - [SmoochApi::ListTemplatesResponse](docs/ListTemplatesResponse.md)
  - [SmoochApi::ListWebhooksResponse](docs/ListWebhooksResponse.md)
  - [SmoochApi::Menu](docs/Menu.md)
  - [SmoochApi::MenuItem](docs/MenuItem.md)
@@ -204,6 +210,10 @@ Class | Method | HTTP request | Description
  - [SmoochApi::ServiceAccountUpdate](docs/ServiceAccountUpdate.md)
  - [SmoochApi::Source](docs/Source.md)
  - [SmoochApi::SubMenuItem](docs/SubMenuItem.md)
+ - [SmoochApi::Template](docs/Template.md)
+ - [SmoochApi::TemplateCreate](docs/TemplateCreate.md)
+ - [SmoochApi::TemplateResponse](docs/TemplateResponse.md)
+ - [SmoochApi::TemplateUpdate](docs/TemplateUpdate.md)
  - [SmoochApi::TypingActivityTrigger](docs/TypingActivityTrigger.md)
  - [SmoochApi::Webhook](docs/Webhook.md)
  - [SmoochApi::WebhookCreate](docs/WebhookCreate.md)
