@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **page_access_token** | **String** | Facebook Page Access Token. Required for *messenger* integrations.  | [optional] 
 **app_id** | **String** | Facebook App ID OR WeChat App ID. Required for *messenger* and *wechat* integrations.  | [optional] 
 **app_secret** | **String** | Facebook Page App Secret OR WeChat App Secret. Required for *messenger* and *wechat* integrations.  | [optional] 
+**access_token_url** | **String** | Optional endpoint to generate access tokens for WeChat. Used to coordinate API access with third party systems.  | [optional] 
 **webhook_secret** | **String** | Secret to verify webhooks. Returned on successful *wechat* and *messagebird* integrations.  | [optional] 
 **page_id** | **String** | Facebook Page App ID. Returned on successful *messenger* integrations.  | [optional] 
 **account_sid** | **String** | Twilio Account SID. Required for *twilio* integrations.  | [optional] 
