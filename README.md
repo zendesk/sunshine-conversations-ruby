@@ -16,7 +16,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 3.18.0'
+    gem 'smooch-api', '~> 3.19.0'
 
 ## Getting Started
 
@@ -129,6 +129,7 @@ Class | Method | HTTP request | Description
 *SmoochApi::IntegrationApi* | [**list_integrations**](docs/IntegrationApi.md#list_integrations) | **GET** /v1/apps/{appId}/integrations | 
 *SmoochApi::IntegrationApi* | [**update_integration**](docs/IntegrationApi.md#update_integration) | **PUT** /v1/apps/{appId}/integrations/{integrationId} | 
 *SmoochApi::IntegrationApi* | [**update_integration_menu**](docs/IntegrationApi.md#update_integration_menu) | **PUT** /v1/apps/{appId}/integrations/{integrationId}/menu | 
+*SmoochApi::IntegrationApi* | [**update_integration_profile**](docs/IntegrationApi.md#update_integration_profile) | **PUT** /v1/apps/{appId}/integrations/{integrationId}/profile | 
 *SmoochApi::MenuApi* | [**delete_menu**](docs/MenuApi.md#delete_menu) | **DELETE** /v1/apps/{appId}/menu | 
 *SmoochApi::MenuApi* | [**get_menu**](docs/MenuApi.md#get_menu) | **GET** /v1/apps/{appId}/menu | 
 *SmoochApi::MenuApi* | [**update_menu**](docs/MenuApi.md#update_menu) | **PUT** /v1/apps/{appId}/menu | 
@@ -183,6 +184,7 @@ Class | Method | HTTP request | Description
  - [SmoochApi::GetMessagesResponse](docs/GetMessagesResponse.md)
  - [SmoochApi::Integration](docs/Integration.md)
  - [SmoochApi::IntegrationCreate](docs/IntegrationCreate.md)
+ - [SmoochApi::IntegrationProfileUpdate](docs/IntegrationProfileUpdate.md)
  - [SmoochApi::IntegrationResponse](docs/IntegrationResponse.md)
  - [SmoochApi::IntegrationUpdate](docs/IntegrationUpdate.md)
  - [SmoochApi::JwtResponse](docs/JwtResponse.md)

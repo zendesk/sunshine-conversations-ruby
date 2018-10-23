@@ -14,22 +14,52 @@ require 'date'
 
 module SmoochApi
 
-  class ServiceAccountUpdate
-    # The service account's name.
-    attr_accessor :name
+  class IntegrationProfileUpdate
+    # Text to display in your profile's About section. Can be used as a status update. Maximum of 139 characters.
+    attr_accessor :about
+
+    # Address of the business. Maximum of 256 characters.
+    attr_accessor :address
+
+    # Description of the business. Maximum of 256 characters.
+    attr_accessor :description
+
+    # Email address to contact the business. Maximum of 128 characters.
+    attr_accessor :email
+
+    # URL where the business' profile photo is hosted. WhatsApp recommends an image with dimensions of 640x640 and max size of 63KB.
+    attr_accessor :photo_url
+
+    # Industry of the business. Maximum of 128 characters.
+    attr_accessor :vertical
+
+    # URLs associated with the business. Maximum of 2 websites.
+    attr_accessor :websites
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'name' => :'name'
+        :'about' => :'about',
+        :'address' => :'address',
+        :'description' => :'description',
+        :'email' => :'email',
+        :'photo_url' => :'photoUrl',
+        :'vertical' => :'vertical',
+        :'websites' => :'websites'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'name' => :'String'
+        :'about' => :'String',
+        :'address' => :'String',
+        :'description' => :'String',
+        :'email' => :'String',
+        :'photo_url' => :'String',
+        :'vertical' => :'String',
+        :'websites' => :'Array<String>'
       }
     end
 
@@ -41,8 +71,34 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'name')
-        self.name = attributes[:'name']
+      if attributes.has_key?(:'about')
+        self.about = attributes[:'about']
+      end
+
+      if attributes.has_key?(:'address')
+        self.address = attributes[:'address']
+      end
+
+      if attributes.has_key?(:'description')
+        self.description = attributes[:'description']
+      end
+
+      if attributes.has_key?(:'email')
+        self.email = attributes[:'email']
+      end
+
+      if attributes.has_key?(:'photoUrl')
+        self.photo_url = attributes[:'photoUrl']
+      end
+
+      if attributes.has_key?(:'vertical')
+        self.vertical = attributes[:'vertical']
+      end
+
+      if attributes.has_key?(:'websites')
+        if (value = attributes[:'websites']).is_a?(Array)
+          self.websites = value
+        end
       end
 
     end
@@ -51,17 +107,12 @@ module SmoochApi
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @name.nil?
-        invalid_properties.push("invalid value for 'name', name cannot be nil.")
-      end
-
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @name.nil?
       return true
     end
 
@@ -70,7 +121,13 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          name == o.name
+          about == o.about &&
+          address == o.address &&
+          description == o.description &&
+          email == o.email &&
+          photo_url == o.photo_url &&
+          vertical == o.vertical &&
+          websites == o.websites
     end
 
     # @see the `==` method
@@ -82,7 +139,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name].hash
+      [about, address, description, email, photo_url, vertical, websites].hash
     end
 
     # Builds the object from hash
