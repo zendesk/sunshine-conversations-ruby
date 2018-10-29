@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **given_name** | **String** | A String of the appUser’s given name. Used as additional criteria to increase the likelihood of a match. (Optional) Used for *messenger* linking.  | [optional] 
 **surname** | **String** | A String of the appUser’s surname. Used as additional criteria to increase the likelihood of a match. (Optional) Used for *messenger* linking.  | [optional] 
 **subject** | **String** | Subject for the outgoing email. (Optional) Used for *mailgun* linking.  | [optional] 
-**skip_confirmation** | **String** | (Deprecated, use confirmation instead) Flag indicating if the linking confirmation should be skipped. | [optional] 
 **confirmation** | [**Confirmation**](Confirmation.md) | Allows you to specify the strategy used to initiate a link with the target user. | 
 
 
