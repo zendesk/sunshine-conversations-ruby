@@ -14,22 +14,21 @@ require 'date'
 
 module SmoochApi
 
-  class IntegrationResponse
-    # The integration.
-    attr_accessor :integration
+  class MessageOverride
+    attr_accessor :whatsapp
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'integration' => :'integration'
+        :'whatsapp' => :'whatsapp'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'integration' => :'Integration'
+        :'whatsapp' => :'MessageOverrideWhatsapp'
       }
     end
 
@@ -41,8 +40,8 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'integration')
-        self.integration = attributes[:'integration']
+      if attributes.has_key?(:'whatsapp')
+        self.whatsapp = attributes[:'whatsapp']
       end
 
     end
@@ -65,7 +64,7 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          integration == o.integration
+          whatsapp == o.whatsapp
     end
 
     # @see the `==` method
@@ -77,7 +76,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [integration].hash
+      [whatsapp].hash
     end
 
     # Builds the object from hash

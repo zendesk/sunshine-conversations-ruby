@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **create_secret_key**
-> SecretKeyResponse create_secret_key(service_account_id, secret_key_create_body)
+> SecretKeyResponse create_secret_key(serviceAccountId, secretKeyCreateBody)
 
 
 
@@ -36,13 +36,13 @@ end
 
 api_instance = SmoochApi::ServiceAccountApi.new
 
-service_account_id = "service_account_id_example" # String | Identifies the service account.
+serviceAccountId = "serviceAccountId_example" # String | Identifies the service account.
 
-secret_key_create_body = SmoochApi::SecretKeyCreate.new # SecretKeyCreate | Body for a createSecretKey request.
+secretKeyCreateBody = SmoochApi::SecretKeyCreate.new # SecretKeyCreate | Body for a createSecretKey request.
 
 
 begin
-  result = api_instance.create_secret_key(service_account_id, secret_key_create_body)
+  result = api_instance.create_secret_key(serviceAccountId, secretKeyCreateBody)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling ServiceAccountApi->create_secret_key: #{e}"
@@ -53,8 +53,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **service_account_id** | **String**| Identifies the service account. | 
- **secret_key_create_body** | [**SecretKeyCreate**](SecretKeyCreate.md)| Body for a createSecretKey request. | 
+ **serviceAccountId** | **String**| Identifies the service account. | 
+ **secretKeyCreateBody** | [**SecretKeyCreate**](SecretKeyCreate.md)| Body for a createSecretKey request. | 
 
 ### Return type
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 
 # **create_service_account**
-> ServiceAccountResponse create_service_account(service_account_create_body)
+> ServiceAccountResponse create_service_account(serviceAccountCreateBody)
 
 
 
@@ -91,11 +91,11 @@ end
 
 api_instance = SmoochApi::ServiceAccountApi.new
 
-service_account_create_body = SmoochApi::ServiceAccountCreate.new # ServiceAccountCreate | Body for a createServiceAccount request.
+serviceAccountCreateBody = SmoochApi::ServiceAccountCreate.new # ServiceAccountCreate | Body for a createServiceAccount request.
 
 
 begin
-  result = api_instance.create_service_account(service_account_create_body)
+  result = api_instance.create_service_account(serviceAccountCreateBody)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling ServiceAccountApi->create_service_account: #{e}"
@@ -106,7 +106,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **service_account_create_body** | [**ServiceAccountCreate**](ServiceAccountCreate.md)| Body for a createServiceAccount request. | 
+ **serviceAccountCreateBody** | [**ServiceAccountCreate**](ServiceAccountCreate.md)| Body for a createServiceAccount request. | 
 
 ### Return type
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 
 
 # **delete_secret_key**
-> delete_secret_key(service_account_id, key_id)
+> delete_secret_key(serviceAccountId, keyId)
 
 
 
@@ -143,13 +143,13 @@ end
 
 api_instance = SmoochApi::ServiceAccountApi.new
 
-service_account_id = "service_account_id_example" # String | Identifies the service account.
+serviceAccountId = "serviceAccountId_example" # String | Identifies the service account.
 
-key_id = "key_id_example" # String | Identifies the secret key.
+keyId = "keyId_example" # String | Identifies the secret key.
 
 
 begin
-  api_instance.delete_secret_key(service_account_id, key_id)
+  api_instance.delete_secret_key(serviceAccountId, keyId)
 rescue SmoochApi::ApiError => e
   puts "Exception when calling ServiceAccountApi->delete_secret_key: #{e}"
 end
@@ -159,8 +159,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **service_account_id** | **String**| Identifies the service account. | 
- **key_id** | **String**| Identifies the secret key. | 
+ **serviceAccountId** | **String**| Identifies the service account. | 
+ **keyId** | **String**| Identifies the secret key. | 
 
 ### Return type
 
@@ -178,7 +178,7 @@ nil (empty response body)
 
 
 # **delete_service_account**
-> delete_service_account(service_account_id, )
+> delete_service_account(serviceAccountId, )
 
 
 
@@ -197,11 +197,11 @@ end
 
 api_instance = SmoochApi::ServiceAccountApi.new
 
-service_account_id = "service_account_id_example" # String | Identifies the service account.
+serviceAccountId = "serviceAccountId_example" # String | Identifies the service account.
 
 
 begin
-  api_instance.delete_service_account(service_account_id, )
+  api_instance.delete_service_account(serviceAccountId, )
 rescue SmoochApi::ApiError => e
   puts "Exception when calling ServiceAccountApi->delete_service_account: #{e}"
 end
@@ -211,7 +211,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **service_account_id** | **String**| Identifies the service account. | 
+ **serviceAccountId** | **String**| Identifies the service account. | 
 
 ### Return type
 
@@ -229,7 +229,7 @@ nil (empty response body)
 
 
 # **get_jwt**
-> JwtResponse get_jwt(service_account_id, key_id)
+> JwtResponse get_jwt(serviceAccountId, keyId)
 
 
 
@@ -248,13 +248,13 @@ end
 
 api_instance = SmoochApi::ServiceAccountApi.new
 
-service_account_id = "service_account_id_example" # String | Identifies the service account.
+serviceAccountId = "serviceAccountId_example" # String | Identifies the service account.
 
-key_id = "key_id_example" # String | Identifies the secret key.
+keyId = "keyId_example" # String | Identifies the secret key.
 
 
 begin
-  result = api_instance.get_jwt(service_account_id, key_id)
+  result = api_instance.get_jwt(serviceAccountId, keyId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling ServiceAccountApi->get_jwt: #{e}"
@@ -265,8 +265,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **service_account_id** | **String**| Identifies the service account. | 
- **key_id** | **String**| Identifies the secret key. | 
+ **serviceAccountId** | **String**| Identifies the service account. | 
+ **keyId** | **String**| Identifies the secret key. | 
 
 ### Return type
 
@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 
 
 # **get_secret_key**
-> SecretKeyResponse get_secret_key(service_account_id, key_id)
+> SecretKeyResponse get_secret_key(serviceAccountId, keyId)
 
 
 
@@ -303,13 +303,13 @@ end
 
 api_instance = SmoochApi::ServiceAccountApi.new
 
-service_account_id = "service_account_id_example" # String | Identifies the service account.
+serviceAccountId = "serviceAccountId_example" # String | Identifies the service account.
 
-key_id = "key_id_example" # String | Identifies the secret key.
+keyId = "keyId_example" # String | Identifies the secret key.
 
 
 begin
-  result = api_instance.get_secret_key(service_account_id, key_id)
+  result = api_instance.get_secret_key(serviceAccountId, keyId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling ServiceAccountApi->get_secret_key: #{e}"
@@ -320,8 +320,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **service_account_id** | **String**| Identifies the service account. | 
- **key_id** | **String**| Identifies the secret key. | 
+ **serviceAccountId** | **String**| Identifies the service account. | 
+ **keyId** | **String**| Identifies the secret key. | 
 
 ### Return type
 
@@ -339,7 +339,7 @@ Name | Type | Description  | Notes
 
 
 # **get_service_account**
-> ServiceAccountResponse get_service_account(service_account_id, )
+> ServiceAccountResponse get_service_account(serviceAccountId, )
 
 
 
@@ -358,11 +358,11 @@ end
 
 api_instance = SmoochApi::ServiceAccountApi.new
 
-service_account_id = "service_account_id_example" # String | Identifies the service account.
+serviceAccountId = "serviceAccountId_example" # String | Identifies the service account.
 
 
 begin
-  result = api_instance.get_service_account(service_account_id, )
+  result = api_instance.get_service_account(serviceAccountId, )
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling ServiceAccountApi->get_service_account: #{e}"
@@ -373,7 +373,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **service_account_id** | **String**| Identifies the service account. | 
+ **serviceAccountId** | **String**| Identifies the service account. | 
 
 ### Return type
 
@@ -391,7 +391,7 @@ Name | Type | Description  | Notes
 
 
 # **list_secret_keys**
-> ListSecretKeysResponse list_secret_keys(service_account_id, )
+> ListSecretKeysResponse list_secret_keys(serviceAccountId, )
 
 
 
@@ -410,11 +410,11 @@ end
 
 api_instance = SmoochApi::ServiceAccountApi.new
 
-service_account_id = "service_account_id_example" # String | Identifies the service account.
+serviceAccountId = "serviceAccountId_example" # String | Identifies the service account.
 
 
 begin
-  result = api_instance.list_secret_keys(service_account_id, )
+  result = api_instance.list_secret_keys(serviceAccountId, )
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling ServiceAccountApi->list_secret_keys: #{e}"
@@ -425,7 +425,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **service_account_id** | **String**| Identifies the service account. | 
+ **serviceAccountId** | **String**| Identifies the service account. | 
 
 ### Return type
 
@@ -498,7 +498,7 @@ Name | Type | Description  | Notes
 
 
 # **update_service_account**
-> ServiceAccountResponse update_service_account(service_account_id, service_account_update_body)
+> ServiceAccountResponse update_service_account(serviceAccountId, serviceAccountUpdateBody)
 
 
 
@@ -517,13 +517,13 @@ end
 
 api_instance = SmoochApi::ServiceAccountApi.new
 
-service_account_id = "service_account_id_example" # String | Identifies the service account.
+serviceAccountId = "serviceAccountId_example" # String | Identifies the service account.
 
-service_account_update_body = SmoochApi::ServiceAccountUpdate.new # ServiceAccountUpdate | Body for an updateServiceAccount request.
+serviceAccountUpdateBody = SmoochApi::ServiceAccountUpdate.new # ServiceAccountUpdate | Body for an updateServiceAccount request.
 
 
 begin
-  result = api_instance.update_service_account(service_account_id, service_account_update_body)
+  result = api_instance.update_service_account(serviceAccountId, serviceAccountUpdateBody)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling ServiceAccountApi->update_service_account: #{e}"
@@ -534,8 +534,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **service_account_id** | **String**| Identifies the service account. | 
- **service_account_update_body** | [**ServiceAccountUpdate**](ServiceAccountUpdate.md)| Body for an updateServiceAccount request. | 
+ **serviceAccountId** | **String**| Identifies the service account. | 
+ **serviceAccountUpdateBody** | [**ServiceAccountUpdate**](ServiceAccountUpdate.md)| Body for an updateServiceAccount request. | 
 
 ### Return type
 

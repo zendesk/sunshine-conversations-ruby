@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**auth_code** | **String** | The auth code | 
+**authCode** | **String** | The auth code | 
 
 

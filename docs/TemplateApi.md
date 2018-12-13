@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **create_template**
-> TemplateResponse create_template(app_id, template_create_body)
+> TemplateResponse create_template(appId, templateCreateBody)
 
 
 
@@ -31,13 +31,13 @@ end
 
 api_instance = SmoochApi::TemplateApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-template_create_body = SmoochApi::TemplateCreate.new # TemplateCreate | Body for a createTemplate request. 
+templateCreateBody = SmoochApi::TemplateCreate.new # TemplateCreate | Body for a createTemplate request. 
 
 
 begin
-  result = api_instance.create_template(app_id, template_create_body)
+  result = api_instance.create_template(appId, templateCreateBody)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling TemplateApi->create_template: #{e}"
@@ -48,8 +48,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **template_create_body** | [**TemplateCreate**](TemplateCreate.md)| Body for a createTemplate request.  | 
+ **appId** | **String**| Identifies the app. | 
+ **templateCreateBody** | [**TemplateCreate**](TemplateCreate.md)| Body for a createTemplate request.  | 
 
 ### Return type
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 
 # **delete_template**
-> delete_template(app_id, template_id)
+> delete_template(appId, templateId)
 
 
 
@@ -86,13 +86,13 @@ end
 
 api_instance = SmoochApi::TemplateApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-template_id = "template_id_example" # String | Identifies the template.
+templateId = "templateId_example" # String | Identifies the template.
 
 
 begin
-  api_instance.delete_template(app_id, template_id)
+  api_instance.delete_template(appId, templateId)
 rescue SmoochApi::ApiError => e
   puts "Exception when calling TemplateApi->delete_template: #{e}"
 end
@@ -102,8 +102,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **template_id** | **String**| Identifies the template. | 
+ **appId** | **String**| Identifies the app. | 
+ **templateId** | **String**| Identifies the template. | 
 
 ### Return type
 
@@ -121,7 +121,7 @@ nil (empty response body)
 
 
 # **get_template**
-> TemplateResponse get_template(app_id, template_id)
+> TemplateResponse get_template(appId, templateId)
 
 
 
@@ -140,13 +140,13 @@ end
 
 api_instance = SmoochApi::TemplateApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-template_id = "template_id_example" # String | Identifies the template.
+templateId = "templateId_example" # String | Identifies the template.
 
 
 begin
-  result = api_instance.get_template(app_id, template_id)
+  result = api_instance.get_template(appId, templateId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling TemplateApi->get_template: #{e}"
@@ -157,8 +157,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **template_id** | **String**| Identifies the template. | 
+ **appId** | **String**| Identifies the app. | 
+ **templateId** | **String**| Identifies the template. | 
 
 ### Return type
 
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 
 
 # **list_templates**
-> ListTemplatesResponse list_templates(app_id, , opts)
+> ListTemplatesResponse list_templates(appId, , opts)
 
 
 
@@ -195,7 +195,7 @@ end
 
 api_instance = SmoochApi::TemplateApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
 opts = { 
   limit: 25, # Integer | The number of records to return.
@@ -203,7 +203,7 @@ opts = {
 }
 
 begin
-  result = api_instance.list_templates(app_id, , opts)
+  result = api_instance.list_templates(appId, , opts)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling TemplateApi->list_templates: #{e}"
@@ -214,7 +214,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
+ **appId** | **String**| Identifies the app. | 
  **limit** | **Integer**| The number of records to return. | [optional] [default to 25]
  **offset** | **Integer**| The number of initial records to skip before picking records to return. | [optional] [default to 0]
 
@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 
 
 # **update_template**
-> TemplateResponse update_template(app_id, template_idtemplate_update_body)
+> TemplateResponse update_template(appId, templateIdtemplateUpdateBody)
 
 
 
@@ -253,15 +253,15 @@ end
 
 api_instance = SmoochApi::TemplateApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-template_id = "template_id_example" # String | Identifies the template.
+templateId = "templateId_example" # String | Identifies the template.
 
-template_update_body = SmoochApi::TemplateUpdate.new # TemplateUpdate | Body for an updateTemplate request. 
+templateUpdateBody = SmoochApi::TemplateUpdate.new # TemplateUpdate | Body for an updateTemplate request. 
 
 
 begin
-  result = api_instance.update_template(app_id, template_idtemplate_update_body)
+  result = api_instance.update_template(appId, templateIdtemplateUpdateBody)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling TemplateApi->update_template: #{e}"
@@ -272,9 +272,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **template_id** | **String**| Identifies the template. | 
- **template_update_body** | [**TemplateUpdate**](TemplateUpdate.md)| Body for an updateTemplate request.  | 
+ **appId** | **String**| Identifies the app. | 
+ **templateId** | **String**| Identifies the template. | 
+ **templateUpdateBody** | [**TemplateUpdate**](TemplateUpdate.md)| Body for an updateTemplate request.  | 
 
 ### Return type
 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **remove_attachment**
-> remove_attachment(app_id, attachment_remove_body)
+> remove_attachment(appId, attachmentRemoveBody)
 
 
 
@@ -28,13 +28,13 @@ end
 
 api_instance = SmoochApi::AttachmentsApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-attachment_remove_body = SmoochApi::AttachmentRemove.new # AttachmentRemove | Body for a removeAttachment request. 
+attachmentRemoveBody = SmoochApi::AttachmentRemove.new # AttachmentRemove | Body for a removeAttachment request. 
 
 
 begin
-  api_instance.remove_attachment(app_id, attachment_remove_body)
+  api_instance.remove_attachment(appId, attachmentRemoveBody)
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AttachmentsApi->remove_attachment: #{e}"
 end
@@ -44,8 +44,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **attachment_remove_body** | [**AttachmentRemove**](AttachmentRemove.md)| Body for a removeAttachment request.  | 
+ **appId** | **String**| Identifies the app. | 
+ **attachmentRemoveBody** | [**AttachmentRemove**](AttachmentRemove.md)| Body for a removeAttachment request.  | 
 
 ### Return type
 
@@ -63,7 +63,7 @@ nil (empty response body)
 
 
 # **upload_attachment**
-> AttachmentResponse upload_attachment(app_id, source, access, opts)
+> AttachmentResponse upload_attachment(appId, source, access, opts)
 
 
 
@@ -82,20 +82,20 @@ end
 
 api_instance = SmoochApi::AttachmentsApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
 source = File.new("/path/to/file.txt") # File | File to be uploaded
 
 access = "access_example" # String | Access level for the resulting file
 
 opts = { 
-  _for: "_for_example", # String | The intended container for the attachment
-  app_user_id: "app_user_id_example", # String | The appUserId of the user that will receive the attachment Used in attachments for messages 
-  user_id: "user_id_example" # String | The userId of the user that will receive the attachment Used in attachments for messages 
+  for: "for_example", # String | The intended container for the attachment
+  appUserId: "appUserId_example", # String | The appUserId of the user that will receive the attachment Used in attachments for messages 
+  userId: "userId_example" # String | The userId of the user that will receive the attachment Used in attachments for messages 
 }
 
 begin
-  result = api_instance.upload_attachment(app_id, source, access, opts)
+  result = api_instance.upload_attachment(appId, source, access, opts)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AttachmentsApi->upload_attachment: #{e}"
@@ -106,12 +106,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
+ **appId** | **String**| Identifies the app. | 
  **source** | **File**| File to be uploaded | 
  **access** | **String**| Access level for the resulting file | 
- **_for** | **String**| The intended container for the attachment | [optional] 
- **app_user_id** | **String**| The appUserId of the user that will receive the attachment Used in attachments for messages  | [optional] 
- **user_id** | **String**| The userId of the user that will receive the attachment Used in attachments for messages  | [optional] 
+ **for** | **String**| The intended container for the attachment | [optional] 
+ **appUserId** | **String**| The appUserId of the user that will receive the attachment Used in attachments for messages  | [optional] 
+ **userId** | **String**| The userId of the user that will receive the attachment Used in attachments for messages  | [optional] 
 
 ### Return type
 

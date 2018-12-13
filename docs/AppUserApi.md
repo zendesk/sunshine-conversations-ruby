@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 # **delete_app_user**
-> delete_app_user(app_id, user_id, )
+> delete_app_user(appId, userId, )
 
 
 
@@ -38,13 +38,13 @@ end
 
 api_instance = SmoochApi::AppUserApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-user_id = "user_id_example" # String | Identifies the user. Can be either the smoochId or the userId.
+userId = "userId_example" # String | Identifies the user. Can be either the smoochId or the userId.
 
 
 begin
-  api_instance.delete_app_user(app_id, user_id, )
+  api_instance.delete_app_user(appId, userId, )
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppUserApi->delete_app_user: #{e}"
 end
@@ -54,8 +54,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **user_id** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
+ **appId** | **String**| Identifies the app. | 
+ **userId** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
 
 ### Return type
 
@@ -73,7 +73,7 @@ nil (empty response body)
 
 
 # **delete_app_user_profile**
-> AppUserResponse delete_app_user_profile(app_id, user_id, )
+> AppUserResponse delete_app_user_profile(appId, userId, )
 
 
 
@@ -92,13 +92,13 @@ end
 
 api_instance = SmoochApi::AppUserApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-user_id = "user_id_example" # String | Identifies the user. Can be either the smoochId or the userId.
+userId = "userId_example" # String | Identifies the user. Can be either the smoochId or the userId.
 
 
 begin
-  result = api_instance.delete_app_user_profile(app_id, user_id, )
+  result = api_instance.delete_app_user_profile(appId, userId, )
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppUserApi->delete_app_user_profile: #{e}"
@@ -109,8 +109,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **user_id** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
+ **appId** | **String**| Identifies the app. | 
+ **userId** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
 
 ### Return type
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 
 # **get_app_user**
-> AppUserResponse get_app_user(app_id, user_id, )
+> AppUserResponse get_app_user(appId, userId, )
 
 
 
@@ -147,13 +147,13 @@ end
 
 api_instance = SmoochApi::AppUserApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-user_id = "user_id_example" # String | Identifies the user. Can be either the smoochId or the userId.
+userId = "userId_example" # String | Identifies the user. Can be either the smoochId or the userId.
 
 
 begin
-  result = api_instance.get_app_user(app_id, user_id, )
+  result = api_instance.get_app_user(appId, userId, )
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppUserApi->get_app_user: #{e}"
@@ -164,8 +164,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **user_id** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
+ **appId** | **String**| Identifies the app. | 
+ **userId** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
 
 ### Return type
 
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
 
 
 # **get_app_user_auth_code**
-> AuthCodeResponse get_app_user_auth_code(app_id, user_id, )
+> AuthCodeResponse get_app_user_auth_code(appId, userId, )
 
 
 
@@ -202,13 +202,13 @@ end
 
 api_instance = SmoochApi::AppUserApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-user_id = "user_id_example" # String | Identifies the user. Can be either the smoochId or the userId.
+userId = "userId_example" # String | Identifies the user. Can be either the smoochId or the userId.
 
 
 begin
-  result = api_instance.get_app_user_auth_code(app_id, user_id, )
+  result = api_instance.get_app_user_auth_code(appId, userId, )
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppUserApi->get_app_user_auth_code: #{e}"
@@ -219,8 +219,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **user_id** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
+ **appId** | **String**| Identifies the app. | 
+ **userId** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
 
 ### Return type
 
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 
 
 # **get_app_user_business_system_ids**
-> AppUserBusinessSystemsResponse get_app_user_business_system_ids(app_id, user_id, )
+> AppUserBusinessSystemsResponse get_app_user_business_system_ids(appId, userId, )
 
 
 
@@ -257,13 +257,13 @@ end
 
 api_instance = SmoochApi::AppUserApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-user_id = "user_id_example" # String | Identifies the user. Can be either the smoochId or the userId.
+userId = "userId_example" # String | Identifies the user. Can be either the smoochId or the userId.
 
 
 begin
-  result = api_instance.get_app_user_business_system_ids(app_id, user_id, )
+  result = api_instance.get_app_user_business_system_ids(appId, userId, )
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppUserApi->get_app_user_business_system_ids: #{e}"
@@ -274,8 +274,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **user_id** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
+ **appId** | **String**| Identifies the app. | 
+ **userId** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
 
 ### Return type
 
@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
 
 
 # **get_app_user_entity_ids**
-> AppUserChannelsResponse get_app_user_entity_ids(app_id, user_id, )
+> AppUserChannelsResponse get_app_user_entity_ids(appId, userId, )
 
 
 
@@ -312,13 +312,13 @@ end
 
 api_instance = SmoochApi::AppUserApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-user_id = "user_id_example" # String | Identifies the user. Can be either the smoochId or the userId.
+userId = "userId_example" # String | Identifies the user. Can be either the smoochId or the userId.
 
 
 begin
-  result = api_instance.get_app_user_entity_ids(app_id, user_id, )
+  result = api_instance.get_app_user_entity_ids(appId, userId, )
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppUserApi->get_app_user_entity_ids: #{e}"
@@ -329,8 +329,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **user_id** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
+ **appId** | **String**| Identifies the app. | 
+ **userId** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
 
 ### Return type
 
@@ -348,7 +348,7 @@ Name | Type | Description  | Notes
 
 
 # **get_link_requests**
-> LinkRequestResponse get_link_requests(app_id, user_id, integration_ids)
+> LinkRequestResponse get_link_requests(appId, userId, integrationIds)
 
 
 
@@ -367,15 +367,15 @@ end
 
 api_instance = SmoochApi::AppUserApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-user_id = "user_id_example" # String | Identifies the user. Can be either the smoochId or the userId.
+userId = "userId_example" # String | Identifies the user. Can be either the smoochId or the userId.
 
-integration_ids = ["integration_ids_example"] # Array<String> | List of integration IDs
+integrationIds = ["integrationIds_example"] # Array<String> | List of integration IDs
 
 
 begin
-  result = api_instance.get_link_requests(app_id, user_id, integration_ids)
+  result = api_instance.get_link_requests(appId, userId, integrationIds)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppUserApi->get_link_requests: #{e}"
@@ -386,9 +386,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **user_id** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
- **integration_ids** | [**Array&lt;String&gt;**](String.md)| List of integration IDs | 
+ **appId** | **String**| Identifies the app. | 
+ **userId** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
+ **integrationIds** | [**Array&lt;String&gt;**](String.md)| List of integration IDs | 
 
 ### Return type
 
@@ -406,7 +406,7 @@ Name | Type | Description  | Notes
 
 
 # **link_app_user**
-> AppUserResponse link_app_user(app_id, user_id, app_user_link_body)
+> AppUserResponse link_app_user(appId, userId, appUserLinkBody)
 
 
 
@@ -425,15 +425,15 @@ end
 
 api_instance = SmoochApi::AppUserApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-user_id = "user_id_example" # String | Identifies the user. Can be either the smoochId or the userId.
+userId = "userId_example" # String | Identifies the user. Can be either the smoochId or the userId.
 
-app_user_link_body = SmoochApi::AppUserLink.new # AppUserLink | Body for a linkAppUser request.
+appUserLinkBody = SmoochApi::AppUserLink.new # AppUserLink | Body for a linkAppUser request.
 
 
 begin
-  result = api_instance.link_app_user(app_id, user_id, app_user_link_body)
+  result = api_instance.link_app_user(appId, userId, appUserLinkBody)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppUserApi->link_app_user: #{e}"
@@ -444,9 +444,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **user_id** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
- **app_user_link_body** | [**AppUserLink**](AppUserLink.md)| Body for a linkAppUser request. | 
+ **appId** | **String**| Identifies the app. | 
+ **userId** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
+ **appUserLinkBody** | [**AppUserLink**](AppUserLink.md)| Body for a linkAppUser request. | 
 
 ### Return type
 
@@ -464,7 +464,7 @@ Name | Type | Description  | Notes
 
 
 # **post_image_message**
-> MessageResponse post_image_message(app_id, user_id, source, role)
+> MessageResponse post_image_message(appId, userId, source, role)
 
 
 
@@ -483,9 +483,9 @@ end
 
 api_instance = SmoochApi::AppUserApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-user_id = "user_id_example" # String | Identifies the user. Can be either the smoochId or the userId.
+userId = "userId_example" # String | Identifies the user. Can be either the smoochId or the userId.
 
 source = File.new("/path/to/file.txt") # File | Image to be uploaded
 
@@ -493,7 +493,7 @@ role = "role_example" # String | Role of the sender
 
 
 begin
-  result = api_instance.post_image_message(app_id, user_id, source, role)
+  result = api_instance.post_image_message(appId, userId, source, role)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppUserApi->post_image_message: #{e}"
@@ -504,8 +504,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **user_id** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
+ **appId** | **String**| Identifies the app. | 
+ **userId** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
  **source** | **File**| Image to be uploaded | 
  **role** | **String**| Role of the sender | 
 
@@ -525,7 +525,7 @@ Name | Type | Description  | Notes
 
 
 # **pre_create_app_user**
-> AppUserResponse pre_create_app_user(app_id, app_user_pre_create_body)
+> AppUserResponse pre_create_app_user(appId, appUserPreCreateBody)
 
 
 
@@ -544,13 +544,13 @@ end
 
 api_instance = SmoochApi::AppUserApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-app_user_pre_create_body = SmoochApi::AppUserPreCreate.new # AppUserPreCreate | Body for a preCreateAppUser request.
+appUserPreCreateBody = SmoochApi::AppUserPreCreate.new # AppUserPreCreate | Body for a preCreateAppUser request.
 
 
 begin
-  result = api_instance.pre_create_app_user(app_id, app_user_pre_create_body)
+  result = api_instance.pre_create_app_user(appId, appUserPreCreateBody)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppUserApi->pre_create_app_user: #{e}"
@@ -561,8 +561,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **app_user_pre_create_body** | [**AppUserPreCreate**](AppUserPreCreate.md)| Body for a preCreateAppUser request. | 
+ **appId** | **String**| Identifies the app. | 
+ **appUserPreCreateBody** | [**AppUserPreCreate**](AppUserPreCreate.md)| Body for a preCreateAppUser request. | 
 
 ### Return type
 
@@ -580,7 +580,7 @@ Name | Type | Description  | Notes
 
 
 # **unlink_app_user**
-> unlink_app_user(app_id, user_id, channel)
+> unlink_app_user(appId, userId, channel)
 
 
 
@@ -599,15 +599,15 @@ end
 
 api_instance = SmoochApi::AppUserApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-user_id = "user_id_example" # String | Identifies the user. Can be either the smoochId or the userId.
+userId = "userId_example" # String | Identifies the user. Can be either the smoochId or the userId.
 
 channel = "channel_example" # String | Name of the channel.
 
 
 begin
-  api_instance.unlink_app_user(app_id, user_id, channel)
+  api_instance.unlink_app_user(appId, userId, channel)
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppUserApi->unlink_app_user: #{e}"
 end
@@ -617,8 +617,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **user_id** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
+ **appId** | **String**| Identifies the app. | 
+ **userId** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
  **channel** | **String**| Name of the channel. | 
 
 ### Return type
@@ -637,7 +637,7 @@ nil (empty response body)
 
 
 # **update_app_user**
-> AppUserResponse update_app_user(app_id, user_id, app_user_update_body)
+> AppUserResponse update_app_user(appId, userId, appUserUpdateBody)
 
 
 
@@ -656,15 +656,15 @@ end
 
 api_instance = SmoochApi::AppUserApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-user_id = "user_id_example" # String | Identifies the user. Can be either the smoochId or the userId.
+userId = "userId_example" # String | Identifies the user. Can be either the smoochId or the userId.
 
-app_user_update_body = SmoochApi::AppUserUpdate.new # AppUserUpdate | Body for an updateAppUser request.
+appUserUpdateBody = SmoochApi::AppUserUpdate.new # AppUserUpdate | Body for an updateAppUser request.
 
 
 begin
-  result = api_instance.update_app_user(app_id, user_id, app_user_update_body)
+  result = api_instance.update_app_user(appId, userId, appUserUpdateBody)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppUserApi->update_app_user: #{e}"
@@ -675,9 +675,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **user_id** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
- **app_user_update_body** | [**AppUserUpdate**](AppUserUpdate.md)| Body for an updateAppUser request. | 
+ **appId** | **String**| Identifies the app. | 
+ **userId** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
+ **appUserUpdateBody** | [**AppUserUpdate**](AppUserUpdate.md)| Body for an updateAppUser request. | 
 
 ### Return type
 

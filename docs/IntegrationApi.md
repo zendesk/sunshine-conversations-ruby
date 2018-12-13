@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **create_integration**
-> IntegrationResponse create_integration(app_id, integration_create_body)
+> IntegrationResponse create_integration(appId, integrationCreateBody)
 
 
 
@@ -36,13 +36,13 @@ end
 
 api_instance = SmoochApi::IntegrationApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-integration_create_body = SmoochApi::IntegrationCreate.new # IntegrationCreate | Body for a createIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration) 
+integrationCreateBody = SmoochApi::IntegrationCreate.new # IntegrationCreate | Body for a createIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration) 
 
 
 begin
-  result = api_instance.create_integration(app_id, integration_create_body)
+  result = api_instance.create_integration(appId, integrationCreateBody)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling IntegrationApi->create_integration: #{e}"
@@ -53,8 +53,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **integration_create_body** | [**IntegrationCreate**](IntegrationCreate.md)| Body for a createIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration)  | 
+ **appId** | **String**| Identifies the app. | 
+ **integrationCreateBody** | [**IntegrationCreate**](IntegrationCreate.md)| Body for a createIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration)  | 
 
 ### Return type
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 
 # **create_integration_menu**
-> MenuResponse create_integration_menu(app_id, integration_id, menu_create_body)
+> MenuResponse create_integration_menu(appId, integrationId, menuCreateBody)
 
 
 
@@ -91,15 +91,15 @@ end
 
 api_instance = SmoochApi::IntegrationApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-integration_id = "integration_id_example" # String | Identifies the integration.
+integrationId = "integrationId_example" # String | Identifies the integration.
 
-menu_create_body = SmoochApi::Menu.new # Menu | Body for a createMenu request.
+menuCreateBody = SmoochApi::Menu.new # Menu | Body for a createMenu request.
 
 
 begin
-  result = api_instance.create_integration_menu(app_id, integration_id, menu_create_body)
+  result = api_instance.create_integration_menu(appId, integrationId, menuCreateBody)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling IntegrationApi->create_integration_menu: #{e}"
@@ -110,9 +110,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **integration_id** | **String**| Identifies the integration. | 
- **menu_create_body** | [**Menu**](Menu.md)| Body for a createMenu request. | 
+ **appId** | **String**| Identifies the app. | 
+ **integrationId** | **String**| Identifies the integration. | 
+ **menuCreateBody** | [**Menu**](Menu.md)| Body for a createMenu request. | 
 
 ### Return type
 
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 
 # **delete_integration**
-> delete_integration(app_id, integration_id, )
+> delete_integration(appId, integrationId, )
 
 
 
@@ -149,13 +149,13 @@ end
 
 api_instance = SmoochApi::IntegrationApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-integration_id = "integration_id_example" # String | Identifies the integration.
+integrationId = "integrationId_example" # String | Identifies the integration.
 
 
 begin
-  api_instance.delete_integration(app_id, integration_id, )
+  api_instance.delete_integration(appId, integrationId, )
 rescue SmoochApi::ApiError => e
   puts "Exception when calling IntegrationApi->delete_integration: #{e}"
 end
@@ -165,8 +165,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **integration_id** | **String**| Identifies the integration. | 
+ **appId** | **String**| Identifies the app. | 
+ **integrationId** | **String**| Identifies the integration. | 
 
 ### Return type
 
@@ -184,7 +184,7 @@ nil (empty response body)
 
 
 # **delete_integration_menu**
-> delete_integration_menu(app_id, integration_id, )
+> delete_integration_menu(appId, integrationId, )
 
 
 
@@ -203,13 +203,13 @@ end
 
 api_instance = SmoochApi::IntegrationApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-integration_id = "integration_id_example" # String | Identifies the integration.
+integrationId = "integrationId_example" # String | Identifies the integration.
 
 
 begin
-  api_instance.delete_integration_menu(app_id, integration_id, )
+  api_instance.delete_integration_menu(appId, integrationId, )
 rescue SmoochApi::ApiError => e
   puts "Exception when calling IntegrationApi->delete_integration_menu: #{e}"
 end
@@ -219,8 +219,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **integration_id** | **String**| Identifies the integration. | 
+ **appId** | **String**| Identifies the app. | 
+ **integrationId** | **String**| Identifies the integration. | 
 
 ### Return type
 
@@ -238,7 +238,7 @@ nil (empty response body)
 
 
 # **get_integration**
-> IntegrationResponse get_integration(app_id, integration_id, )
+> IntegrationResponse get_integration(appId, integrationId, )
 
 
 
@@ -257,13 +257,13 @@ end
 
 api_instance = SmoochApi::IntegrationApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-integration_id = "integration_id_example" # String | Identifies the integration.
+integrationId = "integrationId_example" # String | Identifies the integration.
 
 
 begin
-  result = api_instance.get_integration(app_id, integration_id, )
+  result = api_instance.get_integration(appId, integrationId, )
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling IntegrationApi->get_integration: #{e}"
@@ -274,8 +274,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **integration_id** | **String**| Identifies the integration. | 
+ **appId** | **String**| Identifies the app. | 
+ **integrationId** | **String**| Identifies the integration. | 
 
 ### Return type
 
@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
 
 
 # **get_integration_menu**
-> MenuResponse get_integration_menu(app_id, integration_id, )
+> MenuResponse get_integration_menu(appId, integrationId, )
 
 
 
@@ -312,13 +312,13 @@ end
 
 api_instance = SmoochApi::IntegrationApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-integration_id = "integration_id_example" # String | Identifies the integration.
+integrationId = "integrationId_example" # String | Identifies the integration.
 
 
 begin
-  result = api_instance.get_integration_menu(app_id, integration_id, )
+  result = api_instance.get_integration_menu(appId, integrationId, )
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling IntegrationApi->get_integration_menu: #{e}"
@@ -329,8 +329,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **integration_id** | **String**| Identifies the integration. | 
+ **appId** | **String**| Identifies the app. | 
+ **integrationId** | **String**| Identifies the integration. | 
 
 ### Return type
 
@@ -348,7 +348,7 @@ Name | Type | Description  | Notes
 
 
 # **list_integrations**
-> ListIntegrationsResponse list_integrations(app_id, , opts)
+> ListIntegrationsResponse list_integrations(appId, , opts)
 
 
 
@@ -367,14 +367,14 @@ end
 
 api_instance = SmoochApi::IntegrationApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
 opts = { 
   types: "types_example" # String | List of types to filter the query by. More than one value can be specified through comma separation e.g. ?types=*twilio*,*line*. 
 }
 
 begin
-  result = api_instance.list_integrations(app_id, , opts)
+  result = api_instance.list_integrations(appId, , opts)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling IntegrationApi->list_integrations: #{e}"
@@ -385,7 +385,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
+ **appId** | **String**| Identifies the app. | 
  **types** | **String**| List of types to filter the query by. More than one value can be specified through comma separation e.g. ?types&#x3D;*twilio*,*line*.  | [optional] 
 
 ### Return type
@@ -404,7 +404,7 @@ Name | Type | Description  | Notes
 
 
 # **update_integration**
-> IntegrationResponse update_integration(app_id, integration_id, integration_update_body)
+> IntegrationResponse update_integration(appId, integrationId, integrationUpdateBody)
 
 
 
@@ -423,15 +423,15 @@ end
 
 api_instance = SmoochApi::IntegrationApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-integration_id = "integration_id_example" # String | Identifies the integration.
+integrationId = "integrationId_example" # String | Identifies the integration.
 
-integration_update_body = SmoochApi::IntegrationUpdate.new # IntegrationUpdate | Body for a updateIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration) 
+integrationUpdateBody = SmoochApi::IntegrationUpdate.new # IntegrationUpdate | Body for a updateIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration) 
 
 
 begin
-  result = api_instance.update_integration(app_id, integration_id, integration_update_body)
+  result = api_instance.update_integration(appId, integrationId, integrationUpdateBody)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling IntegrationApi->update_integration: #{e}"
@@ -442,9 +442,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **integration_id** | **String**| Identifies the integration. | 
- **integration_update_body** | [**IntegrationUpdate**](IntegrationUpdate.md)| Body for a updateIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration)  | 
+ **appId** | **String**| Identifies the app. | 
+ **integrationId** | **String**| Identifies the integration. | 
+ **integrationUpdateBody** | [**IntegrationUpdate**](IntegrationUpdate.md)| Body for a updateIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration)  | 
 
 ### Return type
 
@@ -462,7 +462,7 @@ Name | Type | Description  | Notes
 
 
 # **update_integration_menu**
-> MenuResponse update_integration_menu(app_id, integration_id, menu_update_body)
+> MenuResponse update_integration_menu(appId, integrationId, menuUpdateBody)
 
 
 
@@ -481,15 +481,15 @@ end
 
 api_instance = SmoochApi::IntegrationApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-integration_id = "integration_id_example" # String | Identifies the integration.
+integrationId = "integrationId_example" # String | Identifies the integration.
 
-menu_update_body = SmoochApi::Menu.new # Menu | Body for a updateMenu request.
+menuUpdateBody = SmoochApi::Menu.new # Menu | Body for a updateMenu request.
 
 
 begin
-  result = api_instance.update_integration_menu(app_id, integration_id, menu_update_body)
+  result = api_instance.update_integration_menu(appId, integrationId, menuUpdateBody)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling IntegrationApi->update_integration_menu: #{e}"
@@ -500,9 +500,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **integration_id** | **String**| Identifies the integration. | 
- **menu_update_body** | [**Menu**](Menu.md)| Body for a updateMenu request. | 
+ **appId** | **String**| Identifies the app. | 
+ **integrationId** | **String**| Identifies the integration. | 
+ **menuUpdateBody** | [**Menu**](Menu.md)| Body for a updateMenu request. | 
 
 ### Return type
 
@@ -520,7 +520,7 @@ Name | Type | Description  | Notes
 
 
 # **update_integration_profile**
-> update_integration_profile(app_id, integration_id, integration_profile_body)
+> update_integration_profile(appId, integrationId, integrationProfileBody)
 
 
 
@@ -539,15 +539,15 @@ end
 
 api_instance = SmoochApi::IntegrationApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-integration_id = "integration_id_example" # String | Identifies the integration.
+integrationId = "integrationId_example" # String | Identifies the integration.
 
-integration_profile_body = SmoochApi::IntegrationProfileUpdate.new # IntegrationProfileUpdate | Body for a profileUpdate request.
+integrationProfileBody = SmoochApi::IntegrationProfileUpdate.new # IntegrationProfileUpdate | Body for a profileUpdate request.
 
 
 begin
-  api_instance.update_integration_profile(app_id, integration_id, integration_profile_body)
+  api_instance.update_integration_profile(appId, integrationId, integrationProfileBody)
 rescue SmoochApi::ApiError => e
   puts "Exception when calling IntegrationApi->update_integration_profile: #{e}"
 end
@@ -557,9 +557,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **integration_id** | **String**| Identifies the integration. | 
- **integration_profile_body** | [**IntegrationProfileUpdate**](IntegrationProfileUpdate.md)| Body for a profileUpdate request. | 
+ **appId** | **String**| Identifies the app. | 
+ **integrationId** | **String**| Identifies the integration. | 
+ **integrationProfileBody** | [**IntegrationProfileUpdate**](IntegrationProfileUpdate.md)| Body for a profileUpdate request. | 
 
 ### Return type
 

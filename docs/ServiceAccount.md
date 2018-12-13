@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_id** | **String** | The service account&#39;s ID. | 
+**id** | **String** | The service account&#39;s ID. | 
 **name** | **String** | The service account&#39;s name. | 
 
 

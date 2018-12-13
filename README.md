@@ -25,7 +25,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 4.1.0'
+    gem 'smooch-api', '~> 4.2.0'
 
 ## Getting Started
 
@@ -69,11 +69,11 @@ end
 
 api_instance = SmoochApi::AppApi.new
 
-app_create_body = SmoochApi::AppCreate.new # AppCreate | Body for a createApp request.
+appCreateBody = SmoochApi::AppCreate.new # AppCreate | Body for a createApp request.
 
 
 begin
-  result = api_instance.create_app(app_create_body)
+  result = api_instance.create_app(appCreateBody)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppApi->create_app: #{e}"
@@ -210,6 +210,8 @@ Class | Method | HTTP request | Description
  - [SmoochApi::MenuResponse](docs/MenuResponse.md)
  - [SmoochApi::Message](docs/Message.md)
  - [SmoochApi::MessageItem](docs/MessageItem.md)
+ - [SmoochApi::MessageOverride](docs/MessageOverride.md)
+ - [SmoochApi::MessageOverrideWhatsapp](docs/MessageOverrideWhatsapp.md)
  - [SmoochApi::MessagePost](docs/MessagePost.md)
  - [SmoochApi::MessageResponse](docs/MessageResponse.md)
  - [SmoochApi::SecretKey](docs/SecretKey.md)

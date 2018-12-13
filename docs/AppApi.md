@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **create_app**
-> AppResponse create_app(app_create_body)
+> AppResponse create_app(appCreateBody)
 
 
 
@@ -36,11 +36,11 @@ end
 
 api_instance = SmoochApi::AppApi.new
 
-app_create_body = SmoochApi::AppCreate.new # AppCreate | Body for a createApp request.
+appCreateBody = SmoochApi::AppCreate.new # AppCreate | Body for a createApp request.
 
 
 begin
-  result = api_instance.create_app(app_create_body)
+  result = api_instance.create_app(appCreateBody)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppApi->create_app: #{e}"
@@ -51,7 +51,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_create_body** | [**AppCreate**](AppCreate.md)| Body for a createApp request. | 
+ **appCreateBody** | [**AppCreate**](AppCreate.md)| Body for a createApp request. | 
 
 ### Return type
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 
 # **create_secret_key**
-> SecretKeyResponse create_secret_key(app_id, secret_key_create_body)
+> SecretKeyResponse create_secret_key(appId, secretKeyCreateBody)
 
 
 
@@ -88,13 +88,13 @@ end
 
 api_instance = SmoochApi::AppApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-secret_key_create_body = SmoochApi::SecretKeyCreate.new # SecretKeyCreate | Body for a createSecretKey request.
+secretKeyCreateBody = SmoochApi::SecretKeyCreate.new # SecretKeyCreate | Body for a createSecretKey request.
 
 
 begin
-  result = api_instance.create_secret_key(app_id, secret_key_create_body)
+  result = api_instance.create_secret_key(appId, secretKeyCreateBody)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppApi->create_secret_key: #{e}"
@@ -105,8 +105,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **secret_key_create_body** | [**SecretKeyCreate**](SecretKeyCreate.md)| Body for a createSecretKey request. | 
+ **appId** | **String**| Identifies the app. | 
+ **secretKeyCreateBody** | [**SecretKeyCreate**](SecretKeyCreate.md)| Body for a createSecretKey request. | 
 
 ### Return type
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 
 
 # **delete_app**
-> delete_app(app_id, )
+> delete_app(appId, )
 
 
 
@@ -143,11 +143,11 @@ end
 
 api_instance = SmoochApi::AppApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
 
 begin
-  api_instance.delete_app(app_id, )
+  api_instance.delete_app(appId, )
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppApi->delete_app: #{e}"
 end
@@ -157,7 +157,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
+ **appId** | **String**| Identifies the app. | 
 
 ### Return type
 
@@ -175,7 +175,7 @@ nil (empty response body)
 
 
 # **delete_secret_key**
-> delete_secret_key(app_id, key_id)
+> delete_secret_key(appId, keyId)
 
 
 
@@ -194,13 +194,13 @@ end
 
 api_instance = SmoochApi::AppApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-key_id = "key_id_example" # String | Identifies the secret key.
+keyId = "keyId_example" # String | Identifies the secret key.
 
 
 begin
-  api_instance.delete_secret_key(app_id, key_id)
+  api_instance.delete_secret_key(appId, keyId)
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppApi->delete_secret_key: #{e}"
 end
@@ -210,8 +210,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **key_id** | **String**| Identifies the secret key. | 
+ **appId** | **String**| Identifies the app. | 
+ **keyId** | **String**| Identifies the secret key. | 
 
 ### Return type
 
@@ -229,7 +229,7 @@ nil (empty response body)
 
 
 # **get_app**
-> AppResponse get_app(app_id, )
+> AppResponse get_app(appId, )
 
 
 
@@ -248,11 +248,11 @@ end
 
 api_instance = SmoochApi::AppApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
 
 begin
-  result = api_instance.get_app(app_id, )
+  result = api_instance.get_app(appId, )
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppApi->get_app: #{e}"
@@ -263,7 +263,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
+ **appId** | **String**| Identifies the app. | 
 
 ### Return type
 
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 
 
 # **get_app_jwt**
-> JwtResponse get_app_jwt(app_id, key_id)
+> JwtResponse get_app_jwt(appId, keyId)
 
 
 
@@ -300,13 +300,13 @@ end
 
 api_instance = SmoochApi::AppApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-key_id = "key_id_example" # String | Identifies the secret key.
+keyId = "keyId_example" # String | Identifies the secret key.
 
 
 begin
-  result = api_instance.get_app_jwt(app_id, key_id)
+  result = api_instance.get_app_jwt(appId, keyId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppApi->get_app_jwt: #{e}"
@@ -317,8 +317,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **key_id** | **String**| Identifies the secret key. | 
+ **appId** | **String**| Identifies the app. | 
+ **keyId** | **String**| Identifies the secret key. | 
 
 ### Return type
 
@@ -336,7 +336,7 @@ Name | Type | Description  | Notes
 
 
 # **get_secret_key**
-> SecretKeyResponse get_secret_key(app_id, key_id)
+> SecretKeyResponse get_secret_key(appId, keyId)
 
 
 
@@ -355,13 +355,13 @@ end
 
 api_instance = SmoochApi::AppApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-key_id = "key_id_example" # String | Identifies the secret key.
+keyId = "keyId_example" # String | Identifies the secret key.
 
 
 begin
-  result = api_instance.get_secret_key(app_id, key_id)
+  result = api_instance.get_secret_key(appId, keyId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppApi->get_secret_key: #{e}"
@@ -372,8 +372,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **key_id** | **String**| Identifies the secret key. | 
+ **appId** | **String**| Identifies the app. | 
+ **keyId** | **String**| Identifies the secret key. | 
 
 ### Return type
 
@@ -413,7 +413,7 @@ api_instance = SmoochApi::AppApi.new
 opts = { 
   limit: 25, # Integer | The number of records to return.
   offset: 0, # Integer | The number of initial records to skip before picking records to return.
-  service_account_id: "" # String | The service account ID for which to list apps.
+  serviceAccountId: "" # String | The service account ID for which to list apps.
 }
 
 begin
@@ -430,7 +430,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **limit** | **Integer**| The number of records to return. | [optional] [default to 25]
  **offset** | **Integer**| The number of initial records to skip before picking records to return. | [optional] [default to 0]
- **service_account_id** | **String**| The service account ID for which to list apps. | [optional] [default to ]
+ **serviceAccountId** | **String**| The service account ID for which to list apps. | [optional] [default to ]
 
 ### Return type
 
@@ -448,7 +448,7 @@ Name | Type | Description  | Notes
 
 
 # **list_secret_keys**
-> ListSecretKeysResponse list_secret_keys(app_id, )
+> ListSecretKeysResponse list_secret_keys(appId, )
 
 
 
@@ -467,11 +467,11 @@ end
 
 api_instance = SmoochApi::AppApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
 
 begin
-  result = api_instance.list_secret_keys(app_id, )
+  result = api_instance.list_secret_keys(appId, )
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppApi->list_secret_keys: #{e}"
@@ -482,7 +482,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
+ **appId** | **String**| Identifies the app. | 
 
 ### Return type
 
@@ -500,7 +500,7 @@ Name | Type | Description  | Notes
 
 
 # **update_app**
-> AppResponse update_app(app_id, app_update_body)
+> AppResponse update_app(appId, appUpdateBody)
 
 
 
@@ -519,13 +519,13 @@ end
 
 api_instance = SmoochApi::AppApi.new
 
-app_id = "app_id_example" # String | Identifies the app.
+appId = "appId_example" # String | Identifies the app.
 
-app_update_body = SmoochApi::AppUpdate.new # AppUpdate | Body for an updateApp request.
+appUpdateBody = SmoochApi::AppUpdate.new # AppUpdate | Body for an updateApp request.
 
 
 begin
-  result = api_instance.update_app(app_id, app_update_body)
+  result = api_instance.update_app(appId, appUpdateBody)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppApi->update_app: #{e}"
@@ -536,8 +536,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **String**| Identifies the app. | 
- **app_update_body** | [**AppUpdate**](AppUpdate.md)| Body for an updateApp request. | 
+ **appId** | **String**| Identifies the app. | 
+ **appUpdateBody** | [**AppUpdate**](AppUpdate.md)| Body for an updateApp request. | 
 
 ### Return type
 
