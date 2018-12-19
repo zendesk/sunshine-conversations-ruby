@@ -87,7 +87,7 @@ module SmoochApi
       self.class == o.class &&
           conversation == o.conversation &&
           messages == o.messages &&
-          next == o.next
+          self.next == o.next
     end
 
     # @see the `==` method
@@ -99,7 +99,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [conversation, messages, next].hash
+      [conversation, messages, self.next].hash
     end
 
     # Builds the object from hash
