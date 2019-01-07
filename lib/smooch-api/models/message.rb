@@ -21,10 +21,10 @@ module SmoochApi
     # The ID of the message's author.
     attr_accessor :authorId
 
-    # The role of the individual posting the message. Can be either *appUser* or *appMaker*.
+    # The role of the individual posting the message. See Enums.md for available values.
     attr_accessor :role
 
-    # The message type.
+    # The message type. See Enums.md for available values.
     attr_accessor :type
 
     # The source of the message.

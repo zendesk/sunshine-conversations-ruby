@@ -15,7 +15,7 @@ require 'date'
 module SmoochApi
 
   class AppUserLink
-    # The type of the channel to link.
+    # The type of the channel to link. See Enums.md for available values.
     attr_accessor :type
 
     # A String of the appUser’s phone number. It must contain the + prefix and the country code. Required for *messenger*, *twilio* and *messagebird* linking. 

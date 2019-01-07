@@ -15,10 +15,10 @@ require 'date'
 module SmoochApi
 
   class MessagePost
-    # The role of the individual posting the message. Can be either *appUser* or *appMaker*.
+    # The role of the individual posting the message. See Enums.md for available values.
     attr_accessor :role
 
-    # The message type.
+    # The message type. See Enums.md for available values.
     attr_accessor :type
 
     # The display name of the message author.

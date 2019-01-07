@@ -24,7 +24,7 @@ module SmoochApi
     # The image URL to be shown in the carousel/list item.
     attr_accessor :mediaUrl
 
-    # The size of the image to be shown in the carousel/list item. Only top item of Facebook Messenger carousel supported. Choose from *compact* and *large*. 
+    # The size of the image to be shown in the carousel/list item. Only top item of Facebook Messenger carousel supported. See Enums.md for available values. 
     attr_accessor :size
 
     # If a *mediaUrl* was specified, the media type is defined here, for example *image/jpeg*.

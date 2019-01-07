@@ -108,7 +108,7 @@ module SmoochApi
         :'phoneNumber' => :'String',
         :'radioAccessTechnology' => :'String',
         :'state' => :'String',
-        :'timezone' => :'Integer',
+        :'timezone' => :'Float',
         :'wifi' => :'String'
       }
     end

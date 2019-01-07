@@ -25,7 +25,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 4.2.0'
+    gem 'smooch-api', '~> 5.0'
 
 ## Getting Started
 
@@ -123,12 +123,12 @@ Class | Method | HTTP request | Description
 *SmoochApi::AppUserApi* | [**update_app_user**](docs/AppUserApi.md#update_app_user) | **PUT** /v1.1/apps/{appId}/appusers/{userId} | 
 *SmoochApi::AttachmentsApi* | [**remove_attachment**](docs/AttachmentsApi.md#remove_attachment) | **POST** /v1.1/apps/{appId}/attachments/remove | 
 *SmoochApi::AttachmentsApi* | [**upload_attachment**](docs/AttachmentsApi.md#upload_attachment) | **POST** /v1.1/apps/{appId}/attachments | 
+*SmoochApi::ConversationApi* | [**conversation_activity**](docs/ConversationApi.md#conversation_activity) | **POST** /v1.1/apps/{appId}/appusers/{userId}/conversation/activity | 
 *SmoochApi::ConversationApi* | [**delete_message**](docs/ConversationApi.md#delete_message) | **DELETE** /v1.1/apps/{appId}/appusers/{userId}/messages/{messageId} | 
 *SmoochApi::ConversationApi* | [**delete_messages**](docs/ConversationApi.md#delete_messages) | **DELETE** /v1.1/apps/{appId}/appusers/{userId}/messages | 
 *SmoochApi::ConversationApi* | [**get_messages**](docs/ConversationApi.md#get_messages) | **GET** /v1.1/apps/{appId}/appusers/{userId}/messages | 
 *SmoochApi::ConversationApi* | [**post_message**](docs/ConversationApi.md#post_message) | **POST** /v1.1/apps/{appId}/appusers/{userId}/messages | 
 *SmoochApi::ConversationApi* | [**reset_unread_count**](docs/ConversationApi.md#reset_unread_count) | **POST** /v1.1/apps/{appId}/appusers/{userId}/conversation/read | 
-*SmoochApi::ConversationApi* | [**trigger_typing_activity**](docs/ConversationApi.md#trigger_typing_activity) | **POST** /v1.1/apps/{appId}/appusers/{userId}/conversation/activity | 
 *SmoochApi::IntegrationApi* | [**create_integration**](docs/IntegrationApi.md#create_integration) | **POST** /v1.1/apps/{appId}/integrations | 
 *SmoochApi::IntegrationApi* | [**create_integration_menu**](docs/IntegrationApi.md#create_integration_menu) | **POST** /v1.1/apps/{appId}/integrations/{integrationId}/menu | 
 *SmoochApi::IntegrationApi* | [**delete_integration**](docs/IntegrationApi.md#delete_integration) | **DELETE** /v1.1/apps/{appId}/integrations/{integrationId} | 
@@ -188,8 +188,10 @@ Class | Method | HTTP request | Description
  - [SmoochApi::ClientInfo](docs/ClientInfo.md)
  - [SmoochApi::Confirmation](docs/Confirmation.md)
  - [SmoochApi::Conversation](docs/Conversation.md)
+ - [SmoochApi::ConversationActivity](docs/ConversationActivity.md)
  - [SmoochApi::Destination](docs/Destination.md)
  - [SmoochApi::DisplaySettings](docs/DisplaySettings.md)
+ - [SmoochApi::Enums](docs/Enums.md)
  - [SmoochApi::GetMessagesResponse](docs/GetMessagesResponse.md)
  - [SmoochApi::Integration](docs/Integration.md)
  - [SmoochApi::IntegrationCreate](docs/IntegrationCreate.md)
@@ -227,7 +229,6 @@ Class | Method | HTTP request | Description
  - [SmoochApi::TemplateCreate](docs/TemplateCreate.md)
  - [SmoochApi::TemplateResponse](docs/TemplateResponse.md)
  - [SmoochApi::TemplateUpdate](docs/TemplateUpdate.md)
- - [SmoochApi::TypingActivityTrigger](docs/TypingActivityTrigger.md)
  - [SmoochApi::Webhook](docs/Webhook.md)
  - [SmoochApi::WebhookCreate](docs/WebhookCreate.md)
  - [SmoochApi::WebhookResponse](docs/WebhookResponse.md)

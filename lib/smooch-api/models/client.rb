@@ -24,7 +24,7 @@ module SmoochApi
     # The date time the client was last seen.
     attr_accessor :lastSeen
 
-    # The client's platform.
+    # The client's platform. See Enums.md for available values.
     attr_accessor :platform
 
     # The GCM or APN token to be used for sending push notifications to the device. Applies to only *android* and *ios* clients. 

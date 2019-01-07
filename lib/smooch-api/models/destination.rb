@@ -18,7 +18,7 @@ module SmoochApi
     # The ID of the target integration.
     attr_accessor :integrationId
 
-    # The type of the target integration.
+    # The type of the target integration. See Enums.md for available values.
     attr_accessor :integrationType
 
 

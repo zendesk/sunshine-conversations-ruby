@@ -15,7 +15,7 @@ require 'date'
 module SmoochApi
 
   class Confirmation
-    # The confirmation type.
+    # The confirmation type. See Enums.md for available values.
     attr_accessor :type
 
     # The message used to reach out to the user. Must be a valid message object as per the post message API.

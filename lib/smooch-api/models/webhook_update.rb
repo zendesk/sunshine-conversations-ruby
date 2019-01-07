@@ -18,7 +18,7 @@ module SmoochApi
     # URL to be called when the webhook is triggered.
     attr_accessor :target
 
-    # An array of triggers you wish to have the webhook listen to. If unspecified the default trigger is *message*.
+    # An array of triggers you wish to have the webhook listen to. See Enums.md for available values.
     attr_accessor :triggers
 
 

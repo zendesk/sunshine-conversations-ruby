@@ -4,12 +4,69 @@ All URIs are relative to *https://api.smooch.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**conversation_activity**](ConversationApi.md#conversation_activity) | **POST** /v1.1/apps/{appId}/appusers/{userId}/conversation/activity | 
 [**delete_message**](ConversationApi.md#delete_message) | **DELETE** /v1.1/apps/{appId}/appusers/{userId}/messages/{messageId} | 
 [**delete_messages**](ConversationApi.md#delete_messages) | **DELETE** /v1.1/apps/{appId}/appusers/{userId}/messages | 
 [**get_messages**](ConversationApi.md#get_messages) | **GET** /v1.1/apps/{appId}/appusers/{userId}/messages | 
 [**post_message**](ConversationApi.md#post_message) | **POST** /v1.1/apps/{appId}/appusers/{userId}/messages | 
 [**reset_unread_count**](ConversationApi.md#reset_unread_count) | **POST** /v1.1/apps/{appId}/appusers/{userId}/conversation/read | 
-[**trigger_typing_activity**](ConversationApi.md#trigger_typing_activity) | **POST** /v1.1/apps/{appId}/appusers/{userId}/conversation/activity | 
+
+
+# **conversation_activity**
+> conversation_activity(appId, userId, conversationActivityBody)
+
+
+
+Notify Smooch when an app maker starts or stops typing a response.
+
+### Example
+```ruby
+# load the gem
+require 'smooch-api'
+# setup authorization
+SmoochApi.configure do |config|
+  # Configure API key authorization: jwt
+  config.api_key['Authorization'] = 'YOUR JWT'
+  config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = SmoochApi::ConversationApi.new
+
+appId = "appId_example" # String | Identifies the app.
+
+userId = "userId_example" # String | Identifies the user. Can be either the smoochId or the userId.
+
+conversationActivityBody = SmoochApi::ConversationActivity.new # ConversationActivity | Body for a triggerConversationActivity request.
+
+
+begin
+  api_instance.conversation_activity(appId, userId, conversationActivityBody)
+rescue SmoochApi::ApiError => e
+  puts "Exception when calling ConversationApi->conversation_activity: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**| Identifies the app. | 
+ **userId** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
+ **conversationActivityBody** | [**ConversationActivity**](ConversationActivity.md)| Body for a triggerConversationActivity request. | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 
 
 # **delete_message**
@@ -280,63 +337,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**| Identifies the app. | 
  **userId** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[jwt](../README.md#jwt)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **trigger_typing_activity**
-> trigger_typing_activity(appId, userId, typingActivityTriggerBody)
-
-
-
-Notify Smooch when an app maker starts or stops typing a response.
-
-### Example
-```ruby
-# load the gem
-require 'smooch-api'
-# setup authorization
-SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
-  config.api_key['Authorization'] = 'YOUR JWT'
-  config.api_key_prefix['Authorization'] = 'Bearer'
-end
-
-api_instance = SmoochApi::ConversationApi.new
-
-appId = "appId_example" # String | Identifies the app.
-
-userId = "userId_example" # String | Identifies the user. Can be either the smoochId or the userId.
-
-typingActivityTriggerBody = SmoochApi::TypingActivityTrigger.new # TypingActivityTrigger | Body for a triggerTypingActivity request.
-
-
-begin
-  api_instance.trigger_typing_activity(appId, userId, typingActivityTriggerBody)
-rescue SmoochApi::ApiError => e
-  puts "Exception when calling ConversationApi->trigger_typing_activity: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **String**| Identifies the app. | 
- **userId** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
- **typingActivityTriggerBody** | [**TypingActivityTrigger**](TypingActivityTrigger.md)| Body for a triggerTypingActivity request. | 
 
 ### Return type
 

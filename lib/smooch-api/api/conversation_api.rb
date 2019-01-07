@@ -21,6 +21,72 @@ module SmoochApi
     end
 
     # 
+    # Notify Smooch when an app maker starts or stops typing a response.
+    # @param appId Identifies the app.
+    # @param userId Identifies the user. Can be either the smoochId or the userId.
+    # @param conversationActivityBody Body for a triggerConversationActivity request.
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def conversation_activity(appId, userId, conversationActivityBody, opts = {})
+      conversation_activity_with_http_info(appId, userId, conversationActivityBody, opts)
+      return nil
+    end
+
+    # 
+    # Notify Smooch when an app maker starts or stops typing a response.
+    # @param appId Identifies the app.
+    # @param userId Identifies the user. Can be either the smoochId or the userId.
+    # @param conversationActivityBody Body for a triggerConversationActivity request.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def conversation_activity_with_http_info(appId, userId, conversationActivityBody, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ConversationApi.conversation_activity ..."
+      end
+      # verify the required parameter 'appId' is set
+      if @api_client.config.client_side_validation && appId.nil?
+        fail ArgumentError, "Missing the required parameter 'appId' when calling ConversationApi.conversation_activity"
+      end
+      # verify the required parameter 'userId' is set
+      if @api_client.config.client_side_validation && userId.nil?
+        fail ArgumentError, "Missing the required parameter 'userId' when calling ConversationApi.conversation_activity"
+      end
+      # verify the required parameter 'conversationActivityBody' is set
+      if @api_client.config.client_side_validation && conversationActivityBody.nil?
+        fail ArgumentError, "Missing the required parameter 'conversationActivityBody' when calling ConversationApi.conversation_activity"
+      end
+      # resource path
+      local_var_path = "/v1.1/apps/{appId}/appusers/{userId}/conversation/activity".sub('{' + 'appId' + '}', appId.to_s).sub('{' + 'userId' + '}', userId.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(conversationActivityBody)
+      auth_names = ['jwt']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ConversationApi#conversation_activity\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # 
     # Deletes a single message.
     # @param appId Identifies the app.
     # @param userId Identifies the user. Can be either the smoochId or the userId.
@@ -336,72 +402,6 @@ module SmoochApi
         :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: ConversationApi#reset_unread_count\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # 
-    # Notify Smooch when an app maker starts or stops typing a response.
-    # @param appId Identifies the app.
-    # @param userId Identifies the user. Can be either the smoochId or the userId.
-    # @param typingActivityTriggerBody Body for a triggerTypingActivity request.
-    # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def trigger_typing_activity(appId, userId, typingActivityTriggerBody, opts = {})
-      trigger_typing_activity_with_http_info(appId, userId, typingActivityTriggerBody, opts)
-      return nil
-    end
-
-    # 
-    # Notify Smooch when an app maker starts or stops typing a response.
-    # @param appId Identifies the app.
-    # @param userId Identifies the user. Can be either the smoochId or the userId.
-    # @param typingActivityTriggerBody Body for a triggerTypingActivity request.
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
-    def trigger_typing_activity_with_http_info(appId, userId, typingActivityTriggerBody, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: ConversationApi.trigger_typing_activity ..."
-      end
-      # verify the required parameter 'appId' is set
-      if @api_client.config.client_side_validation && appId.nil?
-        fail ArgumentError, "Missing the required parameter 'appId' when calling ConversationApi.trigger_typing_activity"
-      end
-      # verify the required parameter 'userId' is set
-      if @api_client.config.client_side_validation && userId.nil?
-        fail ArgumentError, "Missing the required parameter 'userId' when calling ConversationApi.trigger_typing_activity"
-      end
-      # verify the required parameter 'typingActivityTriggerBody' is set
-      if @api_client.config.client_side_validation && typingActivityTriggerBody.nil?
-        fail ArgumentError, "Missing the required parameter 'typingActivityTriggerBody' when calling ConversationApi.trigger_typing_activity"
-      end
-      # resource path
-      local_var_path = "/v1.1/apps/{appId}/appusers/{userId}/conversation/activity".sub('{' + 'appId' + '}', appId.to_s).sub('{' + 'userId' + '}', userId.to_s)
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = @api_client.object_to_http_body(typingActivityTriggerBody)
-      auth_names = ['jwt']
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ConversationApi#trigger_typing_activity\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

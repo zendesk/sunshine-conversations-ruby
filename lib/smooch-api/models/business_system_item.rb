@@ -15,7 +15,7 @@ require 'date'
 module SmoochApi
 
   class BusinessSystemItem
-    # The type of business system (ex. slack, hipchat, zendesk etc...)
+    # The type of business system. See Enums.md for available values.
     attr_accessor :type
 
     # The channel id for a *slack* integration

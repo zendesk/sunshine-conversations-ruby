@@ -15,7 +15,7 @@ require 'date'
 module SmoochApi
 
   class Action
-    # The action type.
+    # The action type. See Enums.md for available values.
     attr_accessor :type
 
     # The button text.
@@ -45,7 +45,7 @@ module SmoochApi
     # The webview action fallback uri. This is the link that will be used in clients that do not support webviews. Required for *webview* actions. 
     attr_accessor :fallback
 
-    # The size used to display the webview. Allowed values are [\"compact\", \"tall\", \"full\"]. (Optional) Used for *webview* actions. 
+    # The size used to display the webview. Allowed values are [\"compact\", \"tall\", \"full\"]. (Optional) Used for *webview* actions. See Enums.md for available values. 
     attr_accessor :size
 
     # Extra options to pass directly to the channel API. See [Extra Channel Options](https://docs.smooch.io/rest#extra-channel-options-schema)

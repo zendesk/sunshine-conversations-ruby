@@ -21,7 +21,7 @@ module SmoochApi
     # A valid address, like http://smooch.io. Required for a link type item.
     attr_accessor :uri
 
-    # Can either be link, postback, which correspond to Smooch’s link and postback actions, or submenu for nested menus.
+    # Can either be link, postback, which correspond to Smooch’s link and postback actions, or submenu for nested menus. See Enums.md for available values.
     attr_accessor :type
 
     # A payload for a postback. Required for a postback type item.

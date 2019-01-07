@@ -18,7 +18,7 @@ module SmoochApi
     # The integration ID, generated automatically.
     attr_accessor :id
 
-    # The integration type.
+    # The integration type. See Enums.md for available values.
     attr_accessor :type
 
     # Facebook Page Access Token. Required for *messenger* integrations. 
@@ -180,7 +180,7 @@ module SmoochApi
     # A list of origins to whitelist. When set, only the origins from this list will be able to initialize the Web Messenger. If unset, all origins are whitelisted. The elements in the list should follow the serialized-origin format from RFC 6454 `scheme \"://\" host [ \":\" port ]`, where scheme is `http` or `https`. (Optional) Used for *Web Messenger* integrations. 
     attr_accessor :originWhitelist
 
-    # The integration status. Possible values are active, inactive or error. [More info](https://docs.smooch.io/#integration-status).
+    # The integration status. See Enums.md for available values. [More info](https://docs.smooch.io/#integration-status).
     attr_accessor :status
 
     # The error causing the integration to fail. Will be present when `status` is 'error'.

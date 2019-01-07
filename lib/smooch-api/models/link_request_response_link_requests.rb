@@ -18,7 +18,7 @@ module SmoochApi
     # The integration ID.
     attr_accessor :integrationId
 
-    # The integration type.
+    # The integration type. See Enums.md for available values.
     attr_accessor :type
 
     # The link request code.

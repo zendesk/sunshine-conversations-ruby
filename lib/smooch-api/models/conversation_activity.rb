@@ -14,11 +14,11 @@ require 'date'
 
 module SmoochApi
 
-  class TypingActivityTrigger
-    # The role of the actor. Must be *appMaker*.
+  class ConversationActivity
+    # The role of the actor. Must be *appMaker*. See Enums.md for available values.
     attr_accessor :role
 
-    # The type of activity to trigger. Must be either *typing:start* or *typing:stop*.
+    # The type of activity to trigger. Must be either *typing:start* or *typing:stop*. See Enums.md for available values.
     attr_accessor :type
 
     # The name of the app maker that starts or stops typing a response.

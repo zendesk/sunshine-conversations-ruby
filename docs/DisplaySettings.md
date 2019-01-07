@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**imageAspectRatio** | **String** | Specifies how to display all carousel images. Valid values are *horizontal* (default) and *square*. | [optional] 
+**imageAspectRatio** | **String** | Specifies how to display all carousel images. See Enums.md for available values. | [optional] 
 
 

@@ -18,7 +18,7 @@ module SmoochApi
     # An identifier used by Smooch for internal purposes.
     attr_accessor :id
 
-    # An identifier for the channel from which a message originated.
+    # An identifier for the channel from which a message originated. See Enums.md for available values.
     attr_accessor :type
 
 

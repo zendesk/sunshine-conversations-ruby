@@ -15,7 +15,7 @@ require 'date'
 module SmoochApi
 
   class IntegrationCreate
-    # The integration type.
+    # The integration type. See Enums.md for available values.
     attr_accessor :type
 
     # Facebook Page Access Token. Required for *messenger* integrations. 

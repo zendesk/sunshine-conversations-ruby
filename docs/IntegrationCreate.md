@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **String** | The integration type. | 
+**type** | **String** | The integration type. See Enums.md for available values. | 
 **pageAccessToken** | **String** | Facebook Page Access Token. Required for *messenger* integrations.  | [optional] 
 **appId** | **String** | Facebook App ID OR WeChat App ID. Required for *messenger* and *wechat* integrations.  | [optional] 
 **appSecret** | **String** | Facebook Page App Secret OR WeChat App Secret. Required for *messenger* and *wechat* integrations.  | [optional] 

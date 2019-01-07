@@ -15,7 +15,7 @@ require 'date'
 module SmoochApi
 
   class ChannelEntityItem
-    # The type of channel (ex. messenger, viber, twilio etc...)
+    # The type of channel. See Enums.md for available values.
     attr_accessor :type
 
     # The phone number for a *twilio*, *messageBird* integration

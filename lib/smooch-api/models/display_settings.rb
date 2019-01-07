@@ -15,7 +15,7 @@ require 'date'
 module SmoochApi
 
   class DisplaySettings
-    # Specifies how to display all carousel images. Valid values are *horizontal* (default) and *square*.
+    # Specifies how to display all carousel images. See Enums.md for available values.
     attr_accessor :imageAspectRatio
 
 
