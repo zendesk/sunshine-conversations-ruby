@@ -89,7 +89,7 @@ source = File.new("/path/to/file.txt") # File | File to be uploaded
 access = "access_example" # String | Access level for the resulting file
 
 opts = { 
-  for: "for_example", # String | The intended container for the attachment
+  _for: "_for_example", # String | The intended container for the attachment
   appUserId: "appUserId_example", # String | The appUserId of the user that will receive the attachment Used in attachments for messages 
   userId: "userId_example" # String | The userId of the user that will receive the attachment Used in attachments for messages 
 }
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
  **appId** | **String**| Identifies the app. | 
  **source** | **File**| File to be uploaded | 
  **access** | **String**| Access level for the resulting file | 
- **for** | **String**| The intended container for the attachment | [optional] 
+ **_for** | **String**| The intended container for the attachment | [optional] 
  **appUserId** | **String**| The appUserId of the user that will receive the attachment Used in attachments for messages  | [optional] 
  **userId** | **String**| The userId of the user that will receive the attachment Used in attachments for messages  | [optional] 
 
