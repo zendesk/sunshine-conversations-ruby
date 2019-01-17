@@ -370,7 +370,9 @@ api_instance = SmoochApi::IntegrationApi.new
 appId = "appId_example" # String | Identifies the app.
 
 opts = { 
-  types: "types_example" # String | List of types to filter the query by. More than one value can be specified through comma separation e.g. ?types=*twilio*,*line*. 
+  types: "types_example", # String | List of types to filter the query by. More than one value can be specified through comma separation e.g. ?types=*twilio*,*line*. 
+  limit: 25, # Integer | The number of records to return.
+  offset: 0 # Integer | The number of initial records to skip before picking records to return.
 }
 
 begin
@@ -387,6 +389,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**| Identifies the app. | 
  **types** | **String**| List of types to filter the query by. More than one value can be specified through comma separation e.g. ?types&#x3D;*twilio*,*line*.  | [optional] 
+ **limit** | **Integer**| The number of records to return. | [optional] [default to 25]
+ **offset** | **Integer**| The number of initial records to skip before picking records to return. | [optional] [default to 0]
 
 ### Return type
 
