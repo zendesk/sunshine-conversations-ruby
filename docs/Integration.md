@@ -21,6 +21,8 @@ Name | Type | Description | Notes
 **channelId** | **String** | LINE Channel ID. Required for *line* integrations.  | [optional] 
 **channelSecret** | **String** | LINE Channel Secret. Required for *line* integrations.  | [optional] 
 **channelAccessToken** | **String** | LINE Channel Access Token. Required for *line* integrations.  | [optional] 
+**serviceCode** | **String** | LINE Service Code.  | [optional] 
+**switcherSecret** | **String** | LINE Switcher Secret.  | [optional] 
 **botName** | **String** | The bot&#39;s name. Returned on successful *line* integrations.  | [optional] 
 **encodingAesKey** | **String** | AES Encoding Key. (Optional) Used for *wechat* integrations.  | [optional] 
 **fromAddress** | **String** | Email will display as coming from this address. (Optional) Used for *frontendEmail* integrations.  | [optional] 
