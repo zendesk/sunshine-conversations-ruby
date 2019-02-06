@@ -431,7 +431,7 @@ appId = "appId_example" # String | Identifies the app.
 
 integrationId = "integrationId_example" # String | Identifies the integration.
 
-integrationUpdateBody = SmoochApi::IntegrationUpdate.new # IntegrationUpdate | Body for a updateIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration) 
+integrationUpdateBody = SmoochApi::IntegrationUpdate.new # IntegrationUpdate | Body for a updateIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#update-integration) 
 
 
 begin
@@ -448,7 +448,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**| Identifies the app. | 
  **integrationId** | **String**| Identifies the integration. | 
- **integrationUpdateBody** | [**IntegrationUpdate**](IntegrationUpdate.md)| Body for a updateIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#create-integration)  | 
+ **integrationUpdateBody** | [**IntegrationUpdate**](IntegrationUpdate.md)| Body for a updateIntegration request. Additional arguments are necessary based on integration type. For detailed instructions, visit our [official docs](https://docs.smooch.io/rest/#update-integration)  | 
 
 ### Return type
 
