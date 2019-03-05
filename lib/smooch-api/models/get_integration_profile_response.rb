@@ -14,27 +14,22 @@ require 'date'
 
 module SmoochApi
 
-  class Source
-    # An identifier used by Smooch for internal purposes.
-    attr_accessor :id
-
-    # An identifier for the channel from which a message originated. See Enums.md for available values.
-    attr_accessor :type
+  class GetIntegrationProfileResponse
+    # JSON object containing the integration profile. [More info](https://docs.smooch.io/rest/#get-integration-profile)
+    attr_accessor :profile
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'id' => :'id',
-        :'type' => :'type'
+        :'profile' => :'profile'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'id' => :'String',
-        :'type' => :'String'
+        :'profile' => :'Object'
       }
     end
 
@@ -46,12 +41,8 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'id')
-        self.id = attributes[:'id']
-      end
-
-      if attributes.has_key?(:'type')
-        self.type = attributes[:'type']
+      if attributes.has_key?(:'profile')
+        self.profile = attributes[:'profile']
       end
 
     end
@@ -74,8 +65,7 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          type == o.type
+          profile == o.profile
     end
 
     # @see the `==` method
@@ -87,7 +77,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, type].hash
+      [profile].hash
     end
 
     # Builds the object from hash

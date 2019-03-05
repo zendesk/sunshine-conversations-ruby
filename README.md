@@ -25,7 +25,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 5.5.0'
+    gem 'smooch-api', '~> 5.6.0'
 
 ## Getting Started
 
@@ -135,10 +135,12 @@ Class | Method | HTTP request | Description
 *SmoochApi::IntegrationApi* | [**delete_integration_menu**](docs/IntegrationApi.md#delete_integration_menu) | **DELETE** /v1.1/apps/{appId}/integrations/{integrationId}/menu | 
 *SmoochApi::IntegrationApi* | [**get_integration**](docs/IntegrationApi.md#get_integration) | **GET** /v1.1/apps/{appId}/integrations/{integrationId} | 
 *SmoochApi::IntegrationApi* | [**get_integration_menu**](docs/IntegrationApi.md#get_integration_menu) | **GET** /v1.1/apps/{appId}/integrations/{integrationId}/menu | 
+*SmoochApi::IntegrationApi* | [**get_integration_profile**](docs/IntegrationApi.md#get_integration_profile) | **GET** /v1.1/apps/{appId}/integrations/{integrationId}/profile | 
 *SmoochApi::IntegrationApi* | [**list_integrations**](docs/IntegrationApi.md#list_integrations) | **GET** /v1.1/apps/{appId}/integrations | 
 *SmoochApi::IntegrationApi* | [**update_integration**](docs/IntegrationApi.md#update_integration) | **PUT** /v1.1/apps/{appId}/integrations/{integrationId} | 
 *SmoochApi::IntegrationApi* | [**update_integration_menu**](docs/IntegrationApi.md#update_integration_menu) | **PUT** /v1.1/apps/{appId}/integrations/{integrationId}/menu | 
 *SmoochApi::IntegrationApi* | [**update_integration_profile**](docs/IntegrationApi.md#update_integration_profile) | **PUT** /v1.1/apps/{appId}/integrations/{integrationId}/profile | 
+*SmoochApi::IntegrationApi* | [**upload_integration_profile_photo**](docs/IntegrationApi.md#upload_integration_profile_photo) | **PUT** /v1.1/apps/{appId}/integrations/{integrationId}/profile/photo | 
 *SmoochApi::MenuApi* | [**delete_menu**](docs/MenuApi.md#delete_menu) | **DELETE** /v1.1/apps/{appId}/menu | 
 *SmoochApi::MenuApi* | [**get_menu**](docs/MenuApi.md#get_menu) | **GET** /v1.1/apps/{appId}/menu | 
 *SmoochApi::MenuApi* | [**update_menu**](docs/MenuApi.md#update_menu) | **PUT** /v1.1/apps/{appId}/menu | 
@@ -192,6 +194,7 @@ Class | Method | HTTP request | Description
  - [SmoochApi::Destination](docs/Destination.md)
  - [SmoochApi::DisplaySettings](docs/DisplaySettings.md)
  - [SmoochApi::Enums](docs/Enums.md)
+ - [SmoochApi::GetIntegrationProfileResponse](docs/GetIntegrationProfileResponse.md)
  - [SmoochApi::GetMessagesResponse](docs/GetMessagesResponse.md)
  - [SmoochApi::Integration](docs/Integration.md)
  - [SmoochApi::IntegrationCreate](docs/IntegrationCreate.md)
@@ -229,6 +232,7 @@ Class | Method | HTTP request | Description
  - [SmoochApi::TemplateCreate](docs/TemplateCreate.md)
  - [SmoochApi::TemplateResponse](docs/TemplateResponse.md)
  - [SmoochApi::TemplateUpdate](docs/TemplateUpdate.md)
+ - [SmoochApi::UploadIntegrationProfilePhotoResponse](docs/UploadIntegrationProfilePhotoResponse.md)
  - [SmoochApi::Webhook](docs/Webhook.md)
  - [SmoochApi::WebhookCreate](docs/WebhookCreate.md)
  - [SmoochApi::WebhookResponse](docs/WebhookResponse.md)

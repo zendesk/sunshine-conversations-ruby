@@ -10,10 +10,12 @@ Method | HTTP request | Description
 [**delete_integration_menu**](IntegrationApi.md#delete_integration_menu) | **DELETE** /v1.1/apps/{appId}/integrations/{integrationId}/menu | 
 [**get_integration**](IntegrationApi.md#get_integration) | **GET** /v1.1/apps/{appId}/integrations/{integrationId} | 
 [**get_integration_menu**](IntegrationApi.md#get_integration_menu) | **GET** /v1.1/apps/{appId}/integrations/{integrationId}/menu | 
+[**get_integration_profile**](IntegrationApi.md#get_integration_profile) | **GET** /v1.1/apps/{appId}/integrations/{integrationId}/profile | 
 [**list_integrations**](IntegrationApi.md#list_integrations) | **GET** /v1.1/apps/{appId}/integrations | 
 [**update_integration**](IntegrationApi.md#update_integration) | **PUT** /v1.1/apps/{appId}/integrations/{integrationId} | 
 [**update_integration_menu**](IntegrationApi.md#update_integration_menu) | **PUT** /v1.1/apps/{appId}/integrations/{integrationId}/menu | 
 [**update_integration_profile**](IntegrationApi.md#update_integration_profile) | **PUT** /v1.1/apps/{appId}/integrations/{integrationId}/profile | 
+[**upload_integration_profile_photo**](IntegrationApi.md#upload_integration_profile_photo) | **PUT** /v1.1/apps/{appId}/integrations/{integrationId}/profile/photo | 
 
 
 # **create_integration**
@@ -347,6 +349,61 @@ Name | Type | Description  | Notes
 
 
 
+# **get_integration_profile**
+> GetIntegrationProfileResponse get_integration_profile(appId, integrationId, )
+
+
+
+Get the specified integration’s profile.
+
+### Example
+```ruby
+# load the gem
+require 'smooch-api'
+# setup authorization
+SmoochApi.configure do |config|
+  # Configure API key authorization: jwt
+  config.api_key['Authorization'] = 'YOUR JWT'
+  config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = SmoochApi::IntegrationApi.new
+
+appId = "appId_example" # String | Identifies the app.
+
+integrationId = "integrationId_example" # String | Identifies the integration.
+
+
+begin
+  result = api_instance.get_integration_profile(appId, integrationId, )
+  p result
+rescue SmoochApi::ApiError => e
+  puts "Exception when calling IntegrationApi->get_integration_profile: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**| Identifies the app. | 
+ **integrationId** | **String**| Identifies the integration. | 
+
+### Return type
+
+[**GetIntegrationProfileResponse**](GetIntegrationProfileResponse.md)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 # **list_integrations**
 > ListIntegrationsResponse list_integrations(appId, , opts)
 
@@ -576,6 +633,64 @@ nil (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **upload_integration_profile_photo**
+> UploadIntegrationProfilePhotoResponse upload_integration_profile_photo(appId, integrationId, source)
+
+
+
+Upload a photo to be used for the the specified integration’s profile.
+
+### Example
+```ruby
+# load the gem
+require 'smooch-api'
+# setup authorization
+SmoochApi.configure do |config|
+  # Configure API key authorization: jwt
+  config.api_key['Authorization'] = 'YOUR JWT'
+  config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = SmoochApi::IntegrationApi.new
+
+appId = "appId_example" # String | Identifies the app.
+
+integrationId = "integrationId_example" # String | Identifies the integration.
+
+source = File.new("/path/to/file.txt") # File | Photo to be uploaded
+
+
+begin
+  result = api_instance.upload_integration_profile_photo(appId, integrationId, source)
+  p result
+rescue SmoochApi::ApiError => e
+  puts "Exception when calling IntegrationApi->upload_integration_profile_photo: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**| Identifies the app. | 
+ **integrationId** | **String**| Identifies the integration. | 
+ **source** | **File**| Photo to be uploaded | 
+
+### Return type
+
+[**UploadIntegrationProfilePhotoResponse**](UploadIntegrationProfilePhotoResponse.md)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
 

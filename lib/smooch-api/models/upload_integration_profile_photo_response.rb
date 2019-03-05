@@ -14,27 +14,22 @@ require 'date'
 
 module SmoochApi
 
-  class Source
-    # An identifier used by Smooch for internal purposes.
-    attr_accessor :id
-
-    # An identifier for the channel from which a message originated. See Enums.md for available values.
-    attr_accessor :type
+  class UploadIntegrationProfilePhotoResponse
+    # The photo URL after uploading.
+    attr_accessor :photoUrl
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'id' => :'id',
-        :'type' => :'type'
+        :'photoUrl' => :'photoUrl'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'id' => :'String',
-        :'type' => :'String'
+        :'photoUrl' => :'String'
       }
     end
 
@@ -46,12 +41,8 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'id')
-        self.id = attributes[:'id']
-      end
-
-      if attributes.has_key?(:'type')
-        self.type = attributes[:'type']
+      if attributes.has_key?(:'photoUrl')
+        self.photoUrl = attributes[:'photoUrl']
       end
 
     end
@@ -60,12 +51,17 @@ module SmoochApi
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @photoUrl.nil?
+        invalid_properties.push("invalid value for 'photoUrl', photoUrl cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @photoUrl.nil?
       return true
     end
 
@@ -74,8 +70,7 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          type == o.type
+          photoUrl == o.photoUrl
     end
 
     # @see the `==` method
@@ -87,7 +82,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, type].hash
+      [photoUrl].hash
     end
 
     # Builds the object from hash
