@@ -19,6 +19,8 @@ Name | Type | Description | Notes
 **originWhitelist** | **Array&lt;String&gt;** | A list of origins to whitelist. When set, only the origins from this list will be able to initialize the Web Messenger. If unset, all origins are whitelisted. The elements in the list should follow the serialized-origin format from RFC 6454 &#x60;scheme \&quot;://\&quot; host [ \&quot;:\&quot; port ]&#x60;, where scheme is &#x60;http&#x60; or &#x60;https&#x60;. (Optional) Used for *Web Messenger* integrations.  | [optional] 
 **channelId** | **String** | LINE Channel ID. Required for *line* integrations.  | [optional] 
 **channelSecret** | **String** | LINE Channel Secret. Required for *line* integrations.  | [optional] 
+**serviceCode** | **String** | LINE Service Code.  | [optional] 
+**switcherSecret** | **String** | LINE Switcher Secret.  | [optional] 
 **hsmFallbackLanguage** | **String** | Specification of a fallback language. (Optional) Used for *WhatsApp* integrations.  | [optional] 
 
 
