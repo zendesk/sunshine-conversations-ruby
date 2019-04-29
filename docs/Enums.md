@@ -16,5 +16,8 @@ Name | Type | Description | Notes
 **messageType** | **String** |  | [optional] 
 **role** | **String** |  | [optional] 
 **webhookTriggers** | **String** |  | [optional] 
+**deploymentHosting** | **String** |  | [optional] 
+**deploymentStatus** | **String** |  | [optional] 
+**deploymentActivationMethod** | **String** |  | [optional] 
 
 

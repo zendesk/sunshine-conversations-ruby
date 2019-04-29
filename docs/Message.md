@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The message ID, generated automatically. | 
 **authorId** | **String** | The ID of the message&#39;s author. | 
-**role** | **String** | The role of the individual posting the message. See Enums.md for available values. | 
-**type** | **String** | The message type. See Enums.md for available values. | 
+**role** | **String** | The role of the individual posting the message. See [**RoleEnum**](Enums.md#RoleEnum) for available values. | 
+**type** | **String** | The message type. See [**MessageTypeEnum**](Enums.md#MessageTypeEnum) for available values. | 
 **source** | [**Source**](Source.md) | The source of the message. | [optional] 
 **name** | **String** | The display name of the message author. | 
 **text** | **String** | The message text. Required for text messages.  | 

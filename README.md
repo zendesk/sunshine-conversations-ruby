@@ -25,7 +25,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 5.7.0'
+    gem 'smooch-api', '~> 5.8.0'
 
 ## Getting Started
 
@@ -129,6 +129,12 @@ Class | Method | HTTP request | Description
 *SmoochApi::ConversationApi* | [**get_messages**](docs/ConversationApi.md#get_messages) | **GET** /v1.1/apps/{appId}/appusers/{userId}/messages | 
 *SmoochApi::ConversationApi* | [**post_message**](docs/ConversationApi.md#post_message) | **POST** /v1.1/apps/{appId}/appusers/{userId}/messages | 
 *SmoochApi::ConversationApi* | [**reset_unread_count**](docs/ConversationApi.md#reset_unread_count) | **POST** /v1.1/apps/{appId}/appusers/{userId}/conversation/read | 
+*SmoochApi::DeploymentApi* | [**activate_phone_number**](docs/DeploymentApi.md#activate_phone_number) | **POST** /v1.1/whatsapp/deployments/{deploymentId}/activate | 
+*SmoochApi::DeploymentApi* | [**confirm_code**](docs/DeploymentApi.md#confirm_code) | **POST** /v1.1/whatsapp/deployments/{deploymentId}/code/confirm | 
+*SmoochApi::DeploymentApi* | [**create_deployment**](docs/DeploymentApi.md#create_deployment) | **POST** /v1.1/whatsapp/deployments | 
+*SmoochApi::DeploymentApi* | [**delete_deployment**](docs/DeploymentApi.md#delete_deployment) | **DELETE** /v1.1/whatsapp/deployments/{deploymentId} | 
+*SmoochApi::DeploymentApi* | [**get_deployment**](docs/DeploymentApi.md#get_deployment) | **GET** /v1.1/whatsapp/deployments/{deploymentId} | 
+*SmoochApi::DeploymentApi* | [**list_deployments**](docs/DeploymentApi.md#list_deployments) | **GET** /v1.1/whatsapp/deployments | 
 *SmoochApi::IntegrationApi* | [**create_integration**](docs/IntegrationApi.md#create_integration) | **POST** /v1.1/apps/{appId}/integrations | 
 *SmoochApi::IntegrationApi* | [**create_integration_menu**](docs/IntegrationApi.md#create_integration_menu) | **POST** /v1.1/apps/{appId}/integrations/{integrationId}/menu | 
 *SmoochApi::IntegrationApi* | [**delete_integration**](docs/IntegrationApi.md#delete_integration) | **DELETE** /v1.1/apps/{appId}/integrations/{integrationId} | 
@@ -191,6 +197,11 @@ Class | Method | HTTP request | Description
  - [SmoochApi::Confirmation](docs/Confirmation.md)
  - [SmoochApi::Conversation](docs/Conversation.md)
  - [SmoochApi::ConversationActivity](docs/ConversationActivity.md)
+ - [SmoochApi::Deployment](docs/Deployment.md)
+ - [SmoochApi::DeploymentActivatePhoneNumber](docs/DeploymentActivatePhoneNumber.md)
+ - [SmoochApi::DeploymentConfirmCode](docs/DeploymentConfirmCode.md)
+ - [SmoochApi::DeploymentCreate](docs/DeploymentCreate.md)
+ - [SmoochApi::DeploymentResponse](docs/DeploymentResponse.md)
  - [SmoochApi::Destination](docs/Destination.md)
  - [SmoochApi::DisplaySettings](docs/DisplaySettings.md)
  - [SmoochApi::Enums](docs/Enums.md)
@@ -205,6 +216,7 @@ Class | Method | HTTP request | Description
  - [SmoochApi::LinkRequestResponse](docs/LinkRequestResponse.md)
  - [SmoochApi::LinkRequestResponseLinkRequests](docs/LinkRequestResponseLinkRequests.md)
  - [SmoochApi::ListAppsResponse](docs/ListAppsResponse.md)
+ - [SmoochApi::ListDeploymentsResponse](docs/ListDeploymentsResponse.md)
  - [SmoochApi::ListIntegrationsResponse](docs/ListIntegrationsResponse.md)
  - [SmoochApi::ListSecretKeysResponse](docs/ListSecretKeysResponse.md)
  - [SmoochApi::ListServiceAccountsResponse](docs/ListServiceAccountsResponse.md)

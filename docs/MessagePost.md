@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**role** | **String** | The role of the individual posting the message. See Enums.md for available values. | 
-**type** | **String** | The message type. See Enums.md for available values. | 
+**role** | **String** | The role of the individual posting the message. See [**RoleEnum**](Enums.md#RoleEnum) for available values. | 
+**type** | **String** | The message type. See [**MessageTypeEnum**](Enums.md#MessageTypeEnum) for available values. | 
 **name** | **String** | The display name of the message author. | [optional] 
 **email** | **String** | The email address of the message author. | [optional] 
 **avatarUrl** | **String** | The URL of the desired message avatar image. | [optional] 

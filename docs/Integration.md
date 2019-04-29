@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The integration ID, generated automatically. | 
-**type** | **String** | The integration type. See Enums.md for available values. | 
+**type** | **String** | The integration type. See [**IntegrationTypeEnum**](Enums.md#IntegrationTypeEnum) for available values. | 
 **displayName** | **String** | The integration display name. Used to map a human-friendly name to an integration.  | [optional] 
 **pageAccessToken** | **String** | Facebook Page Access Token. Required for *messenger* integrations.  | [optional] 
 **appId** | **String** | Facebook App ID OR WeChat App ID. Required for *messenger* and *wechat* integrations.  | [optional] 
@@ -28,9 +28,10 @@ Name | Type | Description | Notes
 **encodingAesKey** | **String** | AES Encoding Key. (Optional) Used for *wechat* integrations.  | [optional] 
 **fromAddress** | **String** | Email will display as coming from this address. (Optional) Used for *frontendEmail* integrations.  | [optional] 
 **certificate** | **String** | The binary of your APN certificate base64 encoded. Required for *apn* integrations.  | [optional] 
-**baseUrl** | **String** | Your WhatsApp API client&#39;s URL. Required for *WhatsApp* integrations.  | [optional] 
+**deploymentId** | **String** | Your WhatsApp deployment ID. Required for *WhatsApp* integrations.  | [optional] 
+**baseUrl** | **String** | Your WhatsApp API client&#39;s URL. Required for *WhatsApp* integrations. (this usage is deprecated)  | [optional] 
 **hsmFallbackLanguage** | **String** | Specification of a fallback language. (Optional) Used for *WhatsApp* integrations.  | [optional] 
-**password** | **String** | The password for your APN certificate or WhatsApp API client. Required for *WhatsApp* integrations. (Optional) Used for *apn* integrations.  | [optional] 
+**password** | **String** | The password for your APN certificate or WhatsApp API client. Required for *WhatsApp* integrations. (this usage is deprecated) (Optional) Used for *apn* integrations.  | [optional] 
 **autoUpdateBadge** | **BOOLEAN** | Use the unread count of the conversation as the application badge. (Optional) Used for *apn* integrations.  | [optional] 
 **production** | **BOOLEAN** | Flag specifying whether the certificate is production. Returned on successful *apn* integrations.  | [optional] 
 **serverKey** | **String** | Your server key from the fcm console. Required for *fcm* integrations.  | [optional] 
@@ -42,7 +43,7 @@ Name | Type | Description | Notes
 **accessTokenKey** | **String** | The access token key obtained from your user via oauth. Required for *twitter* integrations.  | [optional] 
 **accessTokenSecret** | **String** | The access token secret obtained from your user via oauth. Required for *twitter* integrations.  | [optional] 
 **userId** | **String** | The twitter userId. Returned on successful *twitter* integrations.  | [optional] 
-**username** | **String** | The username for the account. Required for *WhatsApp* integrations. Returned on successful *twitter* and *telegram* integrations.  | [optional] 
+**username** | **String** | The username for the account. Returned on successful *twitter* and *telegram* integrations. Required for *WhatsApp* integrations. (this usage is deprecated)  | [optional] 
 **apiKey** | **String** | The public API key of your Mailgun account. Required for *mailgun* integrations.  | [optional] 
 **domain** | **String** | The domain used to relay email. Required for *mailgun* integrations.  | [optional] 
 **incomingAddress** | **String** | Smooch will receive all emails sent to this address. Required for *mailgun* integrations.  | [optional] 
@@ -61,7 +62,7 @@ Name | Type | Description | Notes
 **businessIconUrl** | **String** | A custom business icon url for the Web Messenger. (Optional) Used for *Web Messenger* integrations.  | [optional] 
 **backgroundImageUrl** | **String** | A custom background url for the Web Messenger. (Optional) Used for *Web Messenger* integrations.  | [optional] 
 **originWhitelist** | **Array&lt;String&gt;** | A list of origins to whitelist. When set, only the origins from this list will be able to initialize the Web Messenger. If unset, all origins are whitelisted. The elements in the list should follow the serialized-origin format from RFC 6454 &#x60;scheme \&quot;://\&quot; host [ \&quot;:\&quot; port ]&#x60;, where scheme is &#x60;http&#x60; or &#x60;https&#x60;. (Optional) Used for *Web Messenger* integrations.  | [optional] 
-**status** | **String** | The integration status. See Enums.md for available values. [More info](https://docs.smooch.io/#integration-status). | [optional] 
+**status** | **String** | The integration status. See [**IntegrationStatusEnum**](Enums.md#IntegrationStatusEnum) for available values. [More info](https://docs.smooch.io/#integration-status). | [optional] 
 **error** | **String** | The error causing the integration to fail. Will be present when &#x60;status&#x60; is &#39;error&#39;. | [optional] 
 
 
