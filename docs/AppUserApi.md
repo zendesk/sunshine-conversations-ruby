@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**get_app_user_entity_ids**](AppUserApi.md#get_app_user_entity_ids) | **GET** /v1.1/apps/{appId}/appusers/{userId}/channels | 
 [**get_link_requests**](AppUserApi.md#get_link_requests) | **GET** /v1.1/apps/{appId}/appusers/{userId}/linkrequest | 
 [**link_app_user**](AppUserApi.md#link_app_user) | **POST** /v1.1/apps/{appId}/appusers/{userId}/channels | 
+[**merge_users**](AppUserApi.md#merge_users) | **POST** /v1.1/apps/{appId}/appusers/merge | 
 [**post_image_message**](AppUserApi.md#post_image_message) | **POST** /v1.1/apps/{appId}/appusers/{userId}/images | 
 [**pre_create_app_user**](AppUserApi.md#pre_create_app_user) | **POST** /v1.1/apps/{appId}/appusers | 
 [**unlink_app_user**](AppUserApi.md#unlink_app_user) | **DELETE** /v1.1/apps/{appId}/appusers/{userId}/channels/{channel} | 
@@ -451,6 +452,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AppUserResponse**](AppUserResponse.md)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **merge_users**
+> merge_users(appId, appUserMergeBody)
+
+
+
+Force the merge of two specific users, when the business has determined that they represent the same person.
+
+### Example
+```ruby
+# load the gem
+require 'smooch-api'
+# setup authorization
+SmoochApi.configure do |config|
+  # Configure API key authorization: jwt
+  config.api_key['Authorization'] = 'YOUR JWT'
+  config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = SmoochApi::AppUserApi.new
+
+appId = "appId_example" # String | Identifies the app.
+
+appUserMergeBody = SmoochApi::AppUserMerge.new # AppUserMerge | Body for a mergeUsers request.
+
+
+begin
+  api_instance.merge_users(appId, appUserMergeBody)
+rescue SmoochApi::ApiError => e
+  puts "Exception when calling AppUserApi->merge_users: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**| Identifies the app. | 
+ **appUserMergeBody** | [**AppUserMerge**](AppUserMerge.md)| Body for a mergeUsers request. | 
+
+### Return type
+
+nil (empty response body)
 
 ### Authorization
 

@@ -25,7 +25,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 5.10.0'
+    gem 'smooch-api', '~> 5.11.0'
 
 ## Getting Started
 
@@ -117,6 +117,7 @@ Class | Method | HTTP request | Description
 *SmoochApi::AppUserApi* | [**get_app_user_entity_ids**](docs/AppUserApi.md#get_app_user_entity_ids) | **GET** /v1.1/apps/{appId}/appusers/{userId}/channels | 
 *SmoochApi::AppUserApi* | [**get_link_requests**](docs/AppUserApi.md#get_link_requests) | **GET** /v1.1/apps/{appId}/appusers/{userId}/linkrequest | 
 *SmoochApi::AppUserApi* | [**link_app_user**](docs/AppUserApi.md#link_app_user) | **POST** /v1.1/apps/{appId}/appusers/{userId}/channels | 
+*SmoochApi::AppUserApi* | [**merge_users**](docs/AppUserApi.md#merge_users) | **POST** /v1.1/apps/{appId}/appusers/merge | 
 *SmoochApi::AppUserApi* | [**post_image_message**](docs/AppUserApi.md#post_image_message) | **POST** /v1.1/apps/{appId}/appusers/{userId}/images | 
 *SmoochApi::AppUserApi* | [**pre_create_app_user**](docs/AppUserApi.md#pre_create_app_user) | **POST** /v1.1/apps/{appId}/appusers | 
 *SmoochApi::AppUserApi* | [**unlink_app_user**](docs/AppUserApi.md#unlink_app_user) | **DELETE** /v1.1/apps/{appId}/appusers/{userId}/channels/{channel} | 
@@ -184,6 +185,7 @@ Class | Method | HTTP request | Description
  - [SmoochApi::AppUserBusinessSystemsResponse](docs/AppUserBusinessSystemsResponse.md)
  - [SmoochApi::AppUserChannelsResponse](docs/AppUserChannelsResponse.md)
  - [SmoochApi::AppUserLink](docs/AppUserLink.md)
+ - [SmoochApi::AppUserMerge](docs/AppUserMerge.md)
  - [SmoochApi::AppUserPreCreate](docs/AppUserPreCreate.md)
  - [SmoochApi::AppUserResponse](docs/AppUserResponse.md)
  - [SmoochApi::AppUserUpdate](docs/AppUserUpdate.md)
@@ -225,6 +227,7 @@ Class | Method | HTTP request | Description
  - [SmoochApi::Menu](docs/Menu.md)
  - [SmoochApi::MenuItem](docs/MenuItem.md)
  - [SmoochApi::MenuResponse](docs/MenuResponse.md)
+ - [SmoochApi::MergedUser](docs/MergedUser.md)
  - [SmoochApi::Message](docs/Message.md)
  - [SmoochApi::MessageItem](docs/MessageItem.md)
  - [SmoochApi::MessageOverride](docs/MessageOverride.md)

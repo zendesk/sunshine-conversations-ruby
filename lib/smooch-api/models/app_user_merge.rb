@@ -14,32 +14,27 @@ require 'date'
 
 module SmoochApi
 
-  class ListTemplatesResponse
-    # The list of templates.
-    attr_accessor :templates
+  class AppUserMerge
+    # Nested object representing the user that will survive at the end of the merge
+    attr_accessor :surviving
 
-    # Flag indicating if there are more templates that are not present in the response.
-    attr_accessor :hasMore
-
-    # The number of template records skipped in the returned list.
-    attr_accessor :offset
+    # Nested object representing the user to merge into the surviving user. This user will be deleted as part of the process.
+    attr_accessor :discarded
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'templates' => :'templates',
-        :'hasMore' => :'hasMore',
-        :'offset' => :'offset'
+        :'surviving' => :'surviving',
+        :'discarded' => :'discarded'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'templates' => :'Array<Template>',
-        :'hasMore' => :'BOOLEAN',
-        :'offset' => :'Integer'
+        :'surviving' => :'MergedUser',
+        :'discarded' => :'MergedUser'
       }
     end
 
@@ -51,18 +46,12 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'templates')
-        if (value = attributes[:'templates']).is_a?(Array)
-          self.templates = value
-        end
+      if attributes.has_key?(:'surviving')
+        self.surviving = attributes[:'surviving']
       end
 
-      if attributes.has_key?(:'hasMore')
-        self.hasMore = attributes[:'hasMore']
-      end
-
-      if attributes.has_key?(:'offset')
-        self.offset = attributes[:'offset']
+      if attributes.has_key?(:'discarded')
+        self.discarded = attributes[:'discarded']
       end
 
     end
@@ -71,8 +60,12 @@ module SmoochApi
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @templates.nil?
-        invalid_properties.push("invalid value for 'templates', templates cannot be nil.")
+      if @surviving.nil?
+        invalid_properties.push("invalid value for 'surviving', surviving cannot be nil.")
+      end
+
+      if @discarded.nil?
+        invalid_properties.push("invalid value for 'discarded', discarded cannot be nil.")
       end
 
       return invalid_properties
@@ -81,7 +74,8 @@ module SmoochApi
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @templates.nil?
+      return false if @surviving.nil?
+      return false if @discarded.nil?
       return true
     end
 
@@ -90,9 +84,8 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          templates == o.templates &&
-          hasMore == o.hasMore &&
-          offset == o.offset
+          surviving == o.surviving &&
+          discarded == o.discarded
     end
 
     # @see the `==` method
@@ -104,7 +97,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [templates, hasMore, offset].hash
+      [surviving, discarded].hash
     end
 
     # Builds the object from hash

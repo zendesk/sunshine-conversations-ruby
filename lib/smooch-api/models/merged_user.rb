@@ -14,32 +14,22 @@ require 'date'
 
 module SmoochApi
 
-  class ListTemplatesResponse
-    # The list of templates.
-    attr_accessor :templates
-
-    # Flag indicating if there are more templates that are not present in the response.
-    attr_accessor :hasMore
-
-    # The number of template records skipped in the returned list.
-    attr_accessor :offset
+  class MergedUser
+    # The `_id` of the user to merge.
+    attr_accessor :id
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'templates' => :'templates',
-        :'hasMore' => :'hasMore',
-        :'offset' => :'offset'
+        :'id' => :'_id'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'templates' => :'Array<Template>',
-        :'hasMore' => :'BOOLEAN',
-        :'offset' => :'Integer'
+        :'id' => :'String'
       }
     end
 
@@ -51,18 +41,8 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'templates')
-        if (value = attributes[:'templates']).is_a?(Array)
-          self.templates = value
-        end
-      end
-
-      if attributes.has_key?(:'hasMore')
-        self.hasMore = attributes[:'hasMore']
-      end
-
-      if attributes.has_key?(:'offset')
-        self.offset = attributes[:'offset']
+      if attributes.has_key?(:'_id')
+        self.id = attributes[:'_id']
       end
 
     end
@@ -71,17 +51,12 @@ module SmoochApi
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @templates.nil?
-        invalid_properties.push("invalid value for 'templates', templates cannot be nil.")
-      end
-
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @templates.nil?
       return true
     end
 
@@ -90,9 +65,7 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          templates == o.templates &&
-          hasMore == o.hasMore &&
-          offset == o.offset
+          id == o.id
     end
 
     # @see the `==` method
@@ -104,7 +77,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [templates, hasMore, offset].hash
+      [id].hash
     end
 
     # Builds the object from hash
