@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **conversation_activity**
-> conversation_activity(appId, userId, conversationActivityBody)
+> ActivityResponse conversation_activity(appId, userId, conversationActivityBody)
 
 
 
@@ -40,7 +40,8 @@ conversationActivityBody = SmoochApi::ConversationActivity.new # ConversationAct
 
 
 begin
-  api_instance.conversation_activity(appId, userId, conversationActivityBody)
+  result = api_instance.conversation_activity(appId, userId, conversationActivityBody)
+  p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling ConversationApi->conversation_activity: #{e}"
 end
@@ -56,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-nil (empty response body)
+[**ActivityResponse**](ActivityResponse.md)
 
 ### Authorization
 

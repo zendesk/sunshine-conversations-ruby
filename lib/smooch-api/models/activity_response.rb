@@ -14,37 +14,22 @@ require 'date'
 
 module SmoochApi
 
-  class WebhookCreate
-    # URL to be called when the webhook is triggered.
-    attr_accessor :target
-
-    # An array of triggers you wish to have the webhook listen to. See [**WebhookTriggersEnum**](Enums.md#WebhookTriggersEnum) for available values.
-    attr_accessor :triggers
-
-    # Specifies whether webhook payloads should include the client information associated with a conversation in webhook events.
-    attr_accessor :includeClient
-
-    # Specifies whether webhook payloads should include the complete appUser schema for appUser events.
-    attr_accessor :includeFullAppUser
+  class ActivityResponse
+    # The conversation.
+    attr_accessor :conversation
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'target' => :'target',
-        :'triggers' => :'triggers',
-        :'includeClient' => :'includeClient',
-        :'includeFullAppUser' => :'includeFullAppUser'
+        :'conversation' => :'conversation'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'target' => :'String',
-        :'triggers' => :'Array<String>',
-        :'includeClient' => :'BOOLEAN',
-        :'includeFullAppUser' => :'BOOLEAN'
+        :'conversation' => :'Conversation'
       }
     end
 
@@ -56,22 +41,8 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'target')
-        self.target = attributes[:'target']
-      end
-
-      if attributes.has_key?(:'triggers')
-        if (value = attributes[:'triggers']).is_a?(Array)
-          self.triggers = value
-        end
-      end
-
-      if attributes.has_key?(:'includeClient')
-        self.includeClient = attributes[:'includeClient']
-      end
-
-      if attributes.has_key?(:'includeFullAppUser')
-        self.includeFullAppUser = attributes[:'includeFullAppUser']
+      if attributes.has_key?(:'conversation')
+        self.conversation = attributes[:'conversation']
       end
 
     end
@@ -80,8 +51,8 @@ module SmoochApi
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @target.nil?
-        invalid_properties.push("invalid value for 'target', target cannot be nil.")
+      if @conversation.nil?
+        invalid_properties.push("invalid value for 'conversation', conversation cannot be nil.")
       end
 
       return invalid_properties
@@ -90,7 +61,7 @@ module SmoochApi
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @target.nil?
+      return false if @conversation.nil?
       return true
     end
 
@@ -99,10 +70,7 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          target == o.target &&
-          triggers == o.triggers &&
-          includeClient == o.includeClient &&
-          includeFullAppUser == o.includeFullAppUser
+          conversation == o.conversation
     end
 
     # @see the `==` method
@@ -114,7 +82,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [target, triggers, includeClient, includeFullAppUser].hash
+      [conversation].hash
     end
 
     # Builds the object from hash

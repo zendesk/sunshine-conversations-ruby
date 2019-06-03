@@ -25,7 +25,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 5.11.0'
+    gem 'smooch-api', '~> 5.12.0'
 
 ## Getting Started
 
@@ -176,6 +176,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [SmoochApi::Action](docs/Action.md)
+ - [SmoochApi::ActivityResponse](docs/ActivityResponse.md)
  - [SmoochApi::App](docs/App.md)
  - [SmoochApi::AppCreate](docs/AppCreate.md)
  - [SmoochApi::AppResponse](docs/AppResponse.md)
