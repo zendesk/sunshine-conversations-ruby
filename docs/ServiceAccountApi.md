@@ -29,7 +29,10 @@ Create a secret key for the specified service account.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -84,7 +87,10 @@ Create a new service account.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -136,7 +142,10 @@ Delete the specified service account secret key.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -190,7 +199,10 @@ Delete the specified service account.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -241,7 +253,10 @@ Get an account-scoped JWT for the specified service account secret key.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -296,7 +311,10 @@ Get the specified service account secret key.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -351,7 +369,10 @@ Get the specified service account.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -403,7 +424,10 @@ List the secret keys for the specified service account.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -455,7 +479,10 @@ List all service accounts configured.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -510,7 +537,10 @@ Update the specified service account.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end

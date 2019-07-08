@@ -31,7 +31,10 @@ Create an integration for the specified app.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -86,7 +89,10 @@ Create the specified integration’s menu, overriding the app menu if configured
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -144,7 +150,10 @@ Delete the specified integration.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -198,7 +207,10 @@ Delete the specified integration’s menu.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -252,7 +264,10 @@ Get the specified integration.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -307,7 +322,10 @@ Get the specified integration's menu.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -362,7 +380,10 @@ Get the specified integration’s profile.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -417,7 +438,10 @@ List integrations for the specified app.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -477,7 +501,10 @@ Update the specified integration.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -535,7 +562,10 @@ Update the specified integration’s menu.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -593,7 +623,10 @@ Update the specified integration’s profile.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -650,7 +683,10 @@ Upload a photo to be used for the the specified integration’s profile.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end

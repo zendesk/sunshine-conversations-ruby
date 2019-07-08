@@ -21,7 +21,10 @@ Remove an attachment uploaded to Smooch.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -75,7 +78,10 @@ Upload an attachment to Smooch to use in future messages.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end

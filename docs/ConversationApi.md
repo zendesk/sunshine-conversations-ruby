@@ -25,7 +25,10 @@ Notify Smooch when an app maker starts or stops typing a response.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -83,7 +86,10 @@ Deletes a single message.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -140,7 +146,10 @@ Clears the message history for a user, permanently deleting all messages, but le
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -194,7 +203,10 @@ Get the specified app user's messages.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -255,7 +267,10 @@ Post a message to or from the app user.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -266,7 +281,7 @@ appId = "appId_example" # String | Identifies the app.
 
 userId = "userId_example" # String | Identifies the user. Can be either the smoochId or the userId.
 
-messagePostBody = SmoochApi::MessagePost.new # MessagePost | Body for a postMessage request. Additional arguments are necessary based on message type ([text](https://docs.smooch.io/rest#text-message), [image](https://docs.smooch.io/rest#image-message), [carousel](https://docs.smooch.io/rest#carousel-message), [list](https://docs.smooch.io/rest#list-message)) 
+messagePostBody = SmoochApi::MessagePost.new # MessagePost | Body for a postMessage request. Additional arguments are necessary based on message type ([text](https://docs.smooch.io/rest/#text), [image](https://docs.smooch.io/rest/#image), [carousel](https://docs.smooch.io/rest/#carousel), [list](https://docs.smooch.io/rest/#list), [form](https://docs.smooch.io/rest/#form)) 
 
 
 begin
@@ -283,7 +298,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**| Identifies the app. | 
  **userId** | **String**| Identifies the user. Can be either the smoochId or the userId. | 
- **messagePostBody** | [**MessagePost**](MessagePost.md)| Body for a postMessage request. Additional arguments are necessary based on message type ([text](https://docs.smooch.io/rest#text-message), [image](https://docs.smooch.io/rest#image-message), [carousel](https://docs.smooch.io/rest#carousel-message), [list](https://docs.smooch.io/rest#list-message))  | 
+ **messagePostBody** | [**MessagePost**](MessagePost.md)| Body for a postMessage request. Additional arguments are necessary based on message type ([text](https://docs.smooch.io/rest/#text), [image](https://docs.smooch.io/rest/#image), [carousel](https://docs.smooch.io/rest/#carousel), [list](https://docs.smooch.io/rest/#list), [form](https://docs.smooch.io/rest/#form))  | 
 
 ### Return type
 
@@ -313,7 +328,10 @@ Reset the unread count of the conversation to 0.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end

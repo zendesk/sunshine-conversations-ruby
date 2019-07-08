@@ -24,7 +24,10 @@ Create a webhook for the specified app.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -79,7 +82,10 @@ Delete the specified webhook.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -133,7 +139,10 @@ Get the specified webhook.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -188,7 +197,10 @@ List webhooks for the specified app.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end
@@ -240,7 +252,10 @@ Update the specified webhook.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
-  # Configure API key authorization: jwt
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
   config.api_key['Authorization'] = 'YOUR JWT'
   config.api_key_prefix['Authorization'] = 'Bearer'
 end

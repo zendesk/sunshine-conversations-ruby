@@ -18,6 +18,8 @@ Name | Type | Description | Notes
 **menuItemType** | **String** |  | [optional] 
 **messageItemSize** | **String** |  | [optional] 
 **messageType** | **String** |  | [optional] 
+**fieldType** | **String** |  | [optional] 
+**quotedMessageType** | **String** |  | [optional] 
 **role** | **String** |  | [optional] 
 **webhookTriggers** | **String** |  | [optional] 
 
