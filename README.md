@@ -25,7 +25,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 5.13.0'
+    gem 'smooch-api', '~> 5.14.0'
 
 ## Getting Started
 
@@ -60,6 +60,10 @@ require 'smooch-api'
 
 # Setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -263,6 +267,10 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Authorization
 
+
+### basicAuth
+
+- **Type**: HTTP basic authentication
 
 ### jwt
 

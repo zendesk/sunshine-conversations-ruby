@@ -32,6 +32,10 @@ Delete specified app user.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -67,7 +71,7 @@ nil (empty response body)
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -89,6 +93,10 @@ Delete specified app user's profile.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -125,7 +133,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -147,6 +155,10 @@ Get the specified app user.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -183,7 +195,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -205,6 +217,10 @@ Get an auth code for facilitating a channel transfer
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -241,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -263,6 +279,10 @@ Get specified app user's business system IDs.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -299,7 +319,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -321,6 +341,10 @@ Get specified app user's channel entity IDs.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -357,7 +381,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -379,6 +403,10 @@ Fetch link requests for the specified app user.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -418,7 +446,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -440,6 +468,10 @@ Link specified app user to given channel.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -479,7 +511,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -501,6 +533,10 @@ Force the merge of two specific users, when the business has determined that the
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -536,7 +572,7 @@ nil (empty response body)
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -558,6 +594,10 @@ Send an image message to the conversation.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -600,7 +640,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -622,6 +662,10 @@ Pre-create an app user.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -658,7 +702,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -680,6 +724,10 @@ Unlink specified app user from given channel.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -718,7 +766,7 @@ nil (empty response body)
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -740,6 +788,10 @@ Update the specified app user.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -779,7 +831,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 

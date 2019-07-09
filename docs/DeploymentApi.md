@@ -25,6 +25,10 @@ Activate a phone number on the specified deployment.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -61,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -83,6 +87,10 @@ Confirm code to complete phone number activation.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -119,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -141,6 +149,10 @@ Create a WhatsApp deployment.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -174,7 +186,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -196,6 +208,10 @@ Delete the specified deployment.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -228,7 +244,7 @@ nil (empty response body)
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -250,6 +266,10 @@ Get the specified deployment.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -283,7 +303,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -305,6 +325,10 @@ List owned WhatsApp deployments.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -332,7 +356,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 

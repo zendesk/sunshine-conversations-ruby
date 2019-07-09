@@ -29,6 +29,10 @@ Create a secret key for the specified service account.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -65,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -87,6 +91,10 @@ Create a new service account.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -120,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -142,6 +150,10 @@ Delete the specified service account secret key.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -177,7 +189,7 @@ nil (empty response body)
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -199,6 +211,10 @@ Delete the specified service account.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -231,7 +247,7 @@ nil (empty response body)
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -253,6 +269,10 @@ Get an account-scoped JWT for the specified service account secret key.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -289,7 +309,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -311,6 +331,10 @@ Get the specified service account secret key.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -347,7 +371,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -369,6 +393,10 @@ Get the specified service account.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -402,7 +430,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -424,6 +452,10 @@ List the secret keys for the specified service account.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -457,7 +489,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -479,6 +511,10 @@ List all service accounts configured.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -515,7 +551,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -537,6 +573,10 @@ Update the specified service account.
 require 'smooch-api'
 # setup authorization
 SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
 
   # OR
 
@@ -573,7 +613,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
