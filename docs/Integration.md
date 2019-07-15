@@ -24,6 +24,8 @@ Name | Type | Description | Notes
 **channelAccessToken** | **String** | LINE Channel Access Token. Required for *line* integrations.  | [optional] 
 **serviceCode** | **String** | LINE Service Code.  | [optional] 
 **switcherSecret** | **String** | LINE Switcher Secret.  | [optional] 
+**qrCodeUrl** | **String** | URL provided by LINE in the [Developer Console](https://developers.line.biz/console/).  | [optional] 
+**lineId** | **String** | LINE Basic ID. Generated automatically when a &#x60;qrCodeUrl&#x60; is updated.  | [optional] 
 **botName** | **String** | The bot&#39;s name. Returned on successful *line* integrations.  | [optional] 
 **encodingAesKey** | **String** | AES Encoding Key. (Optional) Used for *wechat* integrations.  | [optional] 
 **fromAddress** | **String** | Email will display as coming from this address. (Optional) Used for *frontendEmail* integrations.  | [optional] 
