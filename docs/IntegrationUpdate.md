@@ -23,5 +23,6 @@ Name | Type | Description | Notes
 **switcherSecret** | **String** | LINE Switcher Secret.  | [optional] 
 **hsmFallbackLanguage** | **String** | Specification of a fallback language. (Optional) Used for *WhatsApp* integrations.  | [optional] 
 **qrCodeUrl** | **String** | URL provided by LINE in the [Developer Console](https://developers.line.biz/console/).  | [optional] 
+**hideUnsubscribeLink** | **BOOLEAN** | When &#x60;true&#x60;, unsubscribe links will not be included in outbound emails. If this setting is enabled, it is expected that the business is providing the user a way to unsubscribe by some other means. (Optional) Used for *mailgun* integrations.  | [optional] 
 
 
