@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 # **delete_app_user**
-> delete_app_user(appId, userId, )
+> delete_app_user(appId, userId)
 
 
 
@@ -52,7 +52,7 @@ userId = "userId_example" # String | Identifies the user. Can be either the smoo
 
 
 begin
-  api_instance.delete_app_user(appId, userId, )
+  api_instance.delete_app_user(appId, userId)
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppUserApi->delete_app_user: #{e}"
 end
@@ -81,7 +81,7 @@ nil (empty response body)
 
 
 # **delete_app_user_profile**
-> AppUserResponse delete_app_user_profile(appId, userId, )
+> AppUserResponse delete_app_user_profile(appId, userId)
 
 
 
@@ -113,7 +113,7 @@ userId = "userId_example" # String | Identifies the user. Can be either the smoo
 
 
 begin
-  result = api_instance.delete_app_user_profile(appId, userId, )
+  result = api_instance.delete_app_user_profile(appId, userId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppUserApi->delete_app_user_profile: #{e}"
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 
 # **get_app_user**
-> AppUserResponse get_app_user(appId, userId, )
+> AppUserResponse get_app_user(appId, userId)
 
 
 
@@ -175,7 +175,7 @@ userId = "userId_example" # String | Identifies the user. Can be either the smoo
 
 
 begin
-  result = api_instance.get_app_user(appId, userId, )
+  result = api_instance.get_app_user(appId, userId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppUserApi->get_app_user: #{e}"
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 
 
 # **get_app_user_auth_code**
-> AuthCodeResponse get_app_user_auth_code(appId, userId, )
+> AuthCodeResponse get_app_user_auth_code(appId, userId)
 
 
 
@@ -237,7 +237,7 @@ userId = "userId_example" # String | Identifies the user. Can be either the smoo
 
 
 begin
-  result = api_instance.get_app_user_auth_code(appId, userId, )
+  result = api_instance.get_app_user_auth_code(appId, userId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppUserApi->get_app_user_auth_code: #{e}"
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 
 
 # **get_app_user_business_system_ids**
-> AppUserBusinessSystemsResponse get_app_user_business_system_ids(appId, userId, )
+> AppUserBusinessSystemsResponse get_app_user_business_system_ids(appId, userId)
 
 
 
@@ -299,7 +299,7 @@ userId = "userId_example" # String | Identifies the user. Can be either the smoo
 
 
 begin
-  result = api_instance.get_app_user_business_system_ids(appId, userId, )
+  result = api_instance.get_app_user_business_system_ids(appId, userId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppUserApi->get_app_user_business_system_ids: #{e}"
@@ -329,7 +329,7 @@ Name | Type | Description  | Notes
 
 
 # **get_app_user_entity_ids**
-> AppUserChannelsResponse get_app_user_entity_ids(appId, userId, )
+> AppUserChannelsResponse get_app_user_entity_ids(appId, userId)
 
 
 
@@ -361,7 +361,7 @@ userId = "userId_example" # String | Identifies the user. Can be either the smoo
 
 
 begin
-  result = api_instance.get_app_user_entity_ids(appId, userId, )
+  result = api_instance.get_app_user_entity_ids(appId, userId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppUserApi->get_app_user_entity_ids: #{e}"

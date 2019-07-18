@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 
 
 # **list_webhooks**
-> ListWebhooksResponse list_webhooks(appId, )
+> ListWebhooksResponse list_webhooks(appId)
 
 
 
@@ -227,7 +227,7 @@ appId = "appId_example" # String | Identifies the app.
 
 
 begin
-  result = api_instance.list_webhooks(appId, )
+  result = api_instance.list_webhooks(appId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling WebhookApi->list_webhooks: #{e}"
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 
 # **update_webhook**
-> WebhookResponse update_webhook(appId, webhookIdwebhookUpdateBody)
+> WebhookResponse update_webhook(appId, webhookId, webhookUpdateBody)
 
 
 
@@ -290,7 +290,7 @@ webhookUpdateBody = SmoochApi::WebhookUpdate.new # WebhookUpdate | Body for an u
 
 
 begin
-  result = api_instance.update_webhook(appId, webhookIdwebhookUpdateBody)
+  result = api_instance.update_webhook(appId, webhookId, webhookUpdateBody)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling WebhookApi->update_webhook: #{e}"

@@ -70,7 +70,7 @@ nil (empty response body)
 
 
 # **upload_attachment**
-> AttachmentResponse upload_attachment(appId, source, access, opts)
+> AttachmentResponse upload_attachment(appId, source, access, _for, appUserId, userId)
 
 
 
@@ -109,7 +109,7 @@ opts = {
 }
 
 begin
-  result = api_instance.upload_attachment(appId, source, access, opts)
+  result = api_instance.upload_attachment(appId, source, access, _for, appUserId, userId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AttachmentsApi->upload_attachment: #{e}"

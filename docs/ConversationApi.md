@@ -142,7 +142,7 @@ nil (empty response body)
 
 
 # **delete_messages**
-> delete_messages(appId, userId, )
+> delete_messages(appId, userId)
 
 
 
@@ -174,7 +174,7 @@ userId = "userId_example" # String | Identifies the user. Can be either the smoo
 
 
 begin
-  api_instance.delete_messages(appId, userId, )
+  api_instance.delete_messages(appId, userId)
 rescue SmoochApi::ApiError => e
   puts "Exception when calling ConversationApi->delete_messages: #{e}"
 end
@@ -203,7 +203,7 @@ nil (empty response body)
 
 
 # **get_messages**
-> GetMessagesResponse get_messages(appId, userId, , opts)
+> GetMessagesResponse get_messages(appId, userId, before, after)
 
 
 
@@ -239,7 +239,7 @@ opts = {
 }
 
 begin
-  result = api_instance.get_messages(appId, userId, , opts)
+  result = api_instance.get_messages(appId, userId, before, after)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling ConversationApi->get_messages: #{e}"
@@ -336,7 +336,7 @@ Name | Type | Description  | Notes
 
 
 # **reset_unread_count**
-> reset_unread_count(appId, userId, )
+> reset_unread_count(appId, userId)
 
 
 
@@ -368,7 +368,7 @@ userId = "userId_example" # String | Identifies the user. Can be either the smoo
 
 
 begin
-  api_instance.reset_unread_count(appId, userId, )
+  api_instance.reset_unread_count(appId, userId)
 rescue SmoochApi::ApiError => e
   puts "Exception when calling ConversationApi->reset_unread_count: #{e}"
 end

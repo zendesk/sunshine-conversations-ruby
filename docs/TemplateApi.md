@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 
 
 # **list_templates**
-> ListTemplatesResponse list_templates(appId, , opts)
+> ListTemplatesResponse list_templates(appId, limit, offset)
 
 
 
@@ -231,7 +231,7 @@ opts = {
 }
 
 begin
-  result = api_instance.list_templates(appId, , opts)
+  result = api_instance.list_templates(appId, limit, offset)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling TemplateApi->list_templates: #{e}"
@@ -262,7 +262,7 @@ Name | Type | Description  | Notes
 
 
 # **update_template**
-> TemplateResponse update_template(appId, templateIdtemplateUpdateBody)
+> TemplateResponse update_template(appId, templateId, templateUpdateBody)
 
 
 
@@ -296,7 +296,7 @@ templateUpdateBody = SmoochApi::TemplateUpdate.new # TemplateUpdate | Body for a
 
 
 begin
-  result = api_instance.update_template(appId, templateIdtemplateUpdateBody)
+  result = api_instance.update_template(appId, templateId, templateUpdateBody)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling TemplateApi->update_template: #{e}"

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **delete_menu**
-> MenuResponse delete_menu(appId, )
+> MenuResponse delete_menu(appId)
 
 
 
@@ -40,7 +40,7 @@ appId = "appId_example" # String | Identifies the app.
 
 
 begin
-  result = api_instance.delete_menu(appId, )
+  result = api_instance.delete_menu(appId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling MenuApi->delete_menu: #{e}"
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 
 # **get_menu**
-> MenuResponse get_menu(appId, )
+> MenuResponse get_menu(appId)
 
 
 
@@ -99,7 +99,7 @@ appId = "appId_example" # String | Identifies the app.
 
 
 begin
-  result = api_instance.get_menu(appId, )
+  result = api_instance.get_menu(appId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling MenuApi->get_menu: #{e}"

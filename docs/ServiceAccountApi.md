@@ -199,7 +199,7 @@ nil (empty response body)
 
 
 # **delete_service_account**
-> delete_service_account(serviceAccountId, )
+> delete_service_account(serviceAccountId)
 
 
 
@@ -229,7 +229,7 @@ serviceAccountId = "serviceAccountId_example" # String | Identifies the service 
 
 
 begin
-  api_instance.delete_service_account(serviceAccountId, )
+  api_instance.delete_service_account(serviceAccountId)
 rescue SmoochApi::ApiError => e
   puts "Exception when calling ServiceAccountApi->delete_service_account: #{e}"
 end
@@ -381,7 +381,7 @@ Name | Type | Description  | Notes
 
 
 # **get_service_account**
-> ServiceAccountResponse get_service_account(serviceAccountId, )
+> ServiceAccountResponse get_service_account(serviceAccountId)
 
 
 
@@ -411,7 +411,7 @@ serviceAccountId = "serviceAccountId_example" # String | Identifies the service 
 
 
 begin
-  result = api_instance.get_service_account(serviceAccountId, )
+  result = api_instance.get_service_account(serviceAccountId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling ServiceAccountApi->get_service_account: #{e}"
@@ -440,7 +440,7 @@ Name | Type | Description  | Notes
 
 
 # **list_secret_keys**
-> ListSecretKeysResponse list_secret_keys(serviceAccountId, )
+> ListSecretKeysResponse list_secret_keys(serviceAccountId)
 
 
 
@@ -470,7 +470,7 @@ serviceAccountId = "serviceAccountId_example" # String | Identifies the service 
 
 
 begin
-  result = api_instance.list_secret_keys(serviceAccountId, )
+  result = api_instance.list_secret_keys(serviceAccountId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling ServiceAccountApi->list_secret_keys: #{e}"
@@ -499,7 +499,7 @@ Name | Type | Description  | Notes
 
 
 # **list_service_accounts**
-> ListServiceAccountsResponse list_service_accounts(opts)
+> ListServiceAccountsResponse list_service_accounts(limit, offset)
 
 
 
@@ -531,7 +531,7 @@ opts = {
 }
 
 begin
-  result = api_instance.list_service_accounts(opts)
+  result = api_instance.list_service_accounts(limit, offset)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling ServiceAccountApi->list_service_accounts: #{e}"

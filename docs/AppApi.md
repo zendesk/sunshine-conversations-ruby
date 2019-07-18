@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 
 # **delete_app**
-> delete_app(appId, )
+> delete_app(appId)
 
 
 
@@ -168,7 +168,7 @@ appId = "appId_example" # String | Identifies the app.
 
 
 begin
-  api_instance.delete_app(appId, )
+  api_instance.delete_app(appId)
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppApi->delete_app: #{e}"
 end
@@ -257,7 +257,7 @@ nil (empty response body)
 
 
 # **get_app**
-> AppResponse get_app(appId, )
+> AppResponse get_app(appId)
 
 
 
@@ -287,7 +287,7 @@ appId = "appId_example" # String | Identifies the app.
 
 
 begin
-  result = api_instance.get_app(appId, )
+  result = api_instance.get_app(appId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppApi->get_app: #{e}"
@@ -440,7 +440,7 @@ Name | Type | Description  | Notes
 
 
 # **list_apps**
-> ListAppsResponse list_apps(opts)
+> ListAppsResponse list_apps(limit, offset, serviceAccountId)
 
 
 
@@ -473,7 +473,7 @@ opts = {
 }
 
 begin
-  result = api_instance.list_apps(opts)
+  result = api_instance.list_apps(limit, offset, serviceAccountId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppApi->list_apps: #{e}"
@@ -504,7 +504,7 @@ Name | Type | Description  | Notes
 
 
 # **list_secret_keys**
-> ListSecretKeysResponse list_secret_keys(appId, )
+> ListSecretKeysResponse list_secret_keys(appId)
 
 
 
@@ -534,7 +534,7 @@ appId = "appId_example" # String | Identifies the app.
 
 
 begin
-  result = api_instance.list_secret_keys(appId, )
+  result = api_instance.list_secret_keys(appId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling AppApi->list_secret_keys: #{e}"

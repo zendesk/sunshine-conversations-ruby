@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 
 # **delete_deployment**
-> delete_deployment(deploymentId, )
+> delete_deployment(deploymentId)
 
 
 
@@ -226,7 +226,7 @@ deploymentId = "deploymentId_example" # String | Identifies the deployment.
 
 
 begin
-  api_instance.delete_deployment(deploymentId, )
+  api_instance.delete_deployment(deploymentId)
 rescue SmoochApi::ApiError => e
   puts "Exception when calling DeploymentApi->delete_deployment: #{e}"
 end
@@ -254,7 +254,7 @@ nil (empty response body)
 
 
 # **get_deployment**
-> DeploymentResponse get_deployment(deploymentId, )
+> DeploymentResponse get_deployment(deploymentId)
 
 
 
@@ -284,7 +284,7 @@ deploymentId = "deploymentId_example" # String | Identifies the deployment.
 
 
 begin
-  result = api_instance.get_deployment(deploymentId, )
+  result = api_instance.get_deployment(deploymentId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling DeploymentApi->get_deployment: #{e}"
@@ -313,7 +313,7 @@ Name | Type | Description  | Notes
 
 
 # **list_deployments**
-> ListDeploymentsResponse list_deployments
+> ListDeploymentsResponse list_deployments()
 
 
 
@@ -340,7 +340,7 @@ end
 api_instance = SmoochApi::DeploymentApi.new
 
 begin
-  result = api_instance.list_deployments
+  result = api_instance.list_deployments()
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling DeploymentApi->list_deployments: #{e}"

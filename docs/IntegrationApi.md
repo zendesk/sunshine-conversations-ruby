@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 
 # **delete_integration**
-> delete_integration(appId, integrationId, )
+> delete_integration(appId, integrationId)
 
 
 
@@ -178,7 +178,7 @@ integrationId = "integrationId_example" # String | Identifies the integration.
 
 
 begin
-  api_instance.delete_integration(appId, integrationId, )
+  api_instance.delete_integration(appId, integrationId)
 rescue SmoochApi::ApiError => e
   puts "Exception when calling IntegrationApi->delete_integration: #{e}"
 end
@@ -207,7 +207,7 @@ nil (empty response body)
 
 
 # **delete_integration_menu**
-> delete_integration_menu(appId, integrationId, )
+> delete_integration_menu(appId, integrationId)
 
 
 
@@ -239,7 +239,7 @@ integrationId = "integrationId_example" # String | Identifies the integration.
 
 
 begin
-  api_instance.delete_integration_menu(appId, integrationId, )
+  api_instance.delete_integration_menu(appId, integrationId)
 rescue SmoochApi::ApiError => e
   puts "Exception when calling IntegrationApi->delete_integration_menu: #{e}"
 end
@@ -268,7 +268,7 @@ nil (empty response body)
 
 
 # **get_integration**
-> IntegrationResponse get_integration(appId, integrationId, )
+> IntegrationResponse get_integration(appId, integrationId)
 
 
 
@@ -300,7 +300,7 @@ integrationId = "integrationId_example" # String | Identifies the integration.
 
 
 begin
-  result = api_instance.get_integration(appId, integrationId, )
+  result = api_instance.get_integration(appId, integrationId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling IntegrationApi->get_integration: #{e}"
@@ -330,7 +330,7 @@ Name | Type | Description  | Notes
 
 
 # **get_integration_menu**
-> MenuResponse get_integration_menu(appId, integrationId, )
+> MenuResponse get_integration_menu(appId, integrationId)
 
 
 
@@ -362,7 +362,7 @@ integrationId = "integrationId_example" # String | Identifies the integration.
 
 
 begin
-  result = api_instance.get_integration_menu(appId, integrationId, )
+  result = api_instance.get_integration_menu(appId, integrationId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling IntegrationApi->get_integration_menu: #{e}"
@@ -392,7 +392,7 @@ Name | Type | Description  | Notes
 
 
 # **get_integration_profile**
-> GetIntegrationProfileResponse get_integration_profile(appId, integrationId, )
+> GetIntegrationProfileResponse get_integration_profile(appId, integrationId)
 
 
 
@@ -424,7 +424,7 @@ integrationId = "integrationId_example" # String | Identifies the integration.
 
 
 begin
-  result = api_instance.get_integration_profile(appId, integrationId, )
+  result = api_instance.get_integration_profile(appId, integrationId)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling IntegrationApi->get_integration_profile: #{e}"
@@ -454,7 +454,7 @@ Name | Type | Description  | Notes
 
 
 # **list_integrations**
-> ListIntegrationsResponse list_integrations(appId, , opts)
+> ListIntegrationsResponse list_integrations(appId, types, limit, offset)
 
 
 
@@ -489,7 +489,7 @@ opts = {
 }
 
 begin
-  result = api_instance.list_integrations(appId, , opts)
+  result = api_instance.list_integrations(appId, types, limit, offset)
   p result
 rescue SmoochApi::ApiError => e
   puts "Exception when calling IntegrationApi->list_integrations: #{e}"
