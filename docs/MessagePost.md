@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **items** | [**Array&lt;MessageItem&gt;**](MessageItem.md) | The items in the message list. Required for carousel and list messages.  | [optional] 
 **actions** | [**Array&lt;Action&gt;**](Action.md) | The actions in the message. | [optional] 
 **blockChatInput** | **BOOLEAN** | Indicates if the Web SDK chat input should be blocked. Defaults to false. Only for form messages.  | [optional] 
+**displaySettings** | [**DisplaySettings**](DisplaySettings.md) | Settings to adjust the carousel layout. See [Display Settings](https://docs.smooch.io/rest/#display-settings). | [optional] 
 **fields** | [**Array&lt;FieldPost&gt;**](FieldPost.md) | The fields in the form. Required for form messages.  | [optional] 
 **destination** | [**Destination**](Destination.md) | Specifies which channel to deliver a message to. See [list integrations](https://docs.smooch.io/rest/#list-integrations) to get integration ID and type. | [optional] 
 **override** | [**MessageOverride**](MessageOverride.md) | Specifies channel-specific overrides to use in order to bypass Smooch&#39;s message translation logic. | [optional] 
