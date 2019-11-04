@@ -25,7 +25,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 5.19.0'
+    gem 'smooch-api', '~> 5.20.0'
 
 ## Getting Started
 
@@ -205,6 +205,7 @@ Class | Method | HTTP request | Description
  - [SmoochApi::Confirmation](docs/Confirmation.md)
  - [SmoochApi::Conversation](docs/Conversation.md)
  - [SmoochApi::ConversationActivity](docs/ConversationActivity.md)
+ - [SmoochApi::Coordinates](docs/Coordinates.md)
  - [SmoochApi::Deployment](docs/Deployment.md)
  - [SmoochApi::DeploymentActivatePhoneNumber](docs/DeploymentActivatePhoneNumber.md)
  - [SmoochApi::DeploymentConfirmCode](docs/DeploymentConfirmCode.md)
@@ -232,6 +233,7 @@ Class | Method | HTTP request | Description
  - [SmoochApi::ListServiceAccountsResponse](docs/ListServiceAccountsResponse.md)
  - [SmoochApi::ListTemplatesResponse](docs/ListTemplatesResponse.md)
  - [SmoochApi::ListWebhooksResponse](docs/ListWebhooksResponse.md)
+ - [SmoochApi::Location](docs/Location.md)
  - [SmoochApi::Menu](docs/Menu.md)
  - [SmoochApi::MenuItem](docs/MenuItem.md)
  - [SmoochApi::MenuResponse](docs/MenuResponse.md)

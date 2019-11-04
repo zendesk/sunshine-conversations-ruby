@@ -14,27 +14,27 @@ require 'date'
 
 module SmoochApi
 
-  class Conversation
-    # The conversation ID, generated automatically.
-    attr_accessor :id
+  class Location
+    # The location's street address.
+    attr_accessor :address
 
-    # The number of unread messages in the conversation.
-    attr_accessor :unreadCount
+    # A name for the location.
+    attr_accessor :name
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'id' => :'_id',
-        :'unreadCount' => :'unreadCount'
+        :'address' => :'address',
+        :'name' => :'name'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'id' => :'String',
-        :'unreadCount' => :'Integer'
+        :'address' => :'String',
+        :'name' => :'String'
       }
     end
 
@@ -46,12 +46,12 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'_id')
-        self.id = attributes[:'_id']
+      if attributes.has_key?(:'address')
+        self.address = attributes[:'address']
       end
 
-      if attributes.has_key?(:'unreadCount')
-        self.unreadCount = attributes[:'unreadCount']
+      if attributes.has_key?(:'name')
+        self.name = attributes[:'name']
       end
 
     end
@@ -60,22 +60,12 @@ module SmoochApi
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @id.nil?
-        invalid_properties.push("invalid value for 'id', id cannot be nil.")
-      end
-
-      if @unreadCount.nil?
-        invalid_properties.push("invalid value for 'unreadCount', unreadCount cannot be nil.")
-      end
-
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @id.nil?
-      return false if @unreadCount.nil?
       return true
     end
 
@@ -84,8 +74,8 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          unreadCount == o.unreadCount
+          address == o.address &&
+          name == o.name
     end
 
     # @see the `==` method
@@ -97,7 +87,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, unreadCount].hash
+      [address, name].hash
     end
 
     # Builds the object from hash

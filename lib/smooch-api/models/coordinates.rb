@@ -14,27 +14,27 @@ require 'date'
 
 module SmoochApi
 
-  class Conversation
-    # The conversation ID, generated automatically.
-    attr_accessor :id
+  class Coordinates
+    # A floating point value representing the latitude of the location.
+    attr_accessor :lat
 
-    # The number of unread messages in the conversation.
-    attr_accessor :unreadCount
+    # A floating point value representing the longitude of the location.
+    attr_accessor :long
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'id' => :'_id',
-        :'unreadCount' => :'unreadCount'
+        :'lat' => :'lat',
+        :'long' => :'long'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'id' => :'String',
-        :'unreadCount' => :'Integer'
+        :'lat' => :'Float',
+        :'long' => :'Float'
       }
     end
 
@@ -46,12 +46,12 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'_id')
-        self.id = attributes[:'_id']
+      if attributes.has_key?(:'lat')
+        self.lat = attributes[:'lat']
       end
 
-      if attributes.has_key?(:'unreadCount')
-        self.unreadCount = attributes[:'unreadCount']
+      if attributes.has_key?(:'long')
+        self.long = attributes[:'long']
       end
 
     end
@@ -60,12 +60,12 @@ module SmoochApi
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @id.nil?
-        invalid_properties.push("invalid value for 'id', id cannot be nil.")
+      if @lat.nil?
+        invalid_properties.push("invalid value for 'lat', lat cannot be nil.")
       end
 
-      if @unreadCount.nil?
-        invalid_properties.push("invalid value for 'unreadCount', unreadCount cannot be nil.")
+      if @long.nil?
+        invalid_properties.push("invalid value for 'long', long cannot be nil.")
       end
 
       return invalid_properties
@@ -74,8 +74,8 @@ module SmoochApi
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @id.nil?
-      return false if @unreadCount.nil?
+      return false if @lat.nil?
+      return false if @long.nil?
       return true
     end
 
@@ -84,8 +84,8 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          unreadCount == o.unreadCount
+          lat == o.lat &&
+          long == o.long
     end
 
     # @see the `==` method
@@ -97,7 +97,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, unreadCount].hash
+      [lat, long].hash
     end
 
     # Builds the object from hash
