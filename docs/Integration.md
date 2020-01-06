@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 **lineId** | **String** | LINE Basic ID. Generated automatically when a &#x60;qrCodeUrl&#x60; is updated.  | [optional] 
 **botName** | **String** | The bot&#39;s name. Returned on successful *line* integrations.  | [optional] 
 **encodingAesKey** | **String** | AES Encoding Key. (Optional) Used for *wechat* integrations.  | [optional] 
-**fromAddress** | **String** | Email will display as coming from this address. (Optional) Used for *frontendEmail* integrations.  | [optional] 
+**fromAddress** | **String** | Email address to use as the &#x60;From&#x60; and &#x60;Reply-To&#x60; address if it must be different from &#x60;incomingAddress&#x60;. Only use this option if the address that you supply is configured to forward emails to the &#x60;incomingAddress&#x60;, otherwise user replies will be lost. You must also make sure that the domain is properly configured as a mail provider so as to not be flagged as spam by the user&#39;s email client.  (Optional) Used for *mailgun* integrations.  | [optional] 
 **certificate** | **String** | The binary of your APN certificate base64 encoded. Required for *apn* integrations.  | [optional] 
 **deploymentId** | **String** | Your WhatsApp deployment ID. Required for *WhatsApp* integrations.  | [optional] 
 **baseUrl** | **String** | Your WhatsApp API client&#39;s URL. Required for *WhatsApp* integrations. (this usage is deprecated)  | [optional] 

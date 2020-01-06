@@ -24,5 +24,6 @@ Name | Type | Description | Notes
 **hsmFallbackLanguage** | **String** | Specification of a fallback language. (Optional) Used for *WhatsApp* integrations.  | [optional] 
 **qrCodeUrl** | **String** | URL provided by LINE in the [Developer Console](https://developers.line.biz/console/).  | [optional] 
 **hideUnsubscribeLink** | **BOOLEAN** | When &#x60;true&#x60;, unsubscribe links will not be included in outbound emails. If this setting is enabled, it is expected that the business is providing the user a way to unsubscribe by some other means. (Optional) Used for *mailgun* integrations.  | [optional] 
+**fromAddress** | **String** | Email address to use as the &#x60;From&#x60; and &#x60;Reply-To&#x60; address if it must be different from &#x60;incomingAddress&#x60;. Only use this option if the address that you supply is configured to forward emails to the &#x60;incomingAddress&#x60;, otherwise user replies will be lost. You must also make sure that the domain is properly configured as a mail provider so as to not be flagged as spam by the user&#39;s email client.  (Optional) Used for *mailgun* integrations.  | [optional] 
 
 
