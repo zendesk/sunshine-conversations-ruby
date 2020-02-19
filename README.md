@@ -25,7 +25,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 5.22.0'
+    gem 'smooch-api', '~> 5.23.0'
 
 ## Getting Started
 
@@ -241,6 +241,8 @@ Class | Method | HTTP request | Description
  - [SmoochApi::Message](docs/Message.md)
  - [SmoochApi::MessageItem](docs/MessageItem.md)
  - [SmoochApi::MessageOverride](docs/MessageOverride.md)
+ - [SmoochApi::MessageOverrideLine](docs/MessageOverrideLine.md)
+ - [SmoochApi::MessageOverrideMessenger](docs/MessageOverrideMessenger.md)
  - [SmoochApi::MessageOverrideWhatsapp](docs/MessageOverrideWhatsapp.md)
  - [SmoochApi::MessagePost](docs/MessagePost.md)
  - [SmoochApi::MessageResponse](docs/MessageResponse.md)

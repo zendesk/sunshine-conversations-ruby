@@ -14,22 +14,22 @@ require 'date'
 
 module SmoochApi
 
-  class Menu
-    # A list of menu items.
-    attr_accessor :items
+  class MessageOverrideLine
+    # The exact payload to send to LINE.
+    attr_accessor :payload
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'items' => :'items'
+        :'payload' => :'payload'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'items' => :'Array<MenuItem>'
+        :'payload' => :'Object'
       }
     end
 
@@ -41,10 +41,8 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'items')
-        if (value = attributes[:'items']).is_a?(Array)
-          self.items = value
-        end
+      if attributes.has_key?(:'payload')
+        self.payload = attributes[:'payload']
       end
 
     end
@@ -53,17 +51,12 @@ module SmoochApi
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @items.nil?
-        invalid_properties.push("invalid value for 'items', items cannot be nil.")
-      end
-
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @items.nil?
       return true
     end
 
@@ -72,7 +65,7 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          items == o.items
+          payload == o.payload
     end
 
     # @see the `==` method
@@ -84,7 +77,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [items].hash
+      [payload].hash
     end
 
     # Builds the object from hash
