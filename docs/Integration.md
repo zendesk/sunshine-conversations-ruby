@@ -35,7 +35,7 @@ Name | Type | Description | Notes
 **hsmFallbackLanguage** | **String** | Specification of a fallback language. (Optional) Used for *WhatsApp* integrations.  | [optional] 
 **password** | **String** | The password for your APN certificate or WhatsApp API client. Required for *WhatsApp* integrations. (this usage is deprecated) (Optional) Used for *apn* integrations.  | [optional] 
 **autoUpdateBadge** | **BOOLEAN** | Use the unread count of the conversation as the application badge. (Optional) Used for *apn* integrations.  | [optional] 
-**production** | **BOOLEAN** | Flag specifying whether the certificate is production. Returned on successful *apn* integrations.  | [optional] 
+**production** | **BOOLEAN** | Flag specifying the APN environment to connect to (&#x60;production&#x60; if true, &#x60;sandbox&#x60; otherwise). Defaults to value inferred from certificate if not specified. (Optional) Used for *apn* integrations.  | [optional] 
 **serverKey** | **String** | Your server key from the fcm console. Required for *fcm* integrations.  | [optional] 
 **senderId** | **String** | Your sender id from the fcm console. Required for *fcm* integrations.  | [optional] 
 **tier** | **String** | Your Twitter app’s tier. Accepted values are enterprise or premium.  | [optional] 
