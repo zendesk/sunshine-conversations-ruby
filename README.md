@@ -25,7 +25,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 5.25.1'
+    gem 'smooch-api', '~> 5.26.0'
 
 ## Getting Started
 
@@ -156,6 +156,7 @@ Class | Method | HTTP request | Description
 *SmoochApi::MenuApi* | [**delete_menu**](docs/MenuApi.md#delete_menu) | **DELETE** /v1.1/apps/{appId}/menu | 
 *SmoochApi::MenuApi* | [**get_menu**](docs/MenuApi.md#get_menu) | **GET** /v1.1/apps/{appId}/menu | 
 *SmoochApi::MenuApi* | [**update_menu**](docs/MenuApi.md#update_menu) | **PUT** /v1.1/apps/{appId}/menu | 
+*SmoochApi::NotificationApi* | [**post_notification**](docs/NotificationApi.md#post_notification) | **POST** /v1/apps/{appId}/notifications | 
 *SmoochApi::ServiceAccountApi* | [**create_secret_key**](docs/ServiceAccountApi.md#create_secret_key) | **POST** /v1.1/serviceaccounts/{serviceAccountId}/keys | 
 *SmoochApi::ServiceAccountApi* | [**create_service_account**](docs/ServiceAccountApi.md#create_service_account) | **POST** /v1.1/serviceaccounts | 
 *SmoochApi::ServiceAccountApi* | [**delete_secret_key**](docs/ServiceAccountApi.md#delete_secret_key) | **DELETE** /v1.1/serviceaccounts/{serviceAccountId}/keys/{keyId} | 
@@ -198,6 +199,7 @@ Class | Method | HTTP request | Description
  - [SmoochApi::AttachmentRemove](docs/AttachmentRemove.md)
  - [SmoochApi::AttachmentResponse](docs/AttachmentResponse.md)
  - [SmoochApi::AuthCodeResponse](docs/AuthCodeResponse.md)
+ - [SmoochApi::Author](docs/Author.md)
  - [SmoochApi::BusinessSystemItem](docs/BusinessSystemItem.md)
  - [SmoochApi::ChannelEntityItem](docs/ChannelEntityItem.md)
  - [SmoochApi::Client](docs/Client.md)
@@ -246,6 +248,10 @@ Class | Method | HTTP request | Description
  - [SmoochApi::MessageOverrideWhatsapp](docs/MessageOverrideWhatsapp.md)
  - [SmoochApi::MessagePost](docs/MessagePost.md)
  - [SmoochApi::MessageResponse](docs/MessageResponse.md)
+ - [SmoochApi::NotificationPost](docs/NotificationPost.md)
+ - [SmoochApi::NotificationPostDestination](docs/NotificationPostDestination.md)
+ - [SmoochApi::NotificationResponse](docs/NotificationResponse.md)
+ - [SmoochApi::NotificationResponseNotification](docs/NotificationResponseNotification.md)
  - [SmoochApi::Option](docs/Option.md)
  - [SmoochApi::QuotedMessage](docs/QuotedMessage.md)
  - [SmoochApi::SecretKey](docs/SecretKey.md)

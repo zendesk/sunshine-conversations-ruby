@@ -257,7 +257,7 @@ module SmoochApi
       return false unless quotedMessageType_validator.valid?(@quotedMessageType)
       role_validator = EnumAttributeValidator.new('String', ["appMaker", "appUser"])
       return false unless role_validator.valid?(@role)
-      webhookTriggers_validator = EnumAttributeValidator.new('String', ["appUser:delete", "client:add", "client:remove", "conversation:read", "conversation:referral", "conversation:start", "link:failure", "link:match", "link:success", "merge:appUser", "message:appMaker", "message:appUser", "message:delivery:channel", "message:delivery:failure", "message:delivery:user", "payment:success", "postback", "typing:appUser"])
+      webhookTriggers_validator = EnumAttributeValidator.new('String', ["appUser:delete", "client:add", "client:remove", "conversation:read", "conversation:referral", "conversation:start", "link:failure", "link:match", "link:success", "merge:appUser", "message:appMaker", "message:appUser", "message:delivery:channel", "message:delivery:failure", "message:delivery:user", "notification:delivery:channel", "notification:delivery:failure", "notification:delivery:user", "payment:success", "postback", "typing:appUser"])
       return false unless webhookTriggers_validator.valid?(@webhookTriggers)
       return true
     end
@@ -445,7 +445,7 @@ module SmoochApi
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] webhookTriggers Object to be assigned
     def webhookTriggers=(webhookTriggers)
-      validator = EnumAttributeValidator.new('String', ["appUser:delete", "client:add", "client:remove", "conversation:read", "conversation:referral", "conversation:start", "link:failure", "link:match", "link:success", "merge:appUser", "message:appMaker", "message:appUser", "message:delivery:channel", "message:delivery:failure", "message:delivery:user", "payment:success", "postback", "typing:appUser"])
+      validator = EnumAttributeValidator.new('String', ["appUser:delete", "client:add", "client:remove", "conversation:read", "conversation:referral", "conversation:start", "link:failure", "link:match", "link:success", "merge:appUser", "message:appMaker", "message:appUser", "message:delivery:channel", "message:delivery:failure", "message:delivery:user", "notification:delivery:channel", "notification:delivery:failure", "notification:delivery:user", "payment:success", "postback", "typing:appUser"])
       unless validator.valid?(webhookTriggers)
         fail ArgumentError, "invalid value for 'webhookTriggers', must be one of #{validator.allowable_values}."
       end
