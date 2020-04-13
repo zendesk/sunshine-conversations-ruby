@@ -25,7 +25,7 @@ gem install smooch-api
 
 Add this to the Gemfile:
 
-    gem 'smooch-api', '~> 5.26.0'
+    gem 'smooch-api', '~> 5.27.0'
 
 ## Getting Started
 
@@ -110,6 +110,7 @@ Class | Method | HTTP request | Description
 *SmoochApi::AppApi* | [**delete_secret_key**](docs/AppApi.md#delete_secret_key) | **DELETE** /v1.1/apps/{appId}/keys/{keyId} | 
 *SmoochApi::AppApi* | [**get_app**](docs/AppApi.md#get_app) | **GET** /v1.1/apps/{appId} | 
 *SmoochApi::AppApi* | [**get_app_jwt**](docs/AppApi.md#get_app_jwt) | **GET** /v1.1/apps/{appId}/keys/{keyId}/jwt | 
+*SmoochApi::AppApi* | [**get_sdk_ids**](docs/AppApi.md#get_sdk_ids) | **GET** /v1.1/apps/{appId}/sdks | 
 *SmoochApi::AppApi* | [**get_secret_key**](docs/AppApi.md#get_secret_key) | **GET** /v1.1/apps/{appId}/keys/{keyId} | 
 *SmoochApi::AppApi* | [**list_apps**](docs/AppApi.md#list_apps) | **GET** /v1.1/apps | 
 *SmoochApi::AppApi* | [**list_secret_keys**](docs/AppApi.md#list_secret_keys) | **GET** /v1.1/apps/{appId}/keys | 
@@ -220,6 +221,7 @@ Class | Method | HTTP request | Description
  - [SmoochApi::FieldPost](docs/FieldPost.md)
  - [SmoochApi::GetIntegrationProfileResponse](docs/GetIntegrationProfileResponse.md)
  - [SmoochApi::GetMessagesResponse](docs/GetMessagesResponse.md)
+ - [SmoochApi::GetSdkIdsResponse](docs/GetSdkIdsResponse.md)
  - [SmoochApi::Integration](docs/Integration.md)
  - [SmoochApi::IntegrationCreate](docs/IntegrationCreate.md)
  - [SmoochApi::IntegrationProfileUpdate](docs/IntegrationProfileUpdate.md)

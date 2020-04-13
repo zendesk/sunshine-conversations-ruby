@@ -51,6 +51,7 @@ Name | Type | Description | Notes
 **incomingAddress** | **String** | Smooch will receive all emails sent to this address. Required for *mailgun* integrations.  | [optional] 
 **accessKey** | **String** | The public API key of your MessageBird account. Required for *messagebird* integrations.  | [optional] 
 **originator** | **String** | Smooch will receive all messages sent to this phone number. Required for *messagebird* integrations.  | [optional] 
+**signingKey** | **String** | The signing key of your MessageBird account. Used to validate the webhooks&#39; origin. (Optional) Used for *messagebird* integrations.  | [optional] 
 **brandColor** | **String** | This color will be used in the messenger header and the button or tab in idle state. (Optional) Used for *Web Messenger* integrations.  | [optional] 
 **fixedIntroPane** | **BOOLEAN** | When &#x60;true&#x60;, the introduction pane will be pinned at the top of the conversation instead of scrolling with it. The default value is &#x60;false&#x60;. (Optional) Used for *Web Messenger* integrations.  | [optional] 
 **conversationColor** | **String** | This color will be used for customer messages, quick replies and actions in the footer. (Optional) Used for *Web Messenger* integrations.  | [optional] 

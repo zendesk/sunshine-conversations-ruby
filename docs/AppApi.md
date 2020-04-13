@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**delete_secret_key**](AppApi.md#delete_secret_key) | **DELETE** /v1.1/apps/{appId}/keys/{keyId} | 
 [**get_app**](AppApi.md#get_app) | **GET** /v1.1/apps/{appId} | 
 [**get_app_jwt**](AppApi.md#get_app_jwt) | **GET** /v1.1/apps/{appId}/keys/{keyId}/jwt | 
+[**get_sdk_ids**](AppApi.md#get_sdk_ids) | **GET** /v1.1/apps/{appId}/sdks | 
 [**get_secret_key**](AppApi.md#get_secret_key) | **GET** /v1.1/apps/{appId}/keys/{keyId} | 
 [**list_apps**](AppApi.md#list_apps) | **GET** /v1.1/apps | 
 [**list_secret_keys**](AppApi.md#list_secret_keys) | **GET** /v1.1/apps/{appId}/keys | 
@@ -365,6 +366,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**JwtResponse**](JwtResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **get_sdk_ids**
+> GetSdkIdsResponse get_sdk_ids(appId)
+
+
+
+Retrieve the IDs of the three SDK integrations (`android`, `ios`, and `web`) for the specified app, to be used when initializing the SDKs.
+
+### Example
+```ruby
+# load the gem
+require 'smooch-api'
+# setup authorization
+SmoochApi.configure do |config|
+  # Configure HTTP basic authorization (recommended): basicAuth
+  config.username = 'API_KEY_ID'
+  config.password = 'API_KEY_SECRET'
+
+
+  # OR
+
+  # Configure API key authorization (alternative): jwt
+  config.api_key['Authorization'] = 'YOUR JWT'
+  config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = SmoochApi::AppApi.new
+
+appId = "appId_example" # String | Identifies the app.
+
+
+begin
+  result = api_instance.get_sdk_ids(appId)
+  p result
+rescue SmoochApi::ApiError => e
+  puts "Exception when calling AppApi->get_sdk_ids: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**| Identifies the app. | 
+
+### Return type
+
+[**GetSdkIdsResponse**](GetSdkIdsResponse.md)
 
 ### Authorization
 

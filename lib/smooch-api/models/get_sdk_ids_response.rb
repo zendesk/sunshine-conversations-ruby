@@ -14,22 +14,32 @@ require 'date'
 
 module SmoochApi
 
-  class MessageOverrideWhatsapp
-    # The exact payload to send to WhatsApp.
-    attr_accessor :payload
+  class GetSdkIdsResponse
+    # The ID of the `android` integration, used when initializing the Android SDK.
+    attr_accessor :androidIntegrationId
+
+    # The ID of the `ios` integration, used when initializing the iOS SDK.
+    attr_accessor :iosIntegrationId
+
+    # The ID of the `web` integration, used when initializing the Web Messenger SDK.
+    attr_accessor :webIntegrationId
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'payload' => :'payload'
+        :'androidIntegrationId' => :'androidIntegrationId',
+        :'iosIntegrationId' => :'iosIntegrationId',
+        :'webIntegrationId' => :'webIntegrationId'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'payload' => :'Object'
+        :'androidIntegrationId' => :'String',
+        :'iosIntegrationId' => :'String',
+        :'webIntegrationId' => :'String'
       }
     end
 
@@ -41,8 +51,16 @@ module SmoochApi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'payload')
-        self.payload = attributes[:'payload']
+      if attributes.has_key?(:'androidIntegrationId')
+        self.androidIntegrationId = attributes[:'androidIntegrationId']
+      end
+
+      if attributes.has_key?(:'iosIntegrationId')
+        self.iosIntegrationId = attributes[:'iosIntegrationId']
+      end
+
+      if attributes.has_key?(:'webIntegrationId')
+        self.webIntegrationId = attributes[:'webIntegrationId']
       end
 
     end
@@ -51,12 +69,27 @@ module SmoochApi
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @androidIntegrationId.nil?
+        invalid_properties.push("invalid value for 'androidIntegrationId', androidIntegrationId cannot be nil.")
+      end
+
+      if @iosIntegrationId.nil?
+        invalid_properties.push("invalid value for 'iosIntegrationId', iosIntegrationId cannot be nil.")
+      end
+
+      if @webIntegrationId.nil?
+        invalid_properties.push("invalid value for 'webIntegrationId', webIntegrationId cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @androidIntegrationId.nil?
+      return false if @iosIntegrationId.nil?
+      return false if @webIntegrationId.nil?
       return true
     end
 
@@ -65,7 +98,9 @@ module SmoochApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          payload == o.payload
+          androidIntegrationId == o.androidIntegrationId &&
+          iosIntegrationId == o.iosIntegrationId &&
+          webIntegrationId == o.webIntegrationId
     end
 
     # @see the `==` method
@@ -77,7 +112,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [payload].hash
+      [androidIntegrationId, iosIntegrationId, webIntegrationId].hash
     end
 
     # Builds the object from hash
