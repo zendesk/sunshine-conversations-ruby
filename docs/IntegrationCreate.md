@@ -54,5 +54,8 @@ Name | Type | Description | Notes
 **qrCodeUrl** | **String** | URL provided by LINE in the [Developer Console](https://developers.line.biz/console/).  | [optional] 
 **hideUnsubscribeLink** | **BOOLEAN** | When &#x60;true&#x60;, unsubscribe links will not be included in outbound emails. If this setting is enabled, it is expected that the business is providing the user a way to unsubscribe by some other means. (Optional) Used for *mailgun* integrations.  | [optional] 
 **signingKey** | **String** | The signing key of your MessageBird account. Used to validate the webhooks&#39; origin. (Optional) Used for *messagebird* integrations.  | [optional] 
+**apiKey** | **String** | The public API key of your Mailgun account. Required for *mailgun* integrations.  | [optional] 
+**domain** | **String** | The domain used to relay email. Required for *mailgun* integrations.  | [optional] 
+**incomingAddress** | **String** | Smooch will receive all emails sent to this address. Required for *mailgun* integrations.  | [optional] 
 
 
