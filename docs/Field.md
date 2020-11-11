@@ -1,19 +1,35 @@
-# SmoochApi::Field
+# SunshineConversationsClient::Field
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** | The field ID, generated automatically. | [optional] 
-**type** | **String** | The field type. See [**FieldTypeEnum**](Enums.md#FieldTypeEnum) for available values. | 
-**name** | **String** | The name of the field. Each field name must be unique per form. | 
-**label** | **String** | The label to be displayed with the field. | 
-**placeholder** | **String** | The placeholder text of the field that will be rendered. Only for form messages  | [optional] 
-**minSize** | **Integer** | The minimum possible length of the response. Defaults to 1 if not specified. Only for text fields in form messages.  | [optional] 
-**maxSize** | **Integer** | The maximum possible length of the response. Defaults to 128 if not specified. Only for text fields in form messages.  | [optional] 
-**options** | [**Array&lt;Option&gt;**](Option.md) | The field options that can be selected. The array is limited to 20 options. Only for select fields in form messages.  | [optional] 
-**selectSize** | **Integer** | The select size, generated automatically. Only for select fields in form messages.  | [optional] 
-**text** | **String** | The text response to a text field. Required for text fields in form response messages.  | [optional] 
-**email** | **String** | The email response to an email field. Required for email fields in form response messages.  | [optional] 
-**select** | [**Array&lt;Select&gt;**](Select.md) | The options selected as a response to a select field. Required for select fields in form response messages.  | [optional] 
+**type** | **String** | The field type. | 
+**name** | **String** | The name of the field. Must be unique per form or formResponse. | 
+**label** | **String** | The label of the field. What the field is displayed as on Web Messenger. | 
+**placeholder** | **String** | Placeholder text for the field. form message only. | [optional] 
+**min_size** | **Integer** | The minimum allowed length for the response for a field of type text. form message only. | [optional] [default to 1]
+**max_size** | **Integer** | The maximum allowed length for the response for a field of type text. form message only. | [optional] [default to 128]
+**text** | **String** | Specifies the response for a text field. | [optional] 
+**email** | **String** | Specifies the response for a email field. | [optional] 
+**select** | **Array&lt;Object&gt;** | Array of objects representing the response for a field of type select. form and formResponse messages only. | [optional] 
+**options** | **Array&lt;Object&gt;** | Array of objects representing options for a field of type select. | [optional] 
+
+## Code Sample
+
+```ruby
+require 'SunshineConversationsClient'
+
+instance = SunshineConversationsClient::Field.new(type: null,
+                                 name: null,
+                                 label: null,
+                                 placeholder: null,
+                                 min_size: null,
+                                 max_size: null,
+                                 text: null,
+                                 email: null,
+                                 select: null,
+                                 options: null)
+```
 
 

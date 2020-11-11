@@ -1,131 +1,243 @@
-# SmoochApi::AttachmentsApi
+# SunshineConversationsClient::AttachmentsApi
 
 All URIs are relative to *https://api.smooch.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**remove_attachment**](AttachmentsApi.md#remove_attachment) | **POST** /v1.1/apps/{appId}/attachments/remove | 
-[**upload_attachment**](AttachmentsApi.md#upload_attachment) | **POST** /v1.1/apps/{appId}/attachments | 
-
-
-# **remove_attachment**
-> remove_attachment(appId, attachmentRemoveBody)
+[**delete_attachment**](AttachmentsApi.md#delete_attachment) | **POST** /v2/apps/{appId}/attachments/remove | Delete Attachment
+[**generate_media_json_web_token**](AttachmentsApi.md#generate_media_json_web_token) | **POST** /v2/apps/{appId}/attachments/token | Generate Media Token
+[**set_cookie**](AttachmentsApi.md#set_cookie) | **GET** /v2/apps/{appId}/attachments/cookie | Set Cookie
+[**upload_attachment**](AttachmentsApi.md#upload_attachment) | **POST** /v2/apps/{appId}/attachments | Upload Attachment
 
 
 
-Remove an attachment uploaded to Smooch.
+## delete_attachment
+
+> Object delete_attachment(app_id, attachment_delete_body)
+
+Delete Attachment
+
+Remove an attachment uploaded to Sunshine Conversations through the Upload attachment API. See [Attachments for Messages](#section/Attachments-for-Messages) to have attachments automatically deleted when deleting messages, conversations or users. <aside class=\"notice\">Note that deleted attachments can remain available on our CDN’s cache up to 15 minutes after the delete call.</aside> 
 
 ### Example
+
 ```ruby
 # load the gem
-require 'smooch-api'
+require 'sunshine-conversations-client'
 # setup authorization
-SmoochApi.configure do |config|
-  # Configure HTTP basic authorization (recommended): basicAuth
-  config.username = 'API_KEY_ID'
-  config.password = 'API_KEY_SECRET'
+SunshineConversationsClient.configure do |config|
+  # Configure HTTP basic authorization: basicAuth
+  config.username = 'YOUR_USERNAME'
+  config.password = 'YOUR_PASSWORD'
 
-
-  # OR
-
-  # Configure API key authorization (alternative): jwt
-  config.api_key['Authorization'] = 'YOUR JWT'
-  config.api_key_prefix['Authorization'] = 'Bearer'
+  # Configure Bearer authorization (JWT): bearerAuth
+  # Uncomment this line to use JWTs
+  # config.access_token = 'YOUR_JWT'
 end
 
-api_instance = SmoochApi::AttachmentsApi.new
-
-appId = "appId_example" # String | Identifies the app.
-
-attachmentRemoveBody = SmoochApi::AttachmentRemove.new # AttachmentRemove | Body for a removeAttachment request. 
-
+api_instance = SunshineConversationsClient::AttachmentsApi.new
+app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
+attachment_delete_body = SunshineConversationsClient::AttachmentDeleteBody.new # AttachmentDeleteBody | 
+# Be sure to add the required body parameters
 
 begin
-  api_instance.remove_attachment(appId, attachmentRemoveBody)
-rescue SmoochApi::ApiError => e
-  puts "Exception when calling AttachmentsApi->remove_attachment: #{e}"
+  #Delete Attachment
+  result = api_instance.delete_attachment(app_id, attachment_delete_body)
+  p result
+rescue SunshineConversationsClient::ApiError => e
+  puts "Exception when calling AttachmentsApi->delete_attachment: #{e}"
 end
 ```
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Identifies the app. | 
- **attachmentRemoveBody** | [**AttachmentRemove**](AttachmentRemove.md)| Body for a removeAttachment request.  | 
+ **app_id** | **String**| Identifies the app. | 
+ **attachment_delete_body** | [**AttachmentDeleteBody**](AttachmentDeleteBody.md)|  | 
 
 ### Return type
 
-nil (empty response body)
+**Object**
 
 ### Authorization
 
-[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
+## generate_media_json_web_token
 
-# **upload_attachment**
-> AttachmentResponse upload_attachment(appId, source, access, _for, appUserId, userId)
+> AttachmentMediaTokenResponse generate_media_json_web_token(app_id, attachment_media_token_body)
 
+Generate Media Token
 
-
-Upload an attachment to Smooch to use in future messages.
+Generates a media JWT for a list of attachment paths. This media token is a prerequisite for setting the cookie needed to visualize a private attachment. <aside class=\"notice\">Note you have the ability to allow files using different rules, see <a href=\"https://docs.smooch.io/guide/private-attachments\">Private Attachments</a> for more details.</aside> 
 
 ### Example
+
 ```ruby
 # load the gem
-require 'smooch-api'
+require 'sunshine-conversations-client'
 # setup authorization
-SmoochApi.configure do |config|
-  # Configure HTTP basic authorization (recommended): basicAuth
-  config.username = 'API_KEY_ID'
-  config.password = 'API_KEY_SECRET'
+SunshineConversationsClient.configure do |config|
+  # Configure HTTP basic authorization: basicAuth
+  config.username = 'YOUR_USERNAME'
+  config.password = 'YOUR_PASSWORD'
 
-
-  # OR
-
-  # Configure API key authorization (alternative): jwt
-  config.api_key['Authorization'] = 'YOUR JWT'
-  config.api_key_prefix['Authorization'] = 'Bearer'
+  # Configure Bearer authorization (JWT): bearerAuth
+  # Uncomment this line to use JWTs
+  # config.access_token = 'YOUR_JWT'
 end
 
-api_instance = SmoochApi::AttachmentsApi.new
+api_instance = SunshineConversationsClient::AttachmentsApi.new
+app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
+attachment_media_token_body = SunshineConversationsClient::AttachmentMediaTokenBody.new # AttachmentMediaTokenBody | 
+# Be sure to add the required body parameters
 
-appId = "appId_example" # String | Identifies the app.
+begin
+  #Generate Media Token
+  result = api_instance.generate_media_json_web_token(app_id, attachment_media_token_body)
+  p result
+rescue SunshineConversationsClient::ApiError => e
+  puts "Exception when calling AttachmentsApi->generate_media_json_web_token: #{e}"
+end
+```
 
-source = File.new("/path/to/file.txt") # File | File to be uploaded
+### Parameters
 
-access = "access_example" # String | Access level for the resulting file
 
-opts = { 
-  _for: "_for_example", # String | The intended container for the attachment
-  appUserId: "appUserId_example", # String | The appUserId of the user that will receive the attachment Used in attachments for messages 
-  userId: "userId_example" # String | The userId of the user that will receive the attachment Used in attachments for messages 
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **String**| Identifies the app. | 
+ **attachment_media_token_body** | [**AttachmentMediaTokenBody**](AttachmentMediaTokenBody.md)|  | 
+
+### Return type
+
+[**AttachmentMediaTokenResponse**](AttachmentMediaTokenResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth), [bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## set_cookie
+
+> Object set_cookie(app_id)
+
+Set Cookie
+
+With the media JWT retrieved, pass it in the header of the below request as it’s authorization in order to set a cookie in the user’s browser corresponding to the path within the media JWT. The expiration date of this cookie will match the expiration date of the media JWT. This cookie will be needed to visualize a private attachment. 
+
+### Example
+
+```ruby
+# load the gem
+require 'sunshine-conversations-client'
+# setup authorization
+SunshineConversationsClient.configure do |config|
+  # Configure Bearer authorization (JWT): bearerAuth
+  # Uncomment this line to use JWTs
+  # config.access_token = 'YOUR_JWT'
+end
+
+api_instance = SunshineConversationsClient::AttachmentsApi.new
+app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
+# Be sure to add the required body parameters
+
+begin
+  #Set Cookie
+  result = api_instance.set_cookie(app_id)
+  p result
+rescue SunshineConversationsClient::ApiError => e
+  puts "Exception when calling AttachmentsApi->set_cookie: #{e}"
+end
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **String**| Identifies the app. | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## upload_attachment
+
+> AttachmentResponse upload_attachment(app_id, access, source, opts)
+
+Upload Attachment
+
+Upload an attachment to Sunshine Conversations to use in future messages. Files are uploaded using the multipart/form-data content type. Use the returned mediaUrl to send a file, image or carousel message. <aside class=\"notice\">Note that Sunshine Conversations limits the size and type of file you can upload to the platform. See the <a href=\"https://docs.smooch.io/guide/validating-files\">file validation</a> guide for more details.</aside> 
+
+### Example
+
+```ruby
+# load the gem
+require 'sunshine-conversations-client'
+# setup authorization
+SunshineConversationsClient.configure do |config|
+  # Configure HTTP basic authorization: basicAuth
+  config.username = 'YOUR_USERNAME'
+  config.password = 'YOUR_PASSWORD'
+
+  # Configure Bearer authorization (JWT): bearerAuth
+  # Uncomment this line to use JWTs
+  # config.access_token = 'YOUR_JWT'
+end
+
+api_instance = SunshineConversationsClient::AttachmentsApi.new
+app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
+access = 'public' # String | The access level for the attachment. Currently the available access levels are public and private.
+source = File.new('/path/to/file') # File | 
+# Be sure to add the required body parameters
+opts = {
+  _for: 'message', # String | Specifies the intended container for the attachment, to enable automatic attachment deletion (on deletion of associated message, conversation or user). For now, only message is supported. See [Attachments for Messages](#section/Attachments-for-Messages) for details.
+  conversation_id: 'c616a583e4c240a871818541' # String | Links the attachment getting uploaded to the conversation ID.
 }
 
 begin
-  result = api_instance.upload_attachment(appId, source, access, _for, appUserId, userId)
+  #Upload Attachment
+  result = api_instance.upload_attachment(app_id, access, source, opts)
   p result
-rescue SmoochApi::ApiError => e
+rescue SunshineConversationsClient::ApiError => e
   puts "Exception when calling AttachmentsApi->upload_attachment: #{e}"
 end
 ```
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Identifies the app. | 
- **source** | **File**| File to be uploaded | 
- **access** | **String**| Access level for the resulting file | 
- **_for** | **String**| The intended container for the attachment | [optional] 
- **appUserId** | **String**| The appUserId of the user that will receive the attachment Used in attachments for messages  | [optional] 
- **userId** | **String**| The userId of the user that will receive the attachment Used in attachments for messages  | [optional] 
+ **app_id** | **String**| Identifies the app. | 
+ **access** | **String**| The access level for the attachment. Currently the available access levels are public and private. | [default to &#39;public&#39;]
+ **source** | **File**|  | 
+ **_for** | **String**| Specifies the intended container for the attachment, to enable automatic attachment deletion (on deletion of associated message, conversation or user). For now, only message is supported. See [Attachments for Messages](#section/Attachments-for-Messages) for details. | [optional] 
+ **conversation_id** | **String**| Links the attachment getting uploaded to the conversation ID. | [optional] 
 
 ### Return type
 
@@ -133,12 +245,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basicAuth](../README.md#basicAuth), [jwt](../README.md#jwt)
+[basicAuth](../README.md#basicAuth), [bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
- - **Accept**: application/json
-
-
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json
 

@@ -1,20 +1,41 @@
-# SmoochApi::Action
+# SunshineConversationsClient::Action
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **String** | The action type. See [**ActionTypeEnum**](Enums.md#ActionTypeEnum) for available values. | 
+**type** | **String** | The type of action. | 
 **text** | **String** | The button text. | 
-**payload** | **String** | The payload to be sent with the resulting webhook. Required for *postback* and *reply* actions.  | [optional] 
-**metadata** | **Object** | Flat JSON object containing any custom properties associated with the action. | [optional] 
-**amount** | **Integer** | The amount being charged. It needs to be specified in cents and is an integer. Required for *buy* actions.  | [optional] 
-**currency** | **String** | The currency of the amount being charged (USD, CAD, etc.). | [optional] 
-**default** | **BOOLEAN** | Flag indicating if the message action is the default for a message item in Facebook Messenger. | [optional] 
-**iconUrl** | **String** | An icon to render next to the reply option (Facebook Messenger and Web Messenger only). | [optional] 
-**uri** | **String** | The action URI. This is the link that will be used in the clients when clicking the button. Required for *link* and *webview* actions.  | [optional] 
-**fallback** | **String** | The webview action fallback uri. This is the link that will be used in clients that do not support webviews. Required for *webview* actions.  | [optional] 
-**size** | **String** | The size used to display the webview. Allowed values are [\&quot;compact\&quot;, \&quot;tall\&quot;, \&quot;full\&quot;]. (Optional) Used for *webview* actions. See [**ActionSizeEnum**](Enums.md#ActionSizeEnum) for available values.  | [optional] 
-**extraChannelOptions** | **Object** | Extra options to pass directly to the channel API. See [Extra Channel Options](https://docs.smooch.io/rest#extra-channel-options-schema) | [optional] 
-**openOnReceive** | **BOOLEAN** | Flag indicating if the webview should open automatically. Only one action per message can be set to true. Currently only supported on the Web Messenger. | [optional] 
+**amount** | **Integer** | The amount being charged. It needs to be specified in cents and is an integer (9.99$ -&gt; 999). | 
+**currency** | **String** | An ISO 4217 standard currency code in lowercase. Used for actions of type buy. | [optional] 
+**metadata** | [**Object**](.md) | Flat object containing custom properties. Strings, numbers and booleans  are the only supported format that can be passed to metadata. The metadata is limited to 4KB in size.  | [optional] 
+**uri** | **String** | The webview URI. This is the URI that will open in the webview when clicking the button. | 
+**default** | **Boolean** | Boolean value indicating whether the action is the default action for a message item in Facebook Messenger. | [optional] 
+**extra_channel_options** | [**ExtraChannelOptions**](ExtraChannelOptions.md) |  | [optional] 
+**payload** | **String** | A string payload to help you identify the action context. Used when posting the reply. You can also use metadata for more complex needs. | 
+**icon_url** | **String** | An icon to render next to the reply option. | [optional] 
+**size** | **String** | The size to display a webview. Used for actions of type webview. | [optional] 
+**fallback** | **String** | The fallback uri for channels that don’t support webviews. Used for actions of type webview. | 
+**open_on_receive** | **Boolean** | Boolean value indicating if the webview should open automatically. Only one action per message can be set to true. Currently only supported on the Web Messenger. | [optional] 
+
+## Code Sample
+
+```ruby
+require 'SunshineConversationsClient'
+
+instance = SunshineConversationsClient::Action.new(type: null,
+                                 text: null,
+                                 amount: 8000,
+                                 currency: CAD,
+                                 metadata: {&quot;lang&quot;:&quot;en-ca&quot;},
+                                 uri: null,
+                                 default: null,
+                                 extra_channel_options: null,
+                                 payload: null,
+                                 icon_url: null,
+                                 size: null,
+                                 fallback: null,
+                                 open_on_receive: null)
+```
 
 

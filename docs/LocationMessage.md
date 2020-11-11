@@ -1,0 +1,23 @@
+# SunshineConversationsClient::LocationMessage
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**type** | **String** | The type of message. | [default to &#39;location&#39;]
+**text** | **String** | The fallback text message used when location messages are not supported by the channel. | [optional] [readonly] 
+**coordinates** | [**LocationMessageCoordinates**](LocationMessageCoordinates.md) |  | 
+**location** | [**LocationMessageLocation**](LocationMessageLocation.md) |  | [optional] 
+
+## Code Sample
+
+```ruby
+require 'SunshineConversationsClient'
+
+instance = SunshineConversationsClient::LocationMessage.new(type: null,
+                                 text: null,
+                                 coordinates: null,
+                                 location: null)
+```
+
+

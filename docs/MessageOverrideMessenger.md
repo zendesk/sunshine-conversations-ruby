@@ -1,8 +1,17 @@
-# SmoochApi::MessageOverrideMessenger
+# SunshineConversationsClient::MessageOverrideMessenger
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**payload** | **Object** | The exact payload to send to Facebook Messenger. | [optional] 
+**messenger** | [**MessageOverridePayload**](MessageOverridePayload.md) |  | [optional] 
+
+## Code Sample
+
+```ruby
+require 'SunshineConversationsClient'
+
+instance = SunshineConversationsClient::MessageOverrideMessenger.new(messenger: null)
+```
 
 

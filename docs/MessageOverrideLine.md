@@ -1,8 +1,17 @@
-# SmoochApi::MessageOverrideLine
+# SunshineConversationsClient::MessageOverrideLine
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**payload** | **Object** | The exact payload to send to LINE. | [optional] 
+**line** | [**MessageOverridePayload**](MessageOverridePayload.md) |  | [optional] 
+
+## Code Sample
+
+```ruby
+require 'SunshineConversationsClient'
+
+instance = SunshineConversationsClient::MessageOverrideLine.new(line: null)
+```
 
 

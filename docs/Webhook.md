@@ -1,14 +1,29 @@
-# SmoochApi::Webhook
+# SunshineConversationsClient::Webhook
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** | The webhook ID, generated automatically. | 
+**id** | **String** | A unique identifier for the webhook. | [optional] [readonly] 
+**version** | **String** | Schema version of the payload delivered to this webhook. Can be &#x60;v1&#x60;, &#x60;v1.1&#x60; or &#x60;v2&#x60;. | [optional] [readonly] 
 **target** | **String** | URL to be called when the webhook is triggered. | 
-**triggers** | **Array&lt;String&gt;** | An array of triggers you wish to have the webhook listen to. See [**WebhookTriggersEnum**](Enums.md#WebhookTriggersEnum) for available values. | 
-**secret** | **String** | Secret which will be transmitted with each webhook invocation and can be used to verify the authenticity of the caller. | 
-**version** | **String** | The payload version of the webhook. | [optional] 
-**includeClient** | **BOOLEAN** | Specifies whether webhook payloads should include the client information associated with a conversation in webhook events. | [optional] 
-**includeFullAppUser** | **BOOLEAN** | Specifies whether webhook payloads should include the complete appUser schema for appUser events. | [optional] 
+**triggers** | **Array&lt;String&gt;** | An array of triggers the integration is subscribed to. This property is case sensitive. Current supported triggers in v2 are &#x60;conversation:create&#x60;, &#x60;conversation:message:delivery:channel&#x60;, &#x60;conversation:message:delivery:failure&#x60;, &#x60;conversation:message:delivery:user&#x60;, &#x60;conversation:message&#x60;, &#x60;conversation:read&#x60;, &#x60;conversation:typing&#x60;, &#x60;conversation:postback&#x60;, and &#x60;user:merge&#x60; | 
+**secret** | **String** | Webhook secret, used to verify the origin of incoming requests. | [optional] 
+**include_full_user** | **Boolean** | A boolean specifying whether webhook payloads should include the complete user schema for events involving a specific user. | [optional] [default to false]
+**include_full_source** | **Boolean** | A boolean specifying whether webhook payloads should include the client and device object (when applicable). | [optional] [default to false]
+
+## Code Sample
+
+```ruby
+require 'SunshineConversationsClient'
+
+instance = SunshineConversationsClient::Webhook.new(id: 5e554d2cac66fb73a3c01871,
+                                 version: v2,
+                                 target: https://example.com/callback,
+                                 triggers: [&quot;conversation:read&quot;,&quot;conversation:message&quot;],
+                                 secret: 8564b3e6a8b20a4bdb68b05ce9bc5936,
+                                 include_full_user: null,
+                                 include_full_source: null)
+```
 
 
