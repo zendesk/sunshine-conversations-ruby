@@ -8,13 +8,13 @@ Name | Type | Description | Notes
 **server_key** | **String** | Your server key from the fcm console. | [optional] 
 **sender_id** | **String** | Your sender id from the fcm console. | [optional] 
 **can_user_create_more_conversations** | **Boolean** | Allows users to create more than one conversation on the web messenger integration. | [optional] 
+**page_access_token** | **String** | A Facebook Page Access Token. | [optional] 
 **certificate** | **String** | The binary of your APN certificate base64 encoded. | [optional] 
 **password** | **String** | The password for your APN certificate. | [optional] 
 **production** | **Boolean** | The APN environment to connect to (Production, if true, or Sandbox). Defaults to value inferred from certificate if not specified. | [optional] 
 **auto_update_badge** | **Boolean** | Use the unread count of the conversation as the application badge. | [optional] 
 **hide_unsubscribe_link** | **Boolean** | A boolean value indicating whether the unsubscribe link should be omitted from outgoing emails. When enabled, it is expected that the business is providing the user a way to unsubscribe by some other means. By default, the unsubscribe link will be included in all outgoing emails. | [optional] 
 **from_address** | **String** | Email address to use as the From and Reply-To address if it must be different from incomingAddress. Only use this option if the address that you supply is configured to forward emails to the incomingAddress, otherwise user replies will be lost. You must also make sure that the domain is properly configured as a mail provider so as to not be flagged as spam by the user’s email client. May be unset with null. | [optional] 
-**page_access_token** | **String** | A Facebook Page Access Token. | [optional] 
 **brand_color** | **String** | This color will be used in the messenger header and the button or tab in idle state. Must be a 3 or 6-character hexadecimal color. | [optional] [default to &#39;65758e&#39;]
 **fixed_intro_pane** | **Boolean** | When true, the introduction pane will be pinned at the top of the conversation instead of scrolling with it. | [optional] [default to false]
 **conversation_color** | **String** | This color will be used for customer messages, quick replies and actions in the footer. Must be a 3 or 6-character hexadecimal color. | [optional] [default to &#39;0099ff&#39;]
@@ -42,13 +42,13 @@ instance = SunshineConversationsClient::IntegrationUpdate.new(display_name: My a
                                  server_key: &lt;server-key&gt;,
                                  sender_id: &lt;sender-id&gt;,
                                  can_user_create_more_conversations: null,
+                                 page_access_token: your_access_token,
                                  certificate: your_APN_certificate,
                                  password: your_APN_password,
                                  production: null,
                                  auto_update_badge: null,
                                  hide_unsubscribe_link: null,
                                  from_address: test@sandbox123.mailgun.org,
-                                 page_access_token: your_access_token,
                                  brand_color: null,
                                  fixed_intro_pane: null,
                                  conversation_color: null,

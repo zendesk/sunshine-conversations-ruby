@@ -23,6 +23,9 @@ module SunshineConversationsClient
     # Allows users to create more than one conversation on the web messenger integration.
     attr_accessor :can_user_create_more_conversations
 
+    # A Facebook Page Access Token.
+    attr_accessor :page_access_token
+
     # The binary of your APN certificate base64 encoded.
     attr_accessor :certificate
 
@@ -40,9 +43,6 @@ module SunshineConversationsClient
 
     # Email address to use as the From and Reply-To address if it must be different from incomingAddress. Only use this option if the address that you supply is configured to forward emails to the incomingAddress, otherwise user replies will be lost. You must also make sure that the domain is properly configured as a mail provider so as to not be flagged as spam by the user’s email client. May be unset with null.
     attr_accessor :from_address
-
-    # A Facebook Page Access Token.
-    attr_accessor :page_access_token
 
     # This color will be used in the messenger header and the button or tab in idle state. Must be a 3 or 6-character hexadecimal color.
     attr_accessor :brand_color
@@ -102,13 +102,13 @@ module SunshineConversationsClient
         :'server_key' => :'serverKey',
         :'sender_id' => :'senderId',
         :'can_user_create_more_conversations' => :'canUserCreateMoreConversations',
+        :'page_access_token' => :'pageAccessToken',
         :'certificate' => :'certificate',
         :'password' => :'password',
         :'production' => :'production',
         :'auto_update_badge' => :'autoUpdateBadge',
         :'hide_unsubscribe_link' => :'hideUnsubscribeLink',
         :'from_address' => :'fromAddress',
-        :'page_access_token' => :'pageAccessToken',
         :'brand_color' => :'brandColor',
         :'fixed_intro_pane' => :'fixedIntroPane',
         :'conversation_color' => :'conversationColor',
@@ -136,13 +136,13 @@ module SunshineConversationsClient
         :'server_key' => :'String',
         :'sender_id' => :'String',
         :'can_user_create_more_conversations' => :'Boolean',
+        :'page_access_token' => :'String',
         :'certificate' => :'String',
         :'password' => :'String',
         :'production' => :'Boolean',
         :'auto_update_badge' => :'Boolean',
         :'hide_unsubscribe_link' => :'Boolean',
         :'from_address' => :'String',
-        :'page_access_token' => :'String',
         :'brand_color' => :'String',
         :'fixed_intro_pane' => :'Boolean',
         :'conversation_color' => :'String',
@@ -186,6 +186,7 @@ module SunshineConversationsClient
       :'AndroidUpdate',
       :'AppleUpdate',
       :'CustomUpdate',
+      :'InstagramUpdate',
       :'IosUpdate',
       :'LineUpdate',
       :'MailgunUpdate',
@@ -231,6 +232,10 @@ module SunshineConversationsClient
         self.can_user_create_more_conversations = attributes[:'can_user_create_more_conversations']
       end
 
+      if attributes.key?(:'page_access_token')
+        self.page_access_token = attributes[:'page_access_token']
+      end
+
       if attributes.key?(:'certificate')
         self.certificate = attributes[:'certificate']
       end
@@ -253,10 +258,6 @@ module SunshineConversationsClient
 
       if attributes.key?(:'from_address')
         self.from_address = attributes[:'from_address']
-      end
-
-      if attributes.key?(:'page_access_token')
-        self.page_access_token = attributes[:'page_access_token']
       end
 
       if attributes.key?(:'brand_color')
@@ -464,13 +465,13 @@ module SunshineConversationsClient
           server_key == o.server_key &&
           sender_id == o.sender_id &&
           can_user_create_more_conversations == o.can_user_create_more_conversations &&
+          page_access_token == o.page_access_token &&
           certificate == o.certificate &&
           password == o.password &&
           production == o.production &&
           auto_update_badge == o.auto_update_badge &&
           hide_unsubscribe_link == o.hide_unsubscribe_link &&
           from_address == o.from_address &&
-          page_access_token == o.page_access_token &&
           brand_color == o.brand_color &&
           fixed_intro_pane == o.fixed_intro_pane &&
           conversation_color == o.conversation_color &&
@@ -499,7 +500,7 @@ module SunshineConversationsClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [display_name, server_key, sender_id, can_user_create_more_conversations, certificate, password, production, auto_update_badge, hide_unsubscribe_link, from_address, page_access_token, brand_color, fixed_intro_pane, conversation_color, action_color, display_style, button_icon_url, button_width, button_height, integration_order, business_name, business_icon_url, background_image_url, origin_whitelist, prechat_capture, hsm_fallback_language, account_id, account_management_access_token].hash
+      [display_name, server_key, sender_id, can_user_create_more_conversations, page_access_token, certificate, password, production, auto_update_badge, hide_unsubscribe_link, from_address, brand_color, fixed_intro_pane, conversation_color, action_color, display_style, button_icon_url, button_width, button_height, integration_order, business_name, business_icon_url, background_image_url, origin_whitelist, prechat_capture, hsm_fallback_language, account_id, account_management_access_token].hash
     end
 
     # Builds the object from hash

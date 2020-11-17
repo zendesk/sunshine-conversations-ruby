@@ -10,19 +10,36 @@ OpenAPI Generator version: 4.3.1
 require 'date'
 
 module SunshineConversationsClient
-  # Facebook Messenger Setup steps: Take note of your Facebook app ID and secret (apps can be created at developer.facebook.com); The Facebook app must have been submitted to Facebook for app review with the “manage_pages” (to retrieve Page Access Tokens for the Pages, apps that the app user administers and set a webhook) and “pages_messaging” (to send messages) permissions. In order to integrate a Facebook Messenger app you must acquire a Page Access Token from your user. Once you have acquired a page access token from your user, call the Create Integration endpoint with your app secret and ID and the user’s page access token. 
-  class MessengerAllOf
+  class Instagram < Integration
     # The type of integration.
     attr_accessor :type
 
-    # A Facebook Page Access Token.
+    # The Facebook Page Access Token of the Facebook page that is linked to your Instagram account.
     attr_accessor :page_access_token
 
-    # A Facebook App ID.
+    # Your Facebook App ID.
     attr_accessor :app_id
 
-    # A Facebook App Secret.
+    # Your Facebook App secret.
     attr_accessor :app_secret
+
+    # Your Instagram Business account name
+    attr_accessor :business_name
+
+    # Your Instagram Business unique username
+    attr_accessor :business_username
+
+    # The ID of the Facebook Page linked to your Instagram Business account
+    attr_accessor :page_id
+
+    # The ID of the Instagram Business account
+    attr_accessor :business_id
+
+    # The Facebook user's username. This is returned when integrating through the Dashboard
+    attr_accessor :username
+
+    # The Facebook user's user ID. This is returned when integrating through the Dashboard
+    attr_accessor :user_id
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -30,7 +47,13 @@ module SunshineConversationsClient
         :'type' => :'type',
         :'page_access_token' => :'pageAccessToken',
         :'app_id' => :'appId',
-        :'app_secret' => :'appSecret'
+        :'app_secret' => :'appSecret',
+        :'business_name' => :'businessName',
+        :'business_username' => :'businessUsername',
+        :'page_id' => :'pageId',
+        :'business_id' => :'businessId',
+        :'username' => :'username',
+        :'user_id' => :'userId'
       }
     end
 
@@ -40,7 +63,13 @@ module SunshineConversationsClient
         :'type' => :'String',
         :'page_access_token' => :'String',
         :'app_id' => :'String',
-        :'app_secret' => :'String'
+        :'app_secret' => :'String',
+        :'business_name' => :'String',
+        :'business_username' => :'String',
+        :'page_id' => :'String',
+        :'business_id' => :'String',
+        :'username' => :'String',
+        :'user_id' => :'String'
       }
     end
 
@@ -50,25 +79,36 @@ module SunshineConversationsClient
       ])
     end
 
+    # List of class defined in allOf (OpenAPI v3)
+    def self.openapi_all_of
+      [
+      :'InstagramAllOf',
+      :'Integration'
+      ]
+    end
+
     # Initializes the object
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `SunshineConversationsClient::MessengerAllOf` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `SunshineConversationsClient::Instagram` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `SunshineConversationsClient::MessengerAllOf`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `SunshineConversationsClient::Instagram`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
 
+      # call parent's initialize
+      super(attributes)
+
       if attributes.key?(:'type')
         self.type = attributes[:'type']
       else
-        self.type = 'messenger'
+        self.type = 'instagram'
       end
 
       if attributes.key?(:'page_access_token')
@@ -82,12 +122,36 @@ module SunshineConversationsClient
       if attributes.key?(:'app_secret')
         self.app_secret = attributes[:'app_secret']
       end
+
+      if attributes.key?(:'business_name')
+        self.business_name = attributes[:'business_name']
+      end
+
+      if attributes.key?(:'business_username')
+        self.business_username = attributes[:'business_username']
+      end
+
+      if attributes.key?(:'page_id')
+        self.page_id = attributes[:'page_id']
+      end
+
+      if attributes.key?(:'business_id')
+        self.business_id = attributes[:'business_id']
+      end
+
+      if attributes.key?(:'username')
+        self.username = attributes[:'username']
+      end
+
+      if attributes.key?(:'user_id')
+        self.user_id = attributes[:'user_id']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properties with the reasons
     def list_invalid_properties
-      invalid_properties = Array.new
+      invalid_properties = super
       if @page_access_token.nil?
         invalid_properties.push('invalid value for "page_access_token", page_access_token cannot be nil.')
       end
@@ -109,7 +173,7 @@ module SunshineConversationsClient
       return false if @page_access_token.nil?
       return false if @app_id.nil?
       return false if @app_secret.nil?
-      true
+      true && super
     end
 
     # Checks equality by comparing each attribute.
@@ -120,7 +184,13 @@ module SunshineConversationsClient
           type == o.type &&
           page_access_token == o.page_access_token &&
           app_id == o.app_id &&
-          app_secret == o.app_secret
+          app_secret == o.app_secret &&
+          business_name == o.business_name &&
+          business_username == o.business_username &&
+          page_id == o.page_id &&
+          business_id == o.business_id &&
+          username == o.username &&
+          user_id == o.user_id && super(o)
     end
 
     # @see the `==` method
@@ -132,7 +202,7 @@ module SunshineConversationsClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [type, page_access_token, app_id, app_secret].hash
+      [type, page_access_token, app_id, app_secret, business_name, business_username, page_id, business_id, username, user_id].hash
     end
 
     # Builds the object from hash
@@ -147,6 +217,7 @@ module SunshineConversationsClient
     # @return [Object] Returns the model itself
     def build_from_hash(attributes)
       return nil unless attributes.is_a?(Hash)
+      super(attributes)
       self.class.openapi_types.each_pair do |key, type|
         if type =~ /\AArray<(.*)>/i
           # check to ensure the input is an array given that the attribute
@@ -218,7 +289,7 @@ module SunshineConversationsClient
     # Returns the object in the form of hash
     # @return [Hash] Returns the object in the form of hash
     def to_hash
-      hash = {}
+      hash = super
       self.class.attribute_map.each_pair do |attr, param|
         value = self.send(attr)
         if value.nil?
