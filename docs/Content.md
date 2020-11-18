@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **media_url** | **String** | The URL for media, such as an image, attached to the message. | 
 **media_size** | **Float** | The size of the media. | [optional] [readonly] 
 **media_type** | **String** | The media type of the file. | [optional] [readonly] 
+**alt_text** | **String** | An optional description of the image for accessibility purposes. The field will be saved by default with the file name as the value. | [optional] 
 **block_chat_input** | **Boolean** | true if the message should block the chat input on Web Messenger. form message only. | [optional] 
 **fields** | [**Array&lt;Field&gt;**](Field.md) | Array of field objects that contain the submitted fields. | 
 **text_fallback** | **String** | A string containing the &#x60;label: value&#x60; of all fields, each separated by a newline character. | [optional] [readonly] 
@@ -31,6 +32,7 @@ instance = SunshineConversationsClient::Content.new(type: null,
                                  media_url: null,
                                  media_size: null,
                                  media_type: null,
+                                 alt_text: null,
                                  block_chat_input: null,
                                  fields: null,
                                  text_fallback: null,

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **media_url** | **String** | The URL for media, such as an image, attached to the message. | 
 **media_size** | **Float** | The size of the media. | [optional] [readonly] 
 **media_type** | **String** | The media type of the file. | [optional] [readonly] 
+**alt_text** | **String** | An optional description of the file for accessibility purposes. The field will be saved by default with the file name as the value. | [optional] 
 **text** | **String** | The text content of the message. | [optional] 
 
 ## Code Sample
@@ -19,6 +20,7 @@ instance = SunshineConversationsClient::FileMessage.new(type: null,
                                  media_url: null,
                                  media_size: null,
                                  media_type: null,
+                                 alt_text: null,
                                  text: null)
 ```
 
