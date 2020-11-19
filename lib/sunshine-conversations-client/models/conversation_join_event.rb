@@ -10,38 +10,25 @@ OpenAPI Generator version: 4.3.1
 require 'date'
 
 module SunshineConversationsClient
-  class Webhook
-    # A unique identifier for the webhook.
+  class ConversationJoinEvent
+    # The unique ID of the event. May be used to ensure that an event is not processed twice in the case of a webhook that is re-tried due to an error or timeout.
     attr_accessor :id
 
-    # Schema version of the payload delivered to this webhook. Can be `v1`, `v1.1` or `v2`.
-    attr_accessor :version
+    # The type of the event. Will match one of the subscribed triggers for your [webhook](#operation/createWebhook).
+    attr_accessor :type
 
-    # URL to be called when the webhook is triggered.
-    attr_accessor :target
+    # A timestamp signifying when the event was generated. Formatted as `YYYY-MM-DDThh:mm:ss.SSSZ`.
+    attr_accessor :created_at
 
-    # An array of triggers the integration is subscribed to. This property is case sensitive. [More details](https://docs.smooch.io/rest/#section/Webhook-Triggers).
-    attr_accessor :triggers
-
-    # Webhook secret, used to verify the origin of incoming requests.
-    attr_accessor :secret
-
-    # A boolean specifying whether webhook payloads should include the complete user schema for events involving a specific user.
-    attr_accessor :include_full_user
-
-    # A boolean specifying whether webhook payloads should include the client and device object (when applicable).
-    attr_accessor :include_full_source
+    attr_accessor :payload
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'id' => :'id',
-        :'version' => :'version',
-        :'target' => :'target',
-        :'triggers' => :'triggers',
-        :'secret' => :'secret',
-        :'include_full_user' => :'includeFullUser',
-        :'include_full_source' => :'includeFullSource'
+        :'type' => :'type',
+        :'created_at' => :'createdAt',
+        :'payload' => :'payload'
       }
     end
 
@@ -49,12 +36,9 @@ module SunshineConversationsClient
     def self.openapi_types
       {
         :'id' => :'String',
-        :'version' => :'String',
-        :'target' => :'String',
-        :'triggers' => :'Array<String>',
-        :'secret' => :'String',
-        :'include_full_user' => :'Boolean',
-        :'include_full_source' => :'Boolean'
+        :'type' => :'String',
+        :'created_at' => :'String',
+        :'payload' => :'ConversationJoinEventAllOfPayload'
       }
     end
 
@@ -64,17 +48,25 @@ module SunshineConversationsClient
       ])
     end
 
+    # List of class defined in allOf (OpenAPI v3)
+    def self.openapi_all_of
+      [
+      :'ConversationJoinEventAllOf',
+      :'EventSubSchema'
+      ]
+    end
+
     # Initializes the object
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `SunshineConversationsClient::Webhook` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `SunshineConversationsClient::ConversationJoinEvent` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `SunshineConversationsClient::Webhook`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `SunshineConversationsClient::ConversationJoinEvent`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
@@ -83,31 +75,16 @@ module SunshineConversationsClient
         self.id = attributes[:'id']
       end
 
-      if attributes.key?(:'version')
-        self.version = attributes[:'version']
+      if attributes.key?(:'type')
+        self.type = attributes[:'type']
       end
 
-      if attributes.key?(:'target')
-        self.target = attributes[:'target']
+      if attributes.key?(:'created_at')
+        self.created_at = attributes[:'created_at']
       end
 
-      if attributes.key?(:'triggers')
-      end
-
-      if attributes.key?(:'secret')
-        self.secret = attributes[:'secret']
-      end
-
-      if attributes.key?(:'include_full_user')
-        self.include_full_user = attributes[:'include_full_user']
-      else
-        self.include_full_user = false
-      end
-
-      if attributes.key?(:'include_full_source')
-        self.include_full_source = attributes[:'include_full_source']
-      else
-        self.include_full_source = false
+      if attributes.key?(:'payload')
+        self.payload = attributes[:'payload']
       end
     end
 
@@ -115,22 +92,12 @@ module SunshineConversationsClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @target.nil?
-        invalid_properties.push('invalid value for "target", target cannot be nil.')
-      end
-
-      if @triggers.nil?
-        invalid_properties.push('invalid value for "triggers", triggers cannot be nil.')
-      end
-
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @target.nil?
-      return false if @triggers.nil?
       true
     end
 
@@ -140,12 +107,9 @@ module SunshineConversationsClient
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          version == o.version &&
-          target == o.target &&
-          triggers == o.triggers &&
-          secret == o.secret &&
-          include_full_user == o.include_full_user &&
-          include_full_source == o.include_full_source
+          type == o.type &&
+          created_at == o.created_at &&
+          payload == o.payload
     end
 
     # @see the `==` method
@@ -157,7 +121,7 @@ module SunshineConversationsClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [id, version, target, triggers, secret, include_full_user, include_full_source].hash
+      [id, type, created_at, payload].hash
     end
 
     # Builds the object from hash
