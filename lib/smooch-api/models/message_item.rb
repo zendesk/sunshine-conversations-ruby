@@ -24,6 +24,9 @@ module SmoochApi
     # The image URL to be shown in the carousel/list item.
     attr_accessor :mediaUrl
 
+    # An optional description of the media for accessibility purposes. The field will be saved by default with the file name as the value.
+    attr_accessor :altText
+
     # The size of the image to be shown in the carousel/list item. Only top item of Facebook Messenger carousel supported. See [**MessageItemSizeEnum**](Enums.md#MessageItemSizeEnum) for available values. 
     attr_accessor :size
 
@@ -40,6 +43,7 @@ module SmoochApi
         :'title' => :'title',
         :'description' => :'description',
         :'mediaUrl' => :'mediaUrl',
+        :'altText' => :'altText',
         :'size' => :'size',
         :'mediaType' => :'mediaType',
         :'actions' => :'actions'
@@ -52,6 +56,7 @@ module SmoochApi
         :'title' => :'String',
         :'description' => :'String',
         :'mediaUrl' => :'String',
+        :'altText' => :'String',
         :'size' => :'String',
         :'mediaType' => :'String',
         :'actions' => :'Array<Action>'
@@ -76,6 +81,10 @@ module SmoochApi
 
       if attributes.has_key?(:'mediaUrl')
         self.mediaUrl = attributes[:'mediaUrl']
+      end
+
+      if attributes.has_key?(:'altText')
+        self.altText = attributes[:'altText']
       end
 
       if attributes.has_key?(:'size')
@@ -125,6 +134,7 @@ module SmoochApi
           title == o.title &&
           description == o.description &&
           mediaUrl == o.mediaUrl &&
+          altText == o.altText &&
           size == o.size &&
           mediaType == o.mediaType &&
           actions == o.actions
@@ -139,7 +149,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [title, description, mediaUrl, size, mediaType, actions].hash
+      [title, description, mediaUrl, altText, size, mediaType, actions].hash
     end
 
     # Builds the object from hash

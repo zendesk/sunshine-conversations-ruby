@@ -45,6 +45,9 @@ module SmoochApi
     # The mediaType for the message. Required for image/file messages. 
     attr_accessor :mediaType
 
+    # An optional description of the image or the file for accessibility purposes. The field will be saved by default with the file name as the value.
+    attr_accessor :altText
+
     # The items in the message list. Required for carousel and list messages. 
     attr_accessor :items
 
@@ -86,6 +89,7 @@ module SmoochApi
         :'text' => :'text',
         :'mediaUrl' => :'mediaUrl',
         :'mediaType' => :'mediaType',
+        :'altText' => :'altText',
         :'items' => :'items',
         :'actions' => :'actions',
         :'blockChatInput' => :'blockChatInput',
@@ -111,6 +115,7 @@ module SmoochApi
         :'text' => :'String',
         :'mediaUrl' => :'String',
         :'mediaType' => :'String',
+        :'altText' => :'String',
         :'items' => :'Array<MessageItem>',
         :'actions' => :'Array<Action>',
         :'blockChatInput' => :'BOOLEAN',
@@ -169,6 +174,10 @@ module SmoochApi
 
       if attributes.has_key?(:'mediaType')
         self.mediaType = attributes[:'mediaType']
+      end
+
+      if attributes.has_key?(:'altText')
+        self.altText = attributes[:'altText']
       end
 
       if attributes.has_key?(:'items')
@@ -253,6 +262,7 @@ module SmoochApi
           text == o.text &&
           mediaUrl == o.mediaUrl &&
           mediaType == o.mediaType &&
+          altText == o.altText &&
           items == o.items &&
           actions == o.actions &&
           blockChatInput == o.blockChatInput &&
@@ -273,7 +283,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [role, type, name, email, avatarUrl, metadata, payload, text, mediaUrl, mediaType, items, actions, blockChatInput, displaySettings, fields, destination, override, coordinates, location].hash
+      [role, type, name, email, avatarUrl, metadata, payload, text, mediaUrl, mediaType, altText, items, actions, blockChatInput, displaySettings, fields, destination, override, coordinates, location].hash
     end
 
     # Builds the object from hash

@@ -51,6 +51,9 @@ module SmoochApi
     # The mediaType for the message. Required for image/file messages. 
     attr_accessor :mediaType
 
+    # An optional description of the image or the file for accessibility purposes. The field will be saved by default with the file name as the value.
+    attr_accessor :altText
+
     # Flat JSON object containing any custom properties associated with the message.
     attr_accessor :metadata
 
@@ -103,6 +106,7 @@ module SmoochApi
         :'received' => :'received',
         :'mediaUrl' => :'mediaUrl',
         :'mediaType' => :'mediaType',
+        :'altText' => :'altText',
         :'metadata' => :'metadata',
         :'items' => :'items',
         :'actions' => :'actions',
@@ -133,6 +137,7 @@ module SmoochApi
         :'received' => :'Float',
         :'mediaUrl' => :'String',
         :'mediaType' => :'String',
+        :'altText' => :'String',
         :'metadata' => :'Object',
         :'items' => :'Array<MessageItem>',
         :'actions' => :'Array<Action>',
@@ -202,6 +207,10 @@ module SmoochApi
 
       if attributes.has_key?(:'mediaType')
         self.mediaType = attributes[:'mediaType']
+      end
+
+      if attributes.has_key?(:'altText')
+        self.altText = attributes[:'altText']
       end
 
       if attributes.has_key?(:'metadata')
@@ -330,6 +339,7 @@ module SmoochApi
           received == o.received &&
           mediaUrl == o.mediaUrl &&
           mediaType == o.mediaType &&
+          altText == o.altText &&
           metadata == o.metadata &&
           items == o.items &&
           actions == o.actions &&
@@ -353,7 +363,7 @@ module SmoochApi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, authorId, role, type, source, name, text, email, avatarUrl, received, mediaUrl, mediaType, metadata, items, actions, payload, displaySettings, blockChatInput, fields, submitted, quotedMessage, textFallback, coordinates, location].hash
+      [id, authorId, role, type, source, name, text, email, avatarUrl, received, mediaUrl, mediaType, altText, metadata, items, actions, payload, displaySettings, blockChatInput, fields, submitted, quotedMessage, textFallback, coordinates, location].hash
     end
 
     # Builds the object from hash
