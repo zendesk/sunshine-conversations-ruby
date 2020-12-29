@@ -163,7 +163,7 @@ module SunshineConversationsClient
     # @param app_id [String] Identifies the app.
     # @param conversation_id [String] Identifies the conversation.
     # @param [Hash] opts the optional parameters
-    # @option opts [Page] :page Contains parameters for applying cursor pagination.
+    # @option opts [Page1] :page Contains parameters for applying cursor pagination.
     # @return [MessageListResponse]
     def list_messages(app_id, conversation_id, opts = {})
       data, _status_code, _headers = list_messages_with_http_info(app_id, conversation_id, opts)
@@ -175,7 +175,7 @@ module SunshineConversationsClient
     # @param app_id [String] Identifies the app.
     # @param conversation_id [String] Identifies the conversation.
     # @param [Hash] opts the optional parameters
-    # @option opts [Page] :page Contains parameters for applying cursor pagination.
+    # @option opts [Page1] :page Contains parameters for applying cursor pagination.
     # @return [Array<(MessageListResponse, Integer, Hash)>] MessageListResponse data, response status code and response headers
     def list_messages_with_http_info(app_id, conversation_id, opts = {})
       if @api_client.config.debugging
