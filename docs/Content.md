@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **String** | The type of message. | [default to &#39;location&#39;]
+**type** | **String** | The type of message. | [default to &#39;template&#39;]
 **text** | **String** | The fallback text message used when location messages are not supported by the channel. | [optional] [readonly] 
 **actions** | [**Array&lt;ActionSubset&gt;**](ActionSubset.md) | An array of objects representing the actions associated with the message. The array length is limited by the third party channel. | [optional] 
 **items** | [**Array&lt;Item&gt;**](Item.md) | An array of objects representing the items associated with the message. Only present in carousel and list type messages. | 
@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **text_fallback** | **String** | A string containing the &#x60;label: value&#x60; of all fields, each separated by a newline character. | [optional] [readonly] 
 **coordinates** | [**LocationMessageCoordinates**](LocationMessageCoordinates.md) |  | 
 **location** | [**LocationMessageLocation**](LocationMessageLocation.md) |  | [optional] 
+**template** | [**Object**](.md) | The whatsapp template message to send. For more information, consult the [guide](https://docs.smooch.io/guide/whatsapp#sending-message-templates). &#x60;schema&#x60; must be set to &#x60;whatsapp&#x60;. | 
 
 ## Code Sample
 
@@ -37,7 +38,8 @@ instance = SunshineConversationsClient::Content.new(type: null,
                                  fields: null,
                                  text_fallback: null,
                                  coordinates: null,
-                                 location: null)
+                                 location: null,
+                                 template: null)
 ```
 
 

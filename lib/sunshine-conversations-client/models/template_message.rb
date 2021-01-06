@@ -10,43 +10,18 @@ OpenAPI Generator version: 4.3.1
 require 'date'
 
 module SunshineConversationsClient
-  class Activity
-    # If the author type is `user`, only `conversation:read` is supported.
+  class TemplateMessage
+    # The type of message.
     attr_accessor :type
 
-    # The source of the activity.
-    attr_accessor :source
-
-    attr_accessor :author
-
-    class EnumAttributeValidator
-      attr_reader :datatype
-      attr_reader :allowable_values
-
-      def initialize(datatype, allowable_values)
-        @allowable_values = allowable_values.map do |value|
-          case datatype.to_s
-          when /Integer/i
-            value.to_i
-          when /Float/i
-            value.to_f
-          else
-            value
-          end
-        end
-      end
-
-      def valid?(value)
-        !value || allowable_values.include?(value)
-      end
-    end
+    # The whatsapp template message to send. For more information, consult the [guide](https://docs.smooch.io/guide/whatsapp#sending-message-templates). `schema` must be set to `whatsapp`.
+    attr_accessor :template
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'type' => :'type',
-        :'source' => :'source',
-        :'author' => :'author'
+        :'template' => :'template'
       }
     end
 
@@ -54,8 +29,7 @@ module SunshineConversationsClient
     def self.openapi_types
       {
         :'type' => :'String',
-        :'source' => :'SourceWebhook',
-        :'author' => :'AuthorWebhook'
+        :'template' => :'Object'
       }
     end
 
@@ -65,39 +39,29 @@ module SunshineConversationsClient
       ])
     end
 
-    # List of class defined in allOf (OpenAPI v3)
-    def self.openapi_all_of
-      [
-      :'ActivityAllOf',
-      :'ActivityTypes'
-      ]
-    end
-
     # Initializes the object
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `SunshineConversationsClient::Activity` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `SunshineConversationsClient::TemplateMessage` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `SunshineConversationsClient::Activity`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `SunshineConversationsClient::TemplateMessage`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
 
       if attributes.key?(:'type')
         self.type = attributes[:'type']
+      else
+        self.type = 'template'
       end
 
-      if attributes.key?(:'source')
-        self.source = attributes[:'source']
-      end
-
-      if attributes.key?(:'author')
-        self.author = attributes[:'author']
+      if attributes.key?(:'template')
+        self.template = attributes[:'template']
       end
     end
 
@@ -105,25 +69,18 @@ module SunshineConversationsClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @template.nil?
+        invalid_properties.push('invalid value for "template", template cannot be nil.')
+      end
+
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      type_validator = EnumAttributeValidator.new('String', ["conversation:read", "typing:start", "typing:stop"])
-      return false unless type_validator.valid?(@type)
+      return false if @template.nil?
       true
-    end
-
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] type Object to be assigned
-    def type=(type)
-      validator = EnumAttributeValidator.new('String', ["conversation:read", "typing:start", "typing:stop"])
-      unless validator.valid?(type)
-        fail ArgumentError, "invalid value for \"type\", must be one of #{validator.allowable_values}."
-      end
-      @type = type
     end
 
     # Checks equality by comparing each attribute.
@@ -132,8 +89,7 @@ module SunshineConversationsClient
       return true if self.equal?(o)
       self.class == o.class &&
           type == o.type &&
-          source == o.source &&
-          author == o.author
+          template == o.template
     end
 
     # @see the `==` method
@@ -145,7 +101,7 @@ module SunshineConversationsClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [type, source, author].hash
+      [type, template].hash
     end
 
     # Builds the object from hash
