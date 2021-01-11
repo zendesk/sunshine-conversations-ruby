@@ -17,7 +17,7 @@ module SunshineConversationsClient
       @api_client = api_client
     end
     # Create Client
-    # Create a client and link it to a channel specified by the matchCriteria.type.
+    # Create a client and link it to a channel specified by the `matchCriteria.type`. Note that the client is initially created with a `pending` status. The status of the linking request can be tracked by listening to the `link:match`, `link:success` and `link:failure` webhooks (only available in v1). For more information, see [link-events](https://docs.smooch.io/rest/v1/#link-events).
     # @param app_id [String] Identifies the app.
     # @param user_id_or_external_id [String] The user&#39;s id or externalId.
     # @param client_create [ClientCreate] 
@@ -29,7 +29,7 @@ module SunshineConversationsClient
     end
 
     # Create Client
-    # Create a client and link it to a channel specified by the matchCriteria.type.
+    # Create a client and link it to a channel specified by the &#x60;matchCriteria.type&#x60;. Note that the client is initially created with a &#x60;pending&#x60; status. The status of the linking request can be tracked by listening to the &#x60;link:match&#x60;, &#x60;link:success&#x60; and &#x60;link:failure&#x60; webhooks (only available in v1). For more information, see [link-events](https://docs.smooch.io/rest/v1/#link-events).
     # @param app_id [String] Identifies the app.
     # @param user_id_or_external_id [String] The user&#39;s id or externalId.
     # @param client_create [ClientCreate] 
