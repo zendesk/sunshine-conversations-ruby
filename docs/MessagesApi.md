@@ -162,7 +162,7 @@ app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
 conversation_id = '029c31f25a21b47effd7be90' # String | Identifies the conversation.
 # Be sure to add the required body parameters
 opts = {
-  page: SunshineConversationsClient::Page1.new # Page1 | Contains parameters for applying cursor pagination.
+  page: SunshineConversationsClient::Page.new # Page | Contains parameters for applying cursor pagination.
 }
 
 begin
@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **String**| Identifies the app. | 
  **conversation_id** | **String**| Identifies the conversation. | 
- **page** | [**Page1**](.md)| Contains parameters for applying cursor pagination. | [optional] 
+ **page** | [**Page**](.md)| Contains parameters for applying cursor pagination. | [optional] 
 
 ### Return type
 
