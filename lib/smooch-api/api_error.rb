@@ -34,5 +34,27 @@ module SmoochApi
         super arg
       end
     end
+
+    # Override to_s to display a friendly error message
+    def to_s
+      message
+    end
+
+    def message
+      if @message.nil?
+        msg = "Error message: the server returns an error"
+      else
+        msg = @message
+      end
+
+      error_response = {
+        code: code,
+        response_headers: response_headers,
+        response_body: response_body,
+      }
+
+      msg += "\n#{error_response}"
+      msg
+    end
   end
 end
