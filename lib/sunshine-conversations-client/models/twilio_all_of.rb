@@ -20,8 +20,11 @@ module SunshineConversationsClient
     # Twilio Auth Token.
     attr_accessor :auth_token
 
-    # SID for specific phone number.
+    # SID for specific phone number. One of `messagingServiceSid` or `phoneNumberSid` must be provided when creating a Twilio integration.
     attr_accessor :phone_number_sid
+
+    # SID for specific messaging service. One of `messagingServiceSid` or `phoneNumberSid` must be provided when creating a Twilio integration.
+    attr_accessor :messaging_service_sid
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -29,7 +32,8 @@ module SunshineConversationsClient
         :'type' => :'type',
         :'account_sid' => :'accountSid',
         :'auth_token' => :'authToken',
-        :'phone_number_sid' => :'phoneNumberSid'
+        :'phone_number_sid' => :'phoneNumberSid',
+        :'messaging_service_sid' => :'messagingServiceSid'
       }
     end
 
@@ -39,7 +43,8 @@ module SunshineConversationsClient
         :'type' => :'String',
         :'account_sid' => :'String',
         :'auth_token' => :'String',
-        :'phone_number_sid' => :'String'
+        :'phone_number_sid' => :'String',
+        :'messaging_service_sid' => :'String'
       }
     end
 
@@ -81,6 +86,10 @@ module SunshineConversationsClient
       if attributes.key?(:'phone_number_sid')
         self.phone_number_sid = attributes[:'phone_number_sid']
       end
+
+      if attributes.key?(:'messaging_service_sid')
+        self.messaging_service_sid = attributes[:'messaging_service_sid']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -99,12 +108,12 @@ module SunshineConversationsClient
         invalid_properties.push('invalid value for "auth_token", the character length must be great than or equal to 1.')
       end
 
-      if @phone_number_sid.nil?
-        invalid_properties.push('invalid value for "phone_number_sid", phone_number_sid cannot be nil.')
+      if !@phone_number_sid.nil? && @phone_number_sid.to_s.length < 1
+        invalid_properties.push('invalid value for "phone_number_sid", the character length must be great than or equal to 1.')
       end
 
-      if @phone_number_sid.to_s.length < 1
-        invalid_properties.push('invalid value for "phone_number_sid", the character length must be great than or equal to 1.')
+      if !@messaging_service_sid.nil? && @messaging_service_sid.to_s.length < 1
+        invalid_properties.push('invalid value for "messaging_service_sid", the character length must be great than or equal to 1.')
       end
 
       invalid_properties
@@ -116,8 +125,8 @@ module SunshineConversationsClient
       return false if @account_sid.nil?
       return false if @auth_token.nil?
       return false if @auth_token.to_s.length < 1
-      return false if @phone_number_sid.nil?
-      return false if @phone_number_sid.to_s.length < 1
+      return false if !@phone_number_sid.nil? && @phone_number_sid.to_s.length < 1
+      return false if !@messaging_service_sid.nil? && @messaging_service_sid.to_s.length < 1
       true
     end
 
@@ -138,15 +147,21 @@ module SunshineConversationsClient
     # Custom attribute writer method with validation
     # @param [Object] phone_number_sid Value to be assigned
     def phone_number_sid=(phone_number_sid)
-      if phone_number_sid.nil?
-        fail ArgumentError, 'phone_number_sid cannot be nil'
-      end
-
-      if phone_number_sid.to_s.length < 1
+      if !phone_number_sid.nil? && phone_number_sid.to_s.length < 1
         fail ArgumentError, 'invalid value for "phone_number_sid", the character length must be great than or equal to 1.'
       end
 
       @phone_number_sid = phone_number_sid
+    end
+
+    # Custom attribute writer method with validation
+    # @param [Object] messaging_service_sid Value to be assigned
+    def messaging_service_sid=(messaging_service_sid)
+      if !messaging_service_sid.nil? && messaging_service_sid.to_s.length < 1
+        fail ArgumentError, 'invalid value for "messaging_service_sid", the character length must be great than or equal to 1.'
+      end
+
+      @messaging_service_sid = messaging_service_sid
     end
 
     # Checks equality by comparing each attribute.
@@ -157,7 +172,8 @@ module SunshineConversationsClient
           type == o.type &&
           account_sid == o.account_sid &&
           auth_token == o.auth_token &&
-          phone_number_sid == o.phone_number_sid
+          phone_number_sid == o.phone_number_sid &&
+          messaging_service_sid == o.messaging_service_sid
     end
 
     # @see the `==` method
@@ -169,7 +185,7 @@ module SunshineConversationsClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [type, account_sid, auth_token, phone_number_sid].hash
+      [type, account_sid, auth_token, phone_number_sid, messaging_service_sid].hash
     end
 
     # Builds the object from hash
