@@ -14,7 +14,7 @@ module SunshineConversationsClient
     # The unique ID of the user.
     attr_accessor :id
 
-    # An optional ID that if specified can also be used to retrieve the user. 
+    # An optional ID that can also be used to retrieve the user. 
     attr_accessor :external_id
 
     # Attribute mapping from ruby-style variable name to JSON key.

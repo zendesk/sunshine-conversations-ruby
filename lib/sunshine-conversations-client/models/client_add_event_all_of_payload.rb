@@ -11,18 +11,21 @@ require 'date'
 
 module SunshineConversationsClient
   # The payload of the event. The contents of this object depend on the type of event.
-  class UserMergeEventAllOfPayload
-    attr_accessor :merged_users
+  class ClientAddEventAllOfPayload
+    # The conversation associated with the creation of the client. This field is only present when the reason is `channelLinking` and when attaching the client to a specific conversation. 
+    attr_accessor :conversation
 
-    attr_accessor :merged_conversations
+    # The user associated with the client.
+    attr_accessor :user
 
-    attr_accessor :merged_clients
+    # The client that was just created.
+    attr_accessor :client
 
-    # A flat object with the set of metadata properties that were discarded when merging the two users. This should contain values only if the combined metadata fields exceed the 4KB limit.
-    attr_accessor :discarded_metadata
-
-    # The reason for which the users merged. * `api` - The users were merged using the API. * `channelLinking` - The users were merged as a result of initiating a channel link. * `sdkLogin` - The users were merged as a result of logging into an SDK device. 
+    # The reason for which the client was added. * `channelLinking` - The client was created as a result of initiating a channel link. * `sdkLogin` - The client was created as a result of logging into an SDK device. * `authCode` - The client was created as a result of initializing an SDK client with an `authCode`. 
     attr_accessor :reason
+
+    # The source where this event originated from. This could be the API or an SDK device.
+    attr_accessor :source
 
     class EnumAttributeValidator
       attr_reader :datatype
@@ -49,31 +52,29 @@ module SunshineConversationsClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'merged_users' => :'mergedUsers',
-        :'merged_conversations' => :'mergedConversations',
-        :'merged_clients' => :'mergedClients',
-        :'discarded_metadata' => :'discardedMetadata',
-        :'reason' => :'reason'
+        :'conversation' => :'conversation',
+        :'user' => :'user',
+        :'client' => :'client',
+        :'reason' => :'reason',
+        :'source' => :'source'
       }
     end
 
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'merged_users' => :'UserMergeEventAllOfPayloadMergedUsers',
-        :'merged_conversations' => :'UserMergeEventAllOfPayloadMergedConversations',
-        :'merged_clients' => :'UserMergeEventAllOfPayloadMergedClients',
-        :'discarded_metadata' => :'Object',
-        :'reason' => :'String'
+        :'conversation' => :'ConversationTruncated',
+        :'user' => :'UserTruncated',
+        :'client' => :'Client',
+        :'reason' => :'String',
+        :'source' => :'SourceWebhook'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
-        :'merged_conversations',
-        :'merged_clients',
-        :'discarded_metadata',
+        :'conversation',
       ])
     end
 
@@ -81,35 +82,35 @@ module SunshineConversationsClient
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `SunshineConversationsClient::UserMergeEventAllOfPayload` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `SunshineConversationsClient::ClientAddEventAllOfPayload` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `SunshineConversationsClient::UserMergeEventAllOfPayload`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `SunshineConversationsClient::ClientAddEventAllOfPayload`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'merged_users')
-        self.merged_users = attributes[:'merged_users']
+      if attributes.key?(:'conversation')
+        self.conversation = attributes[:'conversation']
       end
 
-      if attributes.key?(:'merged_conversations')
-        self.merged_conversations = attributes[:'merged_conversations']
+      if attributes.key?(:'user')
+        self.user = attributes[:'user']
       end
 
-      if attributes.key?(:'merged_clients')
-        self.merged_clients = attributes[:'merged_clients']
-      end
-
-      if attributes.key?(:'discarded_metadata')
-        self.discarded_metadata = attributes[:'discarded_metadata']
+      if attributes.key?(:'client')
+        self.client = attributes[:'client']
       end
 
       if attributes.key?(:'reason')
         self.reason = attributes[:'reason']
+      end
+
+      if attributes.key?(:'source')
+        self.source = attributes[:'source']
       end
     end
 
@@ -123,7 +124,7 @@ module SunshineConversationsClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      reason_validator = EnumAttributeValidator.new('String', ["api", "channelLinking", "sdkLogin"])
+      reason_validator = EnumAttributeValidator.new('String', ["channelLinking", "sdkLogin", "authCode"])
       return false unless reason_validator.valid?(@reason)
       true
     end
@@ -131,7 +132,7 @@ module SunshineConversationsClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] reason Object to be assigned
     def reason=(reason)
-      validator = EnumAttributeValidator.new('String', ["api", "channelLinking", "sdkLogin"])
+      validator = EnumAttributeValidator.new('String', ["channelLinking", "sdkLogin", "authCode"])
       unless validator.valid?(reason)
         fail ArgumentError, "invalid value for \"reason\", must be one of #{validator.allowable_values}."
       end
@@ -143,11 +144,11 @@ module SunshineConversationsClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          merged_users == o.merged_users &&
-          merged_conversations == o.merged_conversations &&
-          merged_clients == o.merged_clients &&
-          discarded_metadata == o.discarded_metadata &&
-          reason == o.reason
+          conversation == o.conversation &&
+          user == o.user &&
+          client == o.client &&
+          reason == o.reason &&
+          source == o.source
     end
 
     # @see the `==` method
@@ -159,7 +160,7 @@ module SunshineConversationsClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [merged_users, merged_conversations, merged_clients, discarded_metadata, reason].hash
+      [conversation, user, client, reason, source].hash
     end
 
     # Builds the object from hash

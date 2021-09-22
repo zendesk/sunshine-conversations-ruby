@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The unique ID of the user. | [optional] 
-**external_id** | **String** | An optional ID that if specified can also be used to retrieve the user.  | [optional] 
+**external_id** | **String** | An optional ID that can also be used to retrieve the user.  | [optional] 
 
 ## Code Sample
 
