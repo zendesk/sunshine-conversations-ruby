@@ -14,7 +14,7 @@ module SunshineConversationsClient
     # The authorization code received via /oauth/authorize
     attr_accessor :code
 
-    # Must be set to authorization_code
+    # Must be set to the string `authorization_code`
     attr_accessor :grant_type
 
     # Your integration’s unique identifier

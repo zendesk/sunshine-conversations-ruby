@@ -14,49 +14,52 @@ module SunshineConversationsClient
     # To configure a Web Messenger integration, acquire the required information and call the Create Integration endpoint. 
     attr_accessor :type
 
-    # This color will be used in the messenger header and the button or tab in idle state. Must be a 3 or 6-character hexadecimal color.
+    # This color will be used in the messenger header and the button or tab in idle state. Must be a 3 or 6-character hexadecimal color. 
     attr_accessor :brand_color
 
-    # When true, the introduction pane will be pinned at the top of the conversation instead of scrolling with it.
+    # When true, the introduction pane will be pinned at the top of the conversation instead of scrolling with it. 
     attr_accessor :fixed_intro_pane
 
-    # This color will be used for customer messages, quick replies and actions in the footer. Must be a 3 or 6-character hexadecimal color.
+    # This color will be used for customer messages, quick replies and actions in the footer. Must be a 3 or 6-character hexadecimal color. 
     attr_accessor :conversation_color
 
-    # This color will be used for call-to-actions inside your messages. Must be a 3 or 6-character hexadecimal color.
+    # This color will be used for call-to-actions inside your messages. Must be a 3 or 6-character hexadecimal color. 
     attr_accessor :action_color
 
-    # Choose how the messenger will appear on your website. Must be either button or tab.
+    # Choose how the messenger will appear on your website. Must be either button or tab. 
     attr_accessor :display_style
 
-    # With the button style Web Messenger, you have the option of selecting your own button icon. The image must be at least 200 x 200 pixels and must be in either JPG, PNG, or GIF format.
+    # With the button style Web Messenger, you have the option of selecting your own button icon. The image must be at least 200 x 200 pixels and must be in either JPG, PNG, or GIF format. 
     attr_accessor :button_icon_url
 
-    # With the button style Web Messenger, you have the option of specifying the button width.
+    # With the button style Web Messenger, you have the option of specifying the button width. 
     attr_accessor :button_width
 
-    # With the button style Web Messenger, you have the option of specifying the button height.
+    # With the button style Web Messenger, you have the option of specifying the button height. 
     attr_accessor :button_height
 
-    # Array of integration IDs, order will be reflected in the Web Messenger. When set, only integrations from this list will be displayed in the Web Messenger. If unset, all integrations will be displayed.
+    # Array of integration IDs, order will be reflected in the Web Messenger. When set, only integrations from this list will be displayed in the Web Messenger. If unset, all integrations will be displayed. 
     attr_accessor :integration_order
 
     # A custom business name for the Web Messenger.
     attr_accessor :business_name
 
-    # A custom business icon url for the Web Messenger. The image must be at least 200 x 200 pixels and must be in either JPG, PNG, or GIF format.
+    # A custom business icon url for the Web Messenger. The image must be at least 200 x 200 pixels and must be in either JPG, PNG, or GIF format. 
     attr_accessor :business_icon_url
 
-    # A background image url for the conversation. Image will be tiled to fit the window.
+    # A background image url for the conversation. Image will be tiled to fit the window. 
     attr_accessor :background_image_url
 
     # A list of origins to whitelist. When set, only the origins from this list will be able to initialize the Web Messenger. If unset, all origins are whitelisted. The elements in the list should follow the serialized-origin format from RFC 6454: scheme \"://\" host [ \":\" port ], where scheme is http or https. 
     attr_accessor :origin_whitelist
 
-    # Object whose properties can be set to specify the add-on’s options. See the [guide](https://docs.smooch.io/guide/web-messenger/#prechat-capture) to learn more about Prechat Capture.
+    # Object whose properties can be set to specify the add-on’s options. See the [guide](https://docs.smooch.io/guide/web-messenger/#prechat-capture) to learn more about Prechat Capture. 
     attr_accessor :prechat_capture
 
-    # Allows users to create more than one conversation on the web messenger integration.
+    # Allows users to view their list of conversations. By default, the list of conversations will be visible. *This setting only applies to apps where `settings.multiConvoEnabled` is set to `true`*. 
+    attr_accessor :can_user_see_conversation_list
+
+    # Allows users to create more than one conversation on the web messenger integration. 
     attr_accessor :can_user_create_more_conversations
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -77,6 +80,7 @@ module SunshineConversationsClient
         :'background_image_url' => :'backgroundImageUrl',
         :'origin_whitelist' => :'originWhitelist',
         :'prechat_capture' => :'prechatCapture',
+        :'can_user_see_conversation_list' => :'canUserSeeConversationList',
         :'can_user_create_more_conversations' => :'canUserCreateMoreConversations'
       }
     end
@@ -99,6 +103,7 @@ module SunshineConversationsClient
         :'background_image_url' => :'String',
         :'origin_whitelist' => :'Array<String>',
         :'prechat_capture' => :'PrechatCapture',
+        :'can_user_see_conversation_list' => :'Boolean',
         :'can_user_create_more_conversations' => :'Boolean'
       }
     end
@@ -212,6 +217,10 @@ module SunshineConversationsClient
         self.prechat_capture = attributes[:'prechat_capture']
       end
 
+      if attributes.key?(:'can_user_see_conversation_list')
+        self.can_user_see_conversation_list = attributes[:'can_user_see_conversation_list']
+      end
+
       if attributes.key?(:'can_user_create_more_conversations')
         self.can_user_create_more_conversations = attributes[:'can_user_create_more_conversations']
       end
@@ -250,6 +259,7 @@ module SunshineConversationsClient
           background_image_url == o.background_image_url &&
           origin_whitelist == o.origin_whitelist &&
           prechat_capture == o.prechat_capture &&
+          can_user_see_conversation_list == o.can_user_see_conversation_list &&
           can_user_create_more_conversations == o.can_user_create_more_conversations && super(o)
     end
 
@@ -262,7 +272,7 @@ module SunshineConversationsClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [type, brand_color, fixed_intro_pane, conversation_color, action_color, display_style, button_icon_url, button_width, button_height, integration_order, business_name, business_icon_url, background_image_url, origin_whitelist, prechat_capture, can_user_create_more_conversations].hash
+      [type, brand_color, fixed_intro_pane, conversation_color, action_color, display_style, button_icon_url, button_width, button_height, integration_order, business_name, business_icon_url, background_image_url, origin_whitelist, prechat_capture, can_user_see_conversation_list, can_user_create_more_conversations].hash
     end
 
     # Builds the object from hash
