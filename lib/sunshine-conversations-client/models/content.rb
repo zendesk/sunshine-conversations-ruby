@@ -37,7 +37,7 @@ module SunshineConversationsClient
     # An optional description of the image for accessibility purposes. The field will be saved by default with the file name as the value.
     attr_accessor :alt_text
 
-    # true if the message should block the chat input on Web Messenger. form message only.
+    # true if the message should block the chat input on Web Messenger.
     attr_accessor :block_chat_input
 
     # Array of field objects that contain the submitted fields.

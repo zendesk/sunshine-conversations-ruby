@@ -10,12 +10,12 @@ OpenAPI Generator version: 4.3.1
 require 'date'
 
 module SunshineConversationsClient
-  # A form type message without text or actions.
+  # A form type message without text or actions. Only supported in the Web SDK.
   class FormMessage
     # The type of message.
     attr_accessor :type
 
-    # true if the message should block the chat input on Web Messenger. form message only.
+    # true if the message should block the chat input on Web Messenger.
     attr_accessor :block_chat_input
 
     # An array of objects representing fields associated with the message. Only present in form and formResponse messages.

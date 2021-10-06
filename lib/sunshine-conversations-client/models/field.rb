@@ -21,13 +21,13 @@ module SunshineConversationsClient
     # The label of the field. What the field is displayed as on Web Messenger.
     attr_accessor :label
 
-    # Placeholder text for the field. form message only.
+    # Placeholder text for the field. Form message only.
     attr_accessor :placeholder
 
-    # The minimum allowed length for the response for a field of type text. form message only.
+    # The minimum allowed length for the response for a field of type text. Form message only.
     attr_accessor :min_size
 
-    # The maximum allowed length for the response for a field of type text. form message only.
+    # The maximum allowed length for the response for a field of type text. Form message only.
     attr_accessor :max_size
 
     # Specifies the response for a text field.
@@ -36,7 +36,7 @@ module SunshineConversationsClient
     # Specifies the response for a email field.
     attr_accessor :email
 
-    # Array of objects representing the response for a field of type select. form and formResponse messages only.
+    # Array of objects representing the response for a field of type select. Form and formResponse messages only.
     attr_accessor :select
 
     # Array of objects representing options for a field of type select.
