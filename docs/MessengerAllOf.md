@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **page_access_token** | **String** | A Facebook Page Access Token. | 
 **app_id** | **String** | A Facebook App ID. | 
 **app_secret** | **String** | A Facebook App Secret. | 
+**page_id** | **Float** | A Facebook page ID. | [optional] 
+**page_name** | **String** | A Facebook page name. | [optional] 
 
 ## Code Sample
 
@@ -17,7 +19,9 @@ require 'SunshineConversationsClient'
 instance = SunshineConversationsClient::MessengerAllOf.new(type: null,
                                  page_access_token: your_access_token,
                                  app_id: your_facebook_app_id,
-                                 app_secret: your_facebook_app_secret)
+                                 app_secret: your_facebook_app_secret,
+                                 page_id: 123212323432123,
+                                 page_name: An Awesome Page)
 ```
 
 
