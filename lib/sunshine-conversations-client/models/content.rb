@@ -20,6 +20,9 @@ module SunshineConversationsClient
     # An array of objects representing the actions associated with the message. The array length is limited by the third party channel.
     attr_accessor :actions
 
+    # The payload of a [reply button](https://docs.smooch.io/guide/structured-messages/#reply-buttons) response message.
+    attr_accessor :payload
+
     # An array of objects representing the items associated with the message. Only present in carousel and list type messages.
     attr_accessor :items
 
@@ -59,6 +62,7 @@ module SunshineConversationsClient
         :'type' => :'type',
         :'text' => :'text',
         :'actions' => :'actions',
+        :'payload' => :'payload',
         :'items' => :'items',
         :'display_settings' => :'displaySettings',
         :'media_url' => :'mediaUrl',
@@ -80,6 +84,7 @@ module SunshineConversationsClient
         :'type' => :'String',
         :'text' => :'String',
         :'actions' => :'Array<ActionSubset>',
+        :'payload' => :'String',
         :'items' => :'Array<Item>',
         :'display_settings' => :'CarouselMessageDisplaySettings',
         :'media_url' => :'String',
@@ -147,6 +152,10 @@ module SunshineConversationsClient
       end
 
       if attributes.key?(:'actions')
+      end
+
+      if attributes.key?(:'payload')
+        self.payload = attributes[:'payload']
       end
 
       if attributes.key?(:'items')
@@ -278,6 +287,7 @@ module SunshineConversationsClient
           type == o.type &&
           text == o.text &&
           actions == o.actions &&
+          payload == o.payload &&
           items == o.items &&
           display_settings == o.display_settings &&
           media_url == o.media_url &&
@@ -301,7 +311,7 @@ module SunshineConversationsClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [type, text, actions, items, display_settings, media_url, media_size, media_type, alt_text, block_chat_input, fields, text_fallback, coordinates, location, template].hash
+      [type, text, actions, payload, items, display_settings, media_url, media_size, media_type, alt_text, block_chat_input, fields, text_fallback, coordinates, location, template].hash
     end
 
     # Builds the object from hash

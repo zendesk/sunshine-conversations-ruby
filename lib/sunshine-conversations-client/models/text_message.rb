@@ -20,12 +20,16 @@ module SunshineConversationsClient
     # Array of message actions.
     attr_accessor :actions
 
+    # The payload of a [reply button](https://docs.smooch.io/guide/structured-messages/#reply-buttons) response message.
+    attr_accessor :payload
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'type' => :'type',
         :'text' => :'text',
-        :'actions' => :'actions'
+        :'actions' => :'actions',
+        :'payload' => :'payload'
       }
     end
 
@@ -34,7 +38,8 @@ module SunshineConversationsClient
       {
         :'type' => :'String',
         :'text' => :'String',
-        :'actions' => :'Array<Action>'
+        :'actions' => :'Array<Action>',
+        :'payload' => :'String'
       }
     end
 
@@ -70,6 +75,10 @@ module SunshineConversationsClient
       end
 
       if attributes.key?(:'actions')
+      end
+
+      if attributes.key?(:'payload')
+        self.payload = attributes[:'payload']
       end
     end
 
@@ -113,7 +122,8 @@ module SunshineConversationsClient
       self.class == o.class &&
           type == o.type &&
           text == o.text &&
-          actions == o.actions
+          actions == o.actions &&
+          payload == o.payload
     end
 
     # @see the `==` method
@@ -125,7 +135,7 @@ module SunshineConversationsClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [type, text, actions].hash
+      [type, text, actions, payload].hash
     end
 
     # Builds the object from hash

@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **type** | **String** | The type of message. | [default to &#39;template&#39;]
 **text** | **String** | The fallback text message used when location messages are not supported by the channel. | [optional] [readonly] 
 **actions** | [**Array&lt;ActionSubset&gt;**](ActionSubset.md) | An array of objects representing the actions associated with the message. The array length is limited by the third party channel. | [optional] 
+**payload** | **String** | The payload of a [reply button](https://docs.smooch.io/guide/structured-messages/#reply-buttons) response message. | [optional] 
 **items** | [**Array&lt;Item&gt;**](Item.md) | An array of objects representing the items associated with the message. Only present in carousel and list type messages. | 
 **display_settings** | [**CarouselMessageDisplaySettings**](CarouselMessageDisplaySettings.md) |  | [optional] 
 **media_url** | **String** | The URL for media, such as an image, attached to the message. | 
@@ -28,6 +29,7 @@ require 'SunshineConversationsClient'
 instance = SunshineConversationsClient::Content.new(type: null,
                                  text: null,
                                  actions: null,
+                                 payload: null,
                                  items: null,
                                  display_settings: null,
                                  media_url: null,
