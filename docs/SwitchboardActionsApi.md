@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**accept_control**](SwitchboardActionsApi.md#accept_control) | **POST** /v2/apps/{appId}/conversations/{conversationId}/acceptControl | Accept Control
 [**offer_control**](SwitchboardActionsApi.md#offer_control) | **POST** /v2/apps/{appId}/conversations/{conversationId}/offerControl | Offer Control
 [**pass_control**](SwitchboardActionsApi.md#pass_control) | **POST** /v2/apps/{appId}/conversations/{conversationId}/passControl | Pass Control
+[**release_control**](SwitchboardActionsApi.md#release_control) | **POST** /v2/apps/{appId}/conversations/{conversationId}/releaseControl | Release Control
 
 
 
@@ -193,5 +194,65 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## release_control
+
+> Object release_control(app_id, conversation_id)
+
+Release Control
+
+The releaseControl action releases the control of the conversation by nullifying its switchboard state. When using integration auth scope, a 403 is returned if the active switchboard integration is not the authenticated integration.
+
+### Example
+
+```ruby
+# load the gem
+require 'sunshine-conversations-client'
+# setup authorization
+SunshineConversationsClient.configure do |config|
+  # Configure HTTP basic authorization: basicAuth
+  config.username = 'YOUR_USERNAME'
+  config.password = 'YOUR_PASSWORD'
+
+  # Configure Bearer authorization (JWT): bearerAuth
+  # Uncomment this line to use JWTs
+  # config.access_token = 'YOUR_JWT'
+end
+
+api_instance = SunshineConversationsClient::SwitchboardActionsApi.new
+app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
+conversation_id = '029c31f25a21b47effd7be90' # String | Identifies the conversation.
+# Be sure to add the required body parameters
+
+begin
+  #Release Control
+  result = api_instance.release_control(app_id, conversation_id)
+  p result
+rescue SunshineConversationsClient::ApiError => e
+  puts "Exception when calling SwitchboardActionsApi->release_control: #{e}"
+end
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **String**| Identifies the app. | 
+ **conversation_id** | **String**| Identifies the conversation. | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth), [bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
