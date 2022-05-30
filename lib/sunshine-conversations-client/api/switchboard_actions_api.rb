@@ -169,7 +169,7 @@ module SunshineConversationsClient
     end
 
     # Pass Control
-    # Mark the named switchboard integration as active and transition all the other switchboard integrations to standby status.
+    # The passControl action marks the named switchboard integration as active and transition all the other switchboard integrations to standby status.
     # @param app_id [String] Identifies the app.
     # @param conversation_id [String] Identifies the conversation.
     # @param pass_control_body [PassControlBody] 
@@ -181,7 +181,7 @@ module SunshineConversationsClient
     end
 
     # Pass Control
-    # Mark the named switchboard integration as active and transition all the other switchboard integrations to standby status.
+    # The passControl action marks the named switchboard integration as active and transition all the other switchboard integrations to standby status.
     # @param app_id [String] Identifies the app.
     # @param conversation_id [String] Identifies the conversation.
     # @param pass_control_body [PassControlBody] 
