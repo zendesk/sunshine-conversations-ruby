@@ -15,7 +15,7 @@ module SunshineConversationsClient
     # The updated user.
     attr_accessor :user
 
-    # The reason why the user was updated, if applicable. * `authentication` - An anonymous user became an [identified](https://docs.smooch.io/guide/intro-to-users/) user. * `localeDetection` - A user's was updated as a result of automated locale detection on messages sent. 
+    # The reason why the user was updated, if applicable. * `authentication` - An anonymous user became an [identified](https://docs.smooch.io/guide/intro-to-users/) user. * `localeDetection` - A user was updated as a result of automated locale detection on messages sent. 
     attr_accessor :reason
 
     # The source of the creation.
