@@ -15,7 +15,7 @@ module SunshineConversationsClient
     # The updated user.
     attr_accessor :user
 
-    # The reason why the user was updated, if applicable. * `authentication` - An anonymous user became an [identified](https://docs.smooch.io/guide/intro-to-users/) user. 
+    # The reason why the user was updated, if applicable. * `authentication` - An anonymous user became an [identified](https://docs.smooch.io/guide/intro-to-users/) user. * `localeDetection` - A user's was updated as a result of automated locale detection on messages sent. 
     attr_accessor :reason
 
     # The source of the creation.
@@ -105,7 +105,7 @@ module SunshineConversationsClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      reason_validator = EnumAttributeValidator.new('String', ["authentication"])
+      reason_validator = EnumAttributeValidator.new('String', ["authentication", "localeDetection"])
       return false unless reason_validator.valid?(@reason)
       true
     end
@@ -113,7 +113,7 @@ module SunshineConversationsClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] reason Object to be assigned
     def reason=(reason)
-      validator = EnumAttributeValidator.new('String', ["authentication"])
+      validator = EnumAttributeValidator.new('String', ["authentication", "localeDetection"])
       unless validator.valid?(reason)
         fail ArgumentError, "invalid value for \"reason\", must be one of #{validator.allowable_values}."
       end
