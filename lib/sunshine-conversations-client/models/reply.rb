@@ -14,7 +14,7 @@ module SunshineConversationsClient
     # The type of action.
     attr_accessor :type
 
-    # The button text. Text longer than 20 characters will be truncated on Facebook Messenger, and longer than 40 characters will be truncated on Web Messenger, iOS, and Android.
+    # The button text. We recommend a non-empty value because some channels may not support empty ones. Text longer than 20 characters will be truncated on Facebook Messenger, and longer than 40 characters will be truncated on Web Messenger, iOS, and Android.
     attr_accessor :text
 
     # A string payload to help you identify the action context. Used when posting the reply. You can also use metadata for more complex needs.
