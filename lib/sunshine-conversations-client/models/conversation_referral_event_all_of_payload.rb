@@ -38,7 +38,7 @@ module SunshineConversationsClient
       {
         :'conversation' => :'ConversationTruncated',
         :'user' => :'User',
-        :'source' => :'SourceWebhook',
+        :'source' => :'SourceWithCampaignWebhook',
         :'referral' => :'Referral'
       }
     end

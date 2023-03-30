@@ -40,7 +40,7 @@ module SunshineConversationsClient
         :'postback' => :'PostbackWebhook',
         :'conversation' => :'ConversationTruncated',
         :'user' => :'User',
-        :'source' => :'SourceWebhook'
+        :'source' => :'SourceWithCampaignWebhook'
       }
     end
 

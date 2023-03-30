@@ -10,108 +10,113 @@ OpenAPI Generator version: 4.3.1
 require 'date'
 
 module SunshineConversationsClient
-  # The payload of the event. The contents of this object depend on the type of event.
-  class ConversationCreateEventAllOfPayload
-    # The conversation that was created.
-    attr_accessor :conversation
+  class SourceWithCampaignWebhook
+    # An identifier for the channel from which a message originated. May include one of api, sdk, messenger, or any number of other channels.
+    attr_accessor :type
 
-    # The reason why the conversation was created, if applicable. * `linkRequest` - The conversation was created in order to generate a link request to transfer the user to a different channel. * `message` - The conversation was created because a message was sent. * `none` - The conversation was not created for a specific purpose. Used primarily when a conversation is created via the Create Conversation API. * `notification` - The conversation was created by a call to the Notification API. * `prechatCapture` - The conversation was created because the user completed a prechat capture form in the Web Messenger. * `startConversation` - The conversation was created because of a call to the startConversation API on one of the SDK integrations, or a start conversation event was triggered from a messaging channel. * `proactiveMessaging` - The conversation was created because the user interacted with a campaign. 
-    attr_accessor :creation_reason
+    # Identifier indicating which integration the message was sent from. For user messages only.
+    attr_accessor :integration_id
 
-    # The source of the creation.
-    attr_accessor :source
+    # Message identifier assigned by the originating channel.
+    attr_accessor :original_message_id
 
-    # The user associated with the conversation. Only present if the created conversation was of type personal. For sdkGroup conversations, the list of participants can be fetched using the List Participants API, if required.
-    attr_accessor :user
+    # A datetime string with the format YYYY-MM-DDThh:mm:ss.SSSZ representing when the third-party channel received the message.
+    attr_accessor :original_message_timestamp
 
-    # Referral information, if applicable.
-    attr_accessor :referral
+    # The client from which the user authored the message or activity, if applicable. This field will only be present if the `includeFullSource` option is enabled for the webhook.
+    attr_accessor :client
 
-    class EnumAttributeValidator
-      attr_reader :datatype
-      attr_reader :allowable_values
+    # The device from which the user authored the message or activity, if applicable. This field will only be present if the `includeFullSource` option is enabled for the webhook
+    attr_accessor :device
 
-      def initialize(datatype, allowable_values)
-        @allowable_values = allowable_values.map do |value|
-          case datatype.to_s
-          when /Integer/i
-            value.to_i
-          when /Float/i
-            value.to_f
-          else
-            value
-          end
-        end
-      end
-
-      def valid?(value)
-        !value || allowable_values.include?(value)
-      end
-    end
+    attr_accessor :campaign
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'conversation' => :'conversation',
-        :'creation_reason' => :'creationReason',
-        :'source' => :'source',
-        :'user' => :'user',
-        :'referral' => :'referral'
+        :'type' => :'type',
+        :'integration_id' => :'integrationId',
+        :'original_message_id' => :'originalMessageId',
+        :'original_message_timestamp' => :'originalMessageTimestamp',
+        :'client' => :'client',
+        :'device' => :'device',
+        :'campaign' => :'campaign'
       }
     end
 
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'conversation' => :'ConversationTruncated',
-        :'creation_reason' => :'String',
-        :'source' => :'SourceWithCampaignWebhook',
-        :'user' => :'User',
-        :'referral' => :'Referral'
+        :'type' => :'String',
+        :'integration_id' => :'String',
+        :'original_message_id' => :'String',
+        :'original_message_timestamp' => :'String',
+        :'client' => :'Client',
+        :'device' => :'Device',
+        :'campaign' => :'Campaign'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
-        :'user',
-        :'referral'
+        :'original_message_id',
+        :'original_message_timestamp',
+        :'client',
+        :'device',
+        :'campaign'
       ])
+    end
+
+    # List of class defined in allOf (OpenAPI v3)
+    def self.openapi_all_of
+      [
+      :'SourceWebhook',
+      :'SourceWithCampaignWebhookAllOf'
+      ]
     end
 
     # Initializes the object
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `SunshineConversationsClient::ConversationCreateEventAllOfPayload` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `SunshineConversationsClient::SourceWithCampaignWebhook` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `SunshineConversationsClient::ConversationCreateEventAllOfPayload`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `SunshineConversationsClient::SourceWithCampaignWebhook`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'conversation')
-        self.conversation = attributes[:'conversation']
+      if attributes.key?(:'type')
+        self.type = attributes[:'type']
       end
 
-      if attributes.key?(:'creation_reason')
-        self.creation_reason = attributes[:'creation_reason']
+      if attributes.key?(:'integration_id')
+        self.integration_id = attributes[:'integration_id']
       end
 
-      if attributes.key?(:'source')
-        self.source = attributes[:'source']
+      if attributes.key?(:'original_message_id')
+        self.original_message_id = attributes[:'original_message_id']
       end
 
-      if attributes.key?(:'user')
-        self.user = attributes[:'user']
+      if attributes.key?(:'original_message_timestamp')
+        self.original_message_timestamp = attributes[:'original_message_timestamp']
       end
 
-      if attributes.key?(:'referral')
-        self.referral = attributes[:'referral']
+      if attributes.key?(:'client')
+        self.client = attributes[:'client']
+      end
+
+      if attributes.key?(:'device')
+        self.device = attributes[:'device']
+      end
+
+      if attributes.key?(:'campaign')
+        self.campaign = attributes[:'campaign']
       end
     end
 
@@ -125,19 +130,7 @@ module SunshineConversationsClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      creation_reason_validator = EnumAttributeValidator.new('String', ["linkRequest", "message", "none", "notification", "prechatCapture", "startConversation", "proactiveMessaging"])
-      return false unless creation_reason_validator.valid?(@creation_reason)
       true
-    end
-
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] creation_reason Object to be assigned
-    def creation_reason=(creation_reason)
-      validator = EnumAttributeValidator.new('String', ["linkRequest", "message", "none", "notification", "prechatCapture", "startConversation", "proactiveMessaging"])
-      unless validator.valid?(creation_reason)
-        fail ArgumentError, "invalid value for \"creation_reason\", must be one of #{validator.allowable_values}."
-      end
-      @creation_reason = creation_reason
     end
 
     # Checks equality by comparing each attribute.
@@ -145,11 +138,13 @@ module SunshineConversationsClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          conversation == o.conversation &&
-          creation_reason == o.creation_reason &&
-          source == o.source &&
-          user == o.user &&
-          referral == o.referral
+          type == o.type &&
+          integration_id == o.integration_id &&
+          original_message_id == o.original_message_id &&
+          original_message_timestamp == o.original_message_timestamp &&
+          client == o.client &&
+          device == o.device &&
+          campaign == o.campaign
     end
 
     # @see the `==` method
@@ -161,7 +156,7 @@ module SunshineConversationsClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [conversation, creation_reason, source, user, referral].hash
+      [type, integration_id, original_message_id, original_message_timestamp, client, device, campaign].hash
     end
 
     # Builds the object from hash
