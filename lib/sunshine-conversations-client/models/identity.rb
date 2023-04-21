@@ -10,97 +10,66 @@ OpenAPI Generator version: 4.3.1
 require 'date'
 
 module SunshineConversationsClient
-  class User
-    # The unique ID of the user.
-    attr_accessor :id
+  # A connected user identity, such as an email.
+  class Identity
+    # The type of identity.
+    attr_accessor :type
 
-    # An optional ID that can also be used to retrieve the user. 
-    attr_accessor :external_id
+    # The identity value.
+    attr_accessor :value
 
-    attr_accessor :signed_up_at
-
-    attr_accessor :profile
-
-    attr_accessor :metadata
-
-    # The user's connected identities.
-    attr_accessor :identities
+    # The type of verification performed on the identity.
+    attr_accessor :verification
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'id' => :'id',
-        :'external_id' => :'externalId',
-        :'signed_up_at' => :'signedUpAt',
-        :'profile' => :'profile',
-        :'metadata' => :'metadata',
-        :'identities' => :'identities'
+        :'type' => :'type',
+        :'value' => :'value',
+        :'verification' => :'verification'
       }
     end
 
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'id' => :'String',
-        :'external_id' => :'String',
-        :'signed_up_at' => :'String',
-        :'profile' => :'Profile',
-        :'metadata' => :'Object',
-        :'identities' => :'Array<Identity>'
+        :'type' => :'String',
+        :'value' => :'String',
+        :'verification' => :'String'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
-        :'external_id',
       ])
-    end
-
-    # List of class defined in allOf (OpenAPI v3)
-    def self.openapi_all_of
-      [
-      :'UserAllOf',
-      :'UserTruncated'
-      ]
     end
 
     # Initializes the object
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `SunshineConversationsClient::User` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `SunshineConversationsClient::Identity` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `SunshineConversationsClient::User`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `SunshineConversationsClient::Identity`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'id')
-        self.id = attributes[:'id']
+      if attributes.key?(:'type')
+        self.type = attributes[:'type']
       end
 
-      if attributes.key?(:'external_id')
-        self.external_id = attributes[:'external_id']
+      if attributes.key?(:'value')
+        self.value = attributes[:'value']
       end
 
-      if attributes.key?(:'signed_up_at')
-        self.signed_up_at = attributes[:'signed_up_at']
-      end
-
-      if attributes.key?(:'profile')
-        self.profile = attributes[:'profile']
-      end
-
-      if attributes.key?(:'metadata')
-        self.metadata = attributes[:'metadata']
-      end
-
-      if attributes.key?(:'identities')
+      if attributes.key?(:'verification')
+        self.verification = attributes[:'verification']
       end
     end
 
@@ -108,13 +77,37 @@ module SunshineConversationsClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if !@value.nil? && @value.to_s.length > 128
+        invalid_properties.push('invalid value for "value", the character length must be smaller than or equal to 128.')
+      end
+
+      if !@value.nil? && @value.to_s.length < 1
+        invalid_properties.push('invalid value for "value", the character length must be great than or equal to 1.')
+      end
+
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if !@value.nil? && @value.to_s.length > 128
+      return false if !@value.nil? && @value.to_s.length < 1
       true
+    end
+
+    # Custom attribute writer method with validation
+    # @param [Object] value Value to be assigned
+    def value=(value)
+      if !value.nil? && value.to_s.length > 128
+        fail ArgumentError, 'invalid value for "value", the character length must be smaller than or equal to 128.'
+      end
+
+      if !value.nil? && value.to_s.length < 1
+        fail ArgumentError, 'invalid value for "value", the character length must be great than or equal to 1.'
+      end
+
+      @value = value
     end
 
     # Checks equality by comparing each attribute.
@@ -122,12 +115,9 @@ module SunshineConversationsClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          external_id == o.external_id &&
-          signed_up_at == o.signed_up_at &&
-          profile == o.profile &&
-          metadata == o.metadata &&
-          identities == o.identities
+          type == o.type &&
+          value == o.value &&
+          verification == o.verification
     end
 
     # @see the `==` method
@@ -139,7 +129,7 @@ module SunshineConversationsClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [id, external_id, signed_up_at, profile, metadata, identities].hash
+      [type, value, verification].hash
     end
 
     # Builds the object from hash

@@ -17,12 +17,16 @@ module SunshineConversationsClient
 
     attr_accessor :metadata
 
+    # The user's connected identities.
+    attr_accessor :identities
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'signed_up_at' => :'signedUpAt',
         :'profile' => :'profile',
-        :'metadata' => :'metadata'
+        :'metadata' => :'metadata',
+        :'identities' => :'identities'
       }
     end
 
@@ -31,7 +35,8 @@ module SunshineConversationsClient
       {
         :'signed_up_at' => :'String',
         :'profile' => :'Profile',
-        :'metadata' => :'Object'
+        :'metadata' => :'Object',
+        :'identities' => :'Array<Identity>'
       }
     end
 
@@ -67,6 +72,9 @@ module SunshineConversationsClient
       if attributes.key?(:'metadata')
         self.metadata = attributes[:'metadata']
       end
+
+      if attributes.key?(:'identities')
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -89,7 +97,8 @@ module SunshineConversationsClient
       self.class == o.class &&
           signed_up_at == o.signed_up_at &&
           profile == o.profile &&
-          metadata == o.metadata
+          metadata == o.metadata &&
+          identities == o.identities
     end
 
     # @see the `==` method
@@ -101,7 +110,7 @@ module SunshineConversationsClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [signed_up_at, profile, metadata].hash
+      [signed_up_at, profile, metadata, identities].hash
     end
 
     # Builds the object from hash

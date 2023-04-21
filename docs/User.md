@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **signed_up_at** | **String** |  | [optional] 
 **profile** | [**Profile**](Profile.md) |  | [optional] 
 **metadata** | **Object** |  | [optional] 
+**identities** | [**Array&lt;Identity&gt;**](Identity.md) | The user&#39;s connected identities. | [optional] [readonly] 
 
 ## Code Sample
 
@@ -19,7 +20,8 @@ instance = SunshineConversationsClient::User.new(id: 7494535bff5cef41a15be74d,
                                  external_id: your-own-id,
                                  signed_up_at: null,
                                  profile: null,
-                                 metadata: null)
+                                 metadata: null,
+                                 identities: null)
 ```
 
 
