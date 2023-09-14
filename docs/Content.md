@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **items** | [**Array&lt;Item&gt;**](Item.md) | An array of objects representing the items associated with the message. Only present in carousel and list type messages. | 
 **display_settings** | [**CarouselMessageDisplaySettings**](CarouselMessageDisplaySettings.md) |  | [optional] 
 **media_url** | **String** | The URL for media, such as an image, attached to the message. | 
-**media_size** | **Float** | The size of the media. | [optional] [readonly] 
-**media_type** | **String** | The media type of the file. | [optional] [readonly] 
+**media_size** | **Float** | The size of the media in bytes. | [optional] [readonly] 
+**media_type** | **String** | The type of media. | [optional] [readonly] 
 **alt_text** | **String** | An optional description of the image for accessibility purposes. The field will be saved by default with the file name as the value. | [optional] 
 **block_chat_input** | **Boolean** | true if the message should block the chat input on Web Messenger. | [optional] 
 **fields** | [**Array&lt;Field&gt;**](Field.md) | Array of field objects that contain the submitted fields. | 
