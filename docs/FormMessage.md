@@ -5,8 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **String** | The type of message. | [default to &#39;form&#39;]
+**submitted** | **Boolean** | Flag which states whether the form is submitted. | [optional] [readonly] 
 **block_chat_input** | **Boolean** | true if the message should block the chat input on Web Messenger. | [optional] 
-**fields** | [**Array&lt;Field&gt;**](Field.md) | An array of objects representing fields associated with the message. Only present in form and formResponse messages. | 
+**fields** | [**Array&lt;FormMessageField&gt;**](FormMessageField.md) | An array of objects representing fields associated with the message. Only present in form and formResponse messages. | 
 
 ## Code Sample
 
@@ -14,6 +15,7 @@ Name | Type | Description | Notes
 require 'SunshineConversationsClient'
 
 instance = SunshineConversationsClient::FormMessage.new(type: null,
+                                 submitted: null,
                                  block_chat_input: null,
                                  fields: null)
 ```

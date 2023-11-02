@@ -14,8 +14,9 @@ Name | Type | Description | Notes
 **media_size** | **Float** | The size of the media in bytes. | [optional] [readonly] 
 **media_type** | **String** | The type of media. | [optional] [readonly] 
 **alt_text** | **String** | An optional description of the image for accessibility purposes. The field will be saved by default with the file name as the value. | [optional] 
+**submitted** | **Boolean** | Flag which states whether the form is submitted. | [optional] [readonly] 
 **block_chat_input** | **Boolean** | true if the message should block the chat input on Web Messenger. | [optional] 
-**fields** | [**Array&lt;Field&gt;**](Field.md) | Array of field objects that contain the submitted fields. | 
+**fields** | [**Array&lt;FormResponseMessageField&gt;**](FormResponseMessageField.md) | Array of field objects that contain the submitted fields. | 
 **text_fallback** | **String** | A string containing the &#x60;label: value&#x60; of all fields, each separated by a newline character. | [optional] [readonly] 
 **coordinates** | [**LocationMessageCoordinates**](LocationMessageCoordinates.md) |  | 
 **location** | [**LocationMessageLocation**](LocationMessageLocation.md) |  | [optional] 
@@ -36,6 +37,7 @@ instance = SunshineConversationsClient::Content.new(type: null,
                                  media_size: null,
                                  media_type: null,
                                  alt_text: null,
+                                 submitted: null,
                                  block_chat_input: null,
                                  fields: null,
                                  text_fallback: null,
