@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **production** | **Boolean** | The APN environment to connect to (Production, if true, or Sandbox). Defaults to value inferred from certificate if not specified. | [optional] 
 **auto_update_badge** | **Boolean** | Use the unread count of the conversation as the application badge. | [optional] 
 **can_user_create_more_conversations** | **Boolean** | Allows users to create more than one conversation on the iOS integration. | [optional] 
+**attachments_enabled** | **Boolean** | Allows users to send attachments. By default, the setting is set to true. This setting can only be configured in Zendesk Admin Center.  | [optional] [readonly] 
 
 ## Code Sample
 
@@ -21,7 +22,8 @@ instance = SunshineConversationsClient::Ios.new(type: null,
                                  password: your_APN_password,
                                  production: null,
                                  auto_update_badge: null,
-                                 can_user_create_more_conversations: null)
+                                 can_user_create_more_conversations: null,
+                                 attachments_enabled: null)
 ```
 
 

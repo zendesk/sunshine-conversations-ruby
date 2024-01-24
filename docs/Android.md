@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **server_key** | **String** | Your server key from the fcm console. | [optional] 
 **sender_id** | **String** | Your sender id from the fcm console. | [optional] 
 **can_user_create_more_conversations** | **Boolean** | Allows users to create more than one conversation on the android integration. | [optional] 
+**attachments_enabled** | **Boolean** | Allows users to send attachments. By default, the setting is set to true. This setting can only be configured in Zendesk Admin Center.  | [optional] [readonly] 
 
 ## Code Sample
 
@@ -17,7 +18,8 @@ require 'SunshineConversationsClient'
 instance = SunshineConversationsClient::Android.new(type: null,
                                  server_key: &lt;server-key&gt;,
                                  sender_id: &lt;sender-id&gt;,
-                                 can_user_create_more_conversations: null)
+                                 can_user_create_more_conversations: null,
+                                 attachments_enabled: null)
 ```
 
 
