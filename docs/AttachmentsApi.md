@@ -211,7 +211,7 @@ end
 
 api_instance = SunshineConversationsClient::AttachmentsApi.new
 app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-access = 'public' # String | The access level for the attachment. Currently the available access levels are public and private.
+access = 'public' # String | The access level for the attachment. Currently the available access levels are public and private. If you are a licensed Zendesk customer, you must use public. Private is not supported.
 source = File.new('/path/to/file') # File | 
 # Be sure to add the required body parameters
 opts = {
@@ -234,7 +234,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **String**| Identifies the app. | 
- **access** | **String**| The access level for the attachment. Currently the available access levels are public and private. | [default to &#39;public&#39;]
+ **access** | **String**| The access level for the attachment. Currently the available access levels are public and private. If you are a licensed Zendesk customer, you must use public. Private is not supported. | [default to &#39;public&#39;]
  **source** | **File**|  | 
  **_for** | **String**| Specifies the intended container for the attachment, to enable automatic attachment deletion (on deletion of associated message, conversation or user). For now, only message is supported. See [Attachments for Messages](#section/Attachments-for-Messages) for details. | [optional] 
  **conversation_id** | **String**| Links the attachment getting uploaded to the conversation ID. | [optional] 
