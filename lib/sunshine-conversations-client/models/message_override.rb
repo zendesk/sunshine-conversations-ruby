@@ -10,7 +10,7 @@ OpenAPI Generator version: 4.3.1
 require 'date'
 
 module SunshineConversationsClient
-  # A raw payload containing a message that is sent directly to a channel. Messages for [Apple Business Chat](https://docs.smooch.io/guide/apple-business-chat/#passthrough-api), [Line](https://docs.smooch.io/guide/line/#passthrough-api), [Messenger](https://docs.smooch.io/guide/facebook-messenger/#passthrough-api), [Whatsapp](https://docs.smooch.io/guide/whatsapp/#passthrough-api) channels are supported.
+  # A raw payload containing a message that is sent directly to a channel. Messages for [Apple Messages for Business](https://docs.smooch.io/guide/apple-business-chat/#passthrough-api), [Line](https://docs.smooch.io/guide/line/#passthrough-api), [Messenger](https://docs.smooch.io/guide/facebook-messenger/#passthrough-api), [Whatsapp](https://docs.smooch.io/guide/whatsapp/#passthrough-api) channels are supported.
   class MessageOverride
     attr_accessor :apple
 

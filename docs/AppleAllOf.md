@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **String** | To configure an Apple Business Chat integration, acquire the required information and call the Create Integration endpoint.  | [optional] [default to &#39;apple&#39;]
-**business_id** | **String** | Apple Business Chat ID. | 
+**type** | **String** | To configure an Apple Messages for Business integration, acquire the required information and call the Create Integration endpoint.  | [optional] [default to &#39;apple&#39;]
+**business_id** | **String** | Apple Messages for Business ID. | 
 **api_secret** | **String** | Your Apple API secret which is tied to your Messaging Service Provider. | 
 **msp_id** | **String** | Your Messaging Service Provider ID. | 
 

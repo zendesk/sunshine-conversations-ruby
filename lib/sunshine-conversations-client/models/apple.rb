@@ -11,10 +11,10 @@ require 'date'
 
 module SunshineConversationsClient
   class Apple < Integration
-    # To configure an Apple Business Chat integration, acquire the required information and call the Create Integration endpoint. 
+    # To configure an Apple Messages for Business integration, acquire the required information and call the Create Integration endpoint. 
     attr_accessor :type
 
-    # Apple Business Chat ID.
+    # Apple Messages for Business ID.
     attr_accessor :business_id
 
     # Your Apple API secret which is tied to your Messaging Service Provider.
