@@ -4,14 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **String** | The type of the author. | [optional] 
+**signed_up_at** | **String** |  | [optional] 
+**profile** | [**Profile**](Profile.md) |  | [optional] 
+**metadata** | **Object** |  | [optional] 
+**identities** | [**Array&lt;Identity&gt;**](Identity.md) | The user&#39;s connected identities. | [optional] [readonly] 
 
 ## Code Sample
 
 ```ruby
 require 'SunshineConversationsClient'
 
-instance = SunshineConversationsClient::UserAllOf.new(type: null)
+instance = SunshineConversationsClient::UserAllOf.new(signed_up_at: null,
+                                 profile: null,
+                                 metadata: null,
+                                 identities: null)
 ```
 
 
