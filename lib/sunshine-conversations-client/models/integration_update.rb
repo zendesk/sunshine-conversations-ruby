@@ -14,6 +14,15 @@ module SunshineConversationsClient
     # A human-friendly name used to identify the integration. `displayName` can be unset by changing it to `null`.
     attr_accessor :display_name
 
+    # Your project ID from your generated private key file.
+    attr_accessor :project_id
+
+    # Your client email from your generated private key file.
+    attr_accessor :client_email
+
+    # Your private key from your generated private key file.
+    attr_accessor :private_key
+
     # Your server key from the fcm console.
     attr_accessor :server_key
 
@@ -99,6 +108,9 @@ module SunshineConversationsClient
     def self.attribute_map
       {
         :'display_name' => :'displayName',
+        :'project_id' => :'projectId',
+        :'client_email' => :'clientEmail',
+        :'private_key' => :'privateKey',
         :'server_key' => :'serverKey',
         :'sender_id' => :'senderId',
         :'can_user_create_more_conversations' => :'canUserCreateMoreConversations',
@@ -133,6 +145,9 @@ module SunshineConversationsClient
     def self.openapi_types
       {
         :'display_name' => :'String',
+        :'project_id' => :'String',
+        :'client_email' => :'String',
+        :'private_key' => :'String',
         :'server_key' => :'String',
         :'sender_id' => :'String',
         :'can_user_create_more_conversations' => :'Boolean',
@@ -167,6 +182,9 @@ module SunshineConversationsClient
     def self.openapi_nullable
       Set.new([
         :'display_name',
+        :'project_id',
+        :'client_email',
+        :'private_key',
         :'server_key',
         :'sender_id',
         :'certificate',
@@ -219,6 +237,18 @@ module SunshineConversationsClient
 
       if attributes.key?(:'display_name')
         self.display_name = attributes[:'display_name']
+      end
+
+      if attributes.key?(:'project_id')
+        self.project_id = attributes[:'project_id']
+      end
+
+      if attributes.key?(:'client_email')
+        self.client_email = attributes[:'client_email']
+      end
+
+      if attributes.key?(:'private_key')
+        self.private_key = attributes[:'private_key']
       end
 
       if attributes.key?(:'server_key')
@@ -356,6 +386,18 @@ module SunshineConversationsClient
         invalid_properties.push('invalid value for "display_name", the character length must be great than or equal to 1.')
       end
 
+      if !@project_id.nil? && @project_id.to_s.length < 1
+        invalid_properties.push('invalid value for "project_id", the character length must be great than or equal to 1.')
+      end
+
+      if !@client_email.nil? && @client_email.to_s.length < 1
+        invalid_properties.push('invalid value for "client_email", the character length must be great than or equal to 1.')
+      end
+
+      if !@private_key.nil? && @private_key.to_s.length < 1
+        invalid_properties.push('invalid value for "private_key", the character length must be great than or equal to 1.')
+      end
+
       if !@server_key.nil? && @server_key.to_s.length < 1
         invalid_properties.push('invalid value for "server_key", the character length must be great than or equal to 1.')
       end
@@ -380,6 +422,9 @@ module SunshineConversationsClient
     def valid?
       return false if !@display_name.nil? && @display_name.to_s.length > 100
       return false if !@display_name.nil? && @display_name.to_s.length < 1
+      return false if !@project_id.nil? && @project_id.to_s.length < 1
+      return false if !@client_email.nil? && @client_email.to_s.length < 1
+      return false if !@private_key.nil? && @private_key.to_s.length < 1
       return false if !@server_key.nil? && @server_key.to_s.length < 1
       return false if !@sender_id.nil? && @sender_id.to_s.length < 1
       return false if !@certificate.nil? && @certificate.to_s.length < 1
@@ -415,6 +460,36 @@ module SunshineConversationsClient
       end
 
       @display_name = display_name
+    end
+
+    # Custom attribute writer method with validation
+    # @param [Object] project_id Value to be assigned
+    def project_id=(project_id)
+      if !project_id.nil? && project_id.to_s.length < 1
+        fail ArgumentError, 'invalid value for "project_id", the character length must be great than or equal to 1.'
+      end
+
+      @project_id = project_id
+    end
+
+    # Custom attribute writer method with validation
+    # @param [Object] client_email Value to be assigned
+    def client_email=(client_email)
+      if !client_email.nil? && client_email.to_s.length < 1
+        fail ArgumentError, 'invalid value for "client_email", the character length must be great than or equal to 1.'
+      end
+
+      @client_email = client_email
+    end
+
+    # Custom attribute writer method with validation
+    # @param [Object] private_key Value to be assigned
+    def private_key=(private_key)
+      if !private_key.nil? && private_key.to_s.length < 1
+        fail ArgumentError, 'invalid value for "private_key", the character length must be great than or equal to 1.'
+      end
+
+      @private_key = private_key
     end
 
     # Custom attribute writer method with validation
@@ -463,6 +538,9 @@ module SunshineConversationsClient
       return true if self.equal?(o)
       self.class == o.class &&
           display_name == o.display_name &&
+          project_id == o.project_id &&
+          client_email == o.client_email &&
+          private_key == o.private_key &&
           server_key == o.server_key &&
           sender_id == o.sender_id &&
           can_user_create_more_conversations == o.can_user_create_more_conversations &&
@@ -501,7 +579,7 @@ module SunshineConversationsClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [display_name, server_key, sender_id, can_user_create_more_conversations, page_access_token, certificate, password, production, auto_update_badge, hide_unsubscribe_link, from_address, brand_color, fixed_intro_pane, conversation_color, action_color, display_style, button_icon_url, button_width, button_height, integration_order, business_name, business_icon_url, background_image_url, origin_whitelist, prechat_capture, hsm_fallback_language, account_id, account_management_access_token].hash
+      [display_name, project_id, client_email, private_key, server_key, sender_id, can_user_create_more_conversations, page_access_token, certificate, password, production, auto_update_badge, hide_unsubscribe_link, from_address, brand_color, fixed_intro_pane, conversation_color, action_color, display_style, button_icon_url, button_width, button_height, integration_order, business_name, business_icon_url, background_image_url, origin_whitelist, prechat_capture, hsm_fallback_language, account_id, account_management_access_token].hash
     end
 
     # Builds the object from hash

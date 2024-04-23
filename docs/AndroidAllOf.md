@@ -4,7 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **String** | To configure an android integration, first visit the [Firebase Console](https://console.firebase.google.com/). Copy the &#x60;serverKey&#x60; and &#x60;senderId&#x60; from the Cloud Messaging tab in the settings of your project and call the create integrations endpoint with this data. If you would like to continue using your legacy GCM &#x60;serverKey&#x60; you can also obtain it from the [Google Developer Console](https://console.developers.google.com/).  | [optional] [default to &#39;android&#39;]
+**type** | **String** | &lt;aside class&#x3D;\&quot;notice\&quot;&gt;Firebase Cloud Messaging has deprecated its legacy APIs for HTTP and XMPP. Legacy credentials &lt;code&gt;serverKey&lt;/code&gt; and &lt;code&gt;senderId&lt;/code&gt; will stop working as of June 2024 and must be replaced with OAuth 2.0 access token based credentials.&lt;/aside&gt;  To configure an android integration, first visit the [Firebase Console](https://console.firebase.google.com/).  Generate a private key from the Service accounts tab in the settings.  Copy the &#x60;project_id&#x60;, &#x60;client_email&#x60; and &#x60;private_key&#x60; from the generated JSON file and call the create integrations endpoint with this data.  | [optional] [default to &#39;android&#39;]
+**project_id** | **String** | Your project ID from your generated private key file. | [optional] 
+**client_email** | **String** | Your client email from your generated private key file. | [optional] 
+**private_key** | **String** | Your private key from your generated private key file. | [optional] 
 **server_key** | **String** | Your server key from the fcm console. | [optional] 
 **sender_id** | **String** | Your sender id from the fcm console. | [optional] 
 **can_user_create_more_conversations** | **Boolean** | Allows users to create more than one conversation on the android integration. | [optional] 
@@ -16,6 +19,9 @@ Name | Type | Description | Notes
 require 'SunshineConversationsClient'
 
 instance = SunshineConversationsClient::AndroidAllOf.new(type: null,
+                                 project_id: &lt;project-id&gt;,
+                                 client_email: &lt;client-email&gt;,
+                                 private_key: &lt;private-key&gt;,
                                  server_key: &lt;server-key&gt;,
                                  sender_id: &lt;sender-id&gt;,
                                  can_user_create_more_conversations: null,
