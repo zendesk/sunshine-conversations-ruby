@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **app_secret** | **String** | A Facebook App Secret. | 
 **page_id** | **Float** | A Facebook page ID. | [optional] 
 **page_name** | **String** | A Facebook page name. | [optional] 
+**default_responder_id** | **String** | The default responder ID for the integration. This is the ID of the responder that will be used to send messages to the user. For more information, refer to &lt;a href&#x3D;\&quot;https://docs.smooch.io/guide/switchboard/#per-channel-default-responder\&quot;&gt;Per-channel default responder&lt;/a&gt; guide.  | [optional] 
+**default_responder** | [**DefaultResponderDefaultResponder**](DefaultResponderDefaultResponder.md) |  | [optional] 
 
 ## Code Sample
 
@@ -21,7 +23,9 @@ instance = SunshineConversationsClient::Messenger.new(type: null,
                                  app_id: your_facebook_app_id,
                                  app_secret: your_facebook_app_secret,
                                  page_id: 123212323432123,
-                                 page_name: An Awesome Page)
+                                 page_name: An Awesome Page,
+                                 default_responder_id: null,
+                                 default_responder: null)
 ```
 
 

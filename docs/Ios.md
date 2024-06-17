@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **auto_update_badge** | **Boolean** | Use the unread count of the conversation as the application badge. | [optional] 
 **can_user_create_more_conversations** | **Boolean** | Allows users to create more than one conversation on the iOS integration. | [optional] 
 **attachments_enabled** | **Boolean** | Allows users to send attachments. By default, the setting is set to true. This setting can only be configured in Zendesk Admin Center.  | [optional] [readonly] 
+**default_responder_id** | **String** | The default responder ID for the integration. This is the ID of the responder that will be used to send messages to the user. For more information, refer to &lt;a href&#x3D;\&quot;https://docs.smooch.io/guide/switchboard/#per-channel-default-responder\&quot;&gt;Per-channel default responder&lt;/a&gt; guide.  | [optional] 
+**default_responder** | [**DefaultResponderDefaultResponder**](DefaultResponderDefaultResponder.md) |  | [optional] 
 
 ## Code Sample
 
@@ -23,7 +25,9 @@ instance = SunshineConversationsClient::Ios.new(type: null,
                                  production: null,
                                  auto_update_badge: null,
                                  can_user_create_more_conversations: null,
-                                 attachments_enabled: null)
+                                 attachments_enabled: null,
+                                 default_responder_id: null,
+                                 default_responder: null)
 ```
 
 

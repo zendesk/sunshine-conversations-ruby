@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **token** | **String** | Viber Public Account token. | 
 **uri** | **String** | Unique URI of the Viber account. | [optional] [readonly] 
 **account_id** | **String** | Unique ID of the Viber account. | [optional] [readonly] 
+**default_responder_id** | **String** | The default responder ID for the integration. This is the ID of the responder that will be used to send messages to the user. For more information, refer to &lt;a href&#x3D;\&quot;https://docs.smooch.io/guide/switchboard/#per-channel-default-responder\&quot;&gt;Per-channel default responder&lt;/a&gt; guide.  | [optional] 
+**default_responder** | [**DefaultResponderDefaultResponder**](DefaultResponderDefaultResponder.md) |  | [optional] 
 
 ## Code Sample
 
@@ -17,7 +19,9 @@ require 'SunshineConversationsClient'
 instance = SunshineConversationsClient::Viber.new(type: null,
                                  token: 445da6az1s345z78-dazcczb2542zv51a-e0vc5fva17480im9,
                                  uri: null,
-                                 account_id: null)
+                                 account_id: null,
+                                 default_responder_id: null,
+                                 default_responder: null)
 ```
 
 

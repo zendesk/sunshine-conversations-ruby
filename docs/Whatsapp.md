@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **account_id** | **String** | The business ID associated with the WhatsApp account. In combination with accountManagementAccessToken, it’s used for Message Template Reconstruction. | [optional] 
 **account_management_access_token** | **String** | An access token associated with the accountId used to query the WhatsApp Account Management API. In combination with accountId, it’s used for Message Template Reconstruction. | [optional] 
 **phone_number** | **String** | The phone number that is associated with the deployment of this integration, if one exists. | [optional] [readonly] 
+**default_responder_id** | **String** | The default responder ID for the integration. This is the ID of the responder that will be used to send messages to the user. For more information, refer to &lt;a href&#x3D;\&quot;https://docs.smooch.io/guide/switchboard/#per-channel-default-responder\&quot;&gt;Per-channel default responder&lt;/a&gt; guide.  | [optional] 
+**default_responder** | [**DefaultResponderDefaultResponder**](DefaultResponderDefaultResponder.md) |  | [optional] 
 
 ## Code Sample
 
@@ -21,7 +23,9 @@ instance = SunshineConversationsClient::Whatsapp.new(type: null,
                                  hsm_fallback_language: null,
                                  account_id: your_whatsApp_account_id,
                                  account_management_access_token: your_access_token,
-                                 phone_number: 15144441919)
+                                 phone_number: 15144441919,
+                                 default_responder_id: null,
+                                 default_responder: null)
 ```
 
 
