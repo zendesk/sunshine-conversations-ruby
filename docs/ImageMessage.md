@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **alt_text** | **String** | An optional description of the image for accessibility purposes. The field will be saved by default with the file name as the value. | [optional] 
 **text** | **String** | The text content of the message. Optional only if actions are provided. | [optional] 
 **actions** | [**Array&lt;Action&gt;**](Action.md) | Array of message actions. | [optional] 
+**attachment_id** | **String** | An identifier used by Sunshine Conversations for internal purposes. | [optional] 
 
 ## Code Sample
 
@@ -23,7 +24,8 @@ instance = SunshineConversationsClient::ImageMessage.new(type: null,
                                  media_size: null,
                                  alt_text: null,
                                  text: null,
-                                 actions: null)
+                                 actions: null,
+                                 attachment_id: null)
 ```
 
 

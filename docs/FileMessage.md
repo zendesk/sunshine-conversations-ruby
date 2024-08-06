@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **media_type** | **String** | The media type of the file. | [optional] [readonly] 
 **alt_text** | **String** | An optional description of the file for accessibility purposes. The field will be saved by default with the file name as the value. | [optional] 
 **text** | **String** | The text content of the message. | [optional] 
+**attachment_id** | **String** | An identifier used by Sunshine Conversations for internal purposes. | [optional] 
 
 ## Code Sample
 
@@ -21,7 +22,8 @@ instance = SunshineConversationsClient::FileMessage.new(type: null,
                                  media_size: null,
                                  media_type: null,
                                  alt_text: null,
-                                 text: null)
+                                 text: null,
+                                 attachment_id: null)
 ```
 
 
