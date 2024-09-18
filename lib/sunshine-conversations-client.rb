@@ -135,6 +135,7 @@ require 'sunshine-conversations-client/models/default_responder_default_responde
 require 'sunshine-conversations-client/models/default_responder_id'
 require 'sunshine-conversations-client/models/destination'
 require 'sunshine-conversations-client/models/device'
+require 'sunshine-conversations-client/models/device_list_response'
 require 'sunshine-conversations-client/models/device_response'
 require 'sunshine-conversations-client/models/event_sub_schema'
 require 'sunshine-conversations-client/models/extra_channel_options'

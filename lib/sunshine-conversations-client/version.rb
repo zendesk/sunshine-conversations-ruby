@@ -8,5 +8,5 @@ OpenAPI Generator version: 4.3.1
 =end
 
 module SunshineConversationsClient
-  VERSION = '12.8.0'
+  VERSION = '13.0.0'
 end

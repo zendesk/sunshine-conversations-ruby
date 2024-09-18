@@ -95,7 +95,7 @@ module SunshineConversationsClient
     # @param app_id [String] Identifies the app.
     # @param user_id_or_external_id [String] The user&#39;s id or externalId.
     # @param [Hash] opts the optional parameters
-    # @return [ClientListResponse]
+    # @return [DeviceListResponse]
     def list_devices(app_id, user_id_or_external_id, opts = {})
       data, _status_code, _headers = list_devices_with_http_info(app_id, user_id_or_external_id, opts)
       data
@@ -106,7 +106,7 @@ module SunshineConversationsClient
     # @param app_id [String] Identifies the app.
     # @param user_id_or_external_id [String] The user&#39;s id or externalId.
     # @param [Hash] opts the optional parameters
-    # @return [Array<(ClientListResponse, Integer, Hash)>] ClientListResponse data, response status code and response headers
+    # @return [Array<(DeviceListResponse, Integer, Hash)>] DeviceListResponse data, response status code and response headers
     def list_devices_with_http_info(app_id, user_id_or_external_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: DevicesApi.list_devices ...'
@@ -137,7 +137,7 @@ module SunshineConversationsClient
       post_body = opts[:body] 
 
       # return_type
-      return_type = opts[:return_type] || 'ClientListResponse' 
+      return_type = opts[:return_type] || 'DeviceListResponse' 
 
       # auth_names
       auth_names = opts[:auth_names] || ['basicAuth', 'bearerAuth']
