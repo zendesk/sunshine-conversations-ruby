@@ -10,8 +10,6 @@ Name | Type | Description | Notes
 **echo_postback** | **Boolean** | A boolean specifying whether a message should be added to the conversation  history when a postback button is clicked. See  [Echo Postbacks](https://docs.smooch.io/guide/creating-and-managing-apps/#echo-postbacks) for more information.  | [optional] 
 **ignore_auto_conversation_start** | **Boolean** | A boolean specifying whether a non message event coming from a channel will  trigger a  [start conversation](https://docs.smooch.io/rest/#section/Webhook-Triggers) event and count as a monthly active user (MAU). &lt;aside class&#x3D;\&quot;notice\&quot;&gt;Calling &lt;code&gt;startConversation()&lt;/code&gt; (or equivalent) from the Android,  iOS or Web SDK will count as a MAU, regardless of the value of this setting.&lt;/aside&gt;  | [optional] 
 **multi_convo_enabled** | **Boolean** | A boolean specifying whether users are allowed to be part of several conversations. Enabling &#x60;multiConvo&#x60; is **irreversible**.  | [optional] 
-**attachments_access** | **String** | A string specifying whether attachments should be stored in a publicly or privately accessible cloud storage. attachmentsAccess is set to public by default but can be modified to private.  | [optional] 
-**attachments_token_expiration_seconds** | **Integer** | Number of seconds representing the expiration time of the generated media tokens for private attachments. The JWT will be valid for 2 hours by default.  | [optional] 
 **app_localization_enabled** | **Boolean** | A boolean specifying whether the messages authored by the Sunshine Conversations platform should be localized.  | [optional] 
 
 ## Code Sample
@@ -24,9 +22,7 @@ instance = SunshineConversationsClient::AppSettings.new(conversation_retention_s
                                  use_animal_names: null,
                                  echo_postback: null,
                                  ignore_auto_conversation_start: null,
-                                 multi_convo_enabled: null,
-                                 attachments_access: public,
-                                 attachments_token_expiration_seconds: 64028,
+                                 multi_convo_enabled: false,
                                  app_localization_enabled: null)
 ```
 
