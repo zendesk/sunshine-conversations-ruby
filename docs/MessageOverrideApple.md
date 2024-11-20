@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**apple** | [**MessageOverridePayload**](MessageOverridePayload.md) |  | [optional] 
+**apple** | [**AppleMessageOverridePayload**](AppleMessageOverridePayload.md) |  | [optional] 
 
 ## Code Sample
 
