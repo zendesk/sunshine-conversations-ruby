@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_conversation**](ConversationsApi.md#create_conversation) | **POST** /v2/apps/{appId}/conversations | Create Conversation
 [**delete_conversation**](ConversationsApi.md#delete_conversation) | **DELETE** /v2/apps/{appId}/conversations/{conversationId} | Delete Conversation
+[**download_message_ref**](ConversationsApi.md#download_message_ref) | **POST** /v2/apps/{appId}/conversations/{conversationId}/download | Download Message Ref
 [**get_conversation**](ConversationsApi.md#get_conversation) | **GET** /v2/apps/{appId}/conversations/{conversationId} | Get Conversation
 [**list_conversations**](ConversationsApi.md#list_conversations) | **GET** /v2/apps/{appId}/conversations | List Conversations
 [**update_conversation**](ConversationsApi.md#update_conversation) | **PATCH** /v2/apps/{appId}/conversations/{conversationId} | Update Conversation
@@ -129,6 +130,68 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## download_message_ref
+
+> Object download_message_ref(app_id, conversation_id, download_message_ref_body)
+
+Download Message Ref
+
+When a third party channel provides a reference of a data, this API can be used to download the reference and fetch the full data. Currently, only apple channel is supported.
+
+### Example
+
+```ruby
+# load the gem
+require 'sunshine-conversations-client'
+# setup authorization
+SunshineConversationsClient.configure do |config|
+  # Configure HTTP basic authorization: basicAuth
+  config.username = 'YOUR_USERNAME'
+  config.password = 'YOUR_PASSWORD'
+
+  # Configure Bearer authorization (JWT): bearerAuth
+  # Uncomment this line to use JWTs
+  # config.access_token = 'YOUR_JWT'
+end
+
+api_instance = SunshineConversationsClient::ConversationsApi.new
+app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
+conversation_id = '029c31f25a21b47effd7be90' # String | Identifies the conversation.
+download_message_ref_body = {"userId":"6e416caac6a5e9544e3fb6d7","apple":{"interactiveDateRef":{"url":"https://p61-content.icloud.com/M58C0A1A2EB62B6E899B4F28996E8DA229E1914295299C39944B2F2CA7482AE50.C01USN00","bid":"com.apple.messages.MSMessageExtensionBalloonPlugin:0000000000:com.apple.icloud.apps.messages.business.extension","key":"00c0d1827fdc858fe7b42421de1fb289c2ee0a9463d787ce4f118506f970bd6e38","signature":"81a619c81da5a01c6139219a5d20e17430c631e1eb","owner":"M58C0A2A1EB62B4E859B4F28996E8DA229E1914295299C39944B2F2CA7482AE50.C01USN00"}}} # DownloadMessageRefBody | 
+# Be sure to add the required body parameters
+
+begin
+  #Download Message Ref
+  result = api_instance.download_message_ref(app_id, conversation_id, download_message_ref_body)
+  p result
+rescue SunshineConversationsClient::ApiError => e
+  puts "Exception when calling ConversationsApi->download_message_ref: #{e}"
+end
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **String**| Identifies the app. | 
+ **conversation_id** | **String**| Identifies the conversation. | 
+ **download_message_ref_body** | [**DownloadMessageRefBody**](DownloadMessageRefBody.md)|  | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth), [bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
