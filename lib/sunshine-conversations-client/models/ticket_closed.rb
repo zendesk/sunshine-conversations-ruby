@@ -14,7 +14,7 @@ module SunshineConversationsClient
     # The type of system activity that generated the message. The value of this field determines the dynamic content that is rendered to the end-user / agent when viewing this message. Each `type` value will have a set of pre-defined, localized strings that describe the activity.
     attr_accessor :type
 
-    # No additional data is supplied with the \"ticketClosed\" activity type at this time.
+    # No additional data is supplied with the \"ticket:closed\" activity type at this time.
     attr_accessor :data
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -57,7 +57,7 @@ module SunshineConversationsClient
       if attributes.key?(:'type')
         self.type = attributes[:'type']
       else
-        self.type = 'ticketClosed'
+        self.type = 'ticket:closed'
       end
 
       if attributes.key?(:'data')
