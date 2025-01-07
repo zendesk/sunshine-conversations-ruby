@@ -29,7 +29,7 @@ module SunshineConversationsClient
     def self.openapi_types
       {
         :'type' => :'String',
-        :'data' => :'Object'
+        :'data' => :'Hash<String, Object>'
       }
     end
 
@@ -74,7 +74,6 @@ module SunshineConversationsClient
       end
 
       if attributes.key?(:'data')
-        self.data = attributes[:'data']
       end
     end
 
