@@ -283,7 +283,7 @@ end
 api_instance = SunshineConversationsClient::IntegrationsApi.new
 app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
 integration_id = '029c31f25a21b47effd7be90' # String | The id of the integration.
-integration_update = SunshineConversationsClient::IntegrationUpdate.new # IntegrationUpdate | 
+integration_update = {"displayName":"My Test Integration"} # IntegrationUpdate | 
 # Be sure to add the required body parameters
 
 begin

@@ -22,7 +22,7 @@ instance = SunshineConversationsClient::AppSettings.new(conversation_retention_s
                                  use_animal_names: null,
                                  echo_postback: null,
                                  ignore_auto_conversation_start: null,
-                                 multi_convo_enabled: false,
+                                 multi_convo_enabled: true,
                                  app_localization_enabled: null)
 ```
 

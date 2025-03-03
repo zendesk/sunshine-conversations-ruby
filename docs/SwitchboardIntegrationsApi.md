@@ -223,7 +223,7 @@ api_instance = SunshineConversationsClient::SwitchboardIntegrationsApi.new
 app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
 switchboard_id = '5d8cff3cd55b040010928b5b' # String | Identifies the switchboard.
 switchboard_integration_id = '5d8cff3cd55b040010928b5b' # String | Identifies the switchboard integration.
-switchboard_integration_update_body = {"name":"bot","integrationType":"zd:agentWorkspace","deliverStandbyEvents":true,"nextSwitchboardIntegrationId":"5ef21b86e933b7355c11c606","messageHistoryCount":5} # SwitchboardIntegrationUpdateBody | 
+switchboard_integration_update_body = {"deliverStandbyEvents":true,"nextSwitchboardIntegrationId":"5ef21b86e933b7355c11c606","messageHistoryCount":5} # SwitchboardIntegrationUpdateBody | 
 # Be sure to add the required body parameters
 
 begin

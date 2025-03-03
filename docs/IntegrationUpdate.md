@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **private_key** | **String** | Your private key from your generated private key file. | [optional] 
 **server_key** | **String** | Your server key from the fcm console. | [optional] 
 **sender_id** | **String** | Your sender id from the fcm console. | [optional] 
+**can_user_see_conversation_list** | **Boolean** | Allows users to view their list of conversations. By default, the list of conversations will be visible. *This setting only applies to apps where &#x60;settings.multiConvoEnabled&#x60; is set to &#x60;true&#x60;*.  | [optional] 
 **can_user_create_more_conversations** | **Boolean** | Allows users to create more than one conversation on the web messenger integration. | [optional] 
 **authentication_message_secret** | **String** | A secret used to create the state value when sending Apple authentication 2.0 messages | [optional] 
 **page_access_token** | **String** | A Facebook Page Access Token. | [optional] 
@@ -50,6 +51,7 @@ instance = SunshineConversationsClient::IntegrationUpdate.new(display_name: My a
                                  private_key: &lt;private-key&gt;,
                                  server_key: &lt;server-key&gt;,
                                  sender_id: &lt;sender-id&gt;,
+                                 can_user_see_conversation_list: false,
                                  can_user_create_more_conversations: null,
                                  authentication_message_secret: eH3Ea4329FzUGEsWkjQr1dbD1JDpn5Ygo/kbW0/f8gOQ4eHTr31bjDUcCfv3s9QaAwRgpd4sckdlSXwMOAGHBQ&#x3D;&#x3D;,
                                  page_access_token: your_access_token,
