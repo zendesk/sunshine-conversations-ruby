@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ## download_message_ref
 
-> Object download_message_ref(app_id, conversation_id, download_message_ref_body)
+> Hash&lt;String, Object&gt; download_message_ref(app_id, conversation_id, download_message_ref_body)
 
 Download Message Ref
 
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**Hash&lt;String, Object&gt;**
 
 ### Authorization
 

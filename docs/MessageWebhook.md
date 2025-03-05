@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **content** | [**Content**](Content.md) | The content of the message. | [optional] 
 **source** | [**Source**](Source.md) |  | [optional] 
 **quoted_message** | [**QuotedMessage**](QuotedMessage.md) | The quoted message is currently only available for WhatsApp and Web Messenger &#x60;formResponse&#x60; messages. | [optional] 
-**metadata** | **Object** |  | [optional] 
+**metadata** | **Hash** |  | [optional] 
 **deleted** | **Boolean** | true if the message serves as a placeholder for one that has been deleted. | [optional] 
 
 ## Code Sample

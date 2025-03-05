@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **integration_id** | **String** | The ID of the integration that the device was created for. | [optional] 
 **last_seen** | **String** | A datetime string with the format YYYY-MM-DDThh:mm:ss.SSSZ representing the last time the user interacted with this device. | [optional] 
 **push_notification_token** | **String** | The token used for push notifications on Android and iOS devices. | [optional] 
-**info** | [**Object**](.md) | A flat curated object with properties that vary for each SDK platform. All keys are optional and not guaranteed to be available. | [optional] 
+**info** | **Hash&lt;String, Object&gt;** | A flat curated object with properties that vary for each SDK platform. All keys are optional and not guaranteed to be available. | [optional] 
 **app_version** | **String** | Version of the mobile app in which the SDK is embedded. Not applicable for devices of type web. | [optional] 
 
 ## Code Sample

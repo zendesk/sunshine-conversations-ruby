@@ -1,5 +1,17 @@
 # Changelog
 
+## [15.0.0] - 2025-03-05
+
+### Fixed
+
+- Fixed `nullable` definition on `next_switchbard_integration_id` property
+- Fixed `nullable` definition on required integration credentials
+- Changed typing of `metadata` fields from `Object` to `Hash<String, Object>`
+- Changed return type of `download_message_ref()` from `Object` to `Hash<String, Object>`
+- Changed typing of device `info` property from `Object` to `Hash<String, Object>`
+- Removed `switchboard_id` and `app_id` properties in `default_responder` schema 
+- Removed `deployment_id` in WhatsApp Integration
+
 ## [14.4.0] - 2025-03-03
 
 ### Added

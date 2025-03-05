@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **signed_up_at** | **String** |  | [optional] 
 **to_be_retained** | **Boolean** |  | [optional] 
 **profile** | [**Profile**](Profile.md) |  | [optional] 
-**metadata** | **Object** |  | [optional] 
+**metadata** | **Hash** |  | [optional] 
 **identities** | [**Array&lt;Identity&gt;**](Identity.md) | The user&#39;s connected identities. | [optional] [readonly] 
 
 ## Code Sample
