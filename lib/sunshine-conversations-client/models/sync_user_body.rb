@@ -10,37 +10,21 @@ OpenAPI Generator version: 4.3.1
 require 'date'
 
 module SunshineConversationsClient
-  # Properties that can be expected to receive inside a form message field. 
-  class FormMessageFieldAllOf
-    # Placeholder text for the field. Form message only.
-    attr_accessor :placeholder
-
-    # The minimum allowed length for the response for a field of type text. Form message only.
-    attr_accessor :min_size
-
-    # The maximum allowed length for the response for a field of type text. Form message only.
-    attr_accessor :max_size
-
-    # Array of objects representing options for a field of type select.
-    attr_accessor :options
+  class SyncUserBody
+    # Only used for synchronizing messaging users when their Support user counterparts have been merged. The user.id of the surviving Support user is specified here.  
+    attr_accessor :surviving_zendesk_id
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'placeholder' => :'placeholder',
-        :'min_size' => :'minSize',
-        :'max_size' => :'maxSize',
-        :'options' => :'options'
+        :'surviving_zendesk_id' => :'survivingZendeskId'
       }
     end
 
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'placeholder' => :'String',
-        :'min_size' => :'Integer',
-        :'max_size' => :'Integer',
-        :'options' => :'Array<Object>'
+        :'surviving_zendesk_id' => :'String'
       }
     end
 
@@ -54,34 +38,19 @@ module SunshineConversationsClient
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `SunshineConversationsClient::FormMessageFieldAllOf` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `SunshineConversationsClient::SyncUserBody` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `SunshineConversationsClient::FormMessageFieldAllOf`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `SunshineConversationsClient::SyncUserBody`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'placeholder')
-        self.placeholder = attributes[:'placeholder']
-      end
-
-      if attributes.key?(:'min_size')
-        self.min_size = attributes[:'min_size']
-      else
-        self.min_size = 1
-      end
-
-      if attributes.key?(:'max_size')
-        self.max_size = attributes[:'max_size']
-      else
-        self.max_size = 128
-      end
-
-      if attributes.key?(:'options')
+      if attributes.key?(:'surviving_zendesk_id')
+        self.surviving_zendesk_id = attributes[:'surviving_zendesk_id']
       end
     end
 
@@ -89,85 +58,13 @@ module SunshineConversationsClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if !@placeholder.nil? && @placeholder.to_s.length > 128
-        invalid_properties.push('invalid value for "placeholder", the character length must be smaller than or equal to 128.')
-      end
-
-      if !@placeholder.nil? && @placeholder.to_s.length < 1
-        invalid_properties.push('invalid value for "placeholder", the character length must be great than or equal to 1.')
-      end
-
-      if !@min_size.nil? && @min_size > 256
-        invalid_properties.push('invalid value for "min_size", must be smaller than or equal to 256.')
-      end
-
-      if !@min_size.nil? && @min_size < 1
-        invalid_properties.push('invalid value for "min_size", must be greater than or equal to 1.')
-      end
-
-      if !@max_size.nil? && @max_size > 256
-        invalid_properties.push('invalid value for "max_size", must be smaller than or equal to 256.')
-      end
-
-      if !@max_size.nil? && @max_size < 1
-        invalid_properties.push('invalid value for "max_size", must be greater than or equal to 1.')
-      end
-
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if !@placeholder.nil? && @placeholder.to_s.length > 128
-      return false if !@placeholder.nil? && @placeholder.to_s.length < 1
-      return false if !@min_size.nil? && @min_size > 256
-      return false if !@min_size.nil? && @min_size < 1
-      return false if !@max_size.nil? && @max_size > 256
-      return false if !@max_size.nil? && @max_size < 1
       true
-    end
-
-    # Custom attribute writer method with validation
-    # @param [Object] placeholder Value to be assigned
-    def placeholder=(placeholder)
-      if !placeholder.nil? && placeholder.to_s.length > 128
-        fail ArgumentError, 'invalid value for "placeholder", the character length must be smaller than or equal to 128.'
-      end
-
-      if !placeholder.nil? && placeholder.to_s.length < 1
-        fail ArgumentError, 'invalid value for "placeholder", the character length must be great than or equal to 1.'
-      end
-
-      @placeholder = placeholder
-    end
-
-    # Custom attribute writer method with validation
-    # @param [Object] min_size Value to be assigned
-    def min_size=(min_size)
-      if !min_size.nil? && min_size > 256
-        fail ArgumentError, 'invalid value for "min_size", must be smaller than or equal to 256.'
-      end
-
-      if !min_size.nil? && min_size < 1
-        fail ArgumentError, 'invalid value for "min_size", must be greater than or equal to 1.'
-      end
-
-      @min_size = min_size
-    end
-
-    # Custom attribute writer method with validation
-    # @param [Object] max_size Value to be assigned
-    def max_size=(max_size)
-      if !max_size.nil? && max_size > 256
-        fail ArgumentError, 'invalid value for "max_size", must be smaller than or equal to 256.'
-      end
-
-      if !max_size.nil? && max_size < 1
-        fail ArgumentError, 'invalid value for "max_size", must be greater than or equal to 1.'
-      end
-
-      @max_size = max_size
     end
 
     # Checks equality by comparing each attribute.
@@ -175,10 +72,7 @@ module SunshineConversationsClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          placeholder == o.placeholder &&
-          min_size == o.min_size &&
-          max_size == o.max_size &&
-          options == o.options
+          surviving_zendesk_id == o.surviving_zendesk_id
     end
 
     # @see the `==` method
@@ -190,7 +84,7 @@ module SunshineConversationsClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [placeholder, min_size, max_size, options].hash
+      [surviving_zendesk_id].hash
     end
 
     # Builds the object from hash
