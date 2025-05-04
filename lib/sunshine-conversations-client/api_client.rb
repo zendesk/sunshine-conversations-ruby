@@ -53,7 +53,8 @@ module SunshineConversationsClient
 
       unless response.success?
         if response.timed_out?
-          fail ApiError.new('Connection timed out')
+          fail ApiError.new(:code => 408,
+                            :message => 'Connection timed out')
         elsif response.code == 0
           # Errors from libcurl will be made visible here
           fail ApiError.new(:code => 0,
