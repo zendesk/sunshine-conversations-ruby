@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 ## release_control
 
-> Object release_control(app_id, conversation_id)
+> Object release_control(app_id, conversation_id, opts)
 
 Release Control
 
@@ -225,10 +225,13 @@ api_instance = SunshineConversationsClient::SwitchboardActionsApi.new
 app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
 conversation_id = '029c31f25a21b47effd7be90' # String | Identifies the conversation.
 # Be sure to add the required body parameters
+opts = {
+  release_control_body: SunshineConversationsClient::ReleaseControlBody.new # ReleaseControlBody | 
+}
 
 begin
   #Release Control
-  result = api_instance.release_control(app_id, conversation_id)
+  result = api_instance.release_control(app_id, conversation_id, opts)
   p result
 rescue SunshineConversationsClient::ApiError => e
   puts "Exception when calling SwitchboardActionsApi->release_control: #{e}"
@@ -242,6 +245,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **String**| Identifies the app. | 
  **conversation_id** | **String**| Identifies the conversation. | 
+ **release_control_body** | [**ReleaseControlBody**](ReleaseControlBody.md)|  | [optional] 
 
 ### Return type
 
@@ -253,6 +257,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: application/json
 

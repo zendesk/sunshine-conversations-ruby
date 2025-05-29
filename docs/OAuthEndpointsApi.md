@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**authorize**](OAuthEndpointsApi.md#authorize) | **GET** /oauth/authorize | Authorize
 [**get_token**](OAuthEndpointsApi.md#get_token) | **POST** /oauth/token | Get Token
+[**get_token_info**](OAuthEndpointsApi.md#get_token_info) | **GET** /v2/tokenInfo | Get Token Info
 [**revoke_access**](OAuthEndpointsApi.md#revoke_access) | **DELETE** /oauth/authorization | Revoke Access
 
 
@@ -110,6 +111,50 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## get_token_info
+
+> AppResponse get_token_info
+
+Get Token Info
+
+This endpoint can be used to retrieve the app linked to the OAuth token.
+
+### Example
+
+```ruby
+# load the gem
+require 'sunshine-conversations-client'
+
+api_instance = SunshineConversationsClient::OAuthEndpointsApi.new
+# Be sure to add the required body parameters
+
+begin
+  #Get Token Info
+  result = api_instance.get_token_info
+  p result
+rescue SunshineConversationsClient::ApiError => e
+  puts "Exception when calling OAuthEndpointsApi->get_token_info: #{e}"
+end
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**AppResponse**](AppResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 

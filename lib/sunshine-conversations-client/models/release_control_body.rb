@@ -10,21 +10,48 @@ OpenAPI Generator version: 4.3.1
 require 'date'
 
 module SunshineConversationsClient
-  class AppResponse
-    # The app.
-    attr_accessor :app
+  class ReleaseControlBody
+    # Reason for the release control action.
+    attr_accessor :reason
+
+    # Flat object containing custom properties. Strings, numbers and booleans are the only supported format that can be passed to metadata. The metadata is limited to 4KB in size. The metadata object will be included in the `switchboard:releaseControl` webhook.
+    attr_accessor :metadata
+
+    class EnumAttributeValidator
+      attr_reader :datatype
+      attr_reader :allowable_values
+
+      def initialize(datatype, allowable_values)
+        @allowable_values = allowable_values.map do |value|
+          case datatype.to_s
+          when /Integer/i
+            value.to_i
+          when /Float/i
+            value.to_f
+          else
+            value
+          end
+        end
+      end
+
+      def valid?(value)
+        !value || allowable_values.include?(value)
+      end
+    end
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'app' => :'app'
+        :'reason' => :'reason',
+        :'metadata' => :'metadata'
       }
     end
 
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'app' => :'App'
+        :'reason' => :'String',
+        :'metadata' => :'Hash'
       }
     end
 
@@ -38,19 +65,23 @@ module SunshineConversationsClient
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `SunshineConversationsClient::AppResponse` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `SunshineConversationsClient::ReleaseControlBody` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `SunshineConversationsClient::AppResponse`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `SunshineConversationsClient::ReleaseControlBody`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'app')
-        self.app = attributes[:'app']
+      if attributes.key?(:'reason')
+        self.reason = attributes[:'reason']
+      end
+
+      if attributes.key?(:'metadata')
+        self.metadata = attributes[:'metadata']
       end
     end
 
@@ -64,7 +95,19 @@ module SunshineConversationsClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      reason_validator = EnumAttributeValidator.new('String', ["ticketClosed", "transferToEmail"])
+      return false unless reason_validator.valid?(@reason)
       true
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] reason Object to be assigned
+    def reason=(reason)
+      validator = EnumAttributeValidator.new('String', ["ticketClosed", "transferToEmail"])
+      unless validator.valid?(reason)
+        fail ArgumentError, "invalid value for \"reason\", must be one of #{validator.allowable_values}."
+      end
+      @reason = reason
     end
 
     # Checks equality by comparing each attribute.
@@ -72,7 +115,8 @@ module SunshineConversationsClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          app == o.app
+          reason == o.reason &&
+          metadata == o.metadata
     end
 
     # @see the `==` method
@@ -84,7 +128,7 @@ module SunshineConversationsClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [app].hash
+      [reason, metadata].hash
     end
 
     # Builds the object from hash
