@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **switcher_secret** | **String** | LINE Switcher Secret. | [optional] 
 **qr_code_url** | **String** | URL provided by LINE in the [Developer Console](https://developers.line.biz/console/). | [optional] 
 **line_id** | **String** | LINE Basic ID. Is automatically set when qrCodeUrl is updated. | [optional] [readonly] 
-**default_responder_id** | **String** | The default responder ID for the integration. This is the ID of the responder that will be used to send messages to the user. For more information, refer to &lt;a href&#x3D;\&quot;https://docs.smooch.io/guide/switchboard/#per-channel-default-responder\&quot;&gt;Per-channel default responder&lt;/a&gt; guide.  | [optional] 
+**default_responder_id** | **String** | The default responder ID for the integration. This is the ID of the responder that will be used to send messages to the user. For more information, refer to the &lt;a href&#x3D;\&quot;https://developer.zendesk.com/documentation/conversations/messaging-platform/programmable-conversations/switchboard/#default-integration-assignment\&quot;&gt;Switchboard guide&lt;/a&gt;.  | [optional] 
 **default_responder** | [**DefaultResponderDefaultResponder**](DefaultResponderDefaultResponder.md) |  | [optional] 
 
 ## Code Sample
