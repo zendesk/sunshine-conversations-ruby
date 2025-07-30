@@ -81,6 +81,7 @@ module SunshineConversationsClient
       end
 
       if attributes.key?(:'participants')
+        self.participants = attributes[:'participants']
       end
 
       if attributes.key?(:'display_name')
