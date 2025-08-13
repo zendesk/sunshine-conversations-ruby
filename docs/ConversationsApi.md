@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**download_message_ref**](ConversationsApi.md#download_message_ref) | **POST** /v2/apps/{appId}/conversations/{conversationId}/download | Download Message Ref
 [**get_conversation**](ConversationsApi.md#get_conversation) | **GET** /v2/apps/{appId}/conversations/{conversationId} | Get Conversation
 [**list_conversations**](ConversationsApi.md#list_conversations) | **GET** /v2/apps/{appId}/conversations | List Conversations
+[**post_conversion_events**](ConversationsApi.md#post_conversion_events) | **POST** /v2/apps/{appId}/conversations/{conversationId}/conversionEvents | Post Conversion Events
 [**update_conversation**](ConversationsApi.md#update_conversation) | **PATCH** /v2/apps/{appId}/conversations/{conversationId} | Update Conversation
 
 
@@ -316,6 +317,68 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## post_conversion_events
+
+> Hash&lt;String, Object&gt; post_conversion_events(app_id, conversation_id, conversion_events_body)
+
+Post Conversion Events
+
+This API can be used to track your end user's interactions with third party channels.
+
+### Example
+
+```ruby
+# load the gem
+require 'sunshine-conversations-client'
+# setup authorization
+SunshineConversationsClient.configure do |config|
+  # Configure HTTP basic authorization: basicAuth
+  config.username = 'YOUR_USERNAME'
+  config.password = 'YOUR_PASSWORD'
+
+  # Configure Bearer authorization (JWT): bearerAuth
+  # Uncomment this line to use JWTs
+  # config.access_token = 'YOUR_JWT'
+end
+
+api_instance = SunshineConversationsClient::ConversationsApi.new
+app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
+conversation_id = '029c31f25a21b47effd7be90' # String | Identifies the conversation.
+conversion_events_body = {"instagram":{"payload":{"data":[{"action_source":"business_messaging","event_name":"TestEvent","event_time":1752161233,"messaging_channel":"instagram"}]}}} # ConversionEventsBody | 
+# Be sure to add the required body parameters
+
+begin
+  #Post Conversion Events
+  result = api_instance.post_conversion_events(app_id, conversation_id, conversion_events_body)
+  p result
+rescue SunshineConversationsClient::ApiError => e
+  puts "Exception when calling ConversationsApi->post_conversion_events: #{e}"
+end
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **String**| Identifies the app. | 
+ **conversation_id** | **String**| Identifies the conversation. | 
+ **conversion_events_body** | [**ConversionEventsBody**](ConversionEventsBody.md)|  | 
+
+### Return type
+
+**Hash&lt;String, Object&gt;**
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth), [bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
