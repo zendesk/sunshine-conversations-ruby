@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 ```ruby
 require 'SunshineConversationsClient'
 
-instance = SunshineConversationsClient::Links.new(prev: https://api.smooch.io/v2/apps?page[before]&#x3D;fcafad804c39a39648004af9,
-                                 _next: https://api.smooch.io/v2/apps?page[after]&#x3D;5ea868f862cdd24abf010b38)
+instance = SunshineConversationsClient::Links.new(prev: https://{subdomain}.zendesk.com/sc/v2/apps?page[before]&#x3D;fcafad804c39a39648004af9,
+                                 _next: https://{subdomain}.zendesk.com/sc/v2/apps?page[after]&#x3D;5ea868f862cdd24abf010b38)
 ```
 
 
