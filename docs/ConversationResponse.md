@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**conversation** | [**Conversation**](Conversation.md) | The conversation. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **conversation** | [**Conversation**](Conversation.md) | The conversation. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::ConversationResponse.new(conversation: null)
+instance = SunshineConversationsClient::ConversationResponse.new(
+  conversation: null
+)
 ```
-
 

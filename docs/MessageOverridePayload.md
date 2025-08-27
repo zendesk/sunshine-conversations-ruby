@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**payload** | [**Object**](.md) |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **payload** | **Object** |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::MessageOverridePayload.new(payload: null)
+instance = SunshineConversationsClient::MessageOverridePayload.new(
+  payload: null
+)
 ```
-
 

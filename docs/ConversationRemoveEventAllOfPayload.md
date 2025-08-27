@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**conversation** | [**ConversationTruncated**](ConversationTruncated.md) | The conversation that was deleted. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **conversation** | [**ConversationTruncated**](ConversationTruncated.md) | The conversation that was deleted. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::ConversationRemoveEventAllOfPayload.new(conversation: null)
+instance = SunshineConversationsClient::ConversationRemoveEventAllOfPayload.new(
+  conversation: null
+)
 ```
-
 

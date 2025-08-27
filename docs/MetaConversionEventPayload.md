@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**data** | **Array&lt;Object&gt;** | The array of conversion events to be sent to Meta&#39;s conversion events API. | 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **data** | **Array&lt;Object&gt;** | The array of conversion events to be sent to Meta&#39;s conversion events API. |  |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::MetaConversionEventPayload.new(data: null)
+instance = SunshineConversationsClient::MetaConversionEventPayload.new(
+  data: null
+)
 ```
-
 

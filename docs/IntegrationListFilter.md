@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**types** | **String** | Comma-separated list of types to return. If omitted, all types are returned. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **types** | **String** | Comma-separated list of types to return. If omitted, all types are returned. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::IntegrationListFilter.new(types: android,ios)
+instance = SunshineConversationsClient::IntegrationListFilter.new(
+  types: android,ios
+)
 ```
-
 

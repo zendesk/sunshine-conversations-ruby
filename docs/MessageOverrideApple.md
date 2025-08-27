@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**apple** | [**AppleMessageOverridePayload**](AppleMessageOverridePayload.md) |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **apple** | [**AppleMessageOverridePayload**](AppleMessageOverridePayload.md) |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::MessageOverrideApple.new(apple: null)
+instance = SunshineConversationsClient::MessageOverrideApple.new(
+  apple: null
+)
 ```
-
 

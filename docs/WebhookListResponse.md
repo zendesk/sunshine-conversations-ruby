@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**webhooks** | [**Array&lt;Webhook&gt;**](Webhook.md) | List of webhooks associated with the integration. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **webhooks** | [**Array&lt;Webhook&gt;**](Webhook.md) | List of webhooks associated with the integration. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::WebhookListResponse.new(webhooks: null)
+instance = SunshineConversationsClient::WebhookListResponse.new(
+  webhooks: null
+)
 ```
-
 

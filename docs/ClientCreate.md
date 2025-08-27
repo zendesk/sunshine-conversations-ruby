@@ -2,20 +2,21 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**match_criteria** | [**MatchCriteria**](MatchCriteria.md) |  | 
-**confirmation** | [**Confirmation**](Confirmation.md) |  | 
-**target** | [**Target**](Target.md) |  | 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **match_criteria** | [**MatchCriteria**](MatchCriteria.md) |  |  |
+| **confirmation** | [**Confirmation**](Confirmation.md) |  |  |
+| **target** | [**Target**](Target.md) |  |  |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::ClientCreate.new(match_criteria: null,
-                                 confirmation: null,
-                                 target: null)
+instance = SunshineConversationsClient::ClientCreate.new(
+  match_criteria: null,
+  confirmation: null,
+  target: null
+)
 ```
-
 

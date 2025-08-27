@@ -2,18 +2,19 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**lat** | **Float** | Global latitude. | 
-**long** | **Float** | Global longitude. | 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **lat** | **Float** | Global latitude. |  |
+| **long** | **Float** | Global longitude. |  |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::LocationMessageCoordinates.new(lat: null,
-                                 long: null)
+instance = SunshineConversationsClient::LocationMessageCoordinates.new(
+  lat: null,
+  long: null
+)
 ```
-
 

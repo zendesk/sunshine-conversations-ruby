@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**display_name** | **String** | The name of the API key. | 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **display_name** | **String** | The name of the API key. |  |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::AppKeyCreateBody.new(display_name: Key 1)
+instance = SunshineConversationsClient::AppKeyCreateBody.new(
+  display_name: null
+)
 ```
-
 

@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**app** | [**App**](App.md) | The app. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **app** | [**App**](App.md) | The app. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::AppResponse.new(app: null)
+instance = SunshineConversationsClient::AppResponse.new(
+  app: null
+)
 ```
-
 

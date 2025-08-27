@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**user** | [**UserTruncated**](UserTruncated.md) | The user that was removed. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **user** | [**UserTruncated**](UserTruncated.md) | The user that was removed. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::UserRemoveEventAllOfPayload.new(user: null)
+instance = SunshineConversationsClient::UserRemoveEventAllOfPayload.new(
+  user: null
+)
 ```
-
 

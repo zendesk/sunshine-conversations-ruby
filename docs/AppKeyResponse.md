@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**key** | [**AppKey**](AppKey.md) | The created key object. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **key** | [**AppKey**](AppKey.md) | The created key object. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::AppKeyResponse.new(key: null)
+instance = SunshineConversationsClient::AppKeyResponse.new(
+  key: null
+)
 ```
-
 

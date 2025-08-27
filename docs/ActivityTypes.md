@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**type** | **String** | If the author type is &#x60;user&#x60;, only &#x60;conversation:read&#x60; is supported. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **type** | **String** | If the author type is &#x60;user&#x60;, only &#x60;conversation:read&#x60; is supported. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::ActivityTypes.new(type: null)
+instance = SunshineConversationsClient::ActivityTypes.new(
+  type: null
+)
 ```
-
 

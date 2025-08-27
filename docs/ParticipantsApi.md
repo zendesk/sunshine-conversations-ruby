@@ -35,8 +35,8 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::ParticipantsApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-conversation_id = '029c31f25a21b47effd7be90' # String | Identifies the conversation.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+conversation_id = 029c31f25a21b47effd7be90 # String | Identifies the conversation.
 participant_join_body = {"userId":"67a11490f0305f4a391e9f8a","subscribeSDKClient":true} # ParticipantJoinBody | 
 # Be sure to add the required body parameters
 
@@ -97,8 +97,8 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::ParticipantsApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-conversation_id = '029c31f25a21b47effd7be90' # String | Identifies the conversation.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+conversation_id = 029c31f25a21b47effd7be90 # String | Identifies the conversation.
 participant_leave_body = {"userId":"67a11490f0305f4a391e9f8a"} # ParticipantLeaveBody | 
 # Be sure to add the required body parameters
 
@@ -159,11 +159,11 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::ParticipantsApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-conversation_id = '029c31f25a21b47effd7be90' # String | Identifies the conversation.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+conversation_id = 029c31f25a21b47effd7be90 # String | Identifies the conversation.
 # Be sure to add the required body parameters
 opts = {
-  page: SunshineConversationsClient::Page.new # Page | Contains parameters for applying cursor pagination.
+  page:  # Page | Contains parameters for applying cursor pagination.
 }
 
 begin

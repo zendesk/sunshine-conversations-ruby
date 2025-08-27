@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**switchboards** | [**Array&lt;Switchboard&gt;**](Switchboard.md) | List of returned switchboards. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **switchboards** | [**Array&lt;Switchboard&gt;**](Switchboard.md) | List of returned switchboards. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::SwitchboardListResponse.new(switchboards: null)
+instance = SunshineConversationsClient::SwitchboardListResponse.new(
+  switchboards: null
+)
 ```
-
 

@@ -37,8 +37,8 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::IntegrationsApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-integration = SunshineConversationsClient::Integration.new # Integration | 
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+integration =  # Integration | 
 # Be sure to add the required body parameters
 
 begin
@@ -97,8 +97,8 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::IntegrationsApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-integration_id = '029c31f25a21b47effd7be90' # String | The id of the integration.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+integration_id = 029c31f25a21b47effd7be90 # String | The id of the integration.
 # Be sure to add the required body parameters
 
 begin
@@ -157,8 +157,8 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::IntegrationsApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-integration_id = '029c31f25a21b47effd7be90' # String | The id of the integration.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+integration_id = 029c31f25a21b47effd7be90 # String | The id of the integration.
 # Be sure to add the required body parameters
 
 begin
@@ -217,11 +217,11 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::IntegrationsApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
 # Be sure to add the required body parameters
 opts = {
-  page: SunshineConversationsClient::Page.new, # Page | Contains parameters for applying cursor pagination.
-  filter: SunshineConversationsClient::IntegrationListFilter.new # IntegrationListFilter | Contains parameters for filtering the results.
+  page: , # Page | Contains parameters for applying cursor pagination.
+  filter:  # IntegrationListFilter | Contains parameters for filtering the results.
 }
 
 begin
@@ -281,8 +281,8 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::IntegrationsApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-integration_id = '029c31f25a21b47effd7be90' # String | The id of the integration.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+integration_id = 029c31f25a21b47effd7be90 # String | The id of the integration.
 integration_update = {"displayName":"My Test Integration"} # IntegrationUpdate | 
 # Be sure to add the required body parameters
 

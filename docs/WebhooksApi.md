@@ -37,9 +37,9 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::WebhooksApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-integration_id = '029c31f25a21b47effd7be90' # String | The id of the integration.
-webhook_create_body = SunshineConversationsClient::WebhookCreateBody.new # WebhookCreateBody | 
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+integration_id = 029c31f25a21b47effd7be90 # String | The id of the integration.
+webhook_create_body =  # WebhookCreateBody | 
 # Be sure to add the required body parameters
 
 begin
@@ -99,9 +99,9 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::WebhooksApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-integration_id = '029c31f25a21b47effd7be90' # String | The id of the integration.
-webhook_id = '029c31f25a21b47effd7be90' # String | The id of the webhook.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+integration_id = 029c31f25a21b47effd7be90 # String | The id of the integration.
+webhook_id = 029c31f25a21b47effd7be90 # String | The id of the webhook.
 # Be sure to add the required body parameters
 
 begin
@@ -161,9 +161,9 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::WebhooksApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-integration_id = '029c31f25a21b47effd7be90' # String | The id of the integration.
-webhook_id = '029c31f25a21b47effd7be90' # String | The id of the webhook.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+integration_id = 029c31f25a21b47effd7be90 # String | The id of the integration.
+webhook_id = 029c31f25a21b47effd7be90 # String | The id of the webhook.
 # Be sure to add the required body parameters
 
 begin
@@ -223,8 +223,8 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::WebhooksApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-integration_id = '029c31f25a21b47effd7be90' # String | The id of the integration.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+integration_id = 029c31f25a21b47effd7be90 # String | The id of the integration.
 # Be sure to add the required body parameters
 
 begin
@@ -283,10 +283,10 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::WebhooksApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-integration_id = '029c31f25a21b47effd7be90' # String | The id of the integration.
-webhook_id = '029c31f25a21b47effd7be90' # String | The id of the webhook.
-webhook_body = SunshineConversationsClient::WebhookBody.new # WebhookBody | 
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+integration_id = 029c31f25a21b47effd7be90 # String | The id of the integration.
+webhook_id = 029c31f25a21b47effd7be90 # String | The id of the webhook.
+webhook_body =  # WebhookBody | 
 # Be sure to add the required body parameters
 
 begin

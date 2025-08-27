@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**keys** | [**Array&lt;AppKey&gt;**](AppKey.md) | List of returned keys. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **keys** | [**Array&lt;AppKey&gt;**](AppKey.md) | List of returned keys. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::AppKeyListResponse.new(keys: null)
+instance = SunshineConversationsClient::AppKeyListResponse.new(
+  keys: null
+)
 ```
-
 

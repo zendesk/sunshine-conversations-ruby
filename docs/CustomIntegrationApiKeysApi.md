@@ -36,9 +36,9 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::CustomIntegrationApiKeysApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-integration_id = '029c31f25a21b47effd7be90' # String | The id of the integration.
-integration_api_key = SunshineConversationsClient::IntegrationApiKey.new # IntegrationApiKey | 
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+integration_id = 029c31f25a21b47effd7be90 # String | The id of the integration.
+integration_api_key =  # IntegrationApiKey | 
 # Be sure to add the required body parameters
 
 begin
@@ -98,9 +98,9 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::CustomIntegrationApiKeysApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-integration_id = '029c31f25a21b47effd7be90' # String | The id of the integration.
-key_id = 'int_5d8cff3cd55b040010928b5b' # String | The id of the key.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+integration_id = 029c31f25a21b47effd7be90 # String | The id of the integration.
+key_id = int_5d8cff3cd55b040010928b5b # String | The id of the key.
 # Be sure to add the required body parameters
 
 begin
@@ -160,9 +160,9 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::CustomIntegrationApiKeysApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-integration_id = '029c31f25a21b47effd7be90' # String | The id of the integration.
-key_id = 'int_5d8cff3cd55b040010928b5b' # String | The id of the key.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+integration_id = 029c31f25a21b47effd7be90 # String | The id of the integration.
+key_id = int_5d8cff3cd55b040010928b5b # String | The id of the key.
 # Be sure to add the required body parameters
 
 begin
@@ -222,8 +222,8 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::CustomIntegrationApiKeysApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-integration_id = '029c31f25a21b47effd7be90' # String | The id of the integration.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+integration_id = 029c31f25a21b47effd7be90 # String | The id of the integration.
 # Be sure to add the required body parameters
 
 begin

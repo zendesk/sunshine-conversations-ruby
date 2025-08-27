@@ -37,7 +37,7 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::AppsApi.new
-app_create_body = SunshineConversationsClient::AppCreateBody.new # AppCreateBody | 
+app_create_body =  # AppCreateBody | 
 # Be sure to add the required body parameters
 
 begin
@@ -95,7 +95,7 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::AppsApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
 # Be sure to add the required body parameters
 
 begin
@@ -153,7 +153,7 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::AppsApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
 # Be sure to add the required body parameters
 
 begin
@@ -213,8 +213,8 @@ end
 api_instance = SunshineConversationsClient::AppsApi.new
 # Be sure to add the required body parameters
 opts = {
-  page: SunshineConversationsClient::Page.new, # Page | Contains parameters for applying cursor pagination.
-  filter: SunshineConversationsClient::AppListFilter.new # AppListFilter | Contains parameters for filtering the results.
+  page: , # Page | Contains parameters for applying cursor pagination.
+  filter:  # AppListFilter | Contains parameters for filtering the results.
 }
 
 begin
@@ -273,8 +273,8 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::AppsApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-app_update_body = SunshineConversationsClient::AppUpdateBody.new # AppUpdateBody | 
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+app_update_body =  # AppUpdateBody | 
 # Be sure to add the required body parameters
 
 begin

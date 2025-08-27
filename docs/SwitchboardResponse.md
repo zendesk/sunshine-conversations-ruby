@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**switchboard** | [**Switchboard**](Switchboard.md) | The switchboard. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **switchboard** | [**Switchboard**](Switchboard.md) | The switchboard. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::SwitchboardResponse.new(switchboard: null)
+instance = SunshineConversationsClient::SwitchboardResponse.new(
+  switchboard: null
+)
 ```
-
 

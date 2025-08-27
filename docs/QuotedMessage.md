@@ -1,21 +1,79 @@
 # SunshineConversationsClient::QuotedMessage
 
-## Properties
+## Class instance methods
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**type** | **String** | The type of quotedMessage - &#x60;externalMessageId&#x60; if no Sunshine Conversations message matched the quoted message. | [default to &#39;externalMessageId&#39;]
-**message** | [**Message**](Message.md) |  | [optional] 
-**external_message_id** | **String** | The external message Id of the quoted message. | [optional] 
+### `openapi_one_of`
 
-## Code Sample
+Returns the list of classes defined in oneOf.
+
+#### Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::QuotedMessage.new(type: null,
-                                 message: null,
-                                 external_message_id: null)
+SunshineConversationsClient::QuotedMessage.openapi_one_of
+# =>
+# [
+#   :'QuotedMessageExternalMessageId',
+#   :'QuotedMessageMessage'
+# ]
 ```
 
+### `openapi_discriminator_name`
+
+Returns the discriminator's property name.
+
+#### Example
+
+```ruby
+require 'sunshine-conversations-client'
+
+SunshineConversationsClient::QuotedMessage.openapi_discriminator_name
+# => :'type'
+```
+
+### `openapi_discriminator_name`
+
+Returns the discriminator's mapping.
+
+#### Example
+
+```ruby
+require 'sunshine-conversations-client'
+
+SunshineConversationsClient::QuotedMessage.openapi_discriminator_mapping
+# =>
+# {
+#   :'externalMessageId' => :'QuotedMessageExternalMessageId',
+#   :'message' => :'QuotedMessageMessage'
+# }
+```
+
+### build
+
+Find the appropriate object from the `openapi_one_of` list and casts the data into it.
+
+#### Example
+
+```ruby
+require 'sunshine-conversations-client'
+
+SunshineConversationsClient::QuotedMessage.build(data)
+# => #<QuotedMessageExternalMessageId:0x00007fdd4aab02a0>
+
+SunshineConversationsClient::QuotedMessage.build(data_that_doesnt_match)
+# => nil
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| **data** | **Mixed** | data to be matched against the list of oneOf items |
+
+#### Return type
+
+- `QuotedMessageExternalMessageId`
+- `QuotedMessageMessage`
+- `nil` (if no type matches)
 

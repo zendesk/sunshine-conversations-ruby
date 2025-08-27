@@ -36,7 +36,7 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::SwitchboardsApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
 # Be sure to add the required body parameters
 
 begin
@@ -94,8 +94,8 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::SwitchboardsApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-switchboard_id = '5d8cff3cd55b040010928b5b' # String | Identifies the switchboard.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+switchboard_id = 5d8cff3cd55b040010928b5b # String | Identifies the switchboard.
 # Be sure to add the required body parameters
 
 begin
@@ -154,7 +154,7 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::SwitchboardsApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
 # Be sure to add the required body parameters
 
 begin
@@ -212,9 +212,9 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::SwitchboardsApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-switchboard_id = '5d8cff3cd55b040010928b5b' # String | Identifies the switchboard.
-switchboard_update_body = SunshineConversationsClient::SwitchboardUpdateBody.new # SwitchboardUpdateBody | 
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+switchboard_id = 5d8cff3cd55b040010928b5b # String | Identifies the switchboard.
+switchboard_update_body =  # SwitchboardUpdateBody | 
 # Be sure to add the required body parameters
 
 begin

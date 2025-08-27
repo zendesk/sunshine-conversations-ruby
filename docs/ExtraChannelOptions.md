@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**messenger** | [**ExtraChannelOptionsMessenger**](ExtraChannelOptionsMessenger.md) |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **messenger** | [**ExtraChannelOptionsMessenger**](ExtraChannelOptionsMessenger.md) |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::ExtraChannelOptions.new(messenger: null)
+instance = SunshineConversationsClient::ExtraChannelOptions.new(
+  messenger: null
+)
 ```
-
 

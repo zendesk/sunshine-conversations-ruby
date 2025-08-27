@@ -2,18 +2,19 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**conversation** | [**ConversationTruncated**](ConversationTruncated.md) | The conversation in which the message was read. | [optional] 
-**activity** | [**Activity**](Activity.md) | The activity that was sent. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **conversation** | [**ConversationTruncated**](ConversationTruncated.md) | The conversation in which the message was read. | [optional] |
+| **activity** | [**ConversationReadEventAllOfPayloadActivity**](ConversationReadEventAllOfPayloadActivity.md) |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::ConversationReadEventAllOfPayload.new(conversation: null,
-                                 activity: null)
+instance = SunshineConversationsClient::ConversationReadEventAllOfPayload.new(
+  conversation: null,
+  activity: null
+)
 ```
-
 

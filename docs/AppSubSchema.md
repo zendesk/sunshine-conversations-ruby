@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**id** | **String** | The unique ID of the app. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **String** | The unique ID of the app. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::AppSubSchema.new(id: 5e4af71a81966cfff3ef6550)
+instance = SunshineConversationsClient::AppSubSchema.new(
+  id: 5e4af71a81966cfff3ef6550
+)
 ```
-
 

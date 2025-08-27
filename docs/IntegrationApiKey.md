@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**display_name** | **String** | The name of the API key. | 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **display_name** | **String** | The name of the API key. |  |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::IntegrationApiKey.new(display_name: My custom key)
+instance = SunshineConversationsClient::IntegrationApiKey.new(
+  display_name: My custom key
+)
 ```
-
 

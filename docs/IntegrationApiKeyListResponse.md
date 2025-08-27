@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**keys** | [**Array&lt;ApiKey&gt;**](ApiKey.md) | Integration keys of the supplied integration. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **keys** | [**Array&lt;ApiKey&gt;**](ApiKey.md) | Integration keys of the supplied integration. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::IntegrationApiKeyListResponse.new(keys: null)
+instance = SunshineConversationsClient::IntegrationApiKeyListResponse.new(
+  keys: null
+)
 ```
-
 

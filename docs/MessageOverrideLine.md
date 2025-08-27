@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**line** | [**MessageOverridePayload**](MessageOverridePayload.md) |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **line** | [**MessageOverridePayload**](MessageOverridePayload.md) |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::MessageOverrideLine.new(line: null)
+instance = SunshineConversationsClient::MessageOverrideLine.new(
+  line: null
+)
 ```
-
 

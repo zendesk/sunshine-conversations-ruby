@@ -26,12 +26,12 @@ This endpoint begins the OAuth flow. It relies on a browser session for authenti
 require 'sunshine-conversations-client'
 
 api_instance = SunshineConversationsClient::OAuthEndpointsApi.new
-client_id = '5e4af71a81966cfff3ef6550' # String | Your integration’s unique identifier
-response_type = 'code' # String | For now the only acceptable value is code.
+client_id = 5e4af71a81966cfff3ef6550 # String | Your integration’s unique identifier
+response_type = code # String | For now the only acceptable value is code.
 # Be sure to add the required body parameters
 opts = {
-  state: 'Pending', # String | You may pass in any arbitrary string value here which will be returned to you along with the code via browser redirect.
-  redirect_uri: 'https://example.org' # String | You may pass in a redirect_uri to determine which URI the response is redirected to. This URI must be contained in the list configured by your integration. If this option is not passed, the first URI present in the list will be used.
+  state: Pending, # String | You may pass in any arbitrary string value here which will be returned to you along with the code via browser redirect.
+  redirect_uri: https://example.org # String | You may pass in a redirect_uri to determine which URI the response is redirected to. This URI must be contained in the list configured by your integration. If this option is not passed, the first URI present in the list will be used.
 }
 
 begin
@@ -68,7 +68,7 @@ No authorization required
 
 ## get_token
 
-> Object get_token(inline_object)
+> GetToken200Response get_token(get_token_request)
 
 Get Token
 
@@ -81,12 +81,12 @@ This endpoint is used to exchange an authorization code for an access token.  It
 require 'sunshine-conversations-client'
 
 api_instance = SunshineConversationsClient::OAuthEndpointsApi.new
-inline_object = SunshineConversationsClient::InlineObject.new # InlineObject | 
+get_token_request =  # GetTokenRequest | 
 # Be sure to add the required body parameters
 
 begin
   #Get Token
-  result = api_instance.get_token(inline_object)
+  result = api_instance.get_token(get_token_request)
   p result
 rescue SunshineConversationsClient::ApiError => e
   puts "Exception when calling OAuthEndpointsApi->get_token: #{e}"
@@ -98,11 +98,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inline_object** | [**InlineObject**](InlineObject.md)|  | 
+ **get_token_request** | [**GetTokenRequest**](GetTokenRequest.md)|  | 
 
 ### Return type
 
-**Object**
+[**GetToken200Response**](GetToken200Response.md)
 
 ### Authorization
 

@@ -2,18 +2,19 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**type** | **String** | The type of confirmation. | 
-**message** | [**MessagePost**](MessagePost.md) | The message used to reach out to the user, if desired. Messages sent via this method can only be of type text and image. If actions are included they can only be of type link. The confirmation message will not be added to the user’s conversation. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **type** | **String** | The type of confirmation. |  |
+| **message** | [**MessagePost**](MessagePost.md) | The message used to reach out to the user, if desired. Messages sent via this method can only be of type text and image. If actions are included they can only be of type link. The confirmation message will not be added to the user’s conversation. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::Confirmation.new(type: null,
-                                 message: null)
+instance = SunshineConversationsClient::Confirmation.new(
+  type: null,
+  message: null
+)
 ```
-
 

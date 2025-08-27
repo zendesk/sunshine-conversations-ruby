@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**messenger** | [**MetaConversionEvent**](MetaConversionEvent.md) |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **messenger** | [**MetaConversionEvent**](MetaConversionEvent.md) |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::MessengerConversionEventsBody.new(messenger: null)
+instance = SunshineConversationsClient::MessengerConversionEventsBody.new(
+  messenger: null
+)
 ```
-
 

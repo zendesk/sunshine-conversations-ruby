@@ -38,8 +38,8 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::UsersApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-user_create_body = SunshineConversationsClient::UserCreateBody.new # UserCreateBody | 
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+user_create_body =  # UserCreateBody | 
 # Be sure to add the required body parameters
 
 begin
@@ -98,8 +98,8 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::UsersApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-user_id_or_external_id = '42589ad070d43be9b00ff7e5' # String | The user's id or externalId.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+user_id_or_external_id = 42589ad070d43be9b00ff7e5 # String | The user's id or externalId.
 # Be sure to add the required body parameters
 
 begin
@@ -158,8 +158,8 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::UsersApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-user_id_or_external_id = '42589ad070d43be9b00ff7e5' # String | The user's id or externalId.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+user_id_or_external_id = 42589ad070d43be9b00ff7e5 # String | The user's id or externalId.
 # Be sure to add the required body parameters
 
 begin
@@ -218,8 +218,8 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::UsersApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-user_id_or_external_id = '42589ad070d43be9b00ff7e5' # String | The user's id or externalId.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+user_id_or_external_id = 42589ad070d43be9b00ff7e5 # String | The user's id or externalId.
 # Be sure to add the required body parameters
 
 begin
@@ -278,11 +278,11 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::UsersApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-zendesk_id = '35436' # String | The ID that links a messaging user to its core Zendesk user counterpart. This ID can be used to fetch the core user record via the Zendesk Support API. 
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+zendesk_id = 35436 # String | The ID that links a messaging user to its core Zendesk user counterpart. This ID can be used to fetch the core user record via the Zendesk Support API. 
 # Be sure to add the required body parameters
 opts = {
-  sync_user_body: SunshineConversationsClient::SyncUserBody.new # SyncUserBody | 
+  sync_user_body:  # SyncUserBody | 
 }
 
 begin
@@ -342,9 +342,9 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::UsersApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-user_id_or_external_id = '42589ad070d43be9b00ff7e5' # String | The user's id or externalId.
-user_update_body = SunshineConversationsClient::UserUpdateBody.new # UserUpdateBody | 
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+user_id_or_external_id = 42589ad070d43be9b00ff7e5 # String | The user's id or externalId.
+user_update_body =  # UserUpdateBody | 
 # Be sure to add the required body parameters
 
 begin

@@ -34,9 +34,9 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::DevicesApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-user_id_or_external_id = '42589ad070d43be9b00ff7e5' # String | The user's id or externalId.
-device_id = '5d8cff3cd55b040010928b5b' # String | The device's id.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+user_id_or_external_id = 42589ad070d43be9b00ff7e5 # String | The user's id or externalId.
+device_id = 5d8cff3cd55b040010928b5b # String | The device's id.
 # Be sure to add the required body parameters
 
 begin
@@ -96,8 +96,8 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::DevicesApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-user_id_or_external_id = '42589ad070d43be9b00ff7e5' # String | The user's id or externalId.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+user_id_or_external_id = 42589ad070d43be9b00ff7e5 # String | The user's id or externalId.
 # Be sure to add the required body parameters
 
 begin

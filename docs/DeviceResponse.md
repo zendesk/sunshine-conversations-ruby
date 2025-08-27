@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**device** | [**Device**](Device.md) | The device. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **device** | [**Device**](Device.md) | The device. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::DeviceResponse.new(device: null)
+instance = SunshineConversationsClient::DeviceResponse.new(
+  device: null
+)
 ```
-
 

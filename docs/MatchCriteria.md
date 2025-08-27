@@ -1,27 +1,85 @@
 # SunshineConversationsClient::MatchCriteria
 
-## Properties
+## Class instance methods
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**type** | **String** | The channel type. | [default to &#39;whatsapp&#39;]
-**integration_id** | **String** | The ID of the integration to link. Must match the provided type. | 
-**primary** | **Boolean** | Flag indicating whether the client will become the primary for the target conversation once linking is complete. | [optional] [default to true]
-**address** | **String** | The user’s email address. | 
-**subject** | **String** | May be specified to set the subject for the outgoing email. | [optional] [default to &#39;New message from {appName}&#39;]
-**phone_number** | **String** | The user’s phone number. It must contain the + prefix and the country code. Examples of valid phone numbers: +1 212-555-2368, +12125552368, +1 212 555 2368. Examples of invalid phone numbers: 212 555 2368, 1 212 555 2368.  | 
+### `openapi_one_of`
 
-## Code Sample
+Returns the list of classes defined in oneOf.
+
+#### Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::MatchCriteria.new(type: null,
-                                 integration_id: 582dedf230e788746891281a,
-                                 primary: null,
-                                 address: steveb@channel5.com,
-                                 subject: null,
-                                 phone_number: +15550001234)
+SunshineConversationsClient::MatchCriteria.openapi_one_of
+# =>
+# [
+#   :'MatchCriteriaMailgun',
+#   :'MatchCriteriaMessagebird',
+#   :'MatchCriteriaTwilio',
+#   :'MatchCriteriaWhatsapp'
+# ]
 ```
 
+### `openapi_discriminator_name`
+
+Returns the discriminator's property name.
+
+#### Example
+
+```ruby
+require 'sunshine-conversations-client'
+
+SunshineConversationsClient::MatchCriteria.openapi_discriminator_name
+# => :'type'
+```
+
+### `openapi_discriminator_name`
+
+Returns the discriminator's mapping.
+
+#### Example
+
+```ruby
+require 'sunshine-conversations-client'
+
+SunshineConversationsClient::MatchCriteria.openapi_discriminator_mapping
+# =>
+# {
+#   :'mailgun' => :'MatchCriteriaMailgun',
+#   :'messagebird' => :'MatchCriteriaMessagebird',
+#   :'twilio' => :'MatchCriteriaTwilio',
+#   :'whatsapp' => :'MatchCriteriaWhatsapp'
+# }
+```
+
+### build
+
+Find the appropriate object from the `openapi_one_of` list and casts the data into it.
+
+#### Example
+
+```ruby
+require 'sunshine-conversations-client'
+
+SunshineConversationsClient::MatchCriteria.build(data)
+# => #<MatchCriteriaMailgun:0x00007fdd4aab02a0>
+
+SunshineConversationsClient::MatchCriteria.build(data_that_doesnt_match)
+# => nil
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| **data** | **Mixed** | data to be matched against the list of oneOf items |
+
+#### Return type
+
+- `MatchCriteriaMailgun`
+- `MatchCriteriaMessagebird`
+- `MatchCriteriaTwilio`
+- `MatchCriteriaWhatsapp`
+- `nil` (if no type matches)
 

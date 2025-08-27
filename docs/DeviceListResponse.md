@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**devices** | [**Array&lt;Device&gt;**](Device.md) | List of returned devices. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **devices** | [**Array&lt;Device&gt;**](Device.md) | List of returned devices. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::DeviceListResponse.new(devices: null)
+instance = SunshineConversationsClient::DeviceListResponse.new(
+  devices: null
+)
 ```
-
 

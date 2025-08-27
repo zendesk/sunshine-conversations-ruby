@@ -2,18 +2,19 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**author** | [**Author**](Author.md) | The author of the activity. | 
-**type** | **String** | If the author type is &#x60;user&#x60;, only &#x60;conversation:read&#x60; is supported. | 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **type** | **String** | If the author type is &#x60;user&#x60;, only &#x60;conversation:read&#x60; is supported. |  |
+| **author** | [**Author**](Author.md) | The author of the activity. |  |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::ActivityPost.new(author: null,
-                                 type: null)
+instance = SunshineConversationsClient::ActivityPost.new(
+  type: null,
+  author: null
+)
 ```
-
 

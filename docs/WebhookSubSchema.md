@@ -2,18 +2,19 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**id** | **String** | The unique ID of the webhook. | [optional] 
-**version** | **String** | Schema version of the payload delivered to this webhook (v2). | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **String** | The unique ID of the webhook. | [optional] |
+| **version** | **String** | Schema version of the payload delivered to this webhook (v2). | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::WebhookSubSchema.new(id: null,
-                                 version: null)
+instance = SunshineConversationsClient::WebhookSubSchema.new(
+  id: null,
+  version: null
+)
 ```
-
 

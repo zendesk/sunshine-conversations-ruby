@@ -1,21 +1,51 @@
 # SunshineConversationsClient::ConversionEventsBody
 
-## Properties
+## Class instance methods
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**messenger** | [**MetaConversionEvent**](MetaConversionEvent.md) |  | [optional] 
-**instagram** | [**MetaConversionEvent**](MetaConversionEvent.md) |  | [optional] 
-**whatsapp** | [**MetaConversionEvent**](MetaConversionEvent.md) |  | [optional] 
+### `openapi_one_of`
 
-## Code Sample
+Returns the list of classes defined in oneOf.
+
+#### Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::ConversionEventsBody.new(messenger: null,
-                                 instagram: null,
-                                 whatsapp: null)
+SunshineConversationsClient::ConversionEventsBody.openapi_one_of
+# =>
+# [
+#   :'InstagramConversionEventsBody',
+#   :'MessengerConversionEventsBody',
+#   :'WhatsAppConversionEventsBody'
+# ]
 ```
 
+### build
+
+Find the appropriate object from the `openapi_one_of` list and casts the data into it.
+
+#### Example
+
+```ruby
+require 'sunshine-conversations-client'
+
+SunshineConversationsClient::ConversionEventsBody.build(data)
+# => #<InstagramConversionEventsBody:0x00007fdd4aab02a0>
+
+SunshineConversationsClient::ConversionEventsBody.build(data_that_doesnt_match)
+# => nil
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| **data** | **Mixed** | data to be matched against the list of oneOf items |
+
+#### Return type
+
+- `InstagramConversionEventsBody`
+- `MessengerConversionEventsBody`
+- `WhatsAppConversionEventsBody`
+- `nil` (if no type matches)
 

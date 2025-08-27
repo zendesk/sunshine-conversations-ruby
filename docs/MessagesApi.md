@@ -36,8 +36,8 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::MessagesApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-conversation_id = '029c31f25a21b47effd7be90' # String | Identifies the conversation.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+conversation_id = 029c31f25a21b47effd7be90 # String | Identifies the conversation.
 # Be sure to add the required body parameters
 
 begin
@@ -96,9 +96,9 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::MessagesApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-conversation_id = '029c31f25a21b47effd7be90' # String | Identifies the conversation.
-message_id = '029c31f25a21b47effd7be90' # String | The id of the message.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+conversation_id = 029c31f25a21b47effd7be90 # String | Identifies the conversation.
+message_id = 029c31f25a21b47effd7be90 # String | The id of the message.
 # Be sure to add the required body parameters
 
 begin
@@ -158,11 +158,11 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::MessagesApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-conversation_id = '029c31f25a21b47effd7be90' # String | Identifies the conversation.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+conversation_id = 029c31f25a21b47effd7be90 # String | Identifies the conversation.
 # Be sure to add the required body parameters
 opts = {
-  page: SunshineConversationsClient::Page.new # Page | Contains parameters for applying cursor pagination.
+  page:  # Page | Contains parameters for applying cursor pagination.
 }
 
 begin
@@ -222,9 +222,9 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::MessagesApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-conversation_id = '029c31f25a21b47effd7be90' # String | Identifies the conversation.
-message_post = SunshineConversationsClient::MessagePost.new # MessagePost | 
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+conversation_id = 029c31f25a21b47effd7be90 # String | Identifies the conversation.
+message_post =  # MessagePost | 
 # Be sure to add the required body parameters
 
 begin

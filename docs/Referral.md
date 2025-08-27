@@ -2,18 +2,19 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**code** | **String** | The referral’s identifier. | [optional] 
-**details** | [**ReferralDetails**](ReferralDetails.md) |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **code** | **String** | The referral’s identifier. | [optional] |
+| **details** | [**ReferralDetails**](ReferralDetails.md) |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::Referral.new(code: null,
-                                 details: null)
+instance = SunshineConversationsClient::Referral.new(
+  code: null,
+  details: null
+)
 ```
-
 

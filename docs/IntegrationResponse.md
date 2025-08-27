@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**integration** | [**Integration**](Integration.md) |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **integration** | [**Integration**](Integration.md) |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::IntegrationResponse.new(integration: null)
+instance = SunshineConversationsClient::IntegrationResponse.new(
+  integration: null
+)
 ```
-
 

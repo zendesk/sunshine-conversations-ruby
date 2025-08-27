@@ -1,19 +1,79 @@
 # SunshineConversationsClient::ActivityMessage
 
-## Properties
+## Class instance methods
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**type** | **String** | The type of system activity that generated the message. The value of this field determines the dynamic content that is rendered to the end-user / agent when viewing this message. Each &#x60;type&#x60; value will have a set of pre-defined, localized strings that describe the activity. | [default to &#39;ticket:transfer:email&#39;]
-**data** | **Hash&lt;String, Object&gt;** | No additional data is supplied with the \&quot;ticket:transfer:email\&quot; activity type at this time. | [optional] 
+### `openapi_one_of`
 
-## Code Sample
+Returns the list of classes defined in oneOf.
+
+#### Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::ActivityMessage.new(type: null,
-                                 data: null)
+SunshineConversationsClient::ActivityMessage.openapi_one_of
+# =>
+# [
+#   :'TicketClosed',
+#   :'TransferToEmail'
+# ]
 ```
 
+### `openapi_discriminator_name`
+
+Returns the discriminator's property name.
+
+#### Example
+
+```ruby
+require 'sunshine-conversations-client'
+
+SunshineConversationsClient::ActivityMessage.openapi_discriminator_name
+# => :'type'
+```
+
+### `openapi_discriminator_name`
+
+Returns the discriminator's mapping.
+
+#### Example
+
+```ruby
+require 'sunshine-conversations-client'
+
+SunshineConversationsClient::ActivityMessage.openapi_discriminator_mapping
+# =>
+# {
+#   :'ticket:closed' => :'TicketClosed',
+#   :'ticket:transfer:email' => :'TransferToEmail'
+# }
+```
+
+### build
+
+Find the appropriate object from the `openapi_one_of` list and casts the data into it.
+
+#### Example
+
+```ruby
+require 'sunshine-conversations-client'
+
+SunshineConversationsClient::ActivityMessage.build(data)
+# => #<TicketClosed:0x00007fdd4aab02a0>
+
+SunshineConversationsClient::ActivityMessage.build(data_that_doesnt_match)
+# => nil
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| **data** | **Mixed** | data to be matched against the list of oneOf items |
+
+#### Return type
+
+- `TicketClosed`
+- `TransferToEmail`
+- `nil` (if no type matches)
 

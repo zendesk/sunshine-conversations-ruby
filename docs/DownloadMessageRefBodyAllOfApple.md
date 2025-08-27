@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**interactive_data_ref** | [**DownloadMessageRefBodyAllOfAppleInteractiveDataRef**](DownloadMessageRefBodyAllOfAppleInteractiveDataRef.md) |  | 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **interactive_data_ref** | [**DownloadMessageRefBodyAllOfAppleInteractiveDataRef**](DownloadMessageRefBodyAllOfAppleInteractiveDataRef.md) |  |  |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::DownloadMessageRefBodyAllOfApple.new(interactive_data_ref: null)
+instance = SunshineConversationsClient::DownloadMessageRefBodyAllOfApple.new(
+  interactive_data_ref: null
+)
 ```
-
 

@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**id** | **String** | The unique ID of the campaign. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **String** | The unique ID of the campaign. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::Campaign.new(id: de13bee15b51033b34162411)
+instance = SunshineConversationsClient::Campaign.new(
+  id: de13bee15b51033b34162411
+)
 ```
-
 

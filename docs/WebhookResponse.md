@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**webhook** | [**Webhook**](Webhook.md) | The webhook. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **webhook** | [**Webhook**](Webhook.md) | The webhook. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::WebhookResponse.new(webhook: null)
+instance = SunshineConversationsClient::WebhookResponse.new(
+  webhook: null
+)
 ```
-
 

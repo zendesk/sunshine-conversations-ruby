@@ -1,21 +1,51 @@
 # SunshineConversationsClient::ParticipantLeaveBody
 
-## Properties
+## Class instance methods
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**user_id** | **String** | The id of the user that will be removed from the conversation. It will return 404 if the user can’t be found.  | [optional] 
-**user_external_id** | **String** | The externalId of the user that will be removed from the conversation. It will return 404 if the user can’t be found.  | [optional] 
-**participant_id** | **String** | The participantId of the user that will be removed from the conversation. It will return 404 if the user can’t be found.  | [optional] 
+### `openapi_one_of`
 
-## Code Sample
+Returns the list of classes defined in oneOf.
+
+#### Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::ParticipantLeaveBody.new(user_id: 42589ad070d43be9b00ff7e5,
-                                 user_external_id: your-own-user-id,
-                                 participant_id: 42589ad070d43be9b00ff7e5)
+SunshineConversationsClient::ParticipantLeaveBody.openapi_one_of
+# =>
+# [
+#   :'ParticipantLeaveBodyParticipantId',
+#   :'ParticipantLeaveBodyUserExternalId',
+#   :'ParticipantLeaveBodyUserId'
+# ]
 ```
 
+### build
+
+Find the appropriate object from the `openapi_one_of` list and casts the data into it.
+
+#### Example
+
+```ruby
+require 'sunshine-conversations-client'
+
+SunshineConversationsClient::ParticipantLeaveBody.build(data)
+# => #<ParticipantLeaveBodyParticipantId:0x00007fdd4aab02a0>
+
+SunshineConversationsClient::ParticipantLeaveBody.build(data_that_doesnt_match)
+# => nil
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| **data** | **Mixed** | data to be matched against the list of oneOf items |
+
+#### Return type
+
+- `ParticipantLeaveBodyParticipantId`
+- `ParticipantLeaveBodyUserExternalId`
+- `ParticipantLeaveBodyUserId`
+- `nil` (if no type matches)
 

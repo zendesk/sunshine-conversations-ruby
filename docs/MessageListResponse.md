@@ -2,20 +2,21 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**messages** | [**Array&lt;Message&gt;**](Message.md) | List of returned messages. | [optional] 
-**meta** | [**Meta**](Meta.md) |  | [optional] 
-**links** | [**Links**](Links.md) |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **messages** | [**Array&lt;Message&gt;**](Message.md) | List of returned messages. | [optional] |
+| **meta** | [**Meta**](Meta.md) |  | [optional] |
+| **links** | [**Links**](Links.md) |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::MessageListResponse.new(messages: null,
-                                 meta: null,
-                                 links: null)
+instance = SunshineConversationsClient::MessageListResponse.new(
+  messages: null,
+  meta: null,
+  links: null
+)
 ```
-
 

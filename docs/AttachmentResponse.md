@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**attachment** | [**AttachmentSchema**](AttachmentSchema.md) | The uploaded attachment object. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **attachment** | [**AttachmentSchema**](AttachmentSchema.md) | The uploaded attachment object. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::AttachmentResponse.new(attachment: null)
+instance = SunshineConversationsClient::AttachmentResponse.new(
+  attachment: null
+)
 ```
-
 

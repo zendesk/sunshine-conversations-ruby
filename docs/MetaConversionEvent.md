@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**payload** | [**MetaConversionEventPayload**](MetaConversionEventPayload.md) |  | 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **payload** | [**MetaConversionEventPayload**](MetaConversionEventPayload.md) |  |  |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::MetaConversionEvent.new(payload: null)
+instance = SunshineConversationsClient::MetaConversionEvent.new(
+  payload: null
+)
 ```
-
 

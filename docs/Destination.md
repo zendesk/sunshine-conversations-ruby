@@ -1,19 +1,49 @@
 # SunshineConversationsClient::Destination
 
-## Properties
+## Class instance methods
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**integration_id** | **String** | The id of the integration to deliver the message to. Will return an error if the integration does not exist or if the user does not have a client for the integration attached to the conversation.  | [optional] 
-**integration_type** | **String** | The type of the integration to deliver the message to. Can be set to &#x60;none&#x60; if sending a [silent message](https://developer.zendesk.com/documentation/conversations/messaging-platform/programmable-conversations/sending-messages/#silent-messages). Will return an error if the user does not have a client of that type attached to the conversation.  | [optional] 
+### `openapi_one_of`
 
-## Code Sample
+Returns the list of classes defined in oneOf.
+
+#### Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::Destination.new(integration_id: 582dedf230e788746891281a,
-                                 integration_type: whatsapp)
+SunshineConversationsClient::Destination.openapi_one_of
+# =>
+# [
+#   :'IntegrationId',
+#   :'IntegrationType'
+# ]
 ```
 
+### build
+
+Find the appropriate object from the `openapi_one_of` list and casts the data into it.
+
+#### Example
+
+```ruby
+require 'sunshine-conversations-client'
+
+SunshineConversationsClient::Destination.build(data)
+# => #<IntegrationId:0x00007fdd4aab02a0>
+
+SunshineConversationsClient::Destination.build(data_that_doesnt_match)
+# => nil
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| **data** | **Mixed** | data to be matched against the list of oneOf items |
+
+#### Return type
+
+- `IntegrationId`
+- `IntegrationType`
+- `nil` (if no type matches)
 

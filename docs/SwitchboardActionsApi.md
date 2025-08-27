@@ -36,9 +36,9 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::SwitchboardActionsApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-conversation_id = '029c31f25a21b47effd7be90' # String | Identifies the conversation.
-accept_control_body = SunshineConversationsClient::AcceptControlBody.new # AcceptControlBody | 
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+conversation_id = 029c31f25a21b47effd7be90 # String | Identifies the conversation.
+accept_control_body =  # AcceptControlBody | 
 # Be sure to add the required body parameters
 
 begin
@@ -98,9 +98,9 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::SwitchboardActionsApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-conversation_id = '029c31f25a21b47effd7be90' # String | Identifies the conversation.
-offer_control_body = SunshineConversationsClient::OfferControlBody.new # OfferControlBody | 
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+conversation_id = 029c31f25a21b47effd7be90 # String | Identifies the conversation.
+offer_control_body =  # OfferControlBody | 
 # Be sure to add the required body parameters
 
 begin
@@ -160,9 +160,9 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::SwitchboardActionsApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-conversation_id = '029c31f25a21b47effd7be90' # String | Identifies the conversation.
-pass_control_body = SunshineConversationsClient::PassControlBody.new # PassControlBody | 
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+conversation_id = 029c31f25a21b47effd7be90 # String | Identifies the conversation.
+pass_control_body =  # PassControlBody | 
 # Be sure to add the required body parameters
 
 begin
@@ -222,11 +222,11 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::SwitchboardActionsApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-conversation_id = '029c31f25a21b47effd7be90' # String | Identifies the conversation.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+conversation_id = 029c31f25a21b47effd7be90 # String | Identifies the conversation.
 # Be sure to add the required body parameters
 opts = {
-  release_control_body: SunshineConversationsClient::ReleaseControlBody.new # ReleaseControlBody | 
+  release_control_body:  # ReleaseControlBody | 
 }
 
 begin

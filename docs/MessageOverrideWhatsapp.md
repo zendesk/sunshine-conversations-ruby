@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**whatsapp** | [**MessageOverridePayload**](MessageOverridePayload.md) |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **whatsapp** | [**MessageOverridePayload**](MessageOverridePayload.md) |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::MessageOverrideWhatsapp.new(whatsapp: null)
+instance = SunshineConversationsClient::MessageOverrideWhatsapp.new(
+  whatsapp: null
+)
 ```
-
 

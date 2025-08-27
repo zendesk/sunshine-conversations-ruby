@@ -36,8 +36,8 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::AppKeysApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-app_key_create_body = SunshineConversationsClient::AppKeyCreateBody.new # AppKeyCreateBody | 
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+app_key_create_body =  # AppKeyCreateBody | 
 # Be sure to add the required body parameters
 
 begin
@@ -96,8 +96,8 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::AppKeysApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-key_id = 'int_5d8cff3cd55b040010928b5b' # String | The id of the key.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+key_id = int_5d8cff3cd55b040010928b5b # String | The id of the key.
 # Be sure to add the required body parameters
 
 begin
@@ -156,8 +156,8 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::AppKeysApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-key_id = 'int_5d8cff3cd55b040010928b5b' # String | The id of the key.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+key_id = int_5d8cff3cd55b040010928b5b # String | The id of the key.
 # Be sure to add the required body parameters
 
 begin
@@ -216,7 +216,7 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::AppKeysApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
 # Be sure to add the required body parameters
 
 begin

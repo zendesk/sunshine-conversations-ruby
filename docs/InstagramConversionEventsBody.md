@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**instagram** | [**MetaConversionEvent**](MetaConversionEvent.md) |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **instagram** | [**MetaConversionEvent**](MetaConversionEvent.md) |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::InstagramConversionEventsBody.new(instagram: null)
+instance = SunshineConversationsClient::InstagramConversionEventsBody.new(
+  instagram: null
+)
 ```
-
 

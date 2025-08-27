@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**switchboard_integration** | [**SwitchboardIntegration**](SwitchboardIntegration.md) | The switchboard integration. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **switchboard_integration** | [**SwitchboardIntegration**](SwitchboardIntegration.md) | The switchboard integration. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::SwitchboardIntegrationResponse.new(switchboard_integration: null)
+instance = SunshineConversationsClient::SwitchboardIntegrationResponse.new(
+  switchboard_integration: null
+)
 ```
-
 

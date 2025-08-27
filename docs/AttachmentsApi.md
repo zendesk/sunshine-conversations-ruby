@@ -34,8 +34,8 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::AttachmentsApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-attachment_delete_body = SunshineConversationsClient::AttachmentDeleteBody.new # AttachmentDeleteBody | 
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+attachment_delete_body =  # AttachmentDeleteBody | 
 # Be sure to add the required body parameters
 
 begin
@@ -94,13 +94,13 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::AttachmentsApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-access = 'public' # String | The access level for the attachment. Currently the only available access level is public. Private is not supported.
-source = File.new('/path/to/file') # File | 
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+access = public # String | The access level for the attachment. Currently the only available access level is public. Private is not supported.
+source = BINARY_DATA_HERE # File | 
 # Be sure to add the required body parameters
 opts = {
-  _for: 'message', # String | Specifies the intended container for the attachment, to enable automatic attachment deletion (on deletion of associated message, conversation or user). For now, only message is supported. See [Attachments for Messages](#section/Attachments-for-Messages) for details.
-  conversation_id: 'c616a583e4c240a871818541' # String | Links the attachment getting uploaded to the conversation ID.
+  _for: message, # String | Specifies the intended container for the attachment, to enable automatic attachment deletion (on deletion of associated message, conversation or user). For now, only message is supported. See [Attachments for Messages](#section/Attachments-for-Messages) for details.
+  conversation_id: c616a583e4c240a871818541 # String | Links the attachment getting uploaded to the conversation ID.
 }
 
 begin

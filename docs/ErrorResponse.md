@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**errors** | [**Array&lt;Error&gt;**](Error.md) | List of errors that occurred. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **errors** | [**Array&lt;Error&gt;**](Error.md) | List of errors that occurred. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::ErrorResponse.new(errors: null)
+instance = SunshineConversationsClient::ErrorResponse.new(
+  errors: null
+)
 ```
-
 

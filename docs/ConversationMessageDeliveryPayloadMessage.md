@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**id** | **String** | A string representing the ID of the message. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **String** | A string representing the ID of the message. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::ConversationMessageDeliveryPayloadMessage.new(id: null)
+instance = SunshineConversationsClient::ConversationMessageDeliveryPayloadMessage.new(
+  id: null
+)
 ```
-
 

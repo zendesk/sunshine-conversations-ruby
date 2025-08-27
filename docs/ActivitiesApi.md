@@ -33,8 +33,8 @@ SunshineConversationsClient.configure do |config|
 end
 
 api_instance = SunshineConversationsClient::ActivitiesApi.new
-app_id = '5d8cff3cd55b040010928b5b' # String | Identifies the app.
-conversation_id = '029c31f25a21b47effd7be90' # String | Identifies the conversation.
+app_id = 5d8cff3cd55b040010928b5b # String | Identifies the app.
+conversation_id = 029c31f25a21b47effd7be90 # String | Identifies the conversation.
 activity_post = {"author":{"type":"user","userId":"5963c0d619a30a2e00de36b8"},"type":"conversation:read"} # ActivityPost | 
 # Be sure to add the required body parameters
 

@@ -2,22 +2,23 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**postback** | [**PostbackWebhook**](PostbackWebhook.md) | The postback associated with the event. | [optional] 
-**conversation** | [**ConversationTruncated**](ConversationTruncated.md) | The conversation linked to the postback. | [optional] 
-**user** | [**User**](User.md) | The user that triggered the postback. | [optional] 
-**source** | [**SourceWithCampaignWebhook**](SourceWithCampaignWebhook.md) | The source of the postback. | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **postback** | [**PostbackWebhook**](PostbackWebhook.md) | The postback associated with the event. | [optional] |
+| **conversation** | [**ConversationTruncated**](ConversationTruncated.md) | The conversation linked to the postback. | [optional] |
+| **user** | [**User**](User.md) | The user that triggered the postback. | [optional] |
+| **source** | [**SourceWithCampaignWebhook**](SourceWithCampaignWebhook.md) | The source of the postback. | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::ConversationPostbackEventAllOfPayload.new(postback: null,
-                                 conversation: null,
-                                 user: null,
-                                 source: null)
+instance = SunshineConversationsClient::ConversationPostbackEventAllOfPayload.new(
+  postback: null,
+  conversation: null,
+  user: null,
+  source: null
+)
 ```
-
 

@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**conversation_id** | **String** | The conversation ID of the target conversation. | 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **conversation_id** | **String** | The conversation ID of the target conversation. |  |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'SunshineConversationsClient'
+require 'sunshine-conversations-client'
 
-instance = SunshineConversationsClient::Target.new(conversation_id: 029c31f25a21b47effd7be90)
+instance = SunshineConversationsClient::Target.new(
+  conversation_id: 029c31f25a21b47effd7be90
+)
 ```
-
 
